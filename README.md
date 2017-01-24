@@ -1,10 +1,13 @@
 # Trap'n Catch®
+
 ### INFORMATION
 ---
 L'équipe DØMINO© est composée d'Amandine NASSIRI, Marc VILLAIN,  Julien DA CUNHA et Wonja NA NGILLE.
+
 ### TODO
 ---
 - Start to work :)
+
 ### PLANNING
 ---
 | Task ID | Title | Fin | Assigned | %Done | Priority |
