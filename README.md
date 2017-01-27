@@ -23,8 +23,8 @@ L'équipe DØMINO© est composée d'Amandine NASSIRI, Marc VILLAIN,  Julien DA C
 | 1.1.2.3 | Souris | 03/02/2017 | Marc | 0 % | 1 |
 | 1.1.2.4 | Map 1 | 09/02/2017 | Wonja | 0 % | 1 |
 | 1.1.2.5 | Map 2 | 09/02/2017 | Amandine | 0 % | 1 |
-| 1.1.2.6 | Script (Hist.) C#0 | 25/01/2017 | Julien | 0 % | 1 |
-| 1.1.2.7 | Script (Hist.) C#1 | 25/01/2017 | Julien | 0 % | 1 |
+| 1.1.2.6 | Script (Hist.) C#0 | 25/01/2017 | Julien | 100 % | 1 |
+| 1.1.2.7 | Script (Hist.) C#1 | 25/01/2017 | Julien | 50 % | 1 |
 | **1.1.3** | IA | 23/02/2017 |  |  |  |
 | 1.1.3.1 | Souris (Base) | 23/02/2017 | Marc; Julien | 0 % | 0 |
 | 1.1.3.2 | Chat (Base) | 23/02/2017 | Amandine; Wonja | 0 % | 0 |
