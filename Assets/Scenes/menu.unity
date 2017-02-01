@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38653472, g: 0.41996744, b: 0.48573464, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -102,7 +102,7 @@ GameObject:
   - 114: {fileID: 243624220}
   - 114: {fileID: 243624219}
   m_Layer: 5
-  m_Name: Option
+  m_Name: SettingButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,8 +124,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -35}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243624219
 MonoBehaviour:
@@ -161,13 +161,13 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 243624220}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1814907569}
-        m_MethodName: LoadButton
+        m_MethodName: ChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - 222: {fileID: 502425476}
   - 114: {fileID: 502425475}
   m_Layer: 5
-  m_Name: SingleplayerText
+  m_Name: SoloLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +279,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Singleplayer
+  m_Text: 'Histoire
+
+'
 --- !u!222 &502425476
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -297,7 +299,7 @@ GameObject:
   - 222: {fileID: 595859452}
   - 114: {fileID: 595859451}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TitleLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,7 +320,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 28}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 450, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &595859451
@@ -347,7 +349,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 80
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -584,7 +586,7 @@ GameObject:
   - 114: {fileID: 907084222}
   - 114: {fileID: 907084221}
   m_Layer: 5
-  m_Name: Exit
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,8 +608,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -88}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -80}
+  m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907084221
 MonoBehaviour:
@@ -649,8 +651,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1814907569}
-        m_MethodName: LoadButton
-        m_Mode: 3
+        m_MethodName: Quit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -705,7 +707,7 @@ GameObject:
   - 222: {fileID: 1112101227}
   - 114: {fileID: 1112101226}
   m_Layer: 5
-  m_Name: OptionsText
+  m_Name: SettingLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -780,7 +782,7 @@ GameObject:
   - 114: {fileID: 1158897121}
   - 114: {fileID: 1158897120}
   m_Layer: 5
-  m_Name: Singleplayer
+  m_Name: SoloButton
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -802,8 +804,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 69}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 40}
+  m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158897120
 MonoBehaviour:
@@ -845,7 +847,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1814907569}
-        m_MethodName: LoadButton
+        m_MethodName: ChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -901,7 +903,7 @@ GameObject:
   - 222: {fileID: 1168179036}
   - 114: {fileID: 1168179035}
   m_Layer: 5
-  m_Name: ExitText
+  m_Name: QuitLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -957,7 +959,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: 'Quitter
+
+'
 --- !u!222 &1168179036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -975,7 +979,7 @@ GameObject:
   - 222: {fileID: 1276974506}
   - 114: {fileID: 1276974505}
   m_Layer: 5
-  m_Name: MultiplayerText
+  m_Name: MultiLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1031,7 +1035,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Multiplayer
+  m_Text: En ligne
 --- !u!222 &1276974506
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1049,8 +1053,6 @@ GameObject:
   - 223: {fileID: 1814907565}
   - 114: {fileID: 1814907564}
   - 114: {fileID: 1814907563}
-  - 114: {fileID: 1814907567}
-  - 114: {fileID: 1814907568}
   - 114: {fileID: 1814907569}
   m_Layer: 5
   m_Name: Canvas
@@ -1138,28 +1140,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1814907567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1814907562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b9d570ba5933e841a9f8bee1b3c07f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1814907568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1814907562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8b5c6d448d6218408298badf56895df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1814907569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1163,7 @@ GameObject:
   - 114: {fileID: 1916787017}
   - 114: {fileID: 1916787016}
   m_Layer: 5
-  m_Name: Multiplayer
+  m_Name: MultiButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1205,8 +1185,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1916787016
 MonoBehaviour:
@@ -1242,13 +1222,13 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1916787017}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1814907569}
-        m_MethodName: LoadButton
+        m_MethodName: ChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
