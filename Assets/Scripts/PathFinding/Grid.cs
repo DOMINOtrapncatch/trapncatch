@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Grid : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class Grid : MonoBehaviour {
 	float nodeDiameter;
 	int gridSizeX, gridSizeY;
 
-	void Start()
+	void Awake()
 	{
 		// Initialisation des variables
 		nodeDiameter = nodeRadius * 2;
@@ -39,9 +40,33 @@ public class Grid : MonoBehaviour {
 				// On check si le node colisionne un objet qui a le mask "unwalkable"
 				bool walkable = !(Physics.CheckSphere (worldPoint, nodeRadius, unwalkableMask));
 				// On ajoute le node à la grille
-				grid [x, y] = new Node (walkable, worldPoint);
+				grid [x, y] = new Node (walkable, worldPoint, x, y);
 			}
 		}
+	}
+		
+	/*
+	 * Obtenir une liste de tous les voisins d'un node
+	 */
+	public List<Node> GetNeighbors(Node node)
+	{
+		List<Node> neighbors = new List<Node> ();
+
+		for(int x = -1; x <= 1; x++)
+		{
+			for(int y = -1; y <= 1; y++)
+			{
+				if (x == 0 && y == 0)
+					continue;
+				
+				int checkX = node.gridX + x;
+				int checkY = node.gridY + y;
+				if (0 <= checkX && checkX < gridSizeX && 0 <= checkY && checkY < gridSizeY)
+					neighbors.Add (grid [checkX, checkY]);
+			}
+		}
+
+		return neighbors;
 	}
 
 	public Node NodeFromWorldPoint(Vector3 worldPosition)
@@ -59,5 +84,26 @@ public class Grid : MonoBehaviour {
 
 		// On retourne le node placé sur la position
 		return grid [x, y];
+	}
+
+	/*
+	 * DEBUG - Affichage de la grille de nodes et de leur etat
+	 */
+	public List<Node> path;
+	void OnDrawGizmos()
+	{
+		Gizmos.DrawWireCube (transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
+
+		if(grid != null)
+		{
+			foreach(Node n in grid)
+			{
+				Gizmos.color = n.walkable ? Color.white : Color.red;
+				if(path != null)
+					if(path.Contains (n))
+						Gizmos.color = Color.black;
+				Gizmos.DrawCube (n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+			}
+		}
 	}
 }
