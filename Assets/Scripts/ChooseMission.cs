@@ -2,97 +2,61 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ChooseMission : MonoBehaviour
 {
+	List<Mission> missions = new List<Mission>();
+	int selectedMission = 0;
+
 	// Use this for initialization
 	void Start ()
     {
-	
+		missions.Add(new Mission(0, "Le chat de gouttière"));
+		missions.Add(new Mission(1, "L'initiation"));
+		missions.Add(new Mission(2, "Le chat de gouttière"));
+		missions.Add(new Mission(3, "De nouveaux arrivants"));
+		missions.Add(new Mission(4, "To determine"));
+		missions.Add(new Mission(5, "To determine"));
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
-            SelectMission(true);
+            SelectMission(1);
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
-            SelectMission(false);
+            SelectMission(-1);
         else if (Input.GetKeyDown(KeyCode.Return))
             LaunchMission();
         else if (Input.GetKeyDown(KeyCode.Backspace))
             SceneManager.LoadScene(0);
     }
 
-    // For the solo menu (true == right button, false == left button)
-    public void SelectMission(bool direction)
+    // For the solo menu (1 == right button, -1 == left button)
+    public void SelectMission(int direction)
     {
-        Text Mission = GameObject.Find("MissionLabel").GetComponent<Text>();
-        switch (Mission.text)
-        {
-            case "Chapitre 0: Une souris intriguante":
-                if (direction)
-                    Mission.text = "Chapitre 1 : Le chat de gouttière";
-                else
-                    Mission.text = "Chapitre 5 : To determine";
-                break;
-            case "Chapitre 1 : Le chat de gouttière":
-                if (direction)
-                    Mission.text = "Chapitre 2 : L'initiation";
-                else
-                    Mission.text = "Chapitre 0: Une souris intriguante";
-                break;
-            case "Chapitre 2 : L'initiation":
-                if (direction)
-                    Mission.text = "Chapitre 3 : De nouveaux arrivants";
-                else
-                    Mission.text = "Chapitre 1 : Le chat de gouttière";
-                break;
-            case "Chapitre 3 : De nouveaux arrivants":
-                if (direction)
-                    Mission.text = "Chapitre 4 : To determine";
-                else
-                    Mission.text = "Chapitre 2 : L'initiation";
-                break;
-            case "Chapitre 4 : To determine":
-                if (direction)
-                    Mission.text = "Chapitre 5 : To determine";
-                else
-                    Mission.text = "Chapitre 3 : De nouveaux arrivants";
-                break;
-            case "Chapitre 5 : To determine":
-                if (direction)
-                    Mission.text = "Chapitre 0: Une souris intriguante";
-                else
-                    Mission.text = "Chapitre 4 : To determine";
-                break;
-        }
+        Text missionLabel = GameObject.Find("MissionLabel").GetComponent<Text>();
+		selectedMission = (selectedMission + direction + missions.Count) % missions.Count;
+		missionLabel.text = "Chapitre " + missions[selectedMission].id + " : " + missions[selectedMission].title;
     }
 
     // Load the selected mission
     public void LaunchMission()
     {
-        Text Mission = GameObject.Find("MissionLabel").GetComponent<Text>();
-        switch (Mission.text)
-        {
-            case "Chapitre 0: Une souris intriguante":
-                SceneManager.LoadScene(0);
-                break;
-            case "Chapitre 1 : Le chat de gouttière":
-                SceneManager.LoadScene(0);
-                break;
-            case "Chapitre 2 : L'initiation":
-                SceneManager.LoadScene(0);
-                break;
-            case "Chapitre 3 : De nouveaux arrivants":
-                SceneManager.LoadScene(0);
-                break;
-            case "Chapitre 4 : To determine":
-                SceneManager.LoadScene(0);
-                break;
-            case "Chapitre 5 : To determine":
-                SceneManager.LoadScene(0);
-                break;
-        }
+		SceneManager.LoadScene(selectedMission);
     }
+}
+
+
+public class Mission
+{
+	public int id;
+	public string title;
+
+	public Mission(int id, string title)
+	{
+		this.id = id;
+		this.title = title;
+	}
 }
