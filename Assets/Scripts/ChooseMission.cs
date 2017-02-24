@@ -3,33 +3,32 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-public class LoadOnClick : MonoBehaviour
+public class ChooseMission : MonoBehaviour
 {
-    /*
-     * -------------
-     * Created by Wonja
-     * Modified by Julien 
-     * -------------
-     * TODO: EDIT THIS FILE WHEN ALL SCENES WILL BE IMPLEMENTED (LaunchMission)
-     */
-
-    // Go from one scene to another scene specified by his id
-    public void ChangeScene(int sceneId)
+	// Use this for initialization
+	void Start ()
     {
-        SceneManager.LoadScene(sceneId);
-    }
-
-    // Close the game
-    public void Quit()
+	
+	}
+	
+	// Update is called once per frame
+	void Update ()
     {
-        Application.Quit();
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+            SelectMission(true);
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            SelectMission(false);
+        else if (Input.GetKeyDown(KeyCode.Return))
+            LaunchMission();
+        else if (Input.GetKeyDown(KeyCode.Backspace))
+            SceneManager.LoadScene(0);
     }
 
     // For the solo menu (true == right button, false == left button)
     public void SelectMission(bool direction)
     {
         Text Mission = GameObject.Find("MissionLabel").GetComponent<Text>();
-        switch(Mission.text)
+        switch (Mission.text)
         {
             case "Chapitre 0: Une souris intriguante":
                 if (direction)
