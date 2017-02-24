@@ -44,20 +44,20 @@ public class Grid : MonoBehaviour {
 		}
 	}
 
-	/*
-	 * DEBUG - Affichage de la grille de nodes et de leur etat
-	 */
-	void OnDrawGizmos()
+	public Node NodeFromWorldPoint(Vector3 worldPosition)
 	{
-		Gizmos.DrawWireCube (transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
+		// Initialisation des pourcentages representant la position sur la grille
+		float percentX = (worldPosition.x + gridWorldSize.x / 2) / gridWorldSize.x;
+		float percentY = (worldPosition.z + gridWorldSize.y / 2) / gridWorldSize.y;
+		// Stay into the boundaries
+		percentX = Mathf.Clamp01 (percentX);
+		percentY = Mathf.Clamp01 (percentY);
 
-		if(grid != null)
-		{
-			foreach(Node n in grid)
-			{
-				Gizmos.color = n.walkable ? Color.white : Color.red;
-				Gizmos.DrawCube (n.worldPosition, Vector3.one * (nodeDiameter - .1f));
-			}
-		}
+		// On obtient les positions du node
+		int x = Mathf.RoundToInt ((gridSizeX - 1) * percentX);
+		int y = Mathf.RoundToInt ((gridSizeY - 1) * percentY);
+
+		// On retourne le node placé sur la position
+		return grid [x, y];
 	}
 }
