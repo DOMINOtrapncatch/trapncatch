@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class LogoLoader : MonoBehaviour {
 
+	public int loadScene;
+
 	// Use this for initialization
 	void Start () {
         StartCoroutine("Countdown");
@@ -13,6 +15,6 @@ public class LogoLoader : MonoBehaviour {
     private IEnumerator Countdown()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(loadScene);
     }
 }
