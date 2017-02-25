@@ -366,10 +366,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 925487199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69cb83b658a2f57408fdfdf9dc4d2ca1, type: 3}
+  m_Script: {fileID: 11500000, guid: 731526e4f72726f40b707e12bb90aae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueStr: {fileID: 0}
+  dialogueLabel: DialogueText
+  dialogueTexts:
+  - '*MIAOUU*'
+  - Oh une souris!
+  - Je vais un peu m'amuser avec elle...
+  sceneId: 0
 --- !u!114 &925487202
 MonoBehaviour:
   m_ObjectHideFlags: 0

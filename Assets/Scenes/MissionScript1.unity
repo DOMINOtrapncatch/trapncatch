@@ -166,7 +166,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 695447837}
+      - m_Target: {fileID: 0}
         m_MethodName: Next
         m_Mode: 1
         m_Arguments:
@@ -513,10 +513,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 695447835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09730d666f31b8f47a12d3c56aa128d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 731526e4f72726f40b707e12bb90aae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Str: {fileID: 0}
+  dialogueLabel: DialogueText
+  dialogueTexts:
+  - Ah une souris,
+  - "j'esp\xE8re que celle-ci pourra me divertir!"
+  sceneId: 0
 --- !u!114 &695447838
 MonoBehaviour:
   m_ObjectHideFlags: 0
