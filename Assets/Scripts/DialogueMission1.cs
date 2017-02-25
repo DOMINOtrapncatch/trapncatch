@@ -20,13 +20,12 @@ public class DialogueMission1 : MonoBehaviour {
             dialogueTxt = "*MIAOUU*";
         if (click == 1)
             dialogueTxt = "Oh une souris!";
-        if (click == 1)
+        if (click == 2)
             dialogueTxt = "Je vais un peu m'amuser avec elle...";
     }
 
     public void Proceed()
     {
         click++;
-        click += 0;
     }
 }
