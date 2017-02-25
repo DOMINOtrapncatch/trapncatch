@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-public class DialogueMission1 : MonoBehaviour {
 
+public class DialogueMission1 : MonoBehaviour
+{
     public Text dialogueStr;
     string dialogueTxt;
     int click;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -16,6 +18,10 @@ public class DialogueMission1 : MonoBehaviour {
 	void Update ()
     {
         dialogueStr.text = dialogueTxt;
+
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+            Proceed();
+
         if (click == 0)
             dialogueTxt = "*MIAOUU*";
         if (click == 1)

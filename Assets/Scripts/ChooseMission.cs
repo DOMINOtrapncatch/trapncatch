@@ -50,7 +50,7 @@ public class ChooseMission : MonoBehaviour
     // Load the selected mission
     public void LaunchMission()
     {
-		SceneManager.LoadScene(selectedMission);
+		SceneManager.LoadScene(selectedMission + 5);
     }
 
     public void Back()
