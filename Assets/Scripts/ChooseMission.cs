@@ -31,7 +31,7 @@ public class ChooseMission : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Return))
             LaunchMission();
         else if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene(1);
+            Back();
     }
 
     // For the solo menu (1 == right button, -1 == left button)
@@ -51,6 +51,11 @@ public class ChooseMission : MonoBehaviour
     public void LaunchMission()
     {
 		SceneManager.LoadScene(selectedMission);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(1);
     }
 
     private AudioSource FindAudio(string name)

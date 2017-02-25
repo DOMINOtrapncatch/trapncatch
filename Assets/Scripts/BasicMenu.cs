@@ -5,6 +5,34 @@ using System.Collections;
 
 public class BasicMenu : MonoBehaviour
 {
+    public string[] names;
+    string[] labelNames;
+    string[] buttonNames;
+    int buttonHovered = 0;
+
+    void Start()
+    {
+        buttonNames = new string[names.Length];
+        labelNames = new string[names.Length];
+
+        for (int i = 0; i < buttonNames.Length; ++i)
+            buttonNames[i] = names[i] + "Button";
+        for (int i = 0; i < labelNames.Length; ++i)
+            labelNames[i] = names[i] + "Label";
+
+        HoverUpdate(0);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+            HoverUpdate(1);
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+            HoverUpdate(-1);
+        else if (Input.GetKeyDown(KeyCode.Return))
+            Launch();
+    }
+
     // Go from one scene to another scene specified by his id
     public void ChangeScene(int sceneId)
     {
@@ -31,5 +59,19 @@ public class BasicMenu : MonoBehaviour
         Text text = GameObject.Find(label).GetComponent<Text>();
         text.color = new Color(219F/255F, 211F/255F, 211F/255F, 1F);
         text.fontSize = 30;
+    }
+
+    private void HoverUpdate(int direction)
+    {
+        UnHover(labelNames[buttonHovered]);
+        buttonHovered = (buttonHovered + labelNames.Length + direction) % labelNames.Length;
+        Hover(labelNames[buttonHovered]);
+    }
+
+    private void Launch()
+    {
+        Button button = GameObject.Find(buttonNames[buttonHovered]).GetComponent<Button>();
+        if (button.interactable)
+            button.onClick.Invoke();
     }
 }
