@@ -15,7 +15,7 @@ L'équipe DØMINO© est composée d'Amandine NASSIRI, Marc VILLAIN,  Julien DA C
 | **1** | Soutenance 1 | 01/03/2017 |  |  |  |
 | **1.1** | Travail | 23/02/2017 |  |  |  |
 | **1.1.1** | Menu | 27/01/2017 |  |  |  |
-| 1.1.1.1 | Accueil | 27/01/2017 | Wonja | 100 % | 1 |
+| 1.1.1.1 | Accueil | 27/01/2017 | Wonja | 0 % | 1 |
 | 1.1.1.2 | Solo / Missions | 27/01/2017 | Julien | 0 % | 1 |
 | **1.1.2** | Graphisme | 23/02/2017 |  |  |  |
 | 1.1.2.1 | Chat #1 (« Normal ») | 03/02/2017 | Marc | 60 % | 1 |
