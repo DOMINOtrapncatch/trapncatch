@@ -21,7 +21,6 @@ public class DialogueMission1 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             Proceed();
-
         if (click == 0)
             dialogueTxt = "*MIAOUU*";
         if (click == 1)
