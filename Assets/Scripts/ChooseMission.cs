@@ -29,8 +29,8 @@ public class ChooseMission : MonoBehaviour
             SelectMission(-1);
         else if (Input.GetKeyDown(KeyCode.Return))
             LaunchMission();
-        else if (Input.GetKeyDown(KeyCode.Backspace))
-            SceneManager.LoadScene(0);
+        else if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene(1);
     }
 
     // For the solo menu (1 == right button, -1 == left button)

@@ -7,9 +7,9 @@ public class LogoLoader : MonoBehaviour {
 	public int loadScene;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         StartCoroutine("Countdown");
-	
 	}
 
     private IEnumerator Countdown()
