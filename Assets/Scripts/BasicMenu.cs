@@ -19,8 +19,6 @@ public class BasicMenu : MonoBehaviour
             buttonNames[i] = names[i] + "Button";
         for (int i = 0; i < labelNames.Length; ++i)
             labelNames[i] = names[i] + "Label";
-
-        HoverUpdate(0);
     }
 
     void Update()
@@ -36,7 +34,7 @@ public class BasicMenu : MonoBehaviour
     // Go from one scene to another scene specified by his id
     public void ChangeScene(int sceneId)
     {
-        SceneManager.LoadScene(sceneId);
+		AutoFade.LoadLevel (sceneId, .3f, .3f, Palette.DARK_PURPLE);
     }
 
     // Close the game
@@ -57,7 +55,7 @@ public class BasicMenu : MonoBehaviour
     public void UnHover(string label)
     {
         Text text = GameObject.Find(label).GetComponent<Text>();
-        text.color = new Color(219F/255F, 211F/255F, 211F/255F, 1F);
+		text.color = Palette.LIGHT_GRAY;
         text.fontSize = 30;
     }
 

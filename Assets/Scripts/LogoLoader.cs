@@ -9,12 +9,23 @@ public class LogoLoader : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        StartCoroutine("Countdown");
+		StartCoroutine("Countdown");
 	}
 
     private IEnumerator Countdown()
     {
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene(loadScene);
+        yield return new WaitForSeconds(4);
+		switch(loadScene)
+		{
+			case 4:
+				AutoFade.LoadLevel (loadScene, 2, 2, Color.white);
+				break;
+			case 1:
+				AutoFade.LoadLevel (loadScene, 2, 2, Palette.DARK_PURPLE);
+				break;
+			default:
+				AutoFade.LoadLevel (loadScene, 2, 2, Color.black);
+				break;
+		}
     }
 }

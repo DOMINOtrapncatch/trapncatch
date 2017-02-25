@@ -12,12 +12,12 @@ public class ChooseMission : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		missions.Add(new Mission(0, "Le chat de gouttière", FindAudio("BGM0"), RGB(60, 43, 77)));
-		missions.Add(new Mission(1, "L'initiation", FindAudio("BGM1"), RGB(191, 112, 27)));
-		missions.Add(new Mission(2, "Le chat de gouttière", FindAudio("BGM2"), RGB(60, 43, 77)));
+		missions.Add(new Mission(0, "Le chat de gouttière",  FindAudio("BGM0"), RGB(60 , 43 , 77)));
+		missions.Add(new Mission(1, "L'initiation",          FindAudio("BGM1"), RGB(191, 112, 27)));
+		missions.Add(new Mission(2, "Le chat de gouttière",  FindAudio("BGM2"), RGB(60 , 43 , 77)));
 		missions.Add(new Mission(3, "De nouveaux arrivants", FindAudio("BGM3"), RGB(191, 112, 27)));
-		missions.Add(new Mission(4, "To determine", FindAudio("BGM4"), RGB(60, 43, 77)));
-		missions.Add(new Mission(5, "To determine", FindAudio("BGM5"), RGB(191, 112, 27)));
+		missions.Add(new Mission(4, "To determine",          FindAudio("BGM4"), RGB(60 , 43 , 77)));
+		missions.Add(new Mission(5, "To determine",          FindAudio("BGM5"), RGB(191, 112, 27)));
         missions[selectedMission].music.Play();
     }
 	
@@ -50,12 +50,12 @@ public class ChooseMission : MonoBehaviour
     // Load the selected mission
     public void LaunchMission()
     {
-		SceneManager.LoadScene(selectedMission + 5);
+		AutoFade.LoadLevel (selectedMission + 5, .3f, .3f, Palette.DARK_PURPLE);
     }
 
     public void Back()
     {
-        SceneManager.LoadScene(1);
+		AutoFade.LoadLevel (1, .3f, .3f, Palette.DARK_PURPLE);
     }
 
     private AudioSource FindAudio(string name)
@@ -65,9 +65,9 @@ public class ChooseMission : MonoBehaviour
 
     private Color RGB(int r, int g, int b)
     {
-        float red = r / 255F;
+        float red   = r / 255F;
         float green = g / 255F;
-        float blue = b / 255F;
+        float blue  = b / 255F;
         return new Color(red, green, blue, 1F);
     }
 }
