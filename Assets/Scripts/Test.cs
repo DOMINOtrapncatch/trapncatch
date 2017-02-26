@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Test : MonoBehaviour
 {
-    Cat player;
+    BlackCat player;
     HUDManager myHUD;
     public Image healthBar;
     public Image manaBar;
@@ -18,7 +18,7 @@ public class Test : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        player = new Cat(0, 0, 100, 100);
+        player = new BlackCat(0, 0);
         myHUD = new HUDManager(player, healthBar, manaBar, spellBar1, spellBar2, spellBar3, spellBar4, objective);
         player.life = 100;
 	}

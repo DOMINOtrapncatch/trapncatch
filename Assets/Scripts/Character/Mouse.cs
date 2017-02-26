@@ -2,7 +2,7 @@
 
 public class Mouse : Character
 {
-	public Mouse(int x, int y, int maxLife, int defense) : base(x, y, maxLife, defense)
+	public Mouse(int x, int y) : base(x, y)
 	{
 		this.width  = .2;
 		this.height = .2;

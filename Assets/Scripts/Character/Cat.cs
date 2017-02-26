@@ -1,13 +1,19 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class Cat : Character
+abstract public class Cat : Character
 {
-	int magic;
+    public int mana;
 
-	public Cat(int x, int y, int maxLife, int defense) : base(x, y, maxLife, defense)
+	public Cat(int x, int y) : base(x, y)
 	{
 		this.width = 1;
 		this.height = 1;
 		this.depth = 2;
 	}
+
+    abstract public int Spell1();
+    abstract public int Spell2();
+    abstract public int Spell3();
+    abstract public int Spell4();
 }
