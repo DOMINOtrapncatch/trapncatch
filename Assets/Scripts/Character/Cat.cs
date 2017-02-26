@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-public class Cat : Character {
-
+public class Cat : Character
+{
 	int magic;
 
 	public Cat(int x, int y, int maxLife, int defense) : base(x, y, maxLife, defense)
@@ -10,5 +10,4 @@ public class Cat : Character {
 		this.height = 1;
 		this.depth = 2;
 	}
-
 }
