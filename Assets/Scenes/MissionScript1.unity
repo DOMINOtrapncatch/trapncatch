@@ -518,9 +518,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLabel: DialogueText
+  bgImage: Background
   dialogueTexts:
   - Ah une souris!
   - "J'esp\xE8re que celle-ci pourra me divertir!"
+  dialogueImages: []
   sceneId: 0
 --- !u!114 &695447838
 MonoBehaviour:

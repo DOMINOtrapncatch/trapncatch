@@ -6,8 +6,11 @@ using System.Collections;
 public class DialogueScript : MonoBehaviour
 {
     public string dialogueLabel;
+    public string bgImage;
     public string[] dialogueTexts;
+    public Sprite[] dialogueImages;
     public int sceneId;
+    Image dialogueImage;
     Text dialogueText;
     int click = 0;
 
@@ -15,6 +18,7 @@ public class DialogueScript : MonoBehaviour
 	void Start ()
     {
         dialogueText = GameObject.Find(dialogueLabel).GetComponent<Text>();
+        dialogueImage = GameObject.Find(bgImage).GetComponent<Image>();
         Proceed();
 	}
 	
@@ -28,7 +32,11 @@ public class DialogueScript : MonoBehaviour
     public void Proceed()
     {
         if (click < dialogueTexts.Length)
+        {
             dialogueText.text = dialogueTexts[click];
+            if (click < dialogueImages.Length)
+                dialogueImage.sprite = dialogueImages[click];
+        }
         else
             SceneManager.LoadScene(sceneId);
         ++click;
