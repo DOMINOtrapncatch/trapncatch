@@ -9,12 +9,6 @@ public abstract class Spell : MonoBehaviour {
     public Cat cat;
     public KeyCode input;
 
-    public Spell(Cat cat, KeyCode input)
-    {
-        this.cat = cat;
-        this.input = input;
-    }
-
     //delai de recovery
     //coup en mana
     //check

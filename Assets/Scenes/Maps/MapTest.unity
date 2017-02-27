@@ -4821,6 +4821,7 @@ GameObject:
   - 114: {fileID: 2027112276}
   - 114: {fileID: 2027112275}
   - 114: {fileID: 2027112280}
+  - 114: {fileID: 2027112282}
   m_Layer: 0
   m_Name: '[CAT] Normal'
   m_TagString: Untagged
@@ -4952,7 +4953,8 @@ MonoBehaviour:
   mana: 100
   maxMana: 100
   icon: {fileID: 0}
-  spells: []
+  spells:
+  - {fileID: 2027112282}
   nearEnemy: []
 --- !u!135 &2027112281
 SphereCollider:
@@ -4966,6 +4968,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.4
   m_Center: {x: 0, y: 1.27, z: 3.26}
+--- !u!114 &2027112282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2027112273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4bebf84725e8544a23ddf8601bc740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana_cost: 40
+  recovery_time: 70
+  recovery_max: 70
+  cat: {fileID: 0}
+  input: 0
 --- !u!1 &2086889222
 GameObject:
   m_ObjectHideFlags: 0
