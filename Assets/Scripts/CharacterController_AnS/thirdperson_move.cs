@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class thirdperson_move : MonoBehaviour {
-    //ON OUBLIT PAS LE RIGIDBODY SVP freez rotation x,y,z
+    //ON OUBLIT PAS LE RIGIDBODY SVP freez rotation x,y,z + isgravity=false
     //add collider
+    //isground = everything
 
 
     //add class for jump
@@ -30,6 +31,7 @@ public class thirdperson_move : MonoBehaviour {
         public string forward_axis = "Vertical";
         public string turn_axis = "Horizontal";
         public string jump_axis = "Jump";
+        
     }
 
     public MoveSettings movesettings = new MoveSettings();
@@ -108,12 +110,13 @@ public class thirdperson_move : MonoBehaviour {
         if (Mathf.Abs(forwardinput) > inputsettings.inputdelay)
         {
             //on fait bouger le charac
-            //rigbody.velocity = transform.forward * forwardinput * movesettings.forwardvelo;
+            rigbody.velocity = transform.forward * forwardinput * movesettings.forwardvelo;
             /*
                 forwardinput peut etre soit >0 soit <0, c'est ce qui gere si on avance ou on recule            
             */
 
             velocity.z = movesettings.forwardvelo * forwardinput;
+            //Debug.LogError(velocity.z);
         }
         else
         {

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Test : MonoBehaviour
 {
-    BlackCat player;
+    Cat player;
     HUDManager myHUD;
     public Image healthBar;
     public Image manaBar;
@@ -20,8 +20,7 @@ public class Test : MonoBehaviour
     {
         player = new BlackCat(0, 0, 0);
         myHUD = new HUDManager(player, healthBar, manaBar, spellBar1, spellBar2, spellBar3, spellBar4, objective);
-        player.life = 100;
-        myHUD.SetObjective("Approchez vous de la souris.");
+        myHUD.SetObjective("Bonjour !");
     }
 	
 	// Update is called once per frame

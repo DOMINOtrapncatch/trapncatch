@@ -25,6 +25,9 @@ public class HUDManager
         this.spellsUI.Add(spell1);
         this.spellsUI.Add(spell1);
         this.spellsUI.Add(spell1);
+
+        SetHealth();
+        SetMana();
     }
 
     public void UpdateSpell()
@@ -47,6 +50,6 @@ public class HUDManager
 
     public void SetMana()
     {
-        statusUI[0].fillAmount = player.mana / player.maxMana;
+        statusUI[1].fillAmount = player.mana / player.maxMana;
     }
 }
