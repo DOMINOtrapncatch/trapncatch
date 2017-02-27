@@ -327,6 +327,70 @@ ModelImporter:
     4300122: Cube_007
     4300124: Icosphere_001
     4300126: Cone_011
+    6400000: Cone_000
+    6400002: Cone_001
+    6400004: Cone_002
+    6400006: Cone_006
+    6400008: Cone_007
+    6400010: Cone_011
+    6400012: Cube_003
+    6400014: Cube_004
+    6400016: Cube_007
+    6400018: Cube_331
+    6400020: Cylinder
+    6400022: Cylinder_001
+    6400024: Cylinder_003
+    6400026: house_000
+    6400028: house_002
+    6400030: house_003
+    6400032: house_004
+    6400034: house_005
+    6400036: house_006
+    6400038: Icosphere
+    6400040: Icosphere_000
+    6400042: Icosphere_001
+    6400044: Icosphere_002
+    6400046: Icosphere_003
+    6400048: Icosphere_004
+    6400050: Icosphere_005
+    6400052: Icosphere_006
+    6400054: Icosphere_007
+    6400056: Icosphere_009
+    6400058: Icosphere_010
+    6400060: Icosphere_011
+    6400062: Icosphere_012
+    6400064: Icosphere_013
+    6400066: Icosphere_014
+    6400068: Icosphere_015
+    6400070: Icosphere_016
+    6400072: Icosphere_017
+    6400074: Icosphere_018
+    6400076: Icosphere_019
+    6400078: Icosphere_020
+    6400080: Icosphere_021
+    6400082: Icosphere_022
+    6400084: Icosphere_023
+    6400086: Icosphere_024
+    6400088: Icosphere_025
+    6400090: Icosphere_026
+    6400092: Icosphere_027
+    6400094: Icosphere_028
+    6400096: Icosphere_029
+    6400098: Icosphere_030
+    6400100: Icosphere_031
+    6400102: Icosphere_032
+    6400104: Icosphere_033
+    6400106: Icosphere_034
+    6400108: Icosphere_035
+    6400110: Icosphere_036
+    6400112: Icosphere_037
+    6400114: Icosphere_038
+    6400116: Icosphere_039
+    6400118: Icosphere_040
+    6400120: Icosphere_041
+    6400122: Icosphere_042
+    6400124: Icosphere_043
+    6400126: Plane
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -355,7 +419,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
