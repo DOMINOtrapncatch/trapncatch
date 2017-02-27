@@ -7,8 +7,6 @@ public class AverageCat : Cat
 {
 	void Start()
 	{
-		spells.Add (new BasicSpell (this, KeyCode.E));
-
         /*maxLife = 100;
         defense = 75;
         attack = 75;
