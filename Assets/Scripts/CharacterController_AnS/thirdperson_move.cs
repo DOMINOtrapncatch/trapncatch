@@ -15,7 +15,7 @@ public class thirdperson_move : MonoBehaviour {
         public float forwardvelo = 12;
         //public float forwardvelo = Character
         public float rotatevelo = 100;
-        public float jumpvelo = 25;
+        public float jumpvelo = 13;
         public float dist_to_ground = 0.1f; //if we're in the air or not
         public LayerMask ground;
     }
