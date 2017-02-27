@@ -264,7 +264,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &114734144
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,12 +451,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 130365135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.55, y: 1.06, z: 1.98}
+  m_LocalPosition: {x: -0.55, y: 0.52, z: 1.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &179567178
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177a381529292144c82bd1d3b268c57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2027112280}
   healthBar: {fileID: 351358027}
   manaBar: {fileID: 1942715606}
   spellBar1: {fileID: 375082691}
@@ -717,7 +718,7 @@ RectTransform:
   - {fileID: 1244118664}
   - {fileID: 1654929523}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -801,7 +802,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &279074121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,8 +1067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b4b1d53c02e40579463a17cdd8373f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeker: {fileID: 0}
-  target: {fileID: 0}
+  seeker: {fileID: 130365139}
+  target: {fileID: 252968602}
 --- !u!114 &409205234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,7 +1097,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
 --- !u!1 &435527307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,7 +1610,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &600805614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,7 +3369,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 29.325, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1467103860
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,7 +3852,7 @@ Transform:
   - {fileID: 624564078}
   - {fileID: 571594407}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1645975373
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,85 +4019,6 @@ Transform:
   - {fileID: 279074122}
   m_Father: {fileID: 694613293}
   m_RootOrder: 0
---- !u!1 &1690873525
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1690873526}
-  - 33: {fileID: 1690873529}
-  - 135: {fileID: 1690873528}
-  - 23: {fileID: 1690873527}
-  m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1690873526
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690873525}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41, y: 1.33, z: 5.3}
-  m_LocalScale: {x: 3, y: 1, z: 3}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 2027112274}
-  m_RootOrder: 2
---- !u!23 &1690873527
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690873525}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!135 &1690873528
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690873525}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1690873529
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1690873525}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1697670797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4894,9 +4816,11 @@ GameObject:
   - 4: {fileID: 2027112274}
   - 95: {fileID: 2027112279}
   - 65: {fileID: 2027112278}
+  - 135: {fileID: 2027112281}
   - 54: {fileID: 2027112277}
   - 114: {fileID: 2027112276}
   - 114: {fileID: 2027112275}
+  - 114: {fileID: 2027112280}
   m_Layer: 0
   m_Name: '[CAT] Normal'
   m_TagString: Untagged
@@ -4917,9 +4841,8 @@ Transform:
   m_Children:
   - {fileID: 2114024741}
   - {fileID: 1548246023}
-  - {fileID: 1690873526}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &2027112275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4943,6 +4866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movesettings:
+    chara_cat: {fileID: 0}
     forwardvelo: 12
     rotatevelo: 100
     jumpvelo: 13
@@ -5002,6 +4926,46 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2027112280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2027112273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bda5fe86a6648e24cb1b683315f3059e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  width: 1
+  height: 1
+  depth: 2
+  life: 100
+  maxLife: 100
+  attack: 20
+  speed: 80
+  defense: 20
+  velo: 20
+  mana: 100
+  maxMana: 100
+  icon: {fileID: 0}
+  spells: []
+  nearEnemy: []
+--- !u!135 &2027112281
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2027112273}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Center: {x: 0, y: 1.27, z: 3.26}
 --- !u!1 &2086889222
 GameObject:
   m_ObjectHideFlags: 0

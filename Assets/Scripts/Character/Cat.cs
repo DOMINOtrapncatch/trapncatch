@@ -5,19 +5,15 @@ using System.Net;
 
 abstract public class Cat : Character
 {
-    public int mana,maxMana;
+    public float mana, maxMana;
     public Sprite icon;
-    public static bool light; //true = lumiere && false = pas de lumiere
-	public List<Spell> spell_list;
-
+    //public static bool light; //true = lumiere && false = pas de lumiere
+	public List<Spell> spells;
 	public List<GameObject> nearEnemy = new List<GameObject>();
-    
-	protected void Init(int x, int y, int z)
+
+	void Update()
 	{
-		base.Init (x, y, z);
-		this.width = 1;
-		this.height = 1;
-		this.depth = 2;
+		CheckSpells ();
 	}
 
 	void OnTriggerEnter(Collider col)
@@ -31,9 +27,9 @@ abstract public class Cat : Character
 			nearEnemy.Remove(col.gameObject);
 	}
 
-	public void Check()
+	public void CheckSpells()
 	{
-		foreach(Spell spell in spell_list)
+		foreach(Spell spell in spells)
 		{
 			if(spell.CanUse ())
 			{

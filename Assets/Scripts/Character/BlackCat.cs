@@ -4,10 +4,8 @@ using System;
 
 public class BlackCat : Cat
 {
-    public BlackCat(int x, int y, int z)
+	void Start()
     {
-		base.Init (x, y, z);
-
         /*maxLife = 100;
         life = base.maxLife;
         defense = 55;

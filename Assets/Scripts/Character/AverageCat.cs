@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 
 public class AverageCat : Cat
 {
-	void Init(int x, int y, int z)
-    {
-		base.Init(x, y, z);
+	void Start()
+	{
+		spells.Add (new BasicSpell (this, KeyCode.E));
 
         /*maxLife = 100;
         defense = 75;
