@@ -1681,6 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177a381529292144c82bd1d3b268c57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   healthBar: {fileID: 683654307}
   manaBar: {fileID: 1997506709}
   spellBar1: {fileID: 788583208}
@@ -2366,6 +2367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movesettings:
+    chara_cat: {fileID: 0}
     forwardvelo: 12
     rotatevelo: 100
     jumpvelo: 13
