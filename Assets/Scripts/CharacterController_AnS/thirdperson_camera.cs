@@ -4,7 +4,7 @@ using System.Collections;
 public class thirdperson_camera : MonoBehaviour {
 
     public Transform player;
-    public float lookSmooth = 0.09f; //how fast we look at out target
+    public float lookSmooth = 0.02f; //how fast we look at out target
     public Vector3 offSetFromTarget = new Vector3(0, 2, -4); // distance camera -> player //ou try 0,-6,-8
     public float camrot_x = 10; //rotation de la camera sur l'axe x
 
