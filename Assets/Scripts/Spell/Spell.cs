@@ -8,8 +8,8 @@ public abstract class Spell : MonoBehaviour {
     public int mana_cost;
     public int recovery_max;
     public Cat cat;
-    public Input input;
-    public Spell(Cat cat, Input input)
+    public KeyCode input;
+    public Spell(Cat cat, KeyCode input)
     {
         this.cat = cat;
         this.input = input;

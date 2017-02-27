@@ -3,8 +3,8 @@ using System.Collections;
 using UnityEditor.VersionControl;
 using System.Runtime.InteropServices;
 
-public class AverageCat : Cat {
-
+public class AverageCat : Cat
+{
     public AverageCat(int x, int y, int z) : base(x, y,z)
     {
         base.maxLife = 100;

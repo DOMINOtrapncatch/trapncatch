@@ -7,7 +7,7 @@ abstract public class Cat : Character
 {
     public int mana,maxMana;
     public Sprite icon;
-    public static bool light;//true = lumiere && false = pas de lumiere
+    public static bool light; //true = lumiere && false = pas de lumiere
 	public List<Spell> spell_list;
 
 	public List<GameObject> nearEnemy = new List<GameObject>();
