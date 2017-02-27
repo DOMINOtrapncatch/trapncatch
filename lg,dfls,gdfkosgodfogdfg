@@ -1,0 +1,115 @@
+[33mcommit 409a2d84b7f2d4792e0402a63c9f36f5583122c6[m
+Author: Chiwps <julien.da-cunha@epita.fr>
+Date:   Fri Feb 24 14:45:33 2017 +0100
+
+    [Menu] Fixed left and right button
+
+[33mcommit 38edc8715d988d7b631d055bc857f911b3d285fb[m
+Author: Skido <marc.villain@epita.fr>
+Date:   Fri Feb 24 13:40:48 2017 +0100
+
+    [TWEAK] Amelioration chargement map
+    Amelioration du code pour pouvoir ajouter des map et modifier les noms plus simplement ;)
+
+[33mcommit e7647ab347da1d186e58e6bc5c6c942106b2f47f[m
+Author: Chiwps <julien.da-cunha@epita.fr>
+Date:   Fri Feb 24 13:20:17 2017 +0100
+
+    [Menu] by Julien
+    Séparation des scripts;
+    Ajout de la possibilité de se déplacer au clavier.
+
+[33mcommit 043f9ee8ce438f95839f54de7d8b35f9894ca686[m
+Author: Chiwps <julien.da-cunha@epita.fr>
+Date:   Wed Feb 1 19:01:23 2017 +0100
+
+    [MENU] DA CUNHA JULIEN
+    Optimisation de la fonction de changement de scène (SceneManager beaucoup plus opti niveau vitesse/cpu etc)
+    Ajout de la fonction Quit() dans le script LoadOnClick.cs pour quitter le jeu lors de l'appui sur un bouton.
+    <<!!!!!------ Ne pas toucher, c'est normal si ce boutton ne fonctionne pas quand on lance le projet à travers unity,
+    il faut le compiler avant ------!!!!!>>
+    Changement de certains nom de GameObjects pour être plus conventionnel.
+    Changement du système de choix de missons solo
+
+[33mcommit c9b4f0f1fe15b8cf802d0fef7fe2dd4f62bd85a2[m
+Author: Skido <marc.villain@epita.fr>
+Date:   Wed Feb 1 13:43:47 2017 +0100
+
+    [RESET] Trying to fix issue
+
+[33mcommit 4823160a5fbe9041c6e4aad9785d949acfde4a7f[m
+Author: Wonj4 <wonja.na-ngille@epita.fr>
+Date:   Wed Feb 1 12:04:30 2017 +0100
+
+    j'ai ajouter menu #wonja
+
+[33mcommit 8c28c6e784ca7ea268261dc5cbbe9b0942118c50[m
+Merge: 2da6e9c 9481d2b
+Author: Wonj4 <wonja.na-ngille@epita.fr>
+Date:   Wed Feb 1 10:02:20 2017 +0100
+
+    Merge branch 'master' of https://github.com/DOMINOtrapncatch/trapncatch
+
+[33mcommit 9481d2bb2ed620503c01065b62288be31d1856d3[m
+Author: Skido <marc.villain@epita.fr>
+Date:   Wed Feb 1 10:00:05 2017 +0100
+
+    [RESET] Commin' back to great stuff.
+
+[33mcommit 2da6e9c26d49f335c63dfb77ee89c0bbcafb52aa[m
+Author: Wonj4 <wonja.na-ngille@epita.fr>
+Date:   Tue Jan 31 22:12:04 2017 +0100
+
+    Update README.md
+
+[33mcommit bc4e8138c44d6d4f0e4a562a5200996ac7439a5b[m
+Author: Chiwps <julien.da-cunha@epita.fr>
+Date:   Fri Jan 27 17:00:07 2017 +0100
+
+    MàJ de la progression des scripts
+
+[33mcommit b6108b861de0f7e1943341d659392ec36d292ab1[m
+Author: Marc Villain <marc.villain@epita.fr>
+Date:   Tue Jan 24 19:17:35 2017 +0100
+
+    [INIT] Re-modification du fichier README.md
+    
+    Manquais des retour a la ligne alors GitHub affichait pas correctement
+    le contenu, une nouvelle fois…. Mais cette fois c’est bon normalement
+    !! ^^
+
+[33mcommit fa4dd963f9819f1e2b366709d3a6914d7907c4d5[m
+Author: Marc Villain <marc.villain@epita.fr>
+Date:   Tue Jan 24 19:11:46 2017 +0100
+
+    [INIT] Modification du fichier README.md
+    
+    Manquais des espaces alors GitHub affichait pas correctement le contenu
+    --‘
+
+[33mcommit 4fad0c2231e3adc20375236ead541e9d34676616[m
+Author: Marc Villain <marc.villain@epita.fr>
+Date:   Fri Jan 20 19:06:46 2017 +0100
+
+    [INIT] Initialisation du fichier README.md
+    
+    Ce fichier est voué à être modifié et complété au fu et à mesure que le
+    projet avance ! Donc n’hésitez pas ;)
+
+[33mcommit 3314393f99f369fcfa1efcdb9ac95388f7b45fbc[m
+Author: Marc Villain <marc.villain@epita.fr>
+Date:   Fri Jan 20 17:11:08 2017 +0100
+
+    [INIT] New Unity base project (v5.41f1)
+
+[33mcommit 457ebd786760d162a11cf5aae387a95153ca02a4[m
+Author: Marc Villain <marc.villain@epita.fr>
+Date:   Fri Jan 20 17:05:27 2017 +0100
+
+    [INIT] Initialisation of .gitignore
+
+[33mcommit af68628a6d4c0542af21b2904e9e4fab6e0a6ad7[m
+Author: DOMINOtrapncatch <trapncatch@gmail.com>
+Date:   Fri Jan 20 16:58:29 2017 +0100
+
+    Initial commit
