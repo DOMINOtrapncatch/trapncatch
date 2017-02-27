@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-abstract public class Character
+abstract public class Character : MonoBehaviour
 {
     public int x, y, z;
     public double width, height, depth;
@@ -12,7 +12,7 @@ abstract public class Character
 
     //sourisvschat et chatvssouris
     //public Sprite icon;
-    public Character(int x, int y, int z)
+	protected void Init(int x, int y, int z)
     {
         this.x = x;
         this.y = y;

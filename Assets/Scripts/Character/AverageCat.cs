@@ -5,12 +5,14 @@ using System.Runtime.InteropServices;
 
 public class AverageCat : Cat
 {
-    public AverageCat(int x, int y, int z) : base(x, y,z)
+	void Init(int x, int y, int z)
     {
-        base.maxLife = 100;
-        base.defense = 75;
-        base.attack = 75;
-        base.speed = 75;
-        base.mana = 60;
+		base.Init(x, y, z);
+
+        /*maxLife = 100;
+        defense = 75;
+        attack = 75;
+        speed = 75;
+        mana = 60;*/
     }
 }

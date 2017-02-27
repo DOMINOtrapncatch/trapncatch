@@ -4,14 +4,16 @@ using System;
 
 public class BlackCat : Cat
 {
-    public BlackCat(int x, int y, int z) : base(x, y, z)
+    public BlackCat(int x, int y, int z)
     {
-        base.maxLife = 100;
-        base.life = base.maxLife;
-        base.defense = 55;
-        base.attack = 65;//t'avais mis 60 mais c'est 65 >_<
-        base.speed = 100;
-        base.maxMana = 100;
-        base.mana = base.maxMana;
+		base.Init (x, y, z);
+
+        /*maxLife = 100;
+        life = base.maxLife;
+        defense = 55;
+        attack = 65;
+        speed = 100;
+        maxMana = 100;
+        mana = maxMana;*/
     }
 }

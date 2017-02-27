@@ -12,8 +12,9 @@ abstract public class Cat : Character
 
 	public List<GameObject> nearEnemy = new List<GameObject>();
     
-	public Cat(int x, int y,int z) : base(x, y,z)
+	protected void Init(int x, int y, int z)
 	{
+		base.Init (x, y, z);
 		this.width = 1;
 		this.height = 1;
 		this.depth = 2;
