@@ -30,6 +30,7 @@ public class thirdperson_move : MonoBehaviour {
         public string forward_axis = "Vertical";
         public string turn_axis = "Horizontal";
         public string jump_axis = "Jump";
+        
     }
 
     public MoveSettings movesettings = new MoveSettings();
