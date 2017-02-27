@@ -1067,8 +1067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b4b1d53c02e40579463a17cdd8373f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeker: {fileID: 130365139}
-  target: {fileID: 252968602}
+  seeker: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &409205234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,9 +1082,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unwalkableMask:
     serializedVersion: 2
-    m_Bits: 256
-  gridWorldSize: {x: 30, y: 30}
-  nodeRadius: 0.5
+    m_Bits: 0
+  gridWorldSize: {x: 0, y: 0}
+  nodeRadius: 0
 --- !u!4 &409205235
 Transform:
   m_ObjectHideFlags: 0
@@ -4982,8 +4982,8 @@ MonoBehaviour:
   mana_cost: 40
   recovery_time: 70
   recovery_max: 70
-  cat: {fileID: 0}
-  input: 0
+  cat: {fileID: 2027112280}
+  input: 101
 --- !u!1 &2086889222
 GameObject:
   m_ObjectHideFlags: 0
