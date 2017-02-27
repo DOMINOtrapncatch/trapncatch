@@ -1,0 +1,1455 @@
+fileFormatVersion: 2
+guid: bee2abc80dc2e476d881493851ebef35
+timeCreated: 1488192680
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cat
+    100004: Cat_Armature
+    100006: ClaviculeArriere_L
+    100008: ClaviculeArriere_R
+    100010: ClaviculeAvant_L
+    100012: ClaviculeAvant_R
+    100014: Colonne
+    100016: Cou
+    100018: CtrlGenouArriere_L
+    100020: CtrlGenouArriere_R
+    100022: CtrlGenouAvant_L
+    100024: CtrlGenouAvant_R
+    100026: CtrlMvtPiedArriere_L
+    100028: CtrlMvtPiedArriere_R
+    100030: CtrlMvtPiedAvant_L
+    100032: CtrlMvtPiedAvant_R
+    100034: CtrlPiedArriere_L
+    100036: CtrlPiedArriere_R
+    100038: CtrlPiedAvant_L
+    100040: CtrlPiedAvant_R
+    100042: CuisseArriere_L
+    100044: CuisseArriere_R
+    100046: CuisseAvant_L
+    100048: CuisseAvant_R
+    100050: Dos
+    100052: Ear_L
+    100054: Ear_R
+    100056: FemurArriere_L
+    100058: FemurArriere_R
+    100060: FemurAvant_L
+    100062: FemurAvant_R
+    100064: Fessier
+    100066: MvtPiedArriere_L
+    100068: MvtPiedArriere_R
+    100070: MvtPiedAvant_L
+    100072: MvtPiedAvant_R
+    100074: MvtTalonArriere_L
+    100076: MvtTalonArriere_R
+    100078: MvtTalonAvant_L
+    100080: MvtTalonAvant_R
+    100082: PiedArriere_L
+    100084: PiedArriere_R
+    100086: PiedAvant_L
+    100088: PiedAvant_R
+    100090: PiedAvantIK_L
+    100092: PiedAvantIK_R
+    100094: Queue_001
+    100096: Queue_002
+    100098: Queue_003
+    100100: Queue_004
+    100102: Queue_005
+    100104: Queue_006
+    100106: Queue_007
+    100108: T_te
+    100110: TalonArriere_L
+    100112: TalonArriere_R
+    100114: TalonArriereIK_L
+    100116: TalonArriereIK_R
+    100118: TalonAvant_L
+    100120: TalonAvant_R
+    400000: //RootNode
+    400002: Cat
+    400004: Cat_Armature
+    400006: ClaviculeArriere_L
+    400008: ClaviculeArriere_R
+    400010: ClaviculeAvant_L
+    400012: ClaviculeAvant_R
+    400014: Colonne
+    400016: Cou
+    400018: CtrlGenouArriere_L
+    400020: CtrlGenouArriere_R
+    400022: CtrlGenouAvant_L
+    400024: CtrlGenouAvant_R
+    400026: CtrlMvtPiedArriere_L
+    400028: CtrlMvtPiedArriere_R
+    400030: CtrlMvtPiedAvant_L
+    400032: CtrlMvtPiedAvant_R
+    400034: CtrlPiedArriere_L
+    400036: CtrlPiedArriere_R
+    400038: CtrlPiedAvant_L
+    400040: CtrlPiedAvant_R
+    400042: CuisseArriere_L
+    400044: CuisseArriere_R
+    400046: CuisseAvant_L
+    400048: CuisseAvant_R
+    400050: Dos
+    400052: Ear_L
+    400054: Ear_R
+    400056: FemurArriere_L
+    400058: FemurArriere_R
+    400060: FemurAvant_L
+    400062: FemurAvant_R
+    400064: Fessier
+    400066: MvtPiedArriere_L
+    400068: MvtPiedArriere_R
+    400070: MvtPiedAvant_L
+    400072: MvtPiedAvant_R
+    400074: MvtTalonArriere_L
+    400076: MvtTalonArriere_R
+    400078: MvtTalonAvant_L
+    400080: MvtTalonAvant_R
+    400082: PiedArriere_L
+    400084: PiedArriere_R
+    400086: PiedAvant_L
+    400088: PiedAvant_R
+    400090: PiedAvantIK_L
+    400092: PiedAvantIK_R
+    400094: Queue_001
+    400096: Queue_002
+    400098: Queue_003
+    400100: Queue_004
+    400102: Queue_005
+    400104: Queue_006
+    400106: Queue_007
+    400108: T_te
+    400110: TalonArriere_L
+    400112: TalonArriere_R
+    400114: TalonArriereIK_L
+    400116: TalonArriereIK_R
+    400118: TalonAvant_L
+    400120: TalonAvant_R
+    4300000: Cat
+    7400000: Default Take
+    7400002: Idle
+    7400004: Walk
+    7400006: Run
+    7400008: Jump
+    7400010: Catch
+    9500000: //RootNode
+    13700000: Cat
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Default Take' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'ClaviculeArriere_L' has translation animation
+      that will be discarded.\n\t'FemurAvant_L' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'FemurAvant_R' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'ClaviculeArriere_R'
+      has translation animation that will be discarded.\n\nClip 'Cat_ArmatureAction'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'ClaviculeArriere_L'
+      has translation animation that will be discarded.\n\t'Colonne' has scale animation
+      that will be discarded.\n\t'Ear_R' has translation animation that will be discarded.\n\t'Ear_L'
+      has translation animation that will be discarded.\n\t'FemurAvant_L' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'FemurAvant_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ClaviculeArriere_R'
+      has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Cat_ArmatureAction
+      firstFrame: 16
+      lastFrame: 82
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 0
+      - path: Cat_Armature
+        weight: 1
+      - path: Cat_Armature/CtrlPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlGenouArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlMvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L/TalonArriereIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlGenouArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlMvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R/TalonArriereIK_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlGenouAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlMvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L/PiedAvantIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlGenouAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlMvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R/PiedAvantIK_R
+        weight: 0
+      - path: Cat_Armature/Fessier
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L/PiedArriere_L
+        weight: 0
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R/PiedArriere_R
+        weight: 0
+      - path: Cat_Armature/Fessier/Colonne
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L/PiedAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R/PiedAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Queue_001
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006/Queue_007
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Cat_ArmatureAction
+      firstFrame: 150
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 0
+      - path: Cat_Armature
+        weight: 1
+      - path: Cat_Armature/CtrlPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlGenouArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlMvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L/TalonArriereIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlGenouArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlMvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R/TalonArriereIK_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlGenouAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlMvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L/PiedAvantIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlGenouAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlMvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R/PiedAvantIK_R
+        weight: 0
+      - path: Cat_Armature/Fessier
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L/PiedArriere_L
+        weight: 0
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R/PiedArriere_R
+        weight: 0
+      - path: Cat_Armature/Fessier/Colonne
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L/PiedAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R/PiedAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Queue_001
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006/Queue_007
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Cat_ArmatureAction
+      firstFrame: 250
+      lastFrame: 262
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 0
+      - path: Cat_Armature
+        weight: 1
+      - path: Cat_Armature/CtrlPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlGenouArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlMvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L/TalonArriereIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlGenouArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlMvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R/TalonArriereIK_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlGenouAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlMvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L/PiedAvantIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlGenouAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlMvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R/PiedAvantIK_R
+        weight: 0
+      - path: Cat_Armature/Fessier
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L/PiedArriere_L
+        weight: 0
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R/PiedArriere_R
+        weight: 0
+      - path: Cat_Armature/Fessier/Colonne
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L/PiedAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R/PiedAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Queue_001
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006/Queue_007
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Cat_ArmatureAction
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 0
+      - path: Cat_Armature
+        weight: 1
+      - path: Cat_Armature/CtrlPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlGenouArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlMvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L/TalonArriereIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlGenouArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlMvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R/TalonArriereIK_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlGenouAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlMvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L/PiedAvantIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlGenouAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlMvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R/PiedAvantIK_R
+        weight: 0
+      - path: Cat_Armature/Fessier
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L/PiedArriere_L
+        weight: 0
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R/PiedArriere_R
+        weight: 0
+      - path: Cat_Armature/Fessier/Colonne
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L/PiedAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R/PiedAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Queue_001
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006/Queue_007
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Catch
+      takeName: Cat_ArmatureAction
+      firstFrame: 300
+      lastFrame: 316
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 0
+      - path: Cat_Armature
+        weight: 1
+      - path: Cat_Armature/CtrlPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlGenouArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/CtrlMvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_L/MvtTalonArriere_L/MvtPiedArriere_L/TalonArriereIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlGenouArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/CtrlMvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedArriere_R/MvtTalonArriere_R/MvtPiedArriere_R/TalonArriereIK_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlGenouAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/CtrlMvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_L/MvtTalonAvant_L/MvtPiedAvant_L/PiedAvantIK_L
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlGenouAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/CtrlMvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R
+        weight: 0
+      - path: Cat_Armature/CtrlPiedAvant_R/MvtTalonAvant_R/MvtPiedAvant_R/PiedAvantIK_R
+        weight: 0
+      - path: Cat_Armature/Fessier
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_L/CuisseArriere_L/FemurArriere_L/TalonArriere_L/PiedArriere_L
+        weight: 0
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R
+        weight: 1
+      - path: Cat_Armature/Fessier/ClaviculeArriere_R/CuisseArriere_R/FemurArriere_R/TalonArriere_R/PiedArriere_R
+        weight: 0
+      - path: Cat_Armature/Fessier/Colonne
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_L/CuisseAvant_L/FemurAvant_L/TalonAvant_L/PiedAvant_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/ClaviculeAvant_R/CuisseAvant_R/FemurAvant_R/TalonAvant_R/PiedAvant_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_L
+        weight: 1
+      - path: Cat_Armature/Fessier/Colonne/Dos/Cou/T_te/Ear_R
+        weight: 1
+      - path: Cat_Armature/Fessier/Queue_001
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006
+        weight: 0
+      - path: Cat_Armature/Fessier/Queue_001/Queue_002/Queue_003/Queue_004/Queue_005/Queue_006/Queue_007
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Fessier
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ClaviculeArriere_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ClaviculeArriere_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CuisseArriere_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CuisseArriere_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: FemurArriere_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: FemurArriere_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Colonne
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dos
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Cou
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: T_te
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ClaviculeAvant_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ClaviculeAvant_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CuisseAvant_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CuisseAvant_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TalonAvant_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TalonAvant_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PiedAvant_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PiedAvant_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TalonArriere_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TalonArriere_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ear_L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ear_R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: '[CAT] Normal(Clone)'
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Cat
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Cat_Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Fessier
+      position: {x: 0.0038539935, y: 0.09817803, z: 1.2857927}
+      rotation: {x: 0.41066864, y: 0.44407415, z: -0.5479757, w: 0.57781667}
+      scale: {x: 0.99999994, y: 1, z: 0.9999987}
+      transformModified: 1
+    - name: ClaviculeArriere_L
+      position: {x: -0.33174562, y: -0.16213506, z: 0.18508436}
+      rotation: {x: -0.010575143, y: 0.26263306, z: -0.9347788, w: -0.2389576}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CuisseArriere_L
+      position: {x: -0.78602886, y: -0.2626438, z: -0.12614207}
+      rotation: {x: 0.91221386, y: 0.24442963, z: 0.3084282, w: -0.11398324}
+      scale: {x: 0.9999997, y: 1, z: 1}
+      transformModified: 1
+    - name: FemurArriere_L
+      position: {x: -0.94922554, y: 0.00000008195639, z: 0.000000028871}
+      rotation: {x: 0.5269383, y: -0.04537882, z: 0.8316352, w: -0.16929193}
+      scale: {x: 0.9999998, y: 1, z: 1}
+      transformModified: 1
+    - name: TalonArriere_L
+      position: {x: -0.61634743, y: 0.00000008940697, z: -0.00000004656613}
+      rotation: {x: -0.004306742, y: 0.39162138, z: 0.022587005, w: 0.9198391}
+      scale: {x: 1, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: PiedArriere_L
+      position: {x: -0.17430855, y: 0.000000008432835, z: -0.000000024292603}
+      rotation: {x: 0.034266915, y: 0.28321832, z: -0.011701111, w: 0.95837164}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Colonne
+      position: {x: -0.6047114, y: 0.000000037020612, z: 0.00000005958884}
+      rotation: {x: 0.034119397, y: 0.1315407, z: 0.001304331, w: 0.9907226}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: Dos
+      position: {x: -1.0826747, y: 0.00000008173532, z: -0.00000006053624}
+      rotation: {x: -0.000034953093, y: 0.14656384, z: -0.000005178535, w: 0.98920125}
+      scale: {x: 0.9999999, y: 1, z: 1}
+      transformModified: 1
+    - name: Cou
+      position: {x: -1.0708225, y: 0.00000008084485, z: -0.000000029802322}
+      rotation: {x: 0.9556158, y: 0.0000007441032, z: 0.29461583, w: -0.0000026476241}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: T_te
+      position: {x: -0.41854966, y: 0.000000031599274, z: -0.000000029802301}
+      rotation: {x: -0.0000024810306, y: 0.1067029, z: -0.00000033410913, w: 0.99429095}
+      scale: {x: 1, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: Ear_R
+      position: {x: -0.8403019, y: -0.36780986, z: 0.31774062}
+      rotation: {x: 0.83335096, y: 0.23763968, z: -0.47992122, w: -0.1368547}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: Ear_L
+      position: {x: -0.84030163, y: 0.3678104, z: 0.31774038}
+      rotation: {x: 0.83335084, y: -0.23764007, z: -0.4799211, w: 0.13685536}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+      transformModified: 1
+    - name: ClaviculeAvant_L
+      position: {x: -0.9387325, y: -0.22972548, z: 0.08747799}
+      rotation: {x: 0.4747823, y: 0.61777323, z: 0.48049378, w: 0.4025715}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: CuisseAvant_L
+      position: {x: -0.8080135, y: 0.16498531, z: -0.22157222}
+      rotation: {x: -0.16848515, y: -0.10279482, z: 0.0002669989, w: 0.9803295}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: FemurAvant_L
+      position: {x: -0.89965445, y: 0.00000007264316, z: 0.000000063329935}
+      rotation: {x: -0.07681838, y: -0.07728361, z: -0.0061384463, w: 0.9940264}
+      scale: {x: 1.0000001, y: 0.99999976, z: 0.99999994}
+      transformModified: 1
+    - name: TalonAvant_L
+      position: {x: -0.54404664, y: 0.000000031664968, z: 0.000000007450581}
+      rotation: {x: 0.9958454, y: 0.037614856, z: -0.03814413, w: 0.07363591}
+      scale: {x: 0.99999964, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: PiedAvant_L
+      position: {x: -0.21769255, y: 0.00000007770723, z: 0.000000016763806}
+      rotation: {x: -0.0058658174, y: 0.20964302, z: 0.004261228, w: 0.97775114}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: ClaviculeAvant_R
+      position: {x: -0.9387325, y: 0.22972563, z: 0.087478034}
+      rotation: {x: -0.44597378, y: 0.57892317, z: -0.52758926, w: 0.4331339}
+      scale: {x: 1, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: CuisseAvant_R
+      position: {x: -0.8080134, y: -0.19580293, z: -0.194873}
+      rotation: {x: 0.07059931, y: -0.10269151, z: 0.004707141, w: 0.9921936}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1.0000001}
+      transformModified: 1
+    - name: FemurAvant_R
+      position: {x: -0.8996544, y: 0.00000010617077, z: 0.000000078231096}
+      rotation: {x: -0.07314543, y: -0.07584425, z: -0.008853278, w: 0.9943938}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: TalonAvant_R
+      position: {x: -0.5439239, y: 0.00000010052463, z: 0.000000067055225}
+      rotation: {x: 0.9947511, y: -0.023163429, z: -0.047772333, w: -0.0874738}
+      scale: {x: 1, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: PiedAvant_R
+      position: {x: -0.21774825, y: -0.000000011175871, z: -0.00000008195639}
+      rotation: {x: 0.15308294, y: 0.2075583, z: 0.03156373, w: 0.9656547}
+      scale: {x: 0.9999997, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: ClaviculeArriere_R
+      position: {x: -0.33065158, y: 0.13228393, z: 0.2022916}
+      rotation: {x: 0.0075910147, y: -0.2142376, z: -0.9485185, w: 0.2331466}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+      transformModified: 1
+    - name: CuisseArriere_R
+      position: {x: -0.78602886, y: 0.2583359, z: -0.13474509}
+      rotation: {x: 0.8845496, y: -0.2718346, z: 0.2892807, w: 0.24493814}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+      transformModified: 1
+    - name: FemurArriere_R
+      position: {x: -0.9492255, y: 0.000000074505806, z: -0.000000074505806}
+      rotation: {x: 0.5148174, y: -0.13150021, z: 0.8237738, w: 0.19765505}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: TalonArriere_R
+      position: {x: -0.61634725, y: 0.00000004825415, z: 0.000000063329935}
+      rotation: {x: 0.09456315, y: 0.3840115, z: 0.062424555, w: 0.91634935}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1}
+      transformModified: 1
+    - name: PiedArriere_R
+      position: {x: -0.17430857, y: 0.000000046929927, z: -0.00000004276535}
+      rotation: {x: 0.03379149, y: 0.28333494, z: -0.008415557, w: 0.95838857}
+      scale: {x: 1.0000002, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: Queue_001
+      position: {x: 0.28683102, y: -0.00017883959, z: -0.08107805}
+      rotation: {x: 0.010884455, y: 0.9728334, z: 0.032326184, w: 0.22897968}
+      scale: {x: 1, y: 1.0000001, z: 0.9999995}
+      transformModified: 1
+    - name: Queue_002
+      position: {x: -0.28939843, y: 0.000000021849, z: -0.00000047683716}
+      rotation: {x: 0.96486336, y: 0.0000000014505067, z: 0.26275218, w: -0.0000001193465}
+      scale: {x: 0.9999999, y: 1, z: 1}
+      transformModified: 1
+    - name: Queue_003
+      position: {x: -0.37686402, y: 0.000000028452428, z: 0.00000017881395}
+      rotation: {x: -0.00000003952281, y: 0.15174317, z: -0.000000024753001, w: 0.98841995}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Queue_004
+      position: {x: -0.71199554, y: 0.00000005375415, z: -0.000000052594356}
+      rotation: {x: 0.99307287, y: -0.00000007944875, z: 0.11750024, w: 0.00000013978477}
+      scale: {x: 1.0000002, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: Queue_005
+      position: {x: -0.54157835, y: 0.00000004088803, z: 0.000000029802322}
+      rotation: {x: 0.000000049083823, y: 0.2415791, z: 0.000000003991982, w: 0.97038114}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Queue_006
+      position: {x: -0.33727607, y: 0.00000002546362, z: 0.000000029802322}
+      rotation: {x: 0.000000016563295, y: 0.21938819, z: -0.000000003348296, w: 0.9756377}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Queue_007
+      position: {x: -0.19251104, y: 0.000000014534177, z: 0.00000011920929}
+      rotation: {x: 0.000000016038816, y: 0.21244058, z: -0.0000000032422522, w: 0.97717404}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlPiedAvant_L
+      position: {x: -0.36278573, y: -1.0124334, z: 0.12712784}
+      rotation: {x: 0.5801503, y: 0.41299188, z: 0.5739666, w: -0.4042594}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: MvtTalonAvant_L
+      position: {x: -0.09394247, y: -0.014029877, z: 0.07695834}
+      rotation: {x: 0.71921444, y: -0.014736444, z: 0.69425815, w: -0.022783814}
+      scale: {x: 1.0000002, y: 0.99999976, z: 0.99999994}
+      transformModified: 1
+    - name: MvtPiedAvant_L
+      position: {x: -0.2709766, y: 0.010784376, z: 0.0056104627}
+      rotation: {x: 0.0238046, y: 0.008152094, z: 0.9986764, w: 0.044858746}
+      scale: {x: 0.9999996, y: 0.9999814, z: 0.9999949}
+      transformModified: 1
+    - name: PiedAvantIK_L
+      position: {x: -0.1932686, y: 0.0037602074, z: 0.10023766}
+      rotation: {x: 0.23700961, y: 0.011109613, z: 0.97142416, w: 0.0061776955}
+      scale: {x: 0.99999976, y: 1, z: 0.9999992}
+      transformModified: 1
+    - name: CtrlMvtPiedAvant_L
+      position: {x: -0.000000001602707, y: 0.00000003457535, z: 0.00000012875535}
+      rotation: {x: -0.0036367788, y: 0.705089, z: -0.0050722626, w: 0.7090914}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: CtrlGenouAvant_L
+      position: {x: 0.5109475, y: 0.22712983, z: -0.7119892}
+      rotation: {x: -0.0012745658, y: 0.9856895, z: 0.1684012, w: -0.007457996}
+      scale: {x: 1, y: 0.99998814, z: 0.9999043}
+      transformModified: 1
+    - name: CtrlPiedAvant_R
+      position: {x: 0.36278573, y: -1.0124334, z: 0.12712784}
+      rotation: {x: 0.5801503, y: 0.41299188, z: 0.5739666, w: -0.4042594}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: MvtTalonAvant_R
+      position: {x: -0.093942486, y: -0.037273057, z: 0.068775766}
+      rotation: {x: 0.68597096, y: -0.2166339, z: 0.6597585, w: -0.21733007}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
+      transformModified: 1
+    - name: MvtPiedAvant_R
+      position: {x: -0.27097675, y: -0.010784415, z: 0.00561049}
+      rotation: {x: 0.023804646, y: -0.008152292, z: 0.9986764, w: -0.044858873}
+      scale: {x: 0.9999998, y: 0.9999824, z: 0.9999954}
+      transformModified: 1
+    - name: PiedAvantIK_R
+      position: {x: -0.19326869, y: -0.00376015, z: 0.10023763}
+      rotation: {x: 0.23490883, y: -0.16746503, z: 0.95694506, w: 0.032086235}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000011}
+      transformModified: 1
+    - name: CtrlMvtPiedAvant_R
+      position: {x: -0.000000003985229, y: 0.0000001025619, z: 0.0000000691507}
+      rotation: {x: 0.23888952, y: 0.66339695, z: 0.23891567, w: 0.6676493}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlGenouAvant_R
+      position: {x: 0.5109475, y: 0.26897225, z: -0.6972594}
+      rotation: {x: -0.0012745498, y: 0.98568976, z: 0.16839997, w: -0.0074579907}
+      scale: {x: 1, y: 0.9999877, z: 0.9999003}
+      transformModified: 1
+    - name: CtrlPiedArriere_L
+      position: {x: -0.36888537, y: 1.2709169, z: 0.16091402}
+      rotation: {x: 0.50131446, y: 0.5013145, z: 0.49868196, w: -0.4986821}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: MvtTalonArriere_L
+      position: {x: -0.09989529, y: 0.00044786258, z: 0.09816785}
+      rotation: {x: 0.7043528, y: 0.00000005995009, z: 0.70985013, w: 0.000000055724726}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: MvtPiedArriere_L
+      position: {x: -0.24159133, y: -0.000000018647388, z: -0.0010424271}
+      rotation: {x: -0.0045080604, y: 0.00000007442663, z: 0.99998987, w: 3.3552322e-10}
+      scale: {x: 0.9999995, y: 1, z: 0.9968185}
+      transformModified: 1
+    - name: TalonArriereIK_L
+      position: {x: -0.14354406, y: -0.00044780612, z: 0.099196926}
+      rotation: {x: 0.29776284, y: -0.00036922548, z: 0.954639, w: -0.0012266168}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
+      transformModified: 1
+    - name: CtrlMvtPiedArriere_L
+      position: {x: -0.000000005498318, y: 0.000000021929473, z: -0.00000012113279}
+      rotation: {x: -0.000000031596848, y: 0.703509, z: -0.00000008387702, w: 0.7106864}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: CtrlGenouArriere_L
+      position: {x: 0.49368688, y: 0.02482485, z: -0.46886402}
+      rotation: {x: 0.00000007863443, y: 0.99999654, z: -0.00000011383496, w: -0.0026323986}
+      scale: {x: 0.9999999, y: 1, z: 0.99588615}
+      transformModified: 1
+    - name: CtrlPiedArriere_R
+      position: {x: 0.36888537, y: 1.2709169, z: 0.16383971}
+      rotation: {x: 0.50131446, y: 0.5013145, z: 0.49868196, w: -0.4986821}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: MvtTalonArriere_R
+      position: {x: -0.09989531, y: -0.00044784645, z: 0.09816789}
+      rotation: {x: 0.7043528, y: 0.000006513211, z: 0.70985013, w: -0.0000063475595}
+      scale: {x: 0.9999995, y: 1, z: 0.99999964}
+      transformModified: 1
+    - name: MvtPiedArriere_R
+      position: {x: -0.24159165, y: 0.000000009877937, z: -0.0010424312}
+      rotation: {x: -0.0045080585, y: 0.000009126537, z: 0.99998987, w: -0.000000092010616}
+      scale: {x: 0.99999964, y: 1, z: 0.9968168}
+      transformModified: 1
+    - name: TalonArriereIK_R
+      position: {x: -0.14354426, y: 0.00044780332, z: 0.09919707}
+      rotation: {x: 0.2977631, y: 0.00036938186, z: 0.95463896, w: 0.0012265675}
+      scale: {x: 0.99999976, y: 1, z: 0.99999934}
+      transformModified: 1
+    - name: CtrlMvtPiedArriere_R
+      position: {x: 0.000000005498318, y: -0.000000008097401, z: -0.000000083991004}
+      rotation: {x: -0.000000031627625, y: 0.703509, z: -0.00000008384531, w: 0.7106864}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: CtrlGenouArriere_R
+      position: {x: 0.49368694, y: -0.024825133, z: -0.46886408}
+      rotation: {x: 0.00000007860486, y: 0.99999654, z: -0.00000012506469, w: -0.0026323986}
+      scale: {x: 1, y: 1, z: 1.00449}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
