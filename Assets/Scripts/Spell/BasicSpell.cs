@@ -4,7 +4,7 @@ using System.Collections;
 public class BasicSpell : Spell {
 
     
-	public BasicSpell (Cat cat, Input input) : base(cat,input)
+	public BasicSpell (Cat cat, KeyCode input) : base(cat, input)
     {
         base.mana_cost = 0;
         base.recovery_max = (150 - cat.speed) / 100;
@@ -14,7 +14,7 @@ public class BasicSpell : Spell {
         base.input = input;
     }
 
-    public void Activate() //attaque basique
+    public override void Activate() //attaque basique
     {
         //attaque
 		Vector3 pos = transform.position;

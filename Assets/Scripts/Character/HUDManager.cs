@@ -27,16 +27,26 @@ public class HUDManager
         this.spellsUI.Add(spell1);
     }
 
-    public void Update()
+    public void UpdateSpell()
     {
-        Update(objectiveUI.text);
+        spellsUI[0].fillAmount = player.spell_list[1].recovery_time / player.spell_list[1].recovery_max;
+        spellsUI[0].fillAmount = player.spell_list[2].recovery_time / player.spell_list[2].recovery_max;
+        spellsUI[0].fillAmount = player.spell_list[3].recovery_time / player.spell_list[3].recovery_max;
+        spellsUI[0].fillAmount = player.spell_list[4].recovery_time / player.spell_list[4].recovery_max;
     }
 
-    public void Update(string objective)
+    public void SetObjective(string objective)
+    {
+        objectiveUI.text = objective;
+    }
+
+    public void SetHealth()
     {
         statusUI[0].fillAmount = player.life / player.maxLife;
-        // statusUI[1].fillAmount = player.mana / player.maxMana;
-        // TODO: add cooldown
-        objectiveUI.text = objective;
+    }
+
+    public void SetMana()
+    {
+        statusUI[0].fillAmount = player.mana / player.maxMana;
     }
 }
