@@ -10,7 +10,9 @@ public class thirdperson_move : MonoBehaviour {
     [System.Serializable]
     public class MoveSettings
     {
+        public Character chara_cat;
         public float forwardvelo = 12;
+        //public float forwardvelo = Character
         public float rotatevelo = 100;
         public float jumpvelo = 25;
         public float dist_to_ground = 0.1f; //if we're in the air or not

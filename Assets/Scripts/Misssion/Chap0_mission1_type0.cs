@@ -6,10 +6,7 @@ public class Chap0_mission1_type0 : MonoBehaviour {
     public Transform player;
     private AverageCat classicat;
 
-    public Transform tooltip1;
-    public Transform tooltip2;
-    public Transform tooltip3;
-    public Transform tooltip4;
+   
 
 	// Use this for initialization
 	void Start ()
