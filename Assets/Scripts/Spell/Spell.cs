@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Runtime.Remoting;
 
-public abstract class Spell {
+public abstract class Spell : MonoBehaviour {
 
     public int recovery_time;//delai between spell
     public int mana_cost;
@@ -19,7 +20,7 @@ public abstract class Spell {
     //check
     public bool CanUse()
     {
-        if(recovery_time == recovery_max && mana_cost <=  cat.mana)
+		if(Input.GetKey (input) && recovery_time == recovery_max && mana_cost <=  cat.mana)
         {
             recovery_time = 0;
             cat.mana -= mana_cost;
@@ -28,10 +29,9 @@ public abstract class Spell {
         }
 
         return false;
-        
     }
 
-    
+	abstract public void Activate();
      
 	
 }

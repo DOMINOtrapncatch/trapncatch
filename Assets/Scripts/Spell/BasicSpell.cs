@@ -17,10 +17,18 @@ public class BasicSpell : Spell {
     public void Activate() //attaque basique
     {
         //attaque
-        
+		Vector3 pos = transform.position;
+		for(int i = 0; i < cat.nearEnemy.Count;i++)
+		{
+			Vector3 vec = cat.nearEnemy[i].transform.position;
+			Vector3 direction = vec - pos;
+			if(Vector3.Dot(direction, transform.forward) < 0.7)
+			{
+				Destroy (cat.nearEnemy[i]);
+			}
+		}
 
         //animation + call marc
-        
         
     }
 }

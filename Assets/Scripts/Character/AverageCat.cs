@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor.VersionControl;
+using System.Runtime.InteropServices;
 
 public class AverageCat : Cat {
 
@@ -11,6 +13,4 @@ public class AverageCat : Cat {
         base.speed = 75;
         base.mana = 60;
     }
-
-    
 }
