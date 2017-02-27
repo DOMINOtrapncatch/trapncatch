@@ -8,7 +8,7 @@ public class BlackCat : Cat
     {
         base.maxLife = 100;
         base.defense = 55;
-        base.attack = 60;
+        base.attack = 65;//t'avais mis 60 mais c'est 65 >_<
         base.speed = 100;
         base.mana = 50;
     }
