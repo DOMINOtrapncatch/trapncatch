@@ -15,8 +15,4 @@ abstract public class Cat : Character
 		this.height = 1;
 		this.depth = 2;
 	}
-
- 
-
-
 }
