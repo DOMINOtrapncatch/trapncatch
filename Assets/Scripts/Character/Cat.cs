@@ -14,7 +14,9 @@ abstract public class Cat : Character
 	void Update()
 	{
 		CheckSpells ();
-	}
+        if (Input.GetKeyDown(KeyCode.Escape))
+            AutoFade.LoadLevel(1, .3f, .3f, Palette.DARK_PURPLE);
+    }
 
 	void OnTriggerEnter(Collider col)
 	{
