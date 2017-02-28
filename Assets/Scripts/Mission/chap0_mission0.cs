@@ -1,38 +1,50 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class chap0_mission0 : MonoBehaviour {
+public class chap0_mission0 : MonoBehaviour
+{
+    HUDManager myHUD;
+    public Cat player;
+    public Image healthBar;
+    public Image manaBar;
+    public Image spellBar1;
+    public Image spellBar2;
+    public Image spellBar3;
+    public Image spellBar4;
+    public Text objective;
 
-    public HUDManager hudmanager;
-    public Cat cat;
-    public Input input;
+    bool tooltip1;
+    bool tooltip3;
+    bool tooltip4;
 
-    public bool tooltip1;
-    
-    public bool tooltip3;
-    public bool tooltip4;
     // Use this for initialization
     void Start()
     {
+        // Une classe ça s'instancie amandine !
+        myHUD = new HUDManager(player, healthBar, manaBar, spellBar1, spellBar2, spellBar3, spellBar4, objective);
         //premier tooltip
-        hudmanager.SetObjective("Se déplacer (T.D. ou ZQSD)");
-
+        myHUD.SetObjective("Se déplacer (ZQSD)");
     }
 
     // Update is called once per frame
     void Update()
     {
+        myHUD.UpdateSpell();
+        myHUD.UpdateHealth();
+        myHUD.UpdateMana();
+         /*
         //en fonction des checktooltip validés, on affiche les tooltip suivants
         //c'pas opti a modif
-        if(CheckTooltip1())
+        if (CheckTooltip1())
         {
-            hudmanager.SetObjective("Clic gauche pour charger une attaque");
+            myHUD.SetObjective("Clic gauche pour charger une attaque");
             if(CheckTooltip2())
             {
-                hudmanager.SetObjective("Poursuivre la souris");
+                myHUD.SetObjective("Poursuivre la souris");
                 if(CheckTooltip3())
                 {
-                    hudmanager.SetObjective("Se rendre jusqu'à la porte");
+                    myHUD.SetObjective("Se rendre jusqu'à la porte");
                     if(CheckTooltip4())
                     {
                         //win
@@ -40,7 +52,7 @@ public class chap0_mission0 : MonoBehaviour {
                     }
                 }
             }
-        }
+        } */
     }
 
     bool CheckTooltip1()
@@ -63,9 +75,7 @@ public class chap0_mission0 : MonoBehaviour {
     bool CheckTooltip2()
     {
         if(Input.GetMouseButton(0))//left click
-        {
             return true;
-        }
         return false;
     }
 
