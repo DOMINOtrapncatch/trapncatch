@@ -89,7 +89,7 @@ public class Grid : MonoBehaviour {
 	/*
 	 * DEBUG - Affichage de la grille de nodes et de leur etat
 	 */
-	public List<Node> path;
+	public List<Node> path = new List<Node>();
 	void OnDrawGizmos()
 	{
 		Gizmos.DrawWireCube (transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));

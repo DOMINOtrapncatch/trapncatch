@@ -21,6 +21,7 @@ abstract public class Cat : Character
 		if(col.gameObject.tag == "Enemy")
 			nearEnemy.Add(col.gameObject);
 	}
+
 	void OnTriggerExit(Collider col)
 	{
 		if(col.gameObject.tag == "Enemy")
