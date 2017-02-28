@@ -141,7 +141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Objectif de la mission
+  m_Text: Objectif de la Mission
 --- !u!222 &17733056
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -755,7 +755,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bee2abc80dc2e476d881493851ebef35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.99044
+      value: -2.061
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bee2abc80dc2e476d881493851ebef35, type: 3}
       propertyPath: m_LocalRotation.x
