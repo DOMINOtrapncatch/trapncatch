@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor.VersionControl;
 using System.Runtime.InteropServices;
 
 public class AverageCat : Cat
