@@ -38,7 +38,7 @@ public class DialogueScript : MonoBehaviour
                 dialogueImage.sprite = dialogueImages[click];
         }
         else
-            SceneManager.LoadScene(sceneId);
+            AutoFade.LoadLevel(sceneId, .3f, .3f, Color.black);
         ++click;
     }
 }
