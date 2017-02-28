@@ -367,6 +367,78 @@ ModelImporter:
     4300138: Plane_000
     4300140: Plane_002
     4300142: Cube_014
+    6400000: Cube
+    6400002: Cube_001
+    6400004: Cube_002
+    6400006: Cube_003
+    6400008: Cube_004
+    6400010: Cube_005
+    6400012: Cube_006
+    6400014: Cube_007
+    6400016: Cube_008
+    6400018: Cube_009
+    6400020: Cube_010
+    6400022: Cube_011
+    6400024: Cube_012
+    6400026: Cube_013
+    6400028: Cube_014
+    6400030: Cube_015
+    6400032: Cube_016
+    6400034: Cube_017
+    6400036: Cube_018
+    6400038: Cube_019
+    6400040: Cube_020
+    6400042: Cube_021
+    6400044: Cube_022
+    6400046: Cube_023
+    6400048: Cube_024
+    6400050: Cube_025
+    6400052: Cube_026
+    6400054: Cube_027
+    6400056: Cube_028
+    6400058: Cube_029
+    6400060: Cube_030
+    6400062: Cube_031
+    6400064: Cube_032
+    6400066: Cube_033
+    6400068: Cube_034
+    6400070: Cylinder
+    6400072: Cylinder_000
+    6400074: Cylinder_001
+    6400076: Cylinder_002
+    6400078: Cylinder_003
+    6400080: Cylinder_004
+    6400082: Cylinder_005
+    6400084: Cylinder_006
+    6400086: Cylinder_007
+    6400088: Cylinder_008
+    6400090: Cylinder_009
+    6400092: Cylinder_010
+    6400094: Cylinder_011
+    6400096: Cylinder_012
+    6400098: Cylinder_013
+    6400100: Cylinder_014
+    6400102: Cylinder_015
+    6400104: Cylinder_016
+    6400106: Cylinder_017
+    6400108: Cylinder_018
+    6400110: Cylinder_019
+    6400112: Cylinder_020
+    6400114: Cylinder_021
+    6400116: Cylinder_022
+    6400118: Plane
+    6400120: Plane_000
+    6400122: Plane_001
+    6400124: Plane_002
+    6400126: Plane_003
+    6400128: Plane_004
+    6400130: Plane_005
+    6400132: Plane_006
+    6400134: Plane_007
+    6400136: Plane_008
+    6400138: Plane_009
+    6400140: Plane_010
+    6400142: Plane_011
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -395,7 +467,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

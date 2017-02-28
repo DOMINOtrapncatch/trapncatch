@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692504, g: 0.4967869, b: 0.57508504, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.55
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!222 &788583209
@@ -1672,22 +1672,22 @@ GameObject:
 --- !u!114 &1099069389
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000011959920802, guid: b29759ef8609065429542a1c87078d91,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1099069388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 177a381529292144c82bd1d3b268c57a, type: 3}
+  m_Script: {fileID: 11500000, guid: dde70d02b7a6c604bb4b0e8de2ee1680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  mouse: {fileID: 0}
+  player: {fileID: 1711177966}
   healthBar: {fileID: 683654307}
   manaBar: {fileID: 1997506709}
   spellBar1: {fileID: 788583208}
   spellBar2: {fileID: 1119473586}
   spellBar3: {fileID: 1218914951}
-  spellBar4: {fileID: 80632073}
+  spellBar4: {fileID: 1218914951}
   objective: {fileID: 17733055}
 --- !u!225 &1099069390
 CanvasGroup:
@@ -1827,7 +1827,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.128
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!222 &1119473587
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.749
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!222 &1218914952
@@ -2425,6 +2425,34 @@ CapsuleCollider:
   m_Height: 4.2909894
   m_Direction: 1
   m_Center: {x: 0, y: 2.83, z: 0}
+--- !u!114 &1711177966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711177960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267894a8a2a42f5429f37a0a4b1dd373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  width: 0
+  height: 0
+  depth: 0
+  life: 0
+  maxLife: 0
+  attack: 0
+  speed: 0
+  defense: 0
+  velo: 0
+  mana: 0
+  maxMana: 0
+  icon: {fileID: 0}
+  spells: []
+  nearEnemy: []
 --- !u!23 &1711177967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2454,6 +2482,38 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1711177968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711177960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana_cost: 0
+  recovery_time: 0
+  recovery_max: 0
+  cat: {fileID: 0}
+  input: 0
+--- !u!114 &1711177969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711177960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4bebf84725e8544a23ddf8601bc740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana_cost: 0
+  recovery_time: 0
+  recovery_max: 0
+  cat: {fileID: 0}
+  input: 0
 --- !u!1 &1730978991
 GameObject:
   m_ObjectHideFlags: 0
