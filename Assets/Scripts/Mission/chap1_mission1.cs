@@ -22,7 +22,7 @@ public class chap1_mission1 : MonoBehaviour
         //position du chat au dessus de la poubelle
         //spawn le chat a cet endroit 
         //sinon on s'en ballec vu qu'il y'a le bug immobilisant
-        myHUD.SetObjective("Attaquez sur la souris");
+        myHUD.SetObjective("Attaquez la souris");
 	}
 	
 	// Update is called once per frame

@@ -2442,14 +2442,14 @@ MonoBehaviour:
   width: 0
   height: 0
   depth: 0
-  life: 0
-  maxLife: 0
+  life: 100
+  maxLife: 100
   attack: 0
   speed: 0
   defense: 0
   velo: 0
-  mana: 0
-  maxMana: 0
+  mana: 100
+  maxMana: 100
   icon: {fileID: 0}
   spells: []
   nearEnemy: []
