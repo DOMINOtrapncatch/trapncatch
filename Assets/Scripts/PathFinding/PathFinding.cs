@@ -7,7 +7,7 @@ public class PathFinding : MonoBehaviour {
 
 	public Transform seeker, target;
 
-	Grid grid;
+	public Grid grid;
 
 	void Awake()
 	{
@@ -19,7 +19,7 @@ public class PathFinding : MonoBehaviour {
 		//FindPath (seeker.position, target.position);
 	}
 
-	void FindPath(Vector3 startPos, Vector3 targetPos)
+	public void FindPath(Vector3 startPos, Vector3 targetPos)
 	{
 		// Convert positions to nodes
 		Node startNode = grid.NodeFromWorldPoint (startPos);
