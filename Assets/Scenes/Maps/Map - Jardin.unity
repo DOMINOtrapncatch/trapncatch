@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692504, g: 0.4967869, b: 0.57508504, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2135,9 +2135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde4cb209a2c5e74987e2c557d73b2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1711177970}
   lookSmooth: 0.02
-  offSetFromTarget: {x: 0, y: 2, z: -4}
+  offSetFromTarget: {x: 0, y: 1.16, z: -1.92}
   camrot_x: 10
 --- !u!82 &916734037
 AudioSource:
@@ -3444,15 +3444,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400126, guid: 11c4700a5adc4a743adeaf9b13e741c2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400126, guid: 11c4700a5adc4a743adeaf9b13e741c2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400126, guid: 11c4700a5adc4a743adeaf9b13e741c2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11c4700a5adc4a743adeaf9b13e741c2, type: 3}
@@ -3718,14 +3718,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movesettings:
-    chara_cat: {fileID: 1711177966}
+    chara_cat: {fileID: 0}
     forwardvelo: 12
     rotatevelo: 100
     jumpvelo: 13
     dist_to_ground: 0.1
     ground:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 4294967295
   physsettings:
     downaccel: 0.75
   inputsettings:
@@ -3786,8 +3786,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 3.449059
-  m_Height: 4.2909894
+  m_Radius: 3.072927
+  m_Height: 0.049176037
   m_Direction: 1
   m_Center: {x: 0, y: 2.83, z: 0}
 --- !u!114 &1711177966
@@ -3886,8 +3886,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1711177960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3858, y: 1.31, z: -2.061}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalPosition: {x: -1.3858, y: 0.04, z: -0.99044}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2120237799}
