@@ -7037,6 +7037,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8071589de891e468e0e6b4e2f65ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 914714664}
+  healthBar: {fileID: 988998009}
+  manaBar: {fileID: 1285385347}
+  spellBar1: {fileID: 805217538}
+  spellBar2: {fileID: 156897975}
+  spellBar3: {fileID: 150902071}
+  spellBar4: {fileID: 1419197554}
+  objective: {fileID: 805959972}
 --- !u!225 &1169329461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7879,7 +7887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
