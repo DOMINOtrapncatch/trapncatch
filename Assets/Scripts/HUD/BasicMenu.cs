@@ -10,8 +10,11 @@ public class BasicMenu : MonoBehaviour
     string[] buttonNames;
     int buttonHovered = 0;
 
+    
+
     void Start()
     {
+        
         buttonNames = new string[names.Length];
         labelNames = new string[names.Length];
 
@@ -23,6 +26,8 @@ public class BasicMenu : MonoBehaviour
 
     void Update()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         if (Input.GetKeyDown(KeyCode.DownArrow))
             HoverUpdate(1);
         else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -30,6 +35,8 @@ public class BasicMenu : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Return))
             Launch();
     }
+
+    
 
     // Go from one scene to another scene specified by his id
     public void ChangeScene(int sceneId)
