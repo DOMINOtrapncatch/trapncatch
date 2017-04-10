@@ -11,6 +11,8 @@ public class Grid : MonoBehaviour {
 	public float nodeRadius;
 
 	public TerrainType[] walkableRegions;
+	public int obstaclePenalty = 20;
+	public int blurSize = 3;
 	LayerMask walkableMask;
 	Dictionary<int, int> walkableRegionsDictionnary = new Dictionary<int, int>();
 
@@ -58,18 +60,83 @@ public class Grid : MonoBehaviour {
 				// Calculating movement penalty with raycast method
 				int movementPenalty = 0;
 
-				if(walkable)
-				{
-					Ray ray = new Ray(worldPoint + Vector3.up * 50, Vector3.down); // Ray starting up in the sky and going straight down
-					RaycastHit hit;
-					if(Physics.Raycast(ray, out hit, 100, walkableMask))
-					{
-						walkableRegionsDictionnary.TryGetValue(hit.collider.gameObject.layer, out movementPenalty);
-					}
-				}
+				Ray ray = new Ray(worldPoint + Vector3.up * 50, Vector3.down); // Ray starting up in the sky and going straight down
+				RaycastHit hit;
+
+				if(Physics.Raycast(ray, out hit, 100, walkableMask))
+					walkableRegionsDictionnary.TryGetValue(hit.collider.gameObject.layer, out movementPenalty);
+
+				if (!walkable)
+					movementPenalty += obstaclePenalty;
 
 				// On ajoute le node à la grille
 				grid [x, y] = new Node (walkable, worldPoint, x, y, movementPenalty);
+			}
+		}
+
+		BlurPenaltyMap(blurSize);
+	}
+
+	/*
+	 * Permet de "flouter" le masque de penalite pour avoir un mvt plus naturel (le seeker ne se colle plus aux bordures)
+	 */
+	void BlurPenaltyMap(int blurSize)
+	{
+		// NOTE: La methode de bluring utilisee est une methode opti (d'ou le code un peu chelou...)
+
+		int kernelSize = blurSize * 2 + 1;
+		int kernelExtents = (kernelSize - 1) / 2;
+
+		int[,] penaltiesHorizontalPass = new int[gridSizeX, gridSizeY];
+		int[,] penaltiesVerticalPass = new int[gridSizeX, gridSizeY];
+
+		// Calculating horizontal bluring
+		for (int y = 0; y < gridSizeY; y++)
+		{
+			for (int x = -kernelExtents; x <= kernelExtents; x++)
+			{
+				int sampleX = Mathf.Clamp(x, 0, kernelExtents);
+				penaltiesHorizontalPass[0, y] += grid[sampleX, y].movementPenalty;
+			}
+
+			for (int x = 1; x < gridSizeX; x++)
+			{
+				int removeIndex = Mathf.Clamp(x - kernelExtents - 1, 0, gridSizeX);
+				int addIndex = Mathf.Clamp(x + kernelExtents, 0, gridSizeX - 1);
+
+				penaltiesHorizontalPass[x, y] = penaltiesHorizontalPass[x - 1, y] - grid[removeIndex, y].movementPenalty + grid[addIndex, y].movementPenalty;
+			}
+		}
+
+		// Calculating vertical bluring
+		for (int x = 0; x < gridSizeX; x++)
+		{
+			for (int y = -kernelExtents; y <= kernelExtents; y++)
+			{
+				int sampleY = Mathf.Clamp(y, 0, kernelExtents);
+				penaltiesVerticalPass[x, 0] += penaltiesHorizontalPass[x, sampleY];
+			}
+
+			// Handle first row
+			int blurredPenalty = Mathf.RoundToInt((float)penaltiesVerticalPass[x, 0] / (kernelSize * kernelSize));
+			grid[x, 0].movementPenalty = blurredPenalty;
+
+			for (int y = 1; y < gridSizeY; y++)
+			{
+				int removeIndex = Mathf.Clamp(y - kernelExtents - 1, 0, gridSizeY);
+				int addIndex = Mathf.Clamp(y + kernelExtents, 0, gridSizeY - 1);
+
+				penaltiesVerticalPass[x, y] = penaltiesVerticalPass[x, y - 1] - penaltiesHorizontalPass[x, removeIndex] + penaltiesHorizontalPass[x, addIndex];
+
+				// Calculates and set the final penalty to the grid nodes
+				blurredPenalty = Mathf.RoundToInt((float)penaltiesVerticalPass[x, y] / (kernelSize * kernelSize));
+				grid[x, y].movementPenalty = blurredPenalty;
+
+				// DEBUG - Drawing gizoms
+				if (blurredPenalty > penaltyMax)
+					penaltyMax = blurredPenalty;
+				if (blurredPenalty < penaltyMin)
+					penaltyMin = blurredPenalty;
 			}
 		}
 	}
@@ -118,6 +185,8 @@ public class Grid : MonoBehaviour {
 	/*
 	 * DEBUG - Affichage de la grille de nodes et de leur etat
 	 */
+	int penaltyMin = int.MaxValue;
+	int penaltyMax = int.MinValue;
 	void OnDrawGizmos()
 	{
 		Gizmos.DrawWireCube (transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
@@ -126,8 +195,9 @@ public class Grid : MonoBehaviour {
 		{
 			foreach(Node n in grid)
 			{
-				Gizmos.color = n.walkable ? Color.white : Color.red;
-				Gizmos.DrawCube (n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+				Gizmos.color = Color.Lerp(Color.white, Color.black, Mathf.InverseLerp(penaltyMin, penaltyMax, n.movementPenalty));
+				Gizmos.color = n.walkable ? Gizmos.color : Color.red;
+				Gizmos.DrawCube (n.worldPosition, Vector3.one * (nodeDiameter));
 			}
 		}
 	}

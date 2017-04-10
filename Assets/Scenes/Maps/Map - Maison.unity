@@ -6236,12 +6236,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f68b7ea80a2b440ca349f4268665f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayGridGizmos: 0
+  displayGridGizmos: 1
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 256
   gridWorldSize: {x: 150, y: 120}
   nodeRadius: 1
+  walkableRegions:
+  - terrainMask:
+      serializedVersion: 2
+      m_Bits: 512
+    terrainPenalty: 0
+  - terrainMask:
+      serializedVersion: 2
+      m_Bits: 1024
+    terrainPenalty: 10
 --- !u!114 &1054064387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7071,6 +7080,9 @@ MonoBehaviour:
   spellBar3: {fileID: 150902071}
   spellBar4: {fileID: 1419197554}
   objective: {fileID: 805959972}
+  tooltip1: 0
+  tooltip3: 0
+  tooltip4: 0
 --- !u!225 &1169329461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8274,7 +8286,7 @@ GameObject:
   - 33: {fileID: 1433782515}
   - 23: {fileID: 1433782514}
   - 64: {fileID: 1433782516}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plane.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}

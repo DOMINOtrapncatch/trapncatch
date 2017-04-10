@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Mission0
+public class Mission0 : MonoBehaviour
 {
     HUDManager myHUD;
     public Cat player;
