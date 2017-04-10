@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class HUDManager : MonoBehaviour
+public class HUDManager
 {
     Cat player;
     List<Image> statusUI;

@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Mission1 : MonoBehaviour
+public class Mission1
 {
     HUDManager myHUD;
     public Mouse mouse;

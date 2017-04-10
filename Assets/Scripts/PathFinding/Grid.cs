@@ -9,6 +9,11 @@ public class Grid : MonoBehaviour {
 	public LayerMask unwalkableMask;
 	public Vector2 gridWorldSize;
 	public float nodeRadius;
+
+	public TerrainType[] walkableRegions;
+	LayerMask walkableMask;
+	Dictionary<int, int> walkableRegionsDictionnary = new Dictionary<int, int>();
+
 	Node[,] grid;
 
 	float nodeDiameter;
@@ -20,6 +25,12 @@ public class Grid : MonoBehaviour {
 		nodeDiameter = nodeRadius * 2;
 		gridSizeX = Mathf.RoundToInt (gridWorldSize.x / nodeDiameter);
 		gridSizeY = Mathf.RoundToInt (gridWorldSize.y / nodeDiameter);
+
+		foreach(TerrainType region in walkableRegions)
+		{
+			walkableMask.value |= region.terrainMask.value; // L'operation "|=" permet de "combiner" les differents mask car unity les store en binaire (Layer 2 = 10, Layer 3 = 100 ==> Layer2 | Layer3 = 110)
+			walkableRegionsDictionnary.Add((int)Mathf.Log(region.terrainMask.value, 2), region.terrainPenalty); // Le log est la pour recup le num du layer: log(pow(2,3), 2) = 3 ==> log(100, 2) = 3
+		}
 
 		// Creation de la grille
 		CreateGrid ();
@@ -43,8 +54,22 @@ public class Grid : MonoBehaviour {
 				Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.forward * (y * nodeDiameter + nodeRadius);
 				// On check si le node colisionne un objet qui a le mask "unwalkable"
 				bool walkable = !(Physics.CheckSphere (worldPoint, nodeRadius, unwalkableMask));
+
+				// Calculating movement penalty with raycast method
+				int movementPenalty = 0;
+
+				if(walkable)
+				{
+					Ray ray = new Ray(worldPoint + Vector3.up * 50, Vector3.down); // Ray starting up in the sky and going straight down
+					RaycastHit hit;
+					if(Physics.Raycast(ray, out hit, 100, walkableMask))
+					{
+						walkableRegionsDictionnary.TryGetValue(hit.collider.gameObject.layer, out movementPenalty);
+					}
+				}
+
 				// On ajoute le node à la grille
-				grid [x, y] = new Node (walkable, worldPoint, x, y);
+				grid [x, y] = new Node (walkable, worldPoint, x, y, movementPenalty);
 			}
 		}
 	}
@@ -105,5 +130,11 @@ public class Grid : MonoBehaviour {
 				Gizmos.DrawCube (n.worldPosition, Vector3.one * (nodeDiameter - .1f));
 			}
 		}
+	}
+
+	[System.Serializable]
+	public class TerrainType {
+		public LayerMask terrainMask;
+		public int terrainPenalty;
 	}
 }

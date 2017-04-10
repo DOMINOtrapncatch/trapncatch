@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
-using System.Diagnostics;
 using System.Collections;
 
 public class PathFinding : MonoBehaviour {
@@ -35,9 +34,6 @@ public class PathFinding : MonoBehaviour {
 
 	IEnumerator FindPath(Vector3 startPos, Vector3 targetPos)
 	{
-		Stopwatch sw = new Stopwatch();
-		sw.Start();
-
 		Vector3[] wapoints = new Vector3[0];
 		bool pathSuccess = false;
 
@@ -72,8 +68,6 @@ public class PathFinding : MonoBehaviour {
 
 				if (currentNode == targetNode)
 				{
-					sw.Stop();
-					print("Path found: " + sw.ElapsedMilliseconds + "ms");
 					pathSuccess = true;
 					break;
 				}
@@ -84,14 +78,17 @@ public class PathFinding : MonoBehaviour {
 						continue;
 
 					int newGCostToNeighbor = currentNode.gCost + GetDistance(currentNode, neighbor);
+					newGCostToNeighbor += neighbor.movementPenalty; // Allow preference for fast surfaces
 					if(newGCostToNeighbor<neighbor.gCost || !openSet.Contains (neighbor))
 					{
 						neighbor.gCost = newGCostToNeighbor;
 						neighbor.hCost = GetDistance(neighbor, targetNode);
 						neighbor.parent = currentNode;
 
-						if (!openSet.Contains (neighbor))
-							openSet.Add (neighbor);
+						if (!openSet.Contains(neighbor))
+							openSet.Add(neighbor);
+						else
+							openSet.UpdateItem(neighbor);
 					}
 				}
 			}
