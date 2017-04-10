@@ -34,7 +34,7 @@ public class Mouse : Character
 		if (Time.timeSinceLevelLoad < .3f)
 			yield return new WaitForSeconds(.3f);
 		
-		PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+		PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound));
 
 		float sqrMoveThreshold = pathUpdateMoveThreshold * pathUpdateMoveThreshold;
 		Vector3 targetPosOld = target.position;
@@ -46,7 +46,7 @@ public class Mouse : Character
 			// Update only if moved a certain dist (this is here for performance issues)
 			if((target.position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
 			{
-				PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+				PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound));
 				targetPosOld = target.position;
 			}
 		}
