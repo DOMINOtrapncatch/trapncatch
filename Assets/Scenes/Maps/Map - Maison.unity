@@ -2635,10 +2635,13 @@ MonoBehaviour:
   life: 1
   maxLife: 1
   Attack: 50
-  Speed: 50
+  Speed: 80
   Defense: 50
   velo: 20
   target: {fileID: 1837774417}
+  turnSpeed: 3
+  turnDst: 0
+  stoppingDst: 10
 --- !u!65 &528003112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6241,7 +6244,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   gridWorldSize: {x: 150, y: 120}
-  nodeRadius: 1
+  nodeRadius: 0.5
   walkableRegions:
   - terrainMask:
       serializedVersion: 2
@@ -6251,6 +6254,8 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 1024
     terrainPenalty: 10
+  obstaclePenalty: 20
+  blurSize: 3
 --- !u!114 &1054064387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7080,9 +7085,6 @@ MonoBehaviour:
   spellBar3: {fileID: 150902071}
   spellBar4: {fileID: 1419197554}
   objective: {fileID: 805959972}
-  tooltip1: 0
-  tooltip3: 0
-  tooltip4: 0
 --- !u!225 &1169329461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10509,10 +10511,10 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837774412}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -56.7, y: 1.5, z: -57.1}
+  m_LocalRotation: {x: -0, y: 0.92077816, z: -0, w: 0.39008665}
+  m_LocalPosition: {x: -57.7, y: 1.5, z: 20.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 133.99101, z: 0}
   m_Children:
   - {fileID: 643233329}
   - {fileID: 914714660}

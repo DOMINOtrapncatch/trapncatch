@@ -11,7 +11,7 @@ public class CatAnimController : MonoBehaviour {
 
 	void Update (){
 		float move = Input.GetAxis ("Vertical");
-		move *= Input.GetKey (KeyCode.LeftShift) ? 1.0f : 0.3f;
-		anim.SetFloat("Speed", move);
+		move *= Input.GetKey (KeyCode.LeftShift) ? 0.4f : 0.2f;
+		anim.SetFloat("Speed", Input.GetKey (KeyCode.Space) ? 1f : move);
 	}
 }
