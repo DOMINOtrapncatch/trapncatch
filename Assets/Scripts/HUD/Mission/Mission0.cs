@@ -11,10 +11,14 @@ public class Mission0 : MonoBehaviour
     public Image spellBar1;
     public Image spellBar2;
     public Image spellBar3;
-    public Image spellBar4;
+    public Image spellBar4; 
     public Text objective;
+    public BoxCollider box;
 
-    bool tooltip1;
+
+
+    int tooltip1;// 4 -> true, qu'on a test toutes les touches dir ou ZQSD
+    int tooltip2;//parce que les booleen ça me soule
     bool tooltip3;
     bool tooltip4;
 
@@ -25,6 +29,8 @@ public class Mission0 : MonoBehaviour
         myHUD = new HUDManager(player, healthBar, manaBar, spellBar1, spellBar2, spellBar3, spellBar4, objective);
         //premier tooltip
         myHUD.SetObjective("Se déplacer (ZQSD)");
+        
+        
     }
 
     // Update is called once per frame
@@ -33,50 +39,70 @@ public class Mission0 : MonoBehaviour
         myHUD.UpdateSpell();
         myHUD.UpdateHealth();
         myHUD.UpdateMana();
-         /*
+         
         //en fonction des checktooltip validés, on affiche les tooltip suivants
         //c'pas opti a modif
-        if (CheckTooltip1())
+        if (CheckTooltip1(ref tooltip1) >= 4)
         {
-            myHUD.SetObjective("Clic gauche pour charger une attaque");
-            if(CheckTooltip2())
+            myHUD.SetObjective("Left Click pour charger une attaque");
+            if(CheckTooltip2(ref tooltip2) >= 1)
             {
                 myHUD.SetObjective("Poursuivre la souris");
-                if(CheckTooltip3())
-                {
-                    myHUD.SetObjective("Se rendre jusqu'à la porte");
-                    if(CheckTooltip4())
-                    {
-                        //win
-                        //passage au chapitre suivant 
-                    }
-                }
+                
+                //pour le reste check istrigger
             }
-        } */
+        } 
     }
 
-    bool CheckTooltip1()
+    int CheckTooltip1(ref int tooltip1)
     {
-        if(Input.GetKeyDown(KeyCode.Z) || 
-            Input.GetKeyDown(KeyCode.Q) || 
-            Input.GetKeyDown(KeyCode.S) || 
-            Input.GetKeyDown(KeyCode.D) || 
-            Input.GetKeyDown(KeyCode.UpArrow) ||
-            Input.GetKeyDown(KeyCode.DownArrow) ||
-            Input.GetKeyDown(KeyCode.LeftArrow) ||
-            Input.GetKeyDown(KeyCode.RightArrow) )
+        if(Input.GetKeyDown(KeyCode.Z))
         {
-            return tooltip1 &= true;
+            ++tooltip1;
+        }
+        else if(Input.GetKeyDown(KeyCode.Q))
+        {
+            ++tooltip1;
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            ++tooltip1;
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            ++tooltip1;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            ++tooltip1;
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            ++tooltip1;
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            ++tooltip1;
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            ++tooltip1;
         }
 
-        return tooltip1 &= false;
+        return tooltip1;
     }
 
-    bool CheckTooltip2()
+    int CheckTooltip2(ref int tooltip2)
     {
-        if(Input.GetMouseButton(0))//left click
-            return true;
-        return false;
+        //ne pas oublier de changer la touche E pour un left click
+        // synchro ces changements sur le script hud egalement
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            ++tooltip2;
+        }
+
+        return tooltip2;
+        
     }
 
     bool CheckTooltip3()
@@ -87,13 +113,29 @@ public class Mission0 : MonoBehaviour
         return true;
     }
 
-    bool CheckTooltip4()
+  
+    void OnTriggerEnter(Collider box)
     {
         // se rendre jusqu'a a porte -> loading scene menu et debloque chap 1
+        //triggerd le collider sur la porte !
+        Debug.Log("Amandine - "+ box.tag);
+        if(box.tag == "Collider" && tooltip3)
+        {
+            //changescene here
+            myHUD.SetObjective("test is OK");
+        }
 
-        //when vector3 chat  == vector3 position de la sortie 
-        return true;
+        else if(box.tag == "Mouse")
+        {
+            tooltip3 = true;
+            myHUD.SetObjective("Se rendre jusqu'à la porte");
+        }
+        
     }
+
+   
+
+   
 
 
 }
