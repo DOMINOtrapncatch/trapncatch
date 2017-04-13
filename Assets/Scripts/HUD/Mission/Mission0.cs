@@ -20,7 +20,6 @@ public class Mission0 : MonoBehaviour
     int tooltip1;// 4 -> true, qu'on a test toutes les touches dir ou ZQSD
     int tooltip2;//parce que les booleen ça me soule
     bool tooltip3;
-    bool tooltip4;
 
     // Use this for initialization
     void Start()
@@ -29,7 +28,6 @@ public class Mission0 : MonoBehaviour
         myHUD = new HUDManager(player, healthBar, manaBar, spellBar1, spellBar2, spellBar3, spellBar4, objective);
         //premier tooltip
         myHUD.SetObjective("Se déplacer (ZQSD)");
-        
         
     }
 
@@ -42,14 +40,15 @@ public class Mission0 : MonoBehaviour
          
         //en fonction des checktooltip validés, on affiche les tooltip suivants
         //c'pas opti a modif
-        if (CheckTooltip1(ref tooltip1) >= 4)
+        if (CheckTooltip1(ref tooltip1) >= 4 && !tooltip3)
         {
             myHUD.SetObjective("Left Click pour charger une attaque");
             if(CheckTooltip2(ref tooltip2) >= 1)
             {
                 myHUD.SetObjective("Poursuivre la souris");
-                
+
                 //pour le reste check istrigger
+                //OnTriggerEnter(box);
             }
         } 
     }
@@ -105,13 +104,7 @@ public class Mission0 : MonoBehaviour
         
     }
 
-    bool CheckTooltip3()
-    {
-        //pourchassez la souris jusqu'a un point B
-
-        //si collider chat is triggered by collider souris
-        return true;
-    }
+    
 
   
     void OnTriggerEnter(Collider box)
@@ -119,14 +112,16 @@ public class Mission0 : MonoBehaviour
         // se rendre jusqu'a a porte -> loading scene menu et debloque chap 1
         //triggerd le collider sur la porte !
         Debug.Log("Amandine - "+ box.tag);
-        if(box.tag == "Collider" && tooltip3)
+        if(box.tag == "Collider" && tooltip3 )
         {
+            
             //changescene here
-            myHUD.SetObjective("test is OK");
+            myHUD.SetObjective("Loading Next Scene");
         }
 
-        else if(box.tag == "Mouse")
+        else if(box.tag == "Enemy")
         {
+            
             tooltip3 = true;
             myHUD.SetObjective("Se rendre jusqu'à la porte");
         }

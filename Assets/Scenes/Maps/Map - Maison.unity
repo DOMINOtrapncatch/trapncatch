@@ -2529,7 +2529,7 @@ GameObject:
   - 65: {fileID: 528003112}
   m_Layer: 0
   m_Name: Mouse
-  m_TagString: Mouse
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7099,7 +7099,6 @@ GameObject:
   - 114: {fileID: 1169329463}
   - 114: {fileID: 1169329462}
   - 225: {fileID: 1169329461}
-  - 114: {fileID: 1169329460}
   m_Layer: 5
   m_Name: HUDCanvas
   m_TagString: Untagged
@@ -7107,26 +7106,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1169329460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1169329459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af8071589de891e468e0e6b4e2f65ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 914714664}
-  healthBar: {fileID: 988998009}
-  manaBar: {fileID: 1285385347}
-  spellBar1: {fileID: 805217538}
-  spellBar2: {fileID: 156897975}
-  spellBar3: {fileID: 150902071}
-  spellBar4: {fileID: 1419197554}
-  objective: {fileID: 805959972}
-  box: {fileID: 0}
 --- !u!225 &1169329461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10656,7 +10635,7 @@ MonoBehaviour:
   spellBar3: {fileID: 1970368014}
   spellBar4: {fileID: 1701271906}
   objective: {fileID: 805959972}
-  box: {fileID: 0}
+  box: {fileID: 763883950}
 --- !u!1 &1850804583
 GameObject:
   m_ObjectHideFlags: 0
