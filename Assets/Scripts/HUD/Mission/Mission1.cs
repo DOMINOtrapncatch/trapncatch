@@ -4,8 +4,9 @@ using System.Collections;
 
 public class Mission1 : MonoBehaviour
 {
-	// HUD Handling
     HUDManager myHUD;
+    public Mouse mouse;
+    public Cat player;
     public Image healthBar;
     public Image manaBar;
     public Image spellBar1;
@@ -13,63 +14,61 @@ public class Mission1 : MonoBehaviour
     public Image spellBar3;
     public Image spellBar4;
     public Text objective;
-
-	// Player related variables
-	public Mouse mouse;
-    public Cat player;
-
-	// Tooltips variables
-	public string messageTooltip1 = "Attaquez la souris";
-	public string messageTooltip2 = "Achever la souris";
-    int tooltip1;
-    int tooltip2;
+    private int tooltip1;
+    private int tooltip2;
 
     // Use this for initialization
     void Start ()
     {
         myHUD = new HUDManager(player, healthBar, manaBar, spellBar1, spellBar2, spellBar3, spellBar4, objective);
-		myHUD.SetObjective(messageTooltip1);
+        tooltip1 = 0;
+        tooltip2 = 0;
+        //position du chat au dessus de la poubelle
+        //spawn le chat a cet endroit 
+        //sinon on s'en ballec vu qu'il y'a le bug immobilisant
+        myHUD.SetObjective("Attaquez la souris");
 	}
 	
 	// Update is called once per frame
-	void Update ()
-	{
-        CheckTooltips();
-	}
-
-	void CheckTooltips()
-	{
-		if(CheckTooltip1())
+	void Update () {
+	    if(CheckTooltip1(ref tooltip1) >= 1)
         {
-			myHUD.SetObjective(messageTooltip2);
-
-            if(CheckTooltip2())
+            myHUD.SetObjective("Achevez la souris (E)");
+            if (mouse.life <= 0 && CheckTooltip2(ref tooltip2) == 0) //if on kill la souris sans capacité special
             {
-                AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+				mouse.life = mouse.maxLife;//freez pv de la souris a 100 tant que il utilise pas une att sppeciale
+
+
+            }
+            else if(CheckTooltip2(ref tooltip2) >=1 && mouse.life <= 0)//test si il a bien fatality la souris 
+            {
+                //win
+                //retour menu selection chapitre
+
             }
         }
 	}
 
-	/*
-	 * Objectif: blesser la souris au moins une fois
-	 */
-    bool CheckTooltip1()
+    int CheckTooltip1(ref int tooltip1)
     {
-        if (mouse.maxLife != mouse.life)
-        	++tooltip1;
+        if (mouse.maxLife != mouse.life)//aka elle s'est faite attaquer au moins une fois
+        {
+            ++tooltip1;
+            
+        }
 
-        return tooltip1 >= 1;
+        return tooltip1;
     }
 
-	/*
-	 * Objectif: tuer la souris en utilisant du mana
-	 */
-    bool CheckTooltip2()
+    int CheckTooltip2(ref int tooltip2)
     {
+        //on va check si le mana du chat a diminué au moins une fois
         if(player.maxMana != player.mana)
-        	++tooltip2;
+        {
+            ++tooltip2;
+        }
 
-        return tooltip2 >= 1 && mouse.life <= 0;
+        return tooltip2;
     }
 
 }
