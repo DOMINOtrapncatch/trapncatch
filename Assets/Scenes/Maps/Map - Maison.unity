@@ -7223,6 +7223,7 @@ GameObject:
   - 114: {fileID: 1169329463}
   - 114: {fileID: 1169329462}
   - 225: {fileID: 1169329461}
+  - 114: {fileID: 1169329460}
   m_Layer: 5
   m_Name: HUDCanvas
   m_TagString: Untagged
@@ -7230,6 +7231,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1169329460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169329459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8071589de891e468e0e6b4e2f65ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 763317448}
+  manaBar: {fileID: 713148884}
+  spellBar1: {fileID: 1374124454}
+  spellBar2: {fileID: 1994966731}
+  spellBar3: {fileID: 1970368014}
+  spellBar4: {fileID: 1701271906}
+  objective: {fileID: 805959972}
+  player: {fileID: 914714664}
+  messageTooltip1: "Se d\xE9placer"
+  messageTooltip2: Left Click pour attaquer
+  messageTooltip3: Poursuivre la souris
+  messageTooltip4: "Se rendre jusqu'\xE0 la porte"
 --- !u!225 &1169329461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9071,7 +9095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1562030327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9094,6 +9118,7 @@ MonoBehaviour:
   messageTooltip1: "Se d\xE9placer"
   messageTooltip2: Left Click pour attaquer
   messageTooltip3: Poursuivre la souris
+  messageTooltip4: "Se rendre jusqu'\xE0 la porte"
 --- !u!4 &1562030328
 Transform:
   m_ObjectHideFlags: 0
@@ -12045,7 +12070,7 @@ GameObject:
   - 64: {fileID: 2097362620}
   m_Layer: 8
   m_Name: Cylinder.003
-  m_TagString: Untagged
+  m_TagString: Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
