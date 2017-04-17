@@ -16,7 +16,7 @@ public class Mouse : Character
 	public float turnDst = 5;
 	public float stoppingDst = 10;
 
-	Transform target;
+	int targetIndex;
 	Path path;
 
 	void Start()
@@ -27,8 +27,7 @@ public class Mouse : Character
 		// Init start and target based on random or not
 		if(randomTarget)
 		{
-			int targetIndex = Random.Range(0, targets.Count - 1);
-			target = targets[targetIndex];
+			targetIndex = Random.Range(0, targets.Count - 1);
 
 			int startIndex;
 			if(targets.Count > 1)
@@ -48,7 +47,7 @@ public class Mouse : Character
 		}
 		else
 		{
-			target = targets[1];
+			targetIndex = 1;
 			transform.position = targets[0].position;
 		}
 
@@ -73,20 +72,20 @@ public class Mouse : Character
 		if (Time.timeSinceLevelLoad < .3f)
 			yield return new WaitForSeconds(.3f);
 		
-		PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound));
+		PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
 
 		float sqrMoveThreshold = pathUpdateMoveThreshold * pathUpdateMoveThreshold;
-		Vector3 targetPosOld = target.position;
+		Vector3 targetPosOld = targets[targetIndex].position;
 
 		while(true)
 		{
 			yield return new WaitForSeconds(minPathUpdateTime);
 
 			// Update only if moved a certain dist (this is here for performance issues)
-			if((target.position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
+			if((targets[targetIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
 			{
-				PathRequestManager.RequestPath(new PathRequest(transform.position, target.position, OnPathFound));
-				targetPosOld = target.position;
+				PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
+				targetPosOld = targets[targetIndex].position;
 			}
 		}
 	}
@@ -136,7 +135,12 @@ public class Mouse : Character
 		{
 			case MouseType.SUICIDE:
 				// Keep following
-				target = targets[randomTarget ? Random.Range(1, targets.Count - 1) : 1];
+				targetIndex = randomTarget ? Random.Range(1, targets.Count - 1) : 1;
+				break;
+
+			case MouseType.CIRCLE:
+				// Go to next point
+				targetIndex = (targetIndex + 1) % targets.Count;
 				break;
 
 			case MouseType.NORMAL:
@@ -171,5 +175,5 @@ public class Mouse : Character
 
 public enum MouseType
 {
-	NORMAL, SUICIDE
+	NORMAL, SUICIDE, CIRCLE
 }
