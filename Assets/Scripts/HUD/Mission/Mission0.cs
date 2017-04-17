@@ -21,10 +21,8 @@ public class Mission0 : MonoBehaviour
 	public string messageTooltip1 = "Se déplacer";
 	public string messageTooltip2 = "Left Click pour attaquer";
 	public string messageTooltip3 = "Poursuivre la souris";
-    public string messageTooltip4 = "Se rendre jusqu'à la porte";
 	int tooltip1 = 0;
 	int tooltip2 = 0;
-    bool CheckTooltip3 = false;
 
 	// Use this for initialization
 	void Start()
@@ -64,7 +62,6 @@ public class Mission0 : MonoBehaviour
 		if(checkInputs && (Input.GetButtonDown("up") || Input.GetButtonDown("right") || Input.GetButtonDown("down") || Input.GetButtonDown("left")))
 			++tooltip1;
 
-        
 		return tooltip1 >= 4;
 	}
 
@@ -81,12 +78,7 @@ public class Mission0 : MonoBehaviour
 
 	void OnTriggerEnter(Collider box)
 	{
-        if (box.tag == "Enemy" && CheckTooltip2(false))
-        {
-            myHUD.SetObjective(messageTooltip3);
-            CheckTooltip3 = true;
-        }
-        else if (box.tag == "Collider" && CheckTooltip3)
-            AutoFade.LoadLevel(9, .3f, .3f, Color.black);
-    }
+		if (box.tag == "Enemy" && CheckTooltip2(false))
+			AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+	}
 }
