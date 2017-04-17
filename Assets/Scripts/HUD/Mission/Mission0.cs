@@ -80,18 +80,15 @@ public class Mission0 : MonoBehaviour
 
 	void OnTriggerEnter(Collider box)
 	{
-        if (box.tag == "Enemy" /*&& CheckTooltip2(false)*/)
+        if (box.tag == "Enemy" && CheckTooltip2(false))
         {
             myHUD.SetObjective(messageTooltip4);
             checktool = true;
-            Debug.Log("OK1");
         }
-        else if (box.tag == "Collider" /*&& checktool*/)
-        {
-            Debug.Log("OK2");
-            AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+        else if (box.tag == "Collider" && checktool)
+            AutoFade.LoadLevel(9, .3f, .3f, Color.black); 
 
-        }
+        
         
 	}
 }
