@@ -62,6 +62,7 @@ public class Mission0 : MonoBehaviour
 		if(checkInputs && (Input.GetButtonDown("up") || Input.GetButtonDown("right") || Input.GetButtonDown("down") || Input.GetButtonDown("left")))
 			++tooltip1;
 
+        
 		return tooltip1 >= 4;
 	}
 
