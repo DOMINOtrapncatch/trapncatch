@@ -745,6 +745,10 @@ Prefab:
       propertyPath: mouseType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014047869748, guid: 06963c92fbb1f1e4db99cd7c787a42ff, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06963c92fbb1f1e4db99cd7c787a42ff, type: 2}
   m_IsPrefabParent: 0
@@ -9071,7 +9075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1562030327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9094,6 +9098,7 @@ MonoBehaviour:
   messageTooltip1: "Se d\xE9placer"
   messageTooltip2: Left Click pour attaquer
   messageTooltip3: Poursuivre la souris
+  messageTooltip4: "Allez jusqu'\xE0 la porte"
 --- !u!4 &1562030328
 Transform:
   m_ObjectHideFlags: 0
@@ -9101,7 +9106,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1562030326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.529005, y: 10.082978, z: -5.7500076}
+  m_LocalPosition: {x: 2.529005, y: 10.082978, z: -5.750007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -10588,6 +10593,7 @@ GameObject:
   - 54: {fileID: 1837774414}
   - 82: {fileID: 1837774413}
   - 82: {fileID: 1837774418}
+  - 114: {fileID: 1837774419}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Cat
@@ -10891,6 +10897,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1837774419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837774412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8071589de891e468e0e6b4e2f65ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 763317448}
+  manaBar: {fileID: 713148884}
+  spellBar1: {fileID: 1374124454}
+  spellBar2: {fileID: 1994966731}
+  spellBar3: {fileID: 1970368014}
+  spellBar4: {fileID: 1701271906}
+  objective: {fileID: 805959972}
+  player: {fileID: 914714664}
+  messageTooltip1: "Se d\xE9placer"
+  messageTooltip2: Left Click pour attaquer
+  messageTooltip3: Poursuivre la souris
+  messageTooltip4: "Allez jusqu'\xE0 la porte"
 --- !u!1 &1850804583
 GameObject:
   m_ObjectHideFlags: 0
@@ -12045,7 +12074,7 @@ GameObject:
   - 64: {fileID: 2097362620}
   m_Layer: 8
   m_Name: Cylinder.003
-  m_TagString: Untagged
+  m_TagString: Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
