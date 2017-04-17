@@ -3,16 +3,24 @@ using UnityEngine.UI;
 
 abstract public class Character : MonoBehaviour
 {
-    public float x, y, z;
-    public float width, height, depth;
-    public float life, maxLife;
+	[Header("Capacity Settings")]
 
-    public float Attack, Speed, Defense;
-	private float maxAttack = 20, maxSpeed = 15, maxDefense = 20;
-	public float attack { get { return Attack * maxAttack / 100; } }
-	public float speed { get { return Speed * maxSpeed / 100; } }
-	public float defense { get { return Defense * maxDefense / 100; } }
+	// Variables qui pourront etres modifiees par l'utilisateur
+	[Range(0, 100)]
+	public float Attack;
+	[Range(0, 100)]
+	public float Speed, Defense, MaxLife;
 
-    public float velo;
+	// Variables qui ne pourront pas etres modifiees par l'utilisateur
+	private float Life = 100;
 
+	// Valeur maximales brutes
+	private float maxAttackVal = 20, maxSpeedVal = 15, maxDefenseVal = 20, maxLifeVal = 100;
+
+	// Variables utilisees dans les scripts
+	public float attack  { get { return Attack  * maxAttackVal  / 100; } }
+	public float speed   { get { return Speed   * maxSpeedVal   / 100; } }
+	public float defense { get { return Defense * maxDefenseVal / 100; } }
+	public float life    { get { return Life    * maxLife       / 100; } set { Life = value; } }
+	public float maxLife { get { return MaxLife * maxLifeVal    / 100; } }
 }

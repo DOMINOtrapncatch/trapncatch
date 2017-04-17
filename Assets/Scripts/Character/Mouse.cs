@@ -1,20 +1,57 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Mouse : Character
 {
+	[Header("Pathfinding Settings")]
+	public MouseType mouseType = MouseType.NORMAL;
+
 	const float minPathUpdateTime = .2f;
 	const float pathUpdateMoveThreshold = .5f;
 
-	public Transform target;
+	public List<Transform> targets = new List<Transform>();
+	public bool randomTarget = true;
 	public float turnSpeed = 3;
 	public float turnDst = 5;
 	public float stoppingDst = 10;
 
+	Transform target;
 	Path path;
 
 	void Start()
 	{
+		// Update randomizer seed
+		Random.InitState(System.DateTime.Now.Millisecond);
+
+		// Init start and target based on random or not
+		if(randomTarget)
+		{
+			int targetIndex = Random.Range(0, targets.Count - 1);
+			target = targets[targetIndex];
+
+			int startIndex;
+			if(targets.Count > 1)
+			{
+				do
+				{
+					startIndex = Random.Range(0, targets.Count - 1);
+				}
+				while (startIndex == targetIndex);
+			}
+			else
+			{
+				startIndex = 0;
+			}
+
+			transform.position = targets[startIndex].position;
+		}
+		else
+		{
+			target = targets[1];
+			transform.position = targets[0].position;
+		}
+
 		StartCoroutine(UpdatePath());
 	}
 
@@ -22,8 +59,10 @@ public class Mouse : Character
 	{
 		if(pathSuccessful)
 		{
+			// Get success path
 			path = new Path(waypoints, transform.position, turnDst, stoppingDst);
-			StopCoroutine("FollowPath"); // In case it alwready exists
+
+			StopCoroutine("FollowPath"); // In case coroutine alwready exists
 			StartCoroutine("FollowPath");
 		}
 	}
@@ -81,7 +120,7 @@ public class Mouse : Character
 				if(pathIndex >= path.slowDownIndex && stoppingDst > 0)
 				{
 					speedPercent = Mathf.Clamp01(path.turnBoundaries[path.finishLineIndex].DistanceFromPoint(pos2D) / stoppingDst);
-					followingPath = !(speedPercent < 0.01f);
+					followingPath = !(speedPercent < 0.2f);
 				}
 
 				Quaternion targetRotation = Quaternion.LookRotation(path.lookPoints[pathIndex] - transform.position);
@@ -90,6 +129,20 @@ public class Mouse : Character
 			}
 
 			yield return null; // Move to the next frame
+		}
+
+		// Decide of the next move
+		switch(mouseType)
+		{
+			case MouseType.SUICIDE:
+				// Keep following
+				target = targets[randomTarget ? Random.Range(1, targets.Count - 1) : 1];
+				break;
+
+			case MouseType.NORMAL:
+				// Disappear
+                Destroy(gameObject);
+				break;
 		}
 	}
 
@@ -114,4 +167,9 @@ public class Mouse : Character
 		transform.position = Vector3.Lerp (transform.position, targetPositions [currentPosition].transform.position, (Mathf.Sin(speed * Time.time) + 0.01f) / 10.0f);
 	}*/
 
+}
+
+public enum MouseType
+{
+	NORMAL, SUICIDE
 }

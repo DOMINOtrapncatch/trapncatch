@@ -5,10 +5,23 @@ using System.Net;
 
 abstract public class Cat : Character
 {
-    public float mana, maxMana;
+	// Variables qui pourront etres modifiees par l'utilisateur
+	[Range(0, 100)]
+	public float Mana;
+	[Range(0, 100)]
+	public float MaxMana;
+
+	// Valeur maximales brutes
+	private float maxManaVal = 100;
+
+	// Variables utilisees dans les scripts
+	public float mana { get { return Mana * maxMana / 100; } set { Mana = value; } }
+	public float maxMana { get { return MaxMana * maxManaVal / 100; } }
+
     public Sprite icon;
     //public static bool light; //true = lumiere && false = pas de lumiere
 	public List<Spell> spells;
+	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
 
 	void Update()

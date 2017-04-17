@@ -9,22 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012257367640}
+  m_RootGameObject: {fileID: 1000014047869748}
   m_IsPrefabParent: 1
---- !u!1 &1000012257367640
+--- !u!1 &1000011590970212
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000010272357710}
-  - 33: {fileID: 33000011039052754}
-  - 23: {fileID: 23000012728166824}
-  - 64: {fileID: 64000013393793056}
-  - 95: {fileID: 95000013350841348}
-  - 114: {fileID: 114000010308288062}
-  - 65: {fileID: 65000012448008098}
+  - 4: {fileID: 4000010404156638}
+  - 33: {fileID: 33000011994635112}
+  - 23: {fileID: 23000013777037914}
+  - 64: {fileID: 64000010625811332}
+  - 95: {fileID: 95000012823476318}
+  - 65: {fileID: 65000012339639706}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Enemy
@@ -32,25 +31,55 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010272357710
+--- !u!1 &1000014047869748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010854912170}
+  - 114: {fileID: 114000011585470892}
+  m_Layer: 0
+  m_Name: '[Mouse] Normal'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010404156638
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012257367640}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.7, y: 0.01, z: -49.7}
+  m_GameObject: {fileID: 1000011590970212}
+  m_LocalRotation: {x: -0.7069895, y: 0, z: 0, w: 0.707224}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.1, y: 3.1, z: 3.1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.981, y: 0, z: 0}
   m_Children: []
+  m_Father: {fileID: 4000010854912170}
+  m_RootOrder: 0
+--- !u!4 &4000010854912170
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014047869748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000010404156638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &23000012728166824
+--- !u!23 &23000013777037914
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012257367640}
+  m_GameObject: {fileID: 1000011590970212}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -74,44 +103,44 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000011039052754
+--- !u!33 &33000011994635112
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012257367640}
+  m_GameObject: {fileID: 1000011590970212}
   m_Mesh: {fileID: 4300000, guid: fbc51a67ec0684677965bcb8d9c5c62c, type: 3}
---- !u!64 &64000013393793056
+--- !u!64 &64000010625811332
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012257367640}
+  m_GameObject: {fileID: 1000011590970212}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: fbc51a67ec0684677965bcb8d9c5c62c, type: 3}
---- !u!65 &65000012448008098
+--- !u!65 &65000012339639706
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012257367640}
+  m_GameObject: {fileID: 1000011590970212}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.326344, y: 1.1880221, z: 0.41485006}
   m_Center: {x: 0, y: 0.21464303, z: 0.21335304}
---- !u!95 &95000013350841348
+--- !u!95 &95000012823476318
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012257367640}
+  m_GameObject: {fileID: 1000011590970212}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fbc51a67ec0684677965bcb8d9c5c62c, type: 3}
   m_Controller: {fileID: 0}
@@ -122,30 +151,27 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000010308288062
+--- !u!114 &114000011585470892
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012257367640}
+  m_GameObject: {fileID: 1000014047869748}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ae87c7bf388e4d7c85801feb7cab0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 9.6
-  y: 1.27
-  z: 12.1
-  width: 5
-  height: 5
-  depth: 5
-  life: 1
-  maxLife: 1
   Attack: 50
-  Speed: 80
+  Speed: 75
   Defense: 50
-  velo: 20
-  target: {fileID: 0}
-  turnSpeed: 3
+  MaxLife: 50
+  mouseType: 0
+  targets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  randomTarget: 1
+  turnSpeed: 4
   turnDst: 0
   stoppingDst: 10

@@ -34,9 +34,9 @@ public class Mission1 : MonoBehaviour
 	    if(CheckTooltip1(ref tooltip1) >= 1)
         {
             myHUD.SetObjective("Achevez la souris (E)");
-            if (mouse.life <=0 && CheckTooltip2(ref tooltip2) == 0) //if on kill la souris sans capacité special
+            if (mouse.life <= 0 && CheckTooltip2(ref tooltip2) == 0) //if on kill la souris sans capacité special
             {
-                mouse.life = 1;//freez pv de la souris a 1 tant que il utilise pas une att sppeciale
+				mouse.life = mouse.maxLife;//freez pv de la souris a 100 tant que il utilise pas une att sppeciale
 
 
             }

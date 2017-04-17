@@ -7,7 +7,7 @@ public class Grid : MonoBehaviour {
 	public bool displayGridGizmos;
 
 	public LayerMask unwalkableMask;
-	public Vector2 gridWorldSize;
+	public Vector3 gridWorldSize;
 	public float nodeRadius;
 
 	public TerrainType[] walkableRegions;
