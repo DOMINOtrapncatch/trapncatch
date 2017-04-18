@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -18,6 +19,9 @@ public class Mouse : Character
 
 	int targetIndex;
 	Path path;
+
+	[Header("GUI Settings")]
+	public Image healthBar;
 
 	void Start()
 	{
@@ -52,6 +56,11 @@ public class Mouse : Character
 		}
 
 		StartCoroutine(UpdatePath());
+	}
+
+	void Update()
+	{
+		healthBar.fillAmount = this.life / this.maxLife;
 	}
 
 	public void OnPathFound(Vector3[] waypoints, bool pathSuccessful)

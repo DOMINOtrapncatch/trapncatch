@@ -21,10 +21,10 @@ public class Mission0 : MonoBehaviour
 	public string messageTooltip1 = "Se déplacer";
 	public string messageTooltip2 = "Left Click pour attaquer";
 	public string messageTooltip3 = "Poursuivre la souris";
-    public string messageTooltip4 = "Allez jusqu'à la porte";
+    public string messageTooltip4 = "Aller jusqu'à la porte";
 	int tooltip1 = 0;
 	int tooltip2 = 0;
-    bool checktool = false;
+    int tooltip3 = 0;
 
 	// Use this for initialization
 	void Start()
@@ -45,7 +45,7 @@ public class Mission0 : MonoBehaviour
 
 	void CheckTooltips()
 	{
-		if (CheckTooltip1(true))
+		if (CheckTooltip1(true) && !CheckTooltip3())
 		{
 			myHUD.SetObjective(messageTooltip2);
 
@@ -72,23 +72,35 @@ public class Mission0 : MonoBehaviour
 	 */
 	bool CheckTooltip2(bool checkInputs)
 	{
-		if(checkInputs && Input.GetButtonDown("attack"))
+		if(checkInputs && Input.GetButtonDown("attack") && player.nearEnemy.Count > 0)
+		{
+			if(tooltip2 > 0)
+				player.attack = 0;
+			
 			++tooltip2;
+		}
 
 		return tooltip2 >= 1;
 	}
 
+	/*
+	 * Objectif: poursuivre la souris
+	 */
+	bool CheckTooltip3()
+	{
+		return tooltip3 >= 10;
+	}
+
 	void OnTriggerEnter(Collider box)
 	{
-        if (box.tag == "Enemy" && CheckTooltip2(false))
+		if (!CheckTooltip3() && box.tag == "Enemy" && CheckTooltip2(false))
         {
             myHUD.SetObjective(messageTooltip4);
-            checktool = true;
+			++tooltip3;
         }
-        else if (box.tag == "Collider" && checktool)
-            AutoFade.LoadLevel(9, .3f, .3f, Color.black); 
-
-        
-        
+		else if (box.tag == "Collider" && CheckTooltip3())
+		{
+			AutoFade.LoadLevel(9, .3f, .3f, Color.black); 
+		}
 	}
 }
