@@ -9,14 +9,19 @@ public class Cat : Character
 	[Range(0, 100)]
 	public float Mana;
 	[Range(0, 100)]
-	public float MaxMana;
+	public float MaxMana, ManaMaxRecoveryTime;
+
+	// Variables qui ne pourront pas etre modifiees par l'utilisateur
+	[HideInInspector]
+	public float ManaRecoveryTime = 0;
 
 	// Valeur maximales brutes
-	private float maxManaVal = 100;
+	private float maxManaVal = 500, manaMaxRecoveryTimeVal = 40;
 
 	// Variables utilisees dans les scripts
-	public float mana    { get { return Mana    * maxMana    / 100; } }
-	public float maxMana { get { return MaxMana * maxManaVal / 100; } }
+	public float mana                { get { return Mana                * maxMana                / 100; } }
+	public float maxMana             { get { return MaxMana             * maxManaVal             / 100; } }
+	public float manaMaxRecoveryTime { get { return ManaMaxRecoveryTime * manaMaxRecoveryTimeVal / 100; } }
 
     public Sprite icon;
     //public static bool light; //true = lumiere && false = pas de lumiere

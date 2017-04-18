@@ -65,6 +65,16 @@ public class HUDManager : MonoBehaviour
 		statusUI[1].fillAmount = player.mana / player.maxMana;
 
 		if (player.mana < player.maxMana)
-			player.Mana += 0.1f;
+		{
+			if(player.ManaRecoveryTime == player.manaMaxRecoveryTime)
+			{
+				player.ManaRecoveryTime = 0;
+				player.Mana += 1;
+			}
+			else
+			{
+				player.ManaRecoveryTime += 1;
+			}
+		}
     }
 }

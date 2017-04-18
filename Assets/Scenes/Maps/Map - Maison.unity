@@ -740,6 +740,11 @@ Prefab:
       propertyPath: targets.Array.data[2]
       value: 
       objectReference: {fileID: 647144167}
+    - target: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
+        type: 2}
+      propertyPath: MaxLife
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06963c92fbb1f1e4db99cd7c787a42ff, type: 2}
   m_IsPrefabParent: 0
@@ -5562,7 +5567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda5fe86a6648e24cb1b683315f3059e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 20
+  Attack: 100
   Speed: 40
   Defense: 40
   MaxLife: 100
