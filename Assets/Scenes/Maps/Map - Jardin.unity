@@ -4996,13 +4996,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267894a8a2a42f5429f37a0a4b1dd373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 20
+  Attack: 100
   Speed: 62.8
   Defense: 33.6
   MaxLife: 100
   Life: 100
   Mana: 100
   MaxMana: 40
+  ManaMaxRecoveryTime: 100
+  ManaRecoveryTime: 0
   icon: {fileID: 0}
   spells:
   - {fileID: 1711177969}
@@ -5049,7 +5051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 10
+  manaCost: 80
   RecoveryTime: 100
   MaxRecoveryTime: 8
   cat: {fileID: 1711177966}
@@ -5850,7 +5852,7 @@ Prefab:
     - target: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
         type: 2}
       propertyPath: MaxLife
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06963c92fbb1f1e4db99cd7c787a42ff, type: 2}
