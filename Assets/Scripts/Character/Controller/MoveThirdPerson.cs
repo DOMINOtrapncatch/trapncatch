@@ -151,5 +151,7 @@ public class MoveThirdPerson : MonoBehaviour {
         {
             velocity.y -= physsettings.downaccel;
         }
+
+        print(velocity.y);
     }
 }
