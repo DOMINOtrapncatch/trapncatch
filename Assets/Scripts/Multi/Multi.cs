@@ -13,29 +13,42 @@ public class Multi : NetworkBehaviour {
      4) receive messages
 
      */
-    int channelID;
-    int socketID;
-    int socketPort = 7777; // NE PAS OUBLIER DE MODIF CECI
-    string host = "127.0.0.1"; //idem
-    int connectID;
-	void Start () {
-        
-        //setup
-        NetworkTransport.Init();
-        ConnectionConfig config = new ConnectionConfig();
+    public uint listen_mess = 8;
+    byte channelID;
 
+    int socketID_server = -1;
+    int socketID_client = -1;
+    int localport = 8888;
+    int socketPort = 7777; // NE PAS OUBLIER DE MODIF CECI
+    int connectID;
+    int maxConnect = 8;
+
+    string host = "127.0.0.1"; //idem
+
+    bool host_init = false;
+    bool client_connected = false;
+    void Start () {
+        //global config
+        GlobalConfig globalconfig = new GlobalConfig();
+        globalconfig.ReactorModel = ReactorModel.FixRateReactor;
+        globalconfig.ThreadAwakeTimeout = listen_mess;
+
+        //setup
         //init channel for futur send/receive actions
-        channelID = config.AddChannel(QosType.Reliable); //less faster but secu
-        
         //set up max numbers of connection for the socket tmtc
-        int maxConnect = 8;
+        ConnectionConfig config = new ConnectionConfig();
+        channelID = config.AddChannel(QosType.Reliable); //less faster but safe
         HostTopology topo = new HostTopology(config, maxConnect);
 
-        //init socket
-        socketID = NetworkTransport.AddHost(topo, socketPort);
-        Debug.Log("Socket open :" + socketID);
+        //init socket server and client
+        socketID_server = NetworkTransport.AddHost(topo, localport);
+        socketID_client = NetworkTransport.AddHost(topo);
+        Debug.Log("Server : " + socketID_server);
+        Debug.Log("Client : " + socketID_client);
 
+        host_init = true;
         Connect();
+        
 	}
 	
 	public void Connect()
@@ -43,7 +56,7 @@ public class Multi : NetworkBehaviour {
         byte error;
 
         //NE PAS OUBLIER DE MODIF
-        connectID = NetworkTransport.Connect(socketID, "localhost", socketPort, 0, out error);
+        connectID = NetworkTransport.Connect(socketID_client, host, socketPort, 0, out error);
         NetworkError neterror = (NetworkError)error;
         if(neterror != NetworkError.Ok)
         {
@@ -60,7 +73,7 @@ public class Multi : NetworkBehaviour {
     public void Disconnect()
     {
         byte error;
-        NetworkTransport.Disconnect(socketID, connectID, out error);
+        NetworkTransport.Disconnect(socketID_client, connectID, out error);
     }
 
     public void SendSocketMessage()
@@ -71,7 +84,7 @@ public class Multi : NetworkBehaviour {
         BinaryFormatter format = new BinaryFormatter();
         format.Serialize(stream, "HelloDOMINO");
 
-        NetworkTransport.Send(socketID, connectID, channelID, buffer, 1024, out error);
+        NetworkTransport.Send(socketID_client, connectID, channelID, buffer, 1024, out error);
 
 
     }
