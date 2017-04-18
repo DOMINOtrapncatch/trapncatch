@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class HUDManager : MonoBehaviour
+public class HUDManager
 {
     Cat player;
     List<Image> statusUI;
@@ -29,7 +29,7 @@ public class HUDManager : MonoBehaviour
         this.spellsUI.Add(spell4);
 
 		UpdateHealth();
-		UpdateMana();
+		UpdateSpell();
     }
 
     public void UpdateSpell()
@@ -38,7 +38,7 @@ public class HUDManager : MonoBehaviour
 		{
 			if (player.spells[i].recoveryTime < player.spells[i].maxRecoveryTime)
 			{
-				player.spells[i].recoveryTime += 1;
+				player.spells[i].RecoveryTime += 1;
 				spellsUI[i].color = new Color(spellsUI[i].color.r, spellsUI[i].color.g, spellsUI[i].color.b, 20);
 			}
 			else
@@ -63,6 +63,18 @@ public class HUDManager : MonoBehaviour
 	public void UpdateMana()
     {
 		statusUI[1].fillAmount = player.mana / player.maxMana;
-		player.mana += 0.1f;
+
+		if (player.mana < player.maxMana)
+		{
+			if(player.ManaRecoveryTime == player.manaMaxRecoveryTime)
+			{
+				player.ManaRecoveryTime = 0;
+				player.Mana += 1;
+			}
+			else
+			{
+				player.ManaRecoveryTime += 1;
+			}
+		}
     }
 }

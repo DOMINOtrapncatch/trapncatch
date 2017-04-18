@@ -15,7 +15,6 @@ public class Mission1 : MonoBehaviour
     public Text objective;
 
 	// Player related variables
-	public Mouse mouse;
     public Cat player;
 
 	// Tooltips variables
@@ -34,6 +33,10 @@ public class Mission1 : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		myHUD.UpdateSpell();
+		myHUD.UpdateHealth();
+		myHUD.UpdateMana();
+
         CheckTooltips();
 	}
 
@@ -51,12 +54,17 @@ public class Mission1 : MonoBehaviour
 	}
 
 	/*
-	 * Objectif: blesser la souris au moins une fois
+	 * Objectif: blesser une souris au moins une fois
 	 */
     bool CheckTooltip1()
     {
-        if (mouse.maxLife != mouse.life)
-        	++tooltip1;
+		if (Input.GetButtonDown("attack") && player.nearEnemy.Count > 0)
+		{
+			if (tooltip1 > 0)
+				player.Attack = 0;
+
+			++tooltip1;
+		}
 
         return tooltip1 >= 1;
     }
@@ -67,9 +75,12 @@ public class Mission1 : MonoBehaviour
     bool CheckTooltip2()
     {
         if(player.maxMana != player.mana)
+		{
+			player.Attack = 10000;
         	++tooltip2;
+		}
 
-        return tooltip2 >= 1 && mouse.life <= 0;
+		return tooltip2 >= 1 && player.enemyKillCount > 0;
     }
 
 }

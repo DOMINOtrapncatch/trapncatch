@@ -5,17 +5,9 @@ using System.Collections;
 
 public class BasicSpell : Spell {
 
-    public override void Activate() //attaque basique
+    public override void Activate()
     {
-        //attaque
-		if(cat.nearEnemy.Count > 0)
-		{
-			// Destroy (cat.nearEnemy[0]); // -> THIS IS THE REAL CODE
-            
-			AutoFade.LoadLevel(9, .3f, .3f, Color.black);
-
-			// ANMATION
-
-		}
+		if (cat.nearEnemy.Count > 0)
+			cat.AttackEnemy(0);
     }
 }

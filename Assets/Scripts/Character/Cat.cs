@@ -3,26 +3,33 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Net;
 
-abstract public class Cat : Character
+public class Cat : Character
 {
 	// Variables qui pourront etres modifiees par l'utilisateur
 	[Range(0, 100)]
 	public float Mana;
 	[Range(0, 100)]
-	public float MaxMana;
+	public float MaxMana, ManaMaxRecoveryTime;
+
+	// Variables qui ne pourront pas etre modifiees par l'utilisateur
+	[HideInInspector]
+	public float ManaRecoveryTime = 0;
 
 	// Valeur maximales brutes
-	private float maxManaVal = 100;
+	private float maxManaVal = 500, manaMaxRecoveryTimeVal = 40;
 
 	// Variables utilisees dans les scripts
-	public float mana { get { return Mana * maxMana / 100; } set { Mana = value; } }
-	public float maxMana { get { return MaxMana * maxManaVal / 100; } }
+	public float mana                { get { return Mana                * maxMana                / 100; } }
+	public float maxMana             { get { return MaxMana             * maxManaVal             / 100; } }
+	public float manaMaxRecoveryTime { get { return ManaMaxRecoveryTime * manaMaxRecoveryTimeVal / 100; } }
 
     public Sprite icon;
     //public static bool light; //true = lumiere && false = pas de lumiere
 	public List<Spell> spells;
 	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
+	[HideInInspector]
+	public int enemyKillCount = 0;
 
 	void Update()
 	{
@@ -34,13 +41,13 @@ abstract public class Cat : Character
 	void OnTriggerEnter(Collider col)
 	{
 		if(col.gameObject.tag == "Enemy")
-			nearEnemy.Add(col.gameObject);
+			nearEnemy.Add(col.gameObject.transform.parent.gameObject);
 	}
 
 	void OnTriggerExit(Collider col)
 	{
 		if(col.gameObject.tag == "Enemy")
-			nearEnemy.Remove(col.gameObject);
+			nearEnemy.Remove(col.gameObject.transform.parent.gameObject);
 	}
 
 	public void CheckSpells()
@@ -53,4 +60,25 @@ abstract public class Cat : Character
 			}
 		}
 	}
+
+	public void AttackEnemy(int enemyIndex)
+	{
+		// Get enemy
+		Mouse enemy = nearEnemy[enemyIndex].GetComponent<Mouse>();
+
+		// Remove life
+		if(attack > 0)
+			enemy.Life -= attack;
+
+		// If dead, make it disappear
+		if (enemy.life <= 0)
+			KillEnemy(enemyIndex);
+	}
+
+	public void KillEnemy(int enemyIndex)
+	{
+        Destroy(nearEnemy[enemyIndex]);
+		++enemyKillCount;
+	}
 }
+
