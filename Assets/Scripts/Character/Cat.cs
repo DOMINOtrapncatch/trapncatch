@@ -34,13 +34,13 @@ abstract public class Cat : Character
 	void OnTriggerEnter(Collider col)
 	{
 		if(col.gameObject.tag == "Enemy")
-			nearEnemy.Add(col.gameObject.transform.parent.gameObject);
+			nearEnemy.Add(col.gameObject);
 	}
 
 	void OnTriggerExit(Collider col)
 	{
 		if(col.gameObject.tag == "Enemy")
-			nearEnemy.Remove(col.gameObject.transform.parent.gameObject);
+			nearEnemy.Remove(col.gameObject);
 	}
 
 	public void CheckSpells()

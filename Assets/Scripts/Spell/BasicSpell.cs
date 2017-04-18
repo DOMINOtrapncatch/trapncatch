@@ -5,20 +5,17 @@ using System.Collections;
 
 public class BasicSpell : Spell {
 
-    public override void Activate()
+    public override void Activate() //attaque basique
     {
+        //attaque
 		if(cat.nearEnemy.Count > 0)
 		{
-			// Get enemy
-			Mouse enemy = cat.nearEnemy[0].GetComponent<Mouse>();
+			// Destroy (cat.nearEnemy[0]); // -> THIS IS THE REAL CODE
+            
+			AutoFade.LoadLevel(9, .3f, .3f, Color.black);
 
-			// Remove life
-			if(cat.attack > 0)
-				enemy.life -= cat.attack;
+			// ANMATION
 
-			// If dead, make it disappear
-			if(enemy.life <= 0)
-                Destroy(cat.nearEnemy[0]);
 		}
     }
 }
