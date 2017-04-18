@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692504, g: 0.4967869, b: 0.57508504, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2795,7 +2795,7 @@ MonoBehaviour:
   spellBar3: {fileID: 1218914951}
   spellBar4: {fileID: 80632073}
   objective: {fileID: 17733055}
-  mouse: {fileID: 0}
+  mouse: {fileID: 1517963970}
   player: {fileID: 1711177966}
   messageTooltip1: Attaquez la souris
   messageTooltip2: Achever la souris
@@ -4657,6 +4657,12 @@ Transform:
   - {fileID: 545811678}
   m_Father: {fileID: 1595319691}
   m_RootOrder: 0
+--- !u!114 &1517963970 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
+    type: 2}
+  m_PrefabInternal: {fileID: 2058016099}
+  m_Script: {fileID: 11500000, guid: 2ae87c7bf388e4d7c85801feb7cab0ae, type: 3}
 --- !u!1 &1595319690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4915,7 +4921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movesettings:
-    chara_cat: {fileID: 0}
+    chara_cat: {fileID: 1711177966}
     forwardvelo: 12
     rotatevelo: 100
     jumpvelo: 13
