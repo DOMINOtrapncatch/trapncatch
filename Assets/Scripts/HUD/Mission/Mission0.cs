@@ -72,7 +72,7 @@ public class Mission0 : MonoBehaviour
 	 */
 	bool CheckTooltip2(bool checkInputs)
 	{
-		if(checkInputs && Input.GetButtonDown("attack") && player.nearEnemy.Count > 0)
+		if(checkInputs && Input.GetButtonDown("attack")) // Check for real attack --> && player.nearEnemy.Count > 0)
 		{
 			if(tooltip2 > 0)
 				player.Attack = 0;
@@ -88,7 +88,7 @@ public class Mission0 : MonoBehaviour
 	 */
 	bool CheckTooltip3()
 	{
-		return tooltip3 >= 10;
+		return tooltip3 >= 4;
 	}
 
 	void OnTriggerEnter(Collider box)
