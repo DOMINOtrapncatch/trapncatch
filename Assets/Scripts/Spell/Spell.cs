@@ -16,7 +16,7 @@ public abstract class Spell : MonoBehaviour {
 	private float maxRecoveryTimeVal = 100;
 
 	// Variables utilisees dans les scripts
-	public float recoveryTime    { get { return RecoveryTime    * maxRecoveryTime    / 100; } set { RecoveryTime = value; } }
+	public float recoveryTime    { get { return RecoveryTime    * maxRecoveryTime    / 100; } }
 	public float maxRecoveryTime { get { return MaxRecoveryTime * maxRecoveryTimeVal / 100; } }
 
     public Cat cat;
@@ -29,10 +29,10 @@ public abstract class Spell : MonoBehaviour {
     {
 		if(Input.GetButtonDown (inputName) && recoveryTime == maxRecoveryTime && cat.mana - manaCost >= 0)
 		{
-            recoveryTime = 0;
+            RecoveryTime = 0;
 
 			if(manaCost > 0)
-            	cat.mana -= manaCost;
+            	cat.Mana -= manaCost;
 			
             return true;
         }

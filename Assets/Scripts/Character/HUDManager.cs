@@ -27,6 +27,9 @@ public class HUDManager : MonoBehaviour
         this.spellsUI.Add(spell2);
         this.spellsUI.Add(spell3);
         this.spellsUI.Add(spell4);
+
+		UpdateHealth();
+		UpdateSpell();
     }
 
     public void UpdateSpell()
@@ -35,7 +38,7 @@ public class HUDManager : MonoBehaviour
 		{
 			if (player.spells[i].recoveryTime < player.spells[i].maxRecoveryTime)
 			{
-				//player.spells[i].recoveryTime += 1;
+				player.spells[i].RecoveryTime += 1;
 				spellsUI[i].color = new Color(spellsUI[i].color.r, spellsUI[i].color.g, spellsUI[i].color.b, 20);
 			}
 			else
@@ -61,10 +64,7 @@ public class HUDManager : MonoBehaviour
     {
 		statusUI[1].fillAmount = player.mana / player.maxMana;
 
-		print("MAX - " + player.maxMana);
-		print(player.mana + " --- 1");
 		if (player.mana < player.maxMana)
-			player.mana += 0.1f;
-		print(player.mana + " --- 2");
+			player.Mana += 0.1f;
     }
 }

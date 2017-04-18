@@ -5566,6 +5566,7 @@ MonoBehaviour:
   Speed: 40
   Defense: 40
   MaxLife: 100
+  Life: 100
   Mana: 100
   MaxMana: 100
   icon: {fileID: 0}
@@ -5644,12 +5645,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8071589de891e468e0e6b4e2f65ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 763317448}
-  manaBar: {fileID: 713148884}
-  spellBar1: {fileID: 1374124454}
-  spellBar2: {fileID: 1994966731}
-  spellBar3: {fileID: 1970368014}
-  spellBar4: {fileID: 1701271906}
+  healthBar: {fileID: 988998009}
+  manaBar: {fileID: 1285385347}
+  spellBar1: {fileID: 805217538}
+  spellBar2: {fileID: 156897975}
+  spellBar3: {fileID: 150902071}
+  spellBar4: {fileID: 1419197554}
   objective: {fileID: 805959972}
   player: {fileID: 914714664}
   messageTooltip1: "Se d\xE9placer"

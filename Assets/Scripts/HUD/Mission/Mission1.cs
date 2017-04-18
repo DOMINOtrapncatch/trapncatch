@@ -61,7 +61,7 @@ public class Mission1 : MonoBehaviour
 		if (Input.GetButtonDown("attack") && player.nearEnemy.Count > 0)
 		{
 			if (tooltip1 > 0)
-				player.attack = 0;
+				player.Attack = 0;
 
 			++tooltip1;
 		}
@@ -76,7 +76,7 @@ public class Mission1 : MonoBehaviour
     {
         if(player.maxMana != player.mana)
 		{
-			player.attack = 10000;
+			player.Attack = 10000;
         	++tooltip2;
 		}
 

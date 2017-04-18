@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Net;
 
-abstract public class Cat : Character
+public class Cat : Character
 {
 	// Variables qui pourront etres modifiees par l'utilisateur
 	[Range(0, 100)]
@@ -15,7 +15,7 @@ abstract public class Cat : Character
 	private float maxManaVal = 100;
 
 	// Variables utilisees dans les scripts
-	public float mana    { get { return Mana    * maxMana    / 100; } set { Mana = value; } }
+	public float mana    { get { return Mana    * maxMana    / 100; } }
 	public float maxMana { get { return MaxMana * maxManaVal / 100; } }
 
     public Sprite icon;
@@ -23,6 +23,7 @@ abstract public class Cat : Character
 	public List<Spell> spells;
 	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
+	[HideInInspector]
 	public int enemyKillCount = 0;
 
 	void Update()
@@ -62,7 +63,7 @@ abstract public class Cat : Character
 
 		// Remove life
 		if(attack > 0)
-			enemy.life -= attack;
+			enemy.Life -= attack;
 
 		// If dead, make it disappear
 		if (enemy.life <= 0)

@@ -75,7 +75,7 @@ public class Mission0 : MonoBehaviour
 		if(checkInputs && Input.GetButtonDown("attack") && player.nearEnemy.Count > 0)
 		{
 			if(tooltip2 > 0)
-				player.attack = 0;
+				player.Attack = 0;
 			
 			++tooltip2;
 		}
