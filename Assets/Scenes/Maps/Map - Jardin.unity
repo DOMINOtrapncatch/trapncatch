@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692504, g: 0.4967869, b: 0.57508504, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2795,7 +2795,6 @@ MonoBehaviour:
   spellBar3: {fileID: 1218914951}
   spellBar4: {fileID: 80632073}
   objective: {fileID: 17733055}
-  mouse: {fileID: 1517963970}
   player: {fileID: 1711177966}
   messageTooltip1: Attaquez la souris
   messageTooltip2: Achever la souris
@@ -4657,12 +4656,6 @@ Transform:
   - {fileID: 545811678}
   m_Father: {fileID: 1595319691}
   m_RootOrder: 0
---- !u!114 &1517963970 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
-    type: 2}
-  m_PrefabInternal: {fileID: 2058016099}
-  m_Script: {fileID: 11500000, guid: 2ae87c7bf388e4d7c85801feb7cab0ae, type: 3}
 --- !u!1 &1595319690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4898,8 +4891,8 @@ GameObject:
   - 114: {fileID: 1711177961}
   - 114: {fileID: 1711177964}
   - 114: {fileID: 1711177966}
-  - 114: {fileID: 1711177968}
   - 114: {fileID: 1711177969}
+  - 114: {fileID: 1711177968}
   - 135: {fileID: 1711177971}
   - 65: {fileID: 1711177965}
   m_Layer: 0
@@ -5003,15 +4996,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267894a8a2a42f5429f37a0a4b1dd373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 0
-  Speed: 0
-  Defense: 0
-  MaxLife: 0
-  Mana: 0
-  MaxMana: 0
+  Attack: 52.5
+  Speed: 62.8
+  Defense: 33.6
+  MaxLife: 73.8
+  Mana: 100
+  MaxMana: 45.8
   icon: {fileID: 0}
-  spells: []
+  spells:
+  - {fileID: 1711177969}
+  - {fileID: 1711177968}
   nearEnemy: []
+  enemyKillCount: 0
 --- !u!23 &1711177967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5052,11 +5048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 0
-  RecoveryTime: 0
-  MaxRecoveryTime: 0
+  manaCost: 10
+  RecoveryTime: 100
+  MaxRecoveryTime: 41.5
   cat: {fileID: 1711177966}
-  input: 0
+  inputName: attack_special
 --- !u!114 &1711177969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5072,7 +5068,7 @@ MonoBehaviour:
   RecoveryTime: 0
   MaxRecoveryTime: 0
   cat: {fileID: 1711177966}
-  input: 0
+  inputName: attack
 --- !u!4 &1711177970
 Transform:
   m_ObjectHideFlags: 0

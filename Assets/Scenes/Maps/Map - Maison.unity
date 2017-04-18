@@ -5549,7 +5549,7 @@ MonoBehaviour:
   RecoveryTime: 0
   MaxRecoveryTime: 0
   cat: {fileID: 914714664}
-  input: 323
+  inputName: attack
 --- !u!114 &914714664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5572,6 +5572,7 @@ MonoBehaviour:
   spells:
   - {fileID: 914714663}
   nearEnemy: []
+  enemyKillCount: 0
 --- !u!54 &914714665
 Rigidbody:
   m_ObjectHideFlags: 0

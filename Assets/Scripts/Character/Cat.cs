@@ -15,7 +15,7 @@ abstract public class Cat : Character
 	private float maxManaVal = 100;
 
 	// Variables utilisees dans les scripts
-	public float mana { get { return Mana * maxMana / 100; } set { Mana = value; } }
+	public float mana    { get { return Mana    * maxMana    / 100; } set { Mana = value; } }
 	public float maxMana { get { return MaxMana * maxManaVal / 100; } }
 
     public Sprite icon;
@@ -23,6 +23,7 @@ abstract public class Cat : Character
 	public List<Spell> spells;
 	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
+	public int enemyKillCount = 0;
 
 	void Update()
 	{
@@ -53,4 +54,25 @@ abstract public class Cat : Character
 			}
 		}
 	}
+
+	public void AttackEnemy(int enemyIndex)
+	{
+		// Get enemy
+		Mouse enemy = nearEnemy[enemyIndex].GetComponent<Mouse>();
+
+		// Remove life
+		if(attack > 0)
+			enemy.life -= attack;
+
+		// If dead, make it disappear
+		if (enemy.life <= 0)
+			KillEnemy(enemyIndex);
+	}
+
+	public void KillEnemy(int enemyIndex)
+	{
+        Destroy(nearEnemy[enemyIndex]);
+		++enemyKillCount;
+	}
 }
+
