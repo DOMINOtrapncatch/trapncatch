@@ -4902,6 +4902,7 @@ GameObject:
   - 114: {fileID: 1711177969}
   - 135: {fileID: 1711177971}
   - 65: {fileID: 1711177965}
+  - 136: {fileID: 1711177972}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -4990,8 +4991,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0789406, y: 3.168906, z: 4.6270638}
-  m_Center: {x: 0.048561096, y: 1.7666721, z: 0.085258484}
+  m_Size: {x: 2.0789406, y: 3.3972795, z: 4.6270647}
+  m_Center: {x: 0.048560902, y: 1.6524855, z: 0.08525849}
 --- !u!114 &1711177966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5100,6 +5101,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.85
   m_Center: {x: 0, y: 1.09, z: 4.46}
+--- !u!136 &1711177972
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711177960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 3.072927
+  m_Height: 0.049176037
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.83, z: 0}
 --- !u!1 &1730978991
 GameObject:
   m_ObjectHideFlags: 0
