@@ -93,6 +93,7 @@ public class Mission0 : MonoBehaviour
 
 	void OnTriggerEnter(Collider box)
 	{
+<<<<<<< HEAD
 		if (!CheckTooltip3() && box.tag == "Enemy" && CheckTooltip2(false))
         {
             myHUD.SetObjective(messageTooltip4);
@@ -102,5 +103,20 @@ public class Mission0 : MonoBehaviour
 		{
 			AutoFade.LoadLevel(9, .3f, .3f, Color.black); 
 		}
+=======
+        if (box.tag == "Enemy" /*&& CheckTooltip2(false)*/)
+        {
+            myHUD.SetObjective(messageTooltip4);
+            checktool = true;
+            Debug.Log("OK1");
+        }
+        else if (box.tag == "Collider" /*&& checktool*/)
+        {
+            Debug.Log("OK2");
+            AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+
+        }
+        
+>>>>>>> parent of 839c1ae... [FIX] part 2/2
 	}
 }
