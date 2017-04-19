@@ -5574,6 +5574,8 @@ MonoBehaviour:
   Life: 100
   Mana: 100
   MaxMana: 100
+  ManaMaxRecoveryTime: 0
+  ManaRecoveryTime: 0
   icon: {fileID: 0}
   spells:
   - {fileID: 914714663}
