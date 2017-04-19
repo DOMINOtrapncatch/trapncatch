@@ -23,10 +23,25 @@ public class HUDManager
 		this.statusUI.Add(healthUI);
         this.statusUI.Add(manaUI);
 
-        this.spellsUI.Add(spell1);
-        this.spellsUI.Add(spell2);
-        this.spellsUI.Add(spell3);
-        this.spellsUI.Add(spell4);
+		if (player.spells.Count >= 1)
+			this.spellsUI.Add(spell1);
+		else
+			spell1.transform.parent.gameObject.SetActive(false);
+		
+		if(player.spells.Count >= 2)
+            this.spellsUI.Add(spell2);
+		else
+			spell2.transform.parent.gameObject.SetActive(false);
+		
+		if(player.spells.Count >= 3)
+            this.spellsUI.Add(spell3);
+		else
+			spell3.transform.parent.gameObject.SetActive(false);
+		
+		if(player.spells.Count >= 4)
+            this.spellsUI.Add(spell4);
+		else
+			spell4.transform.parent.gameObject.SetActive(false);
 
 		UpdateHealth();
 		UpdateSpell();
