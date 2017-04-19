@@ -4,6 +4,7 @@ using System.Runtime.Remoting;
 
 public abstract class Spell : MonoBehaviour {
 
+	[Range(0, 100)]
     public float manaCost;
 
 	// Variables qui pourront etres modifiees par l'utilisateur
@@ -27,7 +28,7 @@ public abstract class Spell : MonoBehaviour {
     //check
     public bool CanUse()
     {
-		if(Input.GetButtonDown (inputName) && recoveryTime == maxRecoveryTime && cat.mana - manaCost >= 0)
+		if(Input.GetButtonDown (inputName) && recoveryTime == maxRecoveryTime && cat.Mana - manaCost >= 0)
 		{
             RecoveryTime = 0;
 
