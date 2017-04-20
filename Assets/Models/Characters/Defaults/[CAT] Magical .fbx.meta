@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: 91971a6cbe042b64daccafabd596196b
+timeCreated: 1492647211
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cat
+    100004: Cat Armature
+    100006: ClaviculeArriere.L
+    100008: ClaviculeArriere.R
+    100010: ClaviculeAvant.L
+    100012: ClaviculeAvant.R
+    100014: Colonne
+    100016: Cou
+    100018: CtrlGenouArriere.L
+    100020: CtrlGenouArriere.L_end
+    100022: CtrlGenouArriere.R
+    100024: CtrlGenouArriere.R_end
+    100026: CtrlGenouAvant.L
+    100028: CtrlGenouAvant.L_end
+    100030: CtrlGenouAvant.R
+    100032: CtrlGenouAvant.R_end
+    100034: CtrlMvtPiedArriere.L
+    100036: CtrlMvtPiedArriere.L_end
+    100038: CtrlMvtPiedArriere.R
+    100040: CtrlMvtPiedArriere.R_end
+    100042: CtrlMvtPiedAvant.L
+    100044: CtrlMvtPiedAvant.L_end
+    100046: CtrlMvtPiedAvant.R
+    100048: CtrlMvtPiedAvant.R_end
+    100050: CtrlPiedArriere.L
+    100052: CtrlPiedArriere.R
+    100054: CtrlPiedAvant.L
+    100056: CtrlPiedAvant.R
+    100058: CuisseArriere.L
+    100060: CuisseArriere.R
+    100062: CuisseAvant.L
+    100064: CuisseAvant.R
+    100066: Dos
+    100068: Ear.L
+    100070: Ear.L_end
+    100072: Ear.R
+    100074: Ear.R_end
+    100076: FemurArriere.L
+    100078: FemurArriere.R
+    100080: FemurAvant.L
+    100082: FemurAvant.R
+    100084: Fessier
+    100086: MvtPiedArriere.L
+    100088: MvtPiedArriere.R
+    100090: MvtPiedAvant.L
+    100092: MvtPiedAvant.R
+    100094: MvtTalonArriere.L
+    100096: MvtTalonArriere.R
+    100098: MvtTalonAvant.L
+    100100: MvtTalonAvant.R
+    100102: PiedArriere.L
+    100104: PiedArriere.L_end
+    100106: PiedArriere.R
+    100108: PiedArriere.R_end
+    100110: PiedAvant.L
+    100112: PiedAvant.L_end
+    100114: PiedAvant.R
+    100116: PiedAvant.R_end
+    100118: PiedAvantIK.L
+    100120: PiedAvantIK.L_end
+    100122: PiedAvantIK.R
+    100124: PiedAvantIK.R_end
+    100126: Queue.001
+    100128: Queue.002
+    100130: Queue.003
+    100132: Queue.004
+    100134: Queue.005
+    100136: Queue.006
+    100138: Queue.007
+    100140: Queue.007_end
+    100142: TalonArriere.L
+    100144: TalonArriere.R
+    100146: TalonArriereIK.L
+    100148: TalonArriereIK.L_end
+    100150: TalonArriereIK.R
+    100152: TalonArriereIK.R_end
+    100154: TalonAvant.L
+    100156: TalonAvant.R
+    100158: "T\xEAte"
+    400000: //RootNode
+    400002: Cat
+    400004: Cat Armature
+    400006: ClaviculeArriere.L
+    400008: ClaviculeArriere.R
+    400010: ClaviculeAvant.L
+    400012: ClaviculeAvant.R
+    400014: Colonne
+    400016: Cou
+    400018: CtrlGenouArriere.L
+    400020: CtrlGenouArriere.L_end
+    400022: CtrlGenouArriere.R
+    400024: CtrlGenouArriere.R_end
+    400026: CtrlGenouAvant.L
+    400028: CtrlGenouAvant.L_end
+    400030: CtrlGenouAvant.R
+    400032: CtrlGenouAvant.R_end
+    400034: CtrlMvtPiedArriere.L
+    400036: CtrlMvtPiedArriere.L_end
+    400038: CtrlMvtPiedArriere.R
+    400040: CtrlMvtPiedArriere.R_end
+    400042: CtrlMvtPiedAvant.L
+    400044: CtrlMvtPiedAvant.L_end
+    400046: CtrlMvtPiedAvant.R
+    400048: CtrlMvtPiedAvant.R_end
+    400050: CtrlPiedArriere.L
+    400052: CtrlPiedArriere.R
+    400054: CtrlPiedAvant.L
+    400056: CtrlPiedAvant.R
+    400058: CuisseArriere.L
+    400060: CuisseArriere.R
+    400062: CuisseAvant.L
+    400064: CuisseAvant.R
+    400066: Dos
+    400068: Ear.L
+    400070: Ear.L_end
+    400072: Ear.R
+    400074: Ear.R_end
+    400076: FemurArriere.L
+    400078: FemurArriere.R
+    400080: FemurAvant.L
+    400082: FemurAvant.R
+    400084: Fessier
+    400086: MvtPiedArriere.L
+    400088: MvtPiedArriere.R
+    400090: MvtPiedAvant.L
+    400092: MvtPiedAvant.R
+    400094: MvtTalonArriere.L
+    400096: MvtTalonArriere.R
+    400098: MvtTalonAvant.L
+    400100: MvtTalonAvant.R
+    400102: PiedArriere.L
+    400104: PiedArriere.L_end
+    400106: PiedArriere.R
+    400108: PiedArriere.R_end
+    400110: PiedAvant.L
+    400112: PiedAvant.L_end
+    400114: PiedAvant.R
+    400116: PiedAvant.R_end
+    400118: PiedAvantIK.L
+    400120: PiedAvantIK.L_end
+    400122: PiedAvantIK.R
+    400124: PiedAvantIK.R_end
+    400126: Queue.001
+    400128: Queue.002
+    400130: Queue.003
+    400132: Queue.004
+    400134: Queue.005
+    400136: Queue.006
+    400138: Queue.007
+    400140: Queue.007_end
+    400142: TalonArriere.L
+    400144: TalonArriere.R
+    400146: TalonArriereIK.L
+    400148: TalonArriereIK.L_end
+    400150: TalonArriereIK.R
+    400152: TalonArriereIK.R_end
+    400154: TalonAvant.L
+    400156: TalonAvant.R
+    400158: "T\xEAte"
+    4300000: Cat
+    7400000: Cat Armature|Cat ArmatureAction
+    9500000: //RootNode
+    13700000: Cat
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
