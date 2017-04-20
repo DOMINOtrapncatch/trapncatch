@@ -28,7 +28,8 @@ public class Mission1 : MonoBehaviour
     {
         myHUD = new HUDManager(player, healthBar, manaBar, spellBar1, spellBar2, spellBar3, spellBar4, objective);
 		myHUD.SetObjective(messageTooltip1);
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update ()
