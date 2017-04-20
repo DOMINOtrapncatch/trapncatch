@@ -21,7 +21,7 @@ public class Chara_Selection : MonoBehaviour {
 	
 	
 	void Update () {
-
+        print(i);
         //rotate charac to check him how sexy it is
         RotateRestrain();
 
@@ -32,19 +32,27 @@ public class Chara_Selection : MonoBehaviour {
 
     void SwapCharacter ()
     {
-        //check debordement
-        if (i >= cats.Count)
-            i = 0;
-
-        else if (i < 0)
-            i = cats.Count - 1;
+        //prevent overlapping
+        cats[i].SetActive(false);
 
         //check input for swaping chara
-        if (Input.GetButton("left"))
+        if (Input.GetButtonDown("left"))
+        {
             --i;
 
-        if (Input.GetButton("right"))
+            if (i < 0)
+                i = cats.Count - 1;
+            
+        }
+
+        if (Input.GetButtonDown("right"))
+        {
             ++i;
+
+            if (i >= cats.Count)
+                i = 0;
+            
+        }
 
         //set active chara depending on user input
         cats[i].SetActive(true);
@@ -64,6 +72,7 @@ public class Chara_Selection : MonoBehaviour {
 
     void RotateRestrain()
     {
-        transform.Rotate(new Vector3(0.0f, Input.GetAxis("Mouse X"), 0.0f));
+        if(Input.GetMouseButton(0))
+            transform.Rotate(new Vector3(0.0f, Input.GetAxis("Mouse X"), 0.0f));
     }
 }
