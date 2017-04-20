@@ -6,10 +6,10 @@ public class AverageCat : Cat
 {
 	void Start()
 	{
-        /*maxLife = 100;
-        defense = 75;
-        attack = 75;
-        speed = 75;
-        mana = 60;*/
+        Attack = 75;
+        Defense = 100;
+        Speed = 75;
+        Mana = 60;
+        
     }
 }
