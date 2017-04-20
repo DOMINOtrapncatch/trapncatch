@@ -1987,10 +1987,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012721231604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7145262, y: -0.98848706, z: 6.62249}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.42154902, z: -0, w: -0.90680563}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.120000005, y: 0.12, z: 0.120000005}
+  m_LocalEulerAnglesHint: {x: 0, y: 409.622, z: 0}
   m_Children:
   - {fileID: 4000012519993600}
   - {fileID: 4000013577107156}
@@ -2404,7 +2404,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012721231604}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: bee2abc80dc2e476d881493851ebef35, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 8597cb99d9226fb48b326e7468eb4365, type: 3}
   m_Controller: {fileID: 9100000, guid: a4f70ca032afa47d8a765750b64d2541, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -2450,7 +2450,9 @@ MonoBehaviour:
   ManaMaxRecoveryTime: 0
   ManaRecoveryTime: 0
   icon: {fileID: 0}
-  spells: []
+  spells:
+  - {fileID: 114000010065870710}
+  - {fileID: 114000013158146742}
   nearEnemy: []
   enemyKillCount: 0
 --- !u!114 &114000012934750120
@@ -2478,7 +2480,7 @@ MonoBehaviour:
   manaCost: 80
   RecoveryTime: 100
   MaxRecoveryTime: 8
-  cat: {fileID: 0}
+  cat: {fileID: 114000012852266264}
   inputName: attack_special
 --- !u!135 &135000013034834070
 SphereCollider:

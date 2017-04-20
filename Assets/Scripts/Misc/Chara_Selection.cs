@@ -16,12 +16,14 @@ public class Chara_Selection : MonoBehaviour {
         {
             cats[i].SetActive(false);
         }
+        EnableAnimation();
 	
 	}
 	
 	
 	void Update () {
-        print(i);
+
+        EnableAnimation();
         //rotate charac to check him how sexy it is
         RotateRestrain();
 
@@ -55,6 +57,7 @@ public class Chara_Selection : MonoBehaviour {
         }
 
         //set active chara depending on user input
+        
         cats[i].SetActive(true);
     }
 
@@ -74,5 +77,12 @@ public class Chara_Selection : MonoBehaviour {
     {
         if(Input.GetMouseButton(0))
             transform.Rotate(new Vector3(0.0f, Input.GetAxis("Mouse X"), 0.0f));
+    }
+
+    void EnableAnimation()
+    {
+        cats[i].GetComponent<Animation>().enabled = true;
+        bool isitt = cats[i].GetComponent<Animator>().isActiveAndEnabled;
+        print(isitt);
     }
 }
