@@ -6,20 +6,27 @@ public class Chara_Selection : MonoBehaviour {
 
     //index
     //list de gameobject et non cat pour avoir accès a la methode setactive oklm
-    private int i = 0;
-    public List<SkinnedMeshRenderer> cats_mesh = new List<SkinnedMeshRenderer>();
+    private int mesh_i = 0;
+    private int cats_i = 0;
+    private float camX;
+    private float camZ;
+
+    private List<SkinnedMeshRenderer> cats_mesh = new List<SkinnedMeshRenderer>();
+    public List<GameObject> cats = new List<GameObject>();
+    public Camera cam;
 
 
-	void Start () {
+
+    void Start () {
         
         
         //on fait disparaitre tous les models sauf le premier
-        for(int i = 1; i < cats_mesh.Count; ++i)
+        for(int i = 0; i < cats.Count; ++i)
         {
+            cats_mesh.Add(cats[i].GetComponentInChildren<SkinnedMeshRenderer>());
             cats_mesh[i].enabled = false;
         }
-
-	
+        
 	}
 	
 	
@@ -38,30 +45,40 @@ public class Chara_Selection : MonoBehaviour {
     void SwapCharacter ()
     {
         //prevent overlapping
-        cats_mesh[i].enabled = false;
+        cats_mesh[mesh_i].enabled = false;
 
         //check input for swaping chara
         if (Input.GetButtonDown("left"))
         {
-            --i;
+            --mesh_i;
+            --cats_i;
+            UpdateCam(false);
 
-            if (i < 0)
-                i = cats_mesh.Count - 1;
+            if (mesh_i < 0)
+            {
+                mesh_i = cats_mesh.Count - 1;
+                cats_i = mesh_i;
+            }
             
         }
 
         if (Input.GetButtonDown("right"))
         {
-            ++i;
+            ++mesh_i;
+            ++cats_i;
+            UpdateCam(true);
 
-            if (i >= cats_mesh.Count)
-                i = 0;
+            if (mesh_i >= cats_mesh.Count)
+            {
+                mesh_i = 0;
+                cats_i = 0;
+            }
             
         }
 
         //set active chara depending on user input
 
-        cats_mesh[i].enabled = true;
+        cats_mesh[mesh_i].enabled = true;
     }
 
     void SaveChara()
@@ -71,7 +88,7 @@ public class Chara_Selection : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-            PlayerPrefs.SetInt("ChoosenCat", i);
+            PlayerPrefs.SetInt("ChoosenCat", cats_i);
             AutoFade.LoadLevel(1, .3f, .3f, Palette.DARK_PURPLE);
         }
     }
@@ -79,14 +96,30 @@ public class Chara_Selection : MonoBehaviour {
     void RotateRestrain()
     {
         if(Input.GetMouseButton(0))
-            transform.Rotate(new Vector3(0.0f, Input.GetAxis("Mouse X"), 0.0f));
+            cats[cats_i].transform.Rotate(new Vector3(0.0f, Input.GetAxis("Mouse X"), 0.0f));
     }
 
-   /* void EnableAnimation()
+    void UpdateCam(bool direction)
     {
-        cats[i].GetComponent<Animation>().enabled = true;
-        bool isitt = cats[i].GetComponent<Animator>().isActiveAndEnabled;
-        print(isitt);
-    }*/
+        //vers la droite //true
+        if(direction)
+        {
+            camX = cam.GetComponent<Transform>().position.x - 0.35f;
+            camZ = cam.GetComponent<Transform>().position.z - 0.20f;
+
+            
+        }
+        
+        //vers la gauche // false
+        else
+        {
+            camX = cam.GetComponent<Transform>().position.x + 0.35f;
+            camZ = cam.GetComponent<Transform>().position.z + 0.20f;
+        }
+
+        cam.transform.position = new Vector3(camX, 0.0f, camZ);
+    }
+
+    
 
 }
