@@ -7,24 +7,27 @@ public class Chara_Selection : MonoBehaviour {
     //index
     //list de gameobject et non cat pour avoir accès a la methode setactive oklm
     private int i = 0;
-    public List<GameObject> cats = new List<GameObject>();
+    public List<SkinnedMeshRenderer> cats_mesh = new List<SkinnedMeshRenderer>();
+
 
 	void Start () {
-
+        
+        
         //on fait disparaitre tous les models sauf le premier
-        for(int i = 1; i < cats.Count; ++i)
+        for(int i = 1; i < cats_mesh.Count; ++i)
         {
-            cats[i].SetActive(false);
+            cats_mesh[i].enabled = false;
         }
-        EnableAnimation();
+
 	
 	}
 	
 	
 	void Update () {
 
-        EnableAnimation();
+        
         //rotate charac to check him how sexy it is
+        //we might delete this since we swap mesh and not entire gameobject
         RotateRestrain();
 
         //use left/q or right/d for swaping chara
@@ -35,7 +38,7 @@ public class Chara_Selection : MonoBehaviour {
     void SwapCharacter ()
     {
         //prevent overlapping
-        cats[i].SetActive(false);
+        cats_mesh[i].enabled = false;
 
         //check input for swaping chara
         if (Input.GetButtonDown("left"))
@@ -43,7 +46,7 @@ public class Chara_Selection : MonoBehaviour {
             --i;
 
             if (i < 0)
-                i = cats.Count - 1;
+                i = cats_mesh.Count - 1;
             
         }
 
@@ -51,14 +54,14 @@ public class Chara_Selection : MonoBehaviour {
         {
             ++i;
 
-            if (i >= cats.Count)
+            if (i >= cats_mesh.Count)
                 i = 0;
             
         }
 
         //set active chara depending on user input
-        
-        cats[i].SetActive(true);
+
+        cats_mesh[i].enabled = true;
     }
 
     void SaveChara()
@@ -79,10 +82,11 @@ public class Chara_Selection : MonoBehaviour {
             transform.Rotate(new Vector3(0.0f, Input.GetAxis("Mouse X"), 0.0f));
     }
 
-    void EnableAnimation()
+   /* void EnableAnimation()
     {
         cats[i].GetComponent<Animation>().enabled = true;
         bool isitt = cats[i].GetComponent<Animator>().isActiveAndEnabled;
         print(isitt);
-    }
+    }*/
+
 }
