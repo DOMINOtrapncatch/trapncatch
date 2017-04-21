@@ -58,6 +58,7 @@ public class Chara_Selection : MonoBehaviour {
             {
                 mesh_i = cats_mesh.Count - 1;
                 cats_i = mesh_i;
+                cam.transform.position = new Vector3(2.98f, 0, 0.68f);
             }
             
         }
@@ -72,6 +73,7 @@ public class Chara_Selection : MonoBehaviour {
             {
                 mesh_i = 0;
                 cats_i = 0;
+                cam.transform.position = new Vector3(3.98f,0,1.28f);
             }
             
         }
@@ -119,6 +121,9 @@ public class Chara_Selection : MonoBehaviour {
 
         cam.transform.position = new Vector3(camX, 0.0f, camZ);
     }
+
+
+    
 
     
 
