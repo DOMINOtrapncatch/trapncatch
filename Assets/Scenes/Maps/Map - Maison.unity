@@ -745,6 +745,12 @@ Prefab:
       propertyPath: MaxLife
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
+        type: 2}
+      propertyPath: deathPrefab
+      value: 
+      objectReference: {fileID: 1000011728585516, guid: 85611536f2122472fae84aa7a9c52881,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06963c92fbb1f1e4db99cd7c787a42ff, type: 2}
   m_IsPrefabParent: 0
@@ -5579,7 +5585,6 @@ MonoBehaviour:
   icon: {fileID: 0}
   spells:
   - {fileID: 914714663}
-  - {fileID: 0}
   nearEnemy: []
   enemyKillCount: 0
 --- !u!54 &914714665

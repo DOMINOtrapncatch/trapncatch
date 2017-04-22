@@ -23,6 +23,9 @@ public class Mouse : Character
 	[Header("GUI Settings")]
 	public Image healthBar;
 
+	[Header("Particle Effects")]
+	public GameObject deathPrefab;
+
 	void Start()
 	{
 		// Update randomizer seed

@@ -77,7 +77,17 @@ public class Cat : Character
 
 	public void KillEnemy(int enemyIndex)
 	{
-        Destroy(nearEnemy[enemyIndex]);
+		// Get enemy
+		Mouse enemy = nearEnemy[enemyIndex].GetComponent<Mouse>();
+
+		// Spawn particle effect on deth spot and destroy it after it was animated
+		GameObject deathParticleInstance = (GameObject)Instantiate(enemy.deathPrefab, nearEnemy[enemyIndex].transform.position, Quaternion.identity);
+		Destroy(deathParticleInstance, 1.0f);
+
+		// Destroy corresponding object
+		Destroy(nearEnemy[enemyIndex]);
+
+		// Increment number of enemies killes
 		++enemyKillCount;
 	}
 }
