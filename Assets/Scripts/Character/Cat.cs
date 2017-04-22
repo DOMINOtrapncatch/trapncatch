@@ -27,7 +27,7 @@ public class Cat : Character
     public Sprite icon;
     //public static bool light; //true = lumiere && false = pas de lumiere
 	public List<Spell> spells;
-	[HideInInspector]
+	//[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
 	//[HideInInspector]
 	public List<GameObject> aroundEnemy = new List<GameObject>();
@@ -56,18 +56,6 @@ public class Cat : Character
         if (Input.GetKeyDown(KeyCode.P))
             AutoFade.LoadLevel(1, .3f, .3f, Palette.DARK_PURPLE);
     }
-
-	void OnTriggerEnter(Collider col)
-	{
-		if(col.gameObject.tag == "Enemy")
-			nearEnemy.Add(col.gameObject.transform.parent.gameObject);
-	}
-
-	void OnTriggerExit(Collider col)
-	{
-		if(col.gameObject.tag == "Enemy")
-			nearEnemy.Remove(col.gameObject.transform.parent.gameObject);
-	}
 
 	public void CheckSpells()
 	{
@@ -107,8 +95,9 @@ public class Cat : Character
 		Destroy(nearEnemy[enemyIndex]);
 
 		// Remove enemy from lists
-		nearEnemy.Remove(nearEnemy[enemyIndex]);
 		aroundEnemy.Remove(nearEnemy[enemyIndex]);
+		aroundEnemy.Remove(nearEnemy[enemyIndex]);
+		nearEnemy.Remove(nearEnemy[enemyIndex]);
 
 		// Increment number of enemies killes
 		++enemyKillCount;
