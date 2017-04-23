@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class Swap : MonoBehaviour
 {
+    //coucou c'est amandine mdr si je fais des modifs je laisse tes anciennes ligne de code en commentaire tkt
     /* 
      * ---------
      * SwapManager by Julien
@@ -16,7 +17,11 @@ public class Swap : MonoBehaviour
     // bind a cam, a cat and a key
     public List<Cat> cats;
     public List<Camera> cameras;
+
     public List<KeyCode> keys;
+    //private List<string> keys = new List<string>();
+    
+
 
     void Start()
     {
@@ -25,6 +30,10 @@ public class Swap : MonoBehaviour
 
         // Starting by only activating the first camera
         SwapWith(0);
+
+        //adding current swap 1, and swap 2 buttons
+        //keys.Add("swap 1");
+        //keys.Add("swap 2");
     }
 
     void Update()
