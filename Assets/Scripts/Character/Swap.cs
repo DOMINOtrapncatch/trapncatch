@@ -18,29 +18,32 @@ public class Swap : MonoBehaviour
     public List<Cat> cats;
     public List<Camera> cameras;
 
-    public List<KeyCode> keys;
-    //private List<string> keys = new List<string>();
+    //public List<KeyCode> keys;
+    private List<string> keys;
     
 
 
     void Start()
     {
+        //adding current swap 1, and swap 2 buttons
+        keys = new List<string>();
+        keys.Add("swap 1");
+        keys.Add("swap 2");
+
         if (cameras.Count == 0 || cameras.Count != keys.Count)
             throw new Exception("Need at least one camera!");
 
         // Starting by only activating the first camera
         SwapWith(0);
 
-        //adding current swap 1, and swap 2 buttons
-        //keys.Add("swap 1");
-        //keys.Add("swap 2");
+        
     }
 
     void Update()
     {
         for (int i = 0; i < keys.Count; ++i)
         {
-            if (Input.GetKeyDown(keys[i]))
+            if (Input.GetButtonDown(keys[i]))
                 SwapWith(i);
         }
     }
