@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: 7a6b2cc8803e8ce4f89994a832054ef3
+timeCreated: 1492647210
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cat
+    100004: Cat Armature
+    100006: ClaviculeArriere.L
+    100008: ClaviculeArriere.R
+    100010: ClaviculeAvant.L
+    100012: ClaviculeAvant.R
+    100014: Colonne
+    100016: Cou
+    100018: CtrlGenouArriere.L
+    100020: CtrlGenouArriere.L_end
+    100022: CtrlGenouArriere.R
+    100024: CtrlGenouArriere.R_end
+    100026: CtrlGenouAvant.L
+    100028: CtrlGenouAvant.L_end
+    100030: CtrlGenouAvant.R
+    100032: CtrlGenouAvant.R_end
+    100034: CtrlMvtPiedArriere.L
+    100036: CtrlMvtPiedArriere.L_end
+    100038: CtrlMvtPiedArriere.R
+    100040: CtrlMvtPiedArriere.R_end
+    100042: CtrlMvtPiedAvant.L
+    100044: CtrlMvtPiedAvant.L_end
+    100046: CtrlMvtPiedAvant.R
+    100048: CtrlMvtPiedAvant.R_end
+    100050: CtrlPiedArriere.L
+    100052: CtrlPiedArriere.R
+    100054: CtrlPiedAvant.L
+    100056: CtrlPiedAvant.R
+    100058: CuisseArriere.L
+    100060: CuisseArriere.R
+    100062: CuisseAvant.L
+    100064: CuisseAvant.R
+    100066: Dos
+    100068: Ear.L
+    100070: Ear.L_end
+    100072: Ear.R
+    100074: Ear.R_end
+    100076: FemurArriere.L
+    100078: FemurArriere.R
+    100080: FemurAvant.L
+    100082: FemurAvant.R
+    100084: Fessier
+    100086: MvtPiedArriere.L
+    100088: MvtPiedArriere.R
+    100090: MvtPiedAvant.L
+    100092: MvtPiedAvant.R
+    100094: MvtTalonArriere.L
+    100096: MvtTalonArriere.R
+    100098: MvtTalonAvant.L
+    100100: MvtTalonAvant.R
+    100102: PiedArriere.L
+    100104: PiedArriere.L_end
+    100106: PiedArriere.R
+    100108: PiedArriere.R_end
+    100110: PiedAvant.L
+    100112: PiedAvant.L_end
+    100114: PiedAvant.R
+    100116: PiedAvant.R_end
+    100118: PiedAvantIK.L
+    100120: PiedAvantIK.L_end
+    100122: PiedAvantIK.R
+    100124: PiedAvantIK.R_end
+    100126: Queue.001
+    100128: Queue.002
+    100130: Queue.003
+    100132: Queue.004
+    100134: Queue.005
+    100136: Queue.006
+    100138: Queue.007
+    100140: Queue.007_end
+    100142: TalonArriere.L
+    100144: TalonArriere.R
+    100146: TalonArriereIK.L
+    100148: TalonArriereIK.L_end
+    100150: TalonArriereIK.R
+    100152: TalonArriereIK.R_end
+    100154: TalonAvant.L
+    100156: TalonAvant.R
+    100158: "T\xEAte"
+    400000: //RootNode
+    400002: Cat
+    400004: Cat Armature
+    400006: ClaviculeArriere.L
+    400008: ClaviculeArriere.R
+    400010: ClaviculeAvant.L
+    400012: ClaviculeAvant.R
+    400014: Colonne
+    400016: Cou
+    400018: CtrlGenouArriere.L
+    400020: CtrlGenouArriere.L_end
+    400022: CtrlGenouArriere.R
+    400024: CtrlGenouArriere.R_end
+    400026: CtrlGenouAvant.L
+    400028: CtrlGenouAvant.L_end
+    400030: CtrlGenouAvant.R
+    400032: CtrlGenouAvant.R_end
+    400034: CtrlMvtPiedArriere.L
+    400036: CtrlMvtPiedArriere.L_end
+    400038: CtrlMvtPiedArriere.R
+    400040: CtrlMvtPiedArriere.R_end
+    400042: CtrlMvtPiedAvant.L
+    400044: CtrlMvtPiedAvant.L_end
+    400046: CtrlMvtPiedAvant.R
+    400048: CtrlMvtPiedAvant.R_end
+    400050: CtrlPiedArriere.L
+    400052: CtrlPiedArriere.R
+    400054: CtrlPiedAvant.L
+    400056: CtrlPiedAvant.R
+    400058: CuisseArriere.L
+    400060: CuisseArriere.R
+    400062: CuisseAvant.L
+    400064: CuisseAvant.R
+    400066: Dos
+    400068: Ear.L
+    400070: Ear.L_end
+    400072: Ear.R
+    400074: Ear.R_end
+    400076: FemurArriere.L
+    400078: FemurArriere.R
+    400080: FemurAvant.L
+    400082: FemurAvant.R
+    400084: Fessier
+    400086: MvtPiedArriere.L
+    400088: MvtPiedArriere.R
+    400090: MvtPiedAvant.L
+    400092: MvtPiedAvant.R
+    400094: MvtTalonArriere.L
+    400096: MvtTalonArriere.R
+    400098: MvtTalonAvant.L
+    400100: MvtTalonAvant.R
+    400102: PiedArriere.L
+    400104: PiedArriere.L_end
+    400106: PiedArriere.R
+    400108: PiedArriere.R_end
+    400110: PiedAvant.L
+    400112: PiedAvant.L_end
+    400114: PiedAvant.R
+    400116: PiedAvant.R_end
+    400118: PiedAvantIK.L
+    400120: PiedAvantIK.L_end
+    400122: PiedAvantIK.R
+    400124: PiedAvantIK.R_end
+    400126: Queue.001
+    400128: Queue.002
+    400130: Queue.003
+    400132: Queue.004
+    400134: Queue.005
+    400136: Queue.006
+    400138: Queue.007
+    400140: Queue.007_end
+    400142: TalonArriere.L
+    400144: TalonArriere.R
+    400146: TalonArriereIK.L
+    400148: TalonArriereIK.L_end
+    400150: TalonArriereIK.R
+    400152: TalonArriereIK.R_end
+    400154: TalonAvant.L
+    400156: TalonAvant.R
+    400158: "T\xEAte"
+    4300000: Cat
+    7400000: Cat Armature|Cat ArmatureAction
+    9500000: //RootNode
+    13700000: Cat
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Fessier
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ClaviculeArriere.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ClaviculeArriere.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CuisseArriere.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CuisseArriere.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: FemurArriere.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: FemurArriere.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Colonne
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dos
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Cou
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: "T\xEAte"
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ClaviculeAvant.L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ClaviculeAvant.R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CuisseAvant.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CuisseAvant.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TalonAvant.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TalonAvant.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PiedAvant.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PiedAvant.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TalonArriere.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TalonArriere.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ear.L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ear.R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: '[CAT] Fast (Clone)'
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Cat
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+      transformModified: 1
+    - name: Cat Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+      transformModified: 1
+    - name: Fessier
+      position: {x: 0.000038539933, y: 0.0009817779, z: 0.012857918}
+      rotation: {x: 0.6043942, y: 0.023621334, z: 0.02110062, w: 0.7960556}
+      scale: {x: 1, y: 0.99999994, z: 0.9999987}
+      transformModified: 1
+    - name: ClaviculeArriere.L
+      position: {x: -0.0016213504, y: 0.0033174553, z: 0.0018508415}
+      rotation: {x: -0.26263306, y: -0.010575066, z: 0.93477875, w: 0.23895785}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999998}
+      transformModified: 1
+    - name: CuisseArriere.L
+      position: {x: -0.0026264398, y: 0.007860284, z: -0.0012614208}
+      rotation: {x: -0.2444297, y: 0.9122134, z: -0.30842906, w: 0.11398497}
+      scale: {x: 0.9999999, y: 0.9999996, z: 0.99999994}
+      transformModified: 1
+    - name: FemurArriere.L
+      position: {x: 7.4505804e-11, y: 0.009492255, z: -9.080395e-10}
+      rotation: {x: 0.04537538, y: 0.52693796, z: -0.83163583, w: 0.16929099}
+      scale: {x: 1, y: 0.9999998, z: 1}
+      transformModified: 1
+    - name: TalonArriere.L
+      position: {x: -4.6566126e-11, y: 0.006163474, z: -4.726462e-10}
+      rotation: {x: 0.39162162, y: 0.004306831, z: 0.022586897, w: 0.919839}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999998}
+      transformModified: 1
+    - name: PiedArriere.L
+      position: {x: -7.989001e-11, y: 0.0017430864, z: -2.8016983e-10}
+      rotation: {x: 0.28321832, y: -0.0342669, z: -0.011701112, w: 0.9583717}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: PiedArriere.L_end
+      position: {x: -0, y: 0.0014398653, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Colonne
+      position: {x: 1.5600195e-10, y: 0.006047113, z: -0.0000000014902741}
+      rotation: {x: 0.13154067, y: -0.034119383, z: 0.0013043302, w: 0.9907226}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: Dos
+      position: {x: 4.1020518e-14, y: 0.010826747, z: -6.0536237e-10}
+      rotation: {x: 0.14656384, y: 0.00003496416, z: -0.000005178534, w: 0.98920125}
+      scale: {x: 1, y: 0.9999999, z: 1}
+      transformModified: 1
+    - name: Cou
+      position: {x: -1.925543e-18, y: 0.010708226, z: -2.9802322e-10}
+      rotation: {x: -0.000000809801, y: 0.9556158, z: -0.29461583, w: 0.0000027578294}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: "T\xEAte"
+      position: {x: -2.0916602e-15, y: 0.0041854964, z: -2.98023e-10}
+      rotation: {x: 0.106702924, y: 0.0000024890874, z: -0.00000033410925, w: 0.99429095}
+      scale: {x: 1, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: Ear.R
+      position: {x: -0.003678099, y: 0.008403018, z: 0.003177406}
+      rotation: {x: -0.23763984, y: 0.833351, z: 0.47992104, w: 0.1368546}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+      transformModified: 1
+    - name: Ear.R_end
+      position: {x: -0, y: 0.0051015997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Ear.L
+      position: {x: 0.0036781032, y: 0.008403016, z: 0.0031774037}
+      rotation: {x: 0.23764005, y: 0.83335084, z: 0.4799211, w: -0.13685508}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+      transformModified: 1
+    - name: Ear.L_end
+      position: {x: -0, y: 0.0051015997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ClaviculeAvant.L
+      position: {x: -0.0022972554, y: 0.009387325, z: 0.0008747799}
+      rotation: {x: 0.61777306, y: -0.4747826, z: 0.48049384, w: 0.4025712}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: CuisseAvant.L
+      position: {x: 0.0016498505, y: 0.008080131, z: -0.0022157212}
+      rotation: {x: -0.10279444, y: 0.16848497, z: 0.00026685, w: 0.98032963}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+      transformModified: 1
+    - name: FemurAvant.L
+      position: {x: -7.4505804e-11, y: 0.0089965435, z: -5.587935e-10}
+      rotation: {x: -0.07728362, y: 0.07681836, z: -0.006138453, w: 0.9940264}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.99999994}
+      transformModified: 1
+    - name: TalonAvant.L
+      position: {x: 2.7008354e-10, y: 0.005440467, z: -5.9604643e-10}
+      rotation: {x: -0.037614148, y: 0.995845, z: 0.038143076, w: -0.07364053}
+      scale: {x: 1.0000001, y: 0.9999997, z: 1}
+      transformModified: 1
+    - name: PiedAvant.L
+      position: {x: 4.8836224e-10, y: 0.0021769258, z: 4.656613e-10}
+      rotation: {x: 0.08009858, y: 0.0020905053, z: -0.016509205, w: 0.996648}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: PiedAvant.L_end
+      position: {x: -0, y: 0.0019276362, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ClaviculeAvant.R
+      position: {x: 0.0022972554, y: 0.009387325, z: 0.00087478035}
+      rotation: {x: 0.57892287, y: 0.44597435, z: -0.5275889, w: 0.43313414}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: CuisseAvant.R
+      position: {x: -0.0019580289, y: 0.008080132, z: -0.0019487297}
+      rotation: {x: -0.10269033, y: -0.0705993, z: 0.004707543, w: 0.99219376}
+      scale: {x: 0.99999976, y: 0.9999999, z: 1}
+      transformModified: 1
+    - name: FemurAvant.R
+      position: {x: 5.2154064e-10, y: 0.008996543, z: 1.9557773e-10}
+      rotation: {x: -0.07584424, y: 0.073145464, z: -0.008853263, w: 0.9943938}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: TalonAvant.R
+      position: {x: 3.4982803e-10, y: 0.0054392396, z: 7.0780515e-10}
+      rotation: {x: 0.023165148, y: 0.99475056, z: 0.047774225, w: 0.08747758}
+      scale: {x: 1, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: PiedAvant.R
+      position: {x: -2.6077032e-10, y: 0.0021774834, z: -8.754432e-10}
+      rotation: {x: 0.0760011, y: -0.15229647, z: 0.02946041, w: 0.9849678}
+      scale: {x: 1, y: 0.99999976, z: 0.99999994}
+      transformModified: 1
+    - name: PiedAvant.R_end
+      position: {x: -0, y: 0.0019276362, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ClaviculeArriere.R
+      position: {x: 0.0013228392, y: 0.0033065155, z: 0.0020229162}
+      rotation: {x: 0.21423785, y: 0.007591051, z: 0.94851846, w: -0.23314656}
+      scale: {x: 0.9999999, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: CuisseArriere.R
+      position: {x: 0.0025833563, y: 0.007860285, z: -0.0013474503}
+      rotation: {x: 0.27183443, y: 0.8845495, z: -0.28928086, w: -0.24493863}
+      scale: {x: 0.9999999, y: 1, z: 1}
+      transformModified: 1
+    - name: FemurArriere.R
+      position: {x: 4.4703483e-10, y: 0.009492254, z: 5.2154064e-10}
+      rotation: {x: 0.13150041, y: 0.51481736, z: -0.8237738, w: -0.19765516}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: TalonArriere.R
+      position: {x: -1.344597e-10, y: 0.0061634723, z: 6.519258e-10}
+      rotation: {x: 0.38401175, y: -0.094562985, z: 0.0624246, w: 0.9163493}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: PiedArriere.R
+      position: {x: 3.0151567e-10, y: 0.0017430859, z: 1.3114913e-10}
+      rotation: {x: 0.28333488, y: -0.03379147, z: -0.008415558, w: 0.9583886}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+      transformModified: 1
+    - name: PiedArriere.R_end
+      position: {x: -0, y: 0.0014398653, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Queue.001
+      position: {x: -0.000001787837, y: -0.00286831, z: -0.0008107823}
+      rotation: {x: 0.9728334, y: -0.010884265, z: 0.032326214, w: 0.22897975}
+      scale: {x: 1, y: 0.9999998, z: 0.9999994}
+      transformModified: 1
+    - name: Queue.002
+      position: {x: 4.4408918e-17, y: 0.0028939852, z: -0.0000000035762786}
+      rotation: {x: -0.00000004085751, y: 0.96486336, z: -0.26275218, w: 0.0000001491335}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: Queue.003
+      position: {x: -5.3290704e-17, y: 0.00376864, z: -5.960464e-10}
+      rotation: {x: 0.15174319, y: 0.00000005097912, z: -0.000000024752994, w: 0.98841995}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Queue.004
+      position: {x: -1.0658141e-16, y: 0.007119955, z: -5.2594357e-10}
+      rotation: {x: -0.000000010047901, y: 0.99307287, z: -0.11750026, w: -0.00000013289802}
+      scale: {x: 1, y: 1.0000002, z: 0.99999994}
+      transformModified: 1
+    - name: Queue.005
+      position: {x: -0, y: 0.0054157833, z: 2.9802322e-10}
+      rotation: {x: 0.24157912, y: -0.000000030845108, z: 0.0000000039919783, w: 0.97038114}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Queue.006
+      position: {x: -2.6645352e-17, y: 0.0033727607, z: 2.9802322e-10}
+      rotation: {x: 0.2193882, y: 5.8833614e-14, z: -0.0000000033482985, w: 0.9756377}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: Queue.007
+      position: {x: 2.1649348e-17, y: 0.0019251104, z: 0.0000000011920929}
+      rotation: {x: 0.21244058, y: -8.0981935e-16, z: -0.0000000032422565, w: 0.97717404}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Queue.007_end
+      position: {x: -0, y: 0.0018120728, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlPiedAvant.L
+      position: {x: -0.0036278572, y: -0.010124334, z: 0.0012712784}
+      rotation: {x: -0.7022579, y: 0.118197426, z: -0.11999969, w: 0.6917105}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: MvtTalonAvant.L
+      position: {x: -0.00014029884, y: 0.0009394246, z: 0.00076958176}
+      rotation: {x: 0.014735682, y: 0.7192145, z: -0.6942581, w: 0.022783922}
+      scale: {x: 0.9999997, y: 1.0000002, z: 0.9999999}
+      transformModified: 1
+    - name: MvtPiedAvant.L
+      position: {x: 0.00010784324, y: 0.0027097668, z: 0.000056104625}
+      rotation: {x: 0.008155277, y: -0.023697611, z: 0.99867904, w: 0.044857014}
+      scale: {x: 0.99998134, y: 0.9999995, z: 0.9999948}
+      transformModified: 1
+    - name: PiedAvantIK.L
+      position: {x: 0.000037602098, y: 0.0019326851, z: 0.0010023765}
+      rotation: {x: 0.011109637, y: -0.23700954, z: 0.97142416, w: 0.006177752}
+      scale: {x: 1, y: 0.9999997, z: 0.99999917}
+      transformModified: 1
+    - name: PiedAvantIK.L_end
+      position: {x: -0, y: 0.002177483, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlMvtPiedAvant.L
+      position: {x: 5.47152e-11, y: -6.3803275e-11, z: -4.249159e-10}
+      rotation: {x: 0.705089, y: 0.003636183, z: -0.0050728917, w: 0.7090914}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: CtrlMvtPiedAvant.L_end
+      position: {x: -0, y: 0.0030146989, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlGenouAvant.L
+      position: {x: 0.002271299, y: -0.0051094745, z: -0.007119893}
+      rotation: {x: 0.9856873, y: 0.0012745238, z: 0.16841419, w: -0.007458449}
+      scale: {x: 0.999988, y: 1, z: 0.9999042}
+      transformModified: 1
+    - name: CtrlGenouAvant.L_end
+      position: {x: -0, y: 0.0029433297, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlPiedAvant.R
+      position: {x: 0.0036278572, y: -0.010124334, z: 0.0012712784}
+      rotation: {x: -0.7022579, y: 0.118197426, z: -0.11999969, w: 0.6917105}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: MvtTalonAvant.R
+      position: {x: -0.00037273057, y: 0.0009394248, z: 0.00068775687}
+      rotation: {x: 0.2166339, y: 0.68597084, z: -0.6597587, w: 0.21733001}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+      transformModified: 1
+    - name: MvtPiedAvant.R
+      position: {x: -0.00010784474, y: 0.0027097678, z: 0.00005610492}
+      rotation: {x: -0.008155443, y: -0.023702184, z: 0.9986789, w: -0.044857726}
+      scale: {x: 0.9999824, y: 0.9999999, z: 0.99999547}
+      transformModified: 1
+    - name: PiedAvantIK.R
+      position: {x: -0.000037601476, y: 0.0019326876, z: 0.0010023763}
+      rotation: {x: -0.16746119, y: -0.23490879, z: 0.9569458, w: 0.032084346}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000011}
+      transformModified: 1
+    - name: PiedAvantIK.R_end
+      position: {x: -0, y: 0.002177483, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlMvtPiedAvant.R
+      position: {x: 8.230563e-10, y: -4.7955435e-11, z: 2.2118911e-11}
+      rotation: {x: 0.66339695, y: -0.23888943, z: 0.23891565, w: 0.6676493}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlMvtPiedAvant.R_end
+      position: {x: -0, y: 0.0030146989, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlGenouAvant.R
+      position: {x: 0.002689723, y: -0.0051094745, z: -0.006972594}
+      rotation: {x: 0.98568743, y: 0.001274524, z: 0.16841349, w: -0.007458578}
+      scale: {x: 0.9999876, y: 1, z: 0.9999002}
+      transformModified: 1
+    - name: CtrlGenouAvant.R_end
+      position: {x: -0, y: 0.0029433297, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlPiedArriere.L
+      position: {x: -0.0036888537, y: 0.012709169, z: 0.0016091402}
+      rotation: {x: -0.7089658, y: -0.00000008407152, z: 0.00000008451532, w: 0.7052429}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: MvtTalonArriere.L
+      position: {x: 0.0000044783787, y: 0.000998953, z: 0.0009816785}
+      rotation: {x: 0.0000001786538, y: -0.70435274, z: 0.70985013, w: -0.000000010315928}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: MvtPiedArriere.L
+      position: {x: -2.3039126e-10, y: 0.0024159136, z: -0.000010424345}
+      rotation: {x: 0.00000006875407, y: 0.004500866, z: 0.99998987, w: -3.0945593e-10}
+      scale: {x: 1, y: 0.9999995, z: 0.9968185}
+      transformModified: 1
+    - name: TalonArriereIK.L
+      position: {x: -0.000004478126, y: 0.0014354403, z: 0.0009919691}
+      rotation: {x: -0.00036921367, y: -0.29776293, z: 0.954639, w: -0.0012265785}
+      scale: {x: 1, y: 1.0000002, z: 1.0000004}
+      transformModified: 1
+    - name: TalonArriereIK.L_end
+      position: {x: -0, y: 0.0017430849, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlMvtPiedArriere.L
+      position: {x: 4.780851e-11, y: 7.4505686e-11, z: -0.0000000012113278}
+      rotation: {x: 0.70350903, y: 0.00000008472173, z: -0.00000008386611, w: 0.7106863}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+      transformModified: 1
+    - name: CtrlMvtPiedArriere.L_end
+      position: {x: -0, y: 0.0021019846, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlGenouArriere.L
+      position: {x: 0.0002482487, y: -0.004936869, z: -0.00468864}
+      rotation: {x: 0.99999654, y: -0.0000000031297098, z: -0.00000011652564, w: -0.002637858}
+      scale: {x: 1, y: 0.9999999, z: 0.99588615}
+      transformModified: 1
+    - name: CtrlGenouArriere.L_end
+      position: {x: -0, y: 0.0027101457, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlPiedArriere.R
+      position: {x: 0.0036888537, y: 0.012709169, z: 0.0016383971}
+      rotation: {x: -0.7089658, y: -0.00000008407152, z: 0.00000008451532, w: 0.7052429}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: MvtTalonArriere.R
+      position: {x: -0.000004478411, y: 0.0009989531, z: 0.0009816788}
+      rotation: {x: 0.000006606564, y: -0.70435274, z: 0.70985013, w: -0.0000063880448}
+      scale: {x: 1, y: 0.9999995, z: 0.99999964}
+      transformModified: 1
+    - name: MvtPiedArriere.R
+      position: {x: 5.4834002e-11, y: 0.0024159162, z: -0.000010424312}
+      rotation: {x: 0.000009155586, y: 0.0045008613, z: 0.99998987, w: -0.00000004120844}
+      scale: {x: 1, y: 0.99999964, z: 0.9968168}
+      transformModified: 1
+    - name: TalonArriereIK.R
+      position: {x: 0.000004477968, y: 0.0014354428, z: 0.0009919706}
+      rotation: {x: 0.0003694257, y: -0.29776302, z: 0.954639, w: 0.0012265053}
+      scale: {x: 1, y: 0.99999976, z: 0.99999934}
+      transformModified: 1
+    - name: TalonArriereIK.R_end
+      position: {x: -0, y: 0.0017430849, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlMvtPiedArriere.R
+      position: {x: 4.7771787e-11, y: -7.4505686e-11, z: -8.399101e-10}
+      rotation: {x: 0.70350903, y: 0.000000084721094, z: -0.00000008386548, w: 0.7106863}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: CtrlMvtPiedArriere.R_end
+      position: {x: -0, y: 0.0021019846, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CtrlGenouArriere.R
+      position: {x: -0.0002482508, y: -0.0049368693, z: -0.0046886406}
+      rotation: {x: 0.99999654, y: -0.0000000031149325, z: -0.0000001221405, w: -0.0026265397}
+      scale: {x: 1, y: 1, z: 1.00449}
+      transformModified: 1
+    - name: CtrlGenouArriere.R_end
+      position: {x: -0, y: 0.002710145, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
