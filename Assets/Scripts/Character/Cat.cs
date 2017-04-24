@@ -35,7 +35,7 @@ public class Cat : Character
 
 	[Header("Pathfinding Settings")]
 	public bool isPathfindingActive = false;
-	public CatIA catType = CatIA.NORMAL;
+	public CatIA catIA = CatIA.NORMAL;
 
 	const float minPathUpdateTime = .2f;
 	const float pathUpdateMoveThreshold = .5f;
