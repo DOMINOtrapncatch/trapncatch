@@ -16,8 +16,15 @@ public class HealSpell : Spell {
 		particle.transform.position = cat.transform.position;
 		particle.Play();
 
-		cat.Life += lifeAmount;
-		if (cat.Life > cat.MaxLife)
-			cat.Life = cat.MaxLife;
+		StartCoroutine("LifeUp");
+	}
+
+	private IEnumerator LifeUp()
+	{
+		for (int i = 0; i < lifeAmount; i++)
+		{
+			cat.Life += 1;
+			yield return new WaitForSeconds(0.2f);
+		}
 	}
 }
