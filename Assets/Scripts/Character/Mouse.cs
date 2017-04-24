@@ -6,7 +6,8 @@ using System.Collections.Generic;
 public class Mouse : Character
 {
 	[Header("Pathfinding Settings")]
-	public MouseType mouseType = MouseType.NORMAL;
+	public MouseIA mouseIA = MouseIA.NORMAL;
+    public MouseType mouseType = MouseType.LVL1;
 
 	const float minPathUpdateTime = .2f;
 	const float pathUpdateMoveThreshold = .5f;
@@ -145,17 +146,17 @@ public class Mouse : Character
 		// Decide of the next move
 		switch(mouseType)
 		{
-			case MouseType.SUICIDE:
+			case MouseIA.SUICIDE:
 				// Keep following
 				targetIndex = randomTarget ? Random.Range(1, targets.Count - 1) : 1;
 				break;
 
-			case MouseType.CIRCLE:
+			case MouseIA.CIRCLE:
 				// Go to next point
 				targetIndex = (targetIndex + 1) % targets.Count;
 				break;
 
-			case MouseType.NORMAL:
+			case MouseIA.NORMAL:
 				// Disappear
                 Destroy(gameObject);
 				break;
@@ -185,7 +186,12 @@ public class Mouse : Character
 
 }
 
-public enum MouseType
+public enum MouseIA
 {
 	NORMAL, SUICIDE, CIRCLE
+}
+
+public enum MouseType
+{
+    LVL1, LVL2, LVL3
 }

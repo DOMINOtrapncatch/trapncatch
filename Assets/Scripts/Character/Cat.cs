@@ -35,7 +35,7 @@ public class Cat : Character
 
 	[Header("Pathfinding Settings")]
 	public bool isPathfindingActive = false;
-	public CatType catType = CatType.NORMAL;
+	public CatIA catIA = CatIA.NORMAL;
 
 	const float minPathUpdateTime = .2f;
 	const float pathUpdateMoveThreshold = .5f;
@@ -263,7 +263,7 @@ public class Cat : Character
 			}
 
 			// Priority to the nearest enemy
-			if (targetIndex != -1 && catType == CatType.NORMAL && aroundEnemy.Count > 0)
+			if (targetIndex != -1 && catType == CatIA.NORMAL && aroundEnemy.Count > 0)
 			{
 				targetIndex = -1;
 				break;
@@ -280,7 +280,7 @@ public class Cat : Character
 		// Decide of the next move
 		switch (catType)
 		{
-			case CatType.NORMAL:
+			case CatIA.NORMAL:
 				// If there are enemies near me, follow it. Else, go somewere you know.
 				if (aroundEnemy.Count > 0)
 				{
@@ -319,7 +319,12 @@ public class Cat : Character
 	}
 }
 
-public enum CatType
+public enum CatIA
 {
 	NORMAL
+}
+
+public enum CatType
+{
+    //idk what to put here tho
 }
