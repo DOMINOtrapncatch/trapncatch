@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 
 public class BasicMenu : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class BasicMenu : MonoBehaviour
     string[] labelNames;
     string[] buttonNames;
     int buttonHovered = 0;
+    public List <int> missionsSceneId = new List<int>();
+    int currentMission = 0;
 
     
 
@@ -42,6 +46,13 @@ public class BasicMenu : MonoBehaviour
     public void ChangeScene(int sceneId)
     {
 		AutoFade.LoadLevel (sceneId, .3f, .3f, Palette.DARK_PURPLE);
+    }
+
+    //Go to the next mission
+    public void NextMission()
+    {
+        currentMission = (currentMission + 1) % missionsSceneId.Count;
+        ChangeScene(missionsSceneId[currentMission]);
     }
 
     // Close the game

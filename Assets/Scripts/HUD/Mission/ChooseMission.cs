@@ -12,12 +12,12 @@ public class ChooseMission : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		missions.Add(new Mission(0, "Le chat de gouttière",  FindAudio("BGM0"), RGB(60 , 43 , 77)));
-		missions.Add(new Mission(1, "L'initiation",          FindAudio("BGM1"), RGB(191, 112, 27)));
-		missions.Add(new Mission(2, "Le chat de gouttière",  FindAudio("BGM2"), RGB(60 , 43 , 77)));
-		missions.Add(new Mission(3, "De nouveaux arrivants", FindAudio("BGM3"), RGB(191, 112, 27)));
-		missions.Add(new Mission(4, "To determine",          FindAudio("BGM4"), RGB(60 , 43 , 77)));
-		missions.Add(new Mission(5, "To determine",          FindAudio("BGM5"), RGB(191, 112, 27)));
+		missions.Add(new Mission(0, "Une souris intrigante",  FindAudio("BGM0"), RGB(60 , 43 , 77)));
+		missions.Add(new Mission(1, "Le chat de gouttière",   FindAudio("BGM1"), RGB(191, 112, 27)));
+		missions.Add(new Mission(2, "L'initiation",           FindAudio("BGM2"), RGB(60 , 43 , 77)));
+		missions.Add(new Mission(3, "De nouveaux arrivants",  FindAudio("BGM3"), RGB(191, 112, 27)));
+		missions.Add(new Mission(4, "La deuxième manhe",      FindAudio("BGM4"), RGB(60 , 43 , 77)));
+		missions.Add(new Mission(5, "La revanche des souris", FindAudio("BGM5"), RGB(191, 112, 27)));
         missions[selectedMission].music.Play();
     }
 	
