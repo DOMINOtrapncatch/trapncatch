@@ -12,19 +12,23 @@ public class HealSpell : Spell {
 
 	public override void Activate()
 	{
-		particle.Stop();
-		particle.transform.position = cat.transform.position;
-		particle.Play();
-
 		StartCoroutine("LifeUp");
 	}
 
 	private IEnumerator LifeUp()
 	{
+		if (!particle.isPlaying)
+			particle.Play();
+		
 		for (int i = 0; i < lifeAmount; i++)
 		{
+			if (cat.Life + 1 > cat.maxLife)
+				break;
+			
 			cat.Life += 1;
 			yield return new WaitForSeconds(0.2f);
 		}
+
+		particle.Stop();
 	}
 }
