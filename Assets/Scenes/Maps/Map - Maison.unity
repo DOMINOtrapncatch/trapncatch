@@ -2704,6 +2704,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 554382472}
   - 135: {fileID: 554382473}
+  - 114: {fileID: 554382474}
   m_Layer: 0
   m_Name: AttackTrigger
   m_TagString: Untagged
@@ -2736,6 +2737,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 20
   m_Center: {x: 31.86, y: 6.42, z: -17.2}
+--- !u!114 &554382474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554382471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62dcb0051c1d44562a4ee653eb14f260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &554449818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,6 +4510,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 743428918}
   - 135: {fileID: 743428919}
+  - 114: {fileID: 743428920}
   m_Layer: 0
   m_Name: ProximityTrigger
   m_TagString: Untagged
@@ -4530,6 +4543,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 100
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &743428920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743428917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0400ac5d3c7104884aaba80a8ebdf6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &750354875
 GameObject:
   m_ObjectHideFlags: 0

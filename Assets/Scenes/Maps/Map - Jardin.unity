@@ -5269,8 +5269,8 @@ GameObject:
   - 114: {fileID: 1711177964}
   - 114: {fileID: 1711177966}
   - 114: {fileID: 1711177969}
-  - 114: {fileID: 1711177968}
   - 65: {fileID: 1711177965}
+  - 114: {fileID: 1711177971}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -5384,7 +5384,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   spells:
   - {fileID: 1711177969}
-  - {fileID: 1711177968}
+  - {fileID: 1711177971}
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
@@ -5424,22 +5424,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!114 &1711177968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1711177960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manaCost: 80
-  RecoveryTime: 100
-  MaxRecoveryTime: 8
-  cat: {fileID: 1711177966}
-  inputName: attack_special
 --- !u!114 &1711177969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5473,6 +5457,24 @@ Transform:
   - {fileID: 1900139557}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1711177971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711177960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e28e929a69c048879a95a5d85ea422e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaCost: 20
+  RecoveryTime: 0
+  MaxRecoveryTime: 0
+  cat: {fileID: 1711177966}
+  inputName: attack_special
+  particle: {fileID: 198000010125173380, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
+  lifeAmount: 20
 --- !u!1 &1730978991
 GameObject:
   m_ObjectHideFlags: 0
@@ -5957,6 +5959,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1887703797}
   - 135: {fileID: 1887703798}
+  - 114: {fileID: 1887703799}
   m_Layer: 0
   m_Name: AttackTrigger
   m_TagString: Untagged
@@ -5989,6 +5992,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.85
   m_Center: {x: 0, y: 1.09, z: 4.46}
+--- !u!114 &1887703799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887703796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62dcb0051c1d44562a4ee653eb14f260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1900139556
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,6 +6012,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1900139557}
   - 135: {fileID: 1900139558}
+  - 114: {fileID: 1900139559}
   m_Layer: 0
   m_Name: ProximityTrigger
   m_TagString: Untagged
@@ -6030,6 +6045,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 25
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1900139559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900139556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0400ac5d3c7104884aaba80a8ebdf6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1908849120
 GameObject:
   m_ObjectHideFlags: 0
@@ -6310,6 +6336,12 @@ Prefab:
       propertyPath: MaxLife
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
+        type: 2}
+      propertyPath: deathPrefab
+      value: 
+      objectReference: {fileID: 1000011728585516, guid: 85611536f2122472fae84aa7a9c52881,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06963c92fbb1f1e4db99cd7c787a42ff, type: 2}
   m_IsPrefabParent: 0
