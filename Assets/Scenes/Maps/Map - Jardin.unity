@@ -5270,7 +5270,6 @@ GameObject:
   - 114: {fileID: 1711177966}
   - 114: {fileID: 1711177969}
   - 114: {fileID: 1711177968}
-  - 135: {fileID: 1711177971}
   - 65: {fileID: 1711177965}
   m_Layer: 0
   m_Name: Cat
@@ -5387,7 +5386,15 @@ MonoBehaviour:
   - {fileID: 1711177969}
   - {fileID: 1711177968}
   nearEnemy: []
+  aroundEnemy: []
   enemyKillCount: 0
+  isPathfindingActive: 0
+  catType: 0
+  targets: []
+  randomTarget: 1
+  turnSpeed: 3
+  turnDst: 5
+  stoppingDst: 10
 --- !u!23 &1711177967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5462,20 +5469,10 @@ Transform:
   m_Children:
   - {fileID: 2120237799}
   - {fileID: 1792689436}
+  - {fileID: 1887703797}
+  - {fileID: 1900139557}
   m_Father: {fileID: 0}
   m_RootOrder: 6
---- !u!135 &1711177971
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1711177960}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3.85
-  m_Center: {x: 0, y: 1.09, z: 4.46}
 --- !u!1 &1730978991
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,6 +5948,88 @@ Transform:
   - {fileID: 1596062967}
   m_Father: {fileID: 519019832}
   m_RootOrder: 3
+--- !u!1 &1887703796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1887703797}
+  - 135: {fileID: 1887703798}
+  m_Layer: 0
+  m_Name: AttackTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1887703797
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887703796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1711177970}
+  m_RootOrder: 2
+--- !u!135 &1887703798
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887703796}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.85
+  m_Center: {x: 0, y: 1.09, z: 4.46}
+--- !u!1 &1900139556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1900139557}
+  - 135: {fileID: 1900139558}
+  m_Layer: 0
+  m_Name: ProximityTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1900139557
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900139556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1711177970}
+  m_RootOrder: 3
+--- !u!135 &1900139558
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900139556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1908849120
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,11 +25,10 @@ public class Cat : Character
 	public float manaMaxRecoveryTime { get { return ManaMaxRecoveryTime * manaMaxRecoveryTimeVal / 100; } }
 
     public Sprite icon;
-    //public static bool light; //true = lumiere && false = pas de lumiere
 	public List<Spell> spells;
-	//[HideInInspector]
+	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
-	//[HideInInspector]
+	[HideInInspector]
 	public List<GameObject> aroundEnemy = new List<GameObject>();
 	[HideInInspector]
 	public int enemyKillCount = 0;
