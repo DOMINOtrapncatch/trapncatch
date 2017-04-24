@@ -12,6 +12,7 @@ public class NMoveThirdPerson : NetworkBehaviour {
     [System.Serializable]
     public class MoveSettings
     {
+
         public Character chara_cat;
         public float forwardvelo = 12;
         //public float forwardvelo = Character
@@ -68,6 +69,8 @@ public class NMoveThirdPerson : NetworkBehaviour {
     }
     private void Start()
     {
+        if (!isLocalPlayer)
+            return;
 
         spawnmanager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
 
@@ -81,6 +84,7 @@ public class NMoveThirdPerson : NetworkBehaviour {
         {
             Debug.LogError("rigidbody inexistant + Call Amandine");
         }
+        
         forwardinput = 0;
         turninput = 0;
         jumpinput = 0;
