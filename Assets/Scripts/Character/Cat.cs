@@ -8,11 +8,13 @@ public class Cat : Character
 {
 	// Variables qui pourront etres modifiees par l'utilisateur
 	[Range(0, 100)]
-	public float Mana;
+	public float MaxMana;
 	[Range(0, 100)]
-	public float MaxMana, ManaMaxRecoveryTime;
+	public float ManaMaxRecoveryTime;
 
-	// Variables qui ne pourront pas etre modifiees par l'utilisateur
+	// Variables qui ne pourront pas etres modifiees par l'utilisateur
+	[HideInInspector]
+	public float Mana = 0;
 	[HideInInspector]
 	public float ManaRecoveryTime = 0;
 

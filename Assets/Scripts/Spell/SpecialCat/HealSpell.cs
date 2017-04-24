@@ -15,6 +15,14 @@ public class HealSpell : Spell {
 		StartCoroutine("LifeUp");
 	}
 
+	public override bool CanUse()
+	{
+		if (cat.life == cat.maxLife)
+			return false;
+		else
+			return base.CanUse();
+	}
+
 	private IEnumerator LifeUp()
 	{
 		if (!particle.isPlaying)

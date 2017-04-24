@@ -4318,7 +4318,6 @@ MonoBehaviour:
   manaCost: 0
   RecoveryTime: 0
   MaxRecoveryTime: 0
-  cat: {fileID: 860923911}
   inputName: attack_special
 --- !u!114 &860923904
 MonoBehaviour:
@@ -4335,7 +4334,6 @@ MonoBehaviour:
   manaCost: 0
   RecoveryTime: 0
   MaxRecoveryTime: 0
-  cat: {fileID: 860923911}
   inputName: attack
 --- !u!114 &860923905
 MonoBehaviour:
@@ -4458,9 +4456,9 @@ MonoBehaviour:
   Attack: 70
   Speed: 70
   Defense: 100
-  MaxLife: 100
   Life: 100
-  Mana: 0
+  MaxLife: 100
+  Mana: 100
   MaxMana: 100
   ManaMaxRecoveryTime: 0
   ManaRecoveryTime: 0
@@ -4491,10 +4489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e28e929a69c048879a95a5d85ea422e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 20
-  RecoveryTime: 0
-  MaxRecoveryTime: 10
-  cat: {fileID: 860923911}
+  manaCost: 0
+  RecoveryTime: 15
+  MaxRecoveryTime: 17
   inputName: spell 1
   particle: {fileID: 1210973159}
   lifeAmount: 20
@@ -4823,7 +4820,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012096350404, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4000012096350404, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4831,7 +4828,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012096350404, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.47
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4000012096350404, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4852,6 +4849,14 @@ Prefab:
     - target: {fileID: 4000012096350404, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010554768854, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010554768854, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}

@@ -12,7 +12,7 @@ abstract public class Character : MonoBehaviour
 	public float Speed, Defense, MaxLife;
 
 	// Variables qui ne pourront pas etres modifiees par l'utilisateur
-	//[HideInInspector]
+	[HideInInspector]
 	public float Life = 100;
 
 	// Valeur maximales brutes
