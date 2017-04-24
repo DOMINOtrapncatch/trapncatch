@@ -15,21 +15,15 @@ public class Chara_Selection : MonoBehaviour {
     public List<GameObject> cats = new List<GameObject>();
     public Camera cam;
 
-
-
     void Start () {
-        
-        
         //on fait disparaitre tous les models sauf le premier
         for(int i = 0; i < cats.Count; ++i)
         {
             cats_mesh.Add(cats[i].GetComponentInChildren<SkinnedMeshRenderer>());
             cats_mesh[i].enabled = false;
         }
-        
 	}
-	
-	
+
 	void Update () {
 
         

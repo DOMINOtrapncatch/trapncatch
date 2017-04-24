@@ -130,7 +130,8 @@ ModelImporter:
     4300000: Cat
     7400000: Sitting
     7400002: Sitting
-    7400004: Cat_ArmatureAction_001
+    7400004: Sitting
+    7400006: Sitting
     9500000: //RootNode
     13700000: Cat
   materials:
@@ -167,8 +168,8 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Cat_ArmatureAction_001
-      takeName: Cat_ArmatureAction_001
+      name: Sitting
+      takeName: Default Take
       firstFrame: -1
       lastFrame: 15
       wrapMode: 0
@@ -177,7 +178,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
