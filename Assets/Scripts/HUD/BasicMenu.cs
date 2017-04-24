@@ -36,8 +36,6 @@ public class BasicMenu : MonoBehaviour
             Launch();
     }
 
-    
-
     // Go from one scene to another scene specified by his id
     public void ChangeScene(int sceneId)
     {

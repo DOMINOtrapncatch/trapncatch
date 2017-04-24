@@ -33,9 +33,7 @@ public class Mission1 : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		myHUD.UpdateSpell();
-		myHUD.UpdateHealth();
-		myHUD.UpdateMana();
+		myHUD.UpdateAll();
 
         CheckTooltips();
 	}

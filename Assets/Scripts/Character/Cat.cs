@@ -24,7 +24,8 @@ public class Cat : Character
 	public float maxMana             { get { return MaxMana             * maxManaVal             / 100; } }
 	public float manaMaxRecoveryTime { get { return ManaMaxRecoveryTime * manaMaxRecoveryTimeVal / 100; } }
 
-    public Sprite icon;
+	public Sprite icon;
+	public List<Spell> attacks;
 	public List<Spell> spells;
 	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
@@ -58,6 +59,14 @@ public class Cat : Character
 
 	public void CheckSpells()
 	{
+		foreach(Spell attack in attacks)
+		{
+			if(attack.CanUse ())
+			{
+				attack.Activate ();
+			}
+		}
+
 		foreach(Spell spell in spells)
 		{
 			if(spell.CanUse ())
