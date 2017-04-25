@@ -941,7 +941,6 @@ GameObject:
   - 95: {fileID: 95000011800167074}
   - 54: {fileID: 54000012517221846}
   - 23: {fileID: 23000013035140248}
-  - 114: {fileID: 114000011523044546}
   - 114: {fileID: 114000012088403042}
   - 114: {fileID: 114000012470467892}
   - 114: {fileID: 114000013202704486}
@@ -950,6 +949,8 @@ GameObject:
   - 114: {fileID: 114000012927203620}
   - 114: {fileID: 114000011585935516}
   - 114: {fileID: 114000010244847172}
+  - 114: {fileID: 114000010207187704}
+  - 114: {fileID: 114000011854341488}
   m_Layer: 0
   m_Name: '[CAT] Fast '
   m_TagString: Cat
@@ -2490,6 +2491,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010207187704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013572534582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09b248a93e57d4499fadb963866e86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010244847172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2517,17 +2529,6 @@ MonoBehaviour:
     forward_axis: Vertical
     turn_axis: Horizontal
     jump_axis: Jump
---- !u!114 &114000011523044546
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013572534582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b7984d3ce5841adadb59c0fdd7e895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000011585935516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2548,6 +2549,25 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114000011854341488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013572534582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95000011800167074}
+  m_ParameterSendBits: 0
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!114 &114000012088403042
 MonoBehaviour:
   m_ObjectHideFlags: 1

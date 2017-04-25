@@ -731,7 +731,7 @@ GameObject:
   - 95: {fileID: 95000012516513600}
   - 54: {fileID: 54000013708587654}
   - 23: {fileID: 23000011648397022}
-  - 114: {fileID: 114000013472535858}
+  - 114: {fileID: 114000011454263074}
   - 114: {fileID: 114000013059270624}
   - 114: {fileID: 114000011425903664}
   - 114: {fileID: 114000012421902126}
@@ -740,6 +740,7 @@ GameObject:
   - 114: {fileID: 114000011424317520}
   - 114: {fileID: 114000014271619284}
   - 114: {fileID: 114000012177438508}
+  - 114: {fileID: 114000011404246778}
   m_Layer: 0
   m_Name: '[CAT] Classic_N'
   m_TagString: Cat
@@ -2490,6 +2491,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011404246778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012684176904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95000012516513600}
+  m_ParameterSendBits: 0
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!114 &114000011424317520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2533,6 +2553,17 @@ MonoBehaviour:
   MaxRecoveryTime: 0
   cat: {fileID: 114000013059270624}
   inputName: attack
+--- !u!114 &114000011454263074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012684176904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09b248a93e57d4499fadb963866e86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012177438508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2619,17 +2650,6 @@ MonoBehaviour:
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
---- !u!114 &114000013472535858
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012684176904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b7984d3ce5841adadb59c0fdd7e895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000014271619284
 MonoBehaviour:
   m_ObjectHideFlags: 1

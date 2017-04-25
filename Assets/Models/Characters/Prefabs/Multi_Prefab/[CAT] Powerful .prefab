@@ -142,11 +142,13 @@ GameObject:
   - 95: {fileID: 95000010036352990}
   - 54: {fileID: 54000011406159828}
   - 23: {fileID: 23000011909952278}
-  - 114: {fileID: 114000010774067864}
   - 114: {fileID: 114000011313103574}
   - 114: {fileID: 114000011722357144}
   - 135: {fileID: 135000010458567254}
   - 65: {fileID: 65000013028894124}
+  - 114: {fileID: 114000010182871274}
+  - 114: {fileID: 114000012234338896}
+  - 114: {fileID: 114000011286873090}
   m_Layer: 0
   m_Name: '[CAT] Powerful '
   m_TagString: Cat
@@ -2486,7 +2488,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000010774067864
+--- !u!114 &114000010182871274
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2494,9 +2496,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010504861694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b7984d3ce5841adadb59c0fdd7e895, type: 3}
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114000011286873090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010504861694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95000010036352990}
+  m_ParameterSendBits: 0
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!114 &114000011313103574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2544,6 +2586,17 @@ MonoBehaviour:
   lookSmooth: 0.02
   offSetFromTarget: {x: 0, y: 2, z: -2.5}
   camrot_x: 10
+--- !u!114 &114000012234338896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010504861694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09b248a93e57d4499fadb963866e86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &124000014114830540
 Behaviour:
   m_ObjectHideFlags: 1

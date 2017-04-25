@@ -582,11 +582,13 @@ GameObject:
   - 95: {fileID: 95000010127410986}
   - 54: {fileID: 54000012772896872}
   - 23: {fileID: 23000013274100838}
-  - 114: {fileID: 114000013788262760}
   - 114: {fileID: 114000012654091110}
   - 114: {fileID: 114000013199012998}
   - 135: {fileID: 135000013738710538}
   - 65: {fileID: 65000010015059066}
+  - 114: {fileID: 114000012559860284}
+  - 114: {fileID: 114000011005747676}
+  - 114: {fileID: 114000013641982708}
   m_Layer: 0
   m_Name: '[CAT] Magical '
   m_TagString: Untagged
@@ -2486,6 +2488,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011005747676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011721045816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09b248a93e57d4499fadb963866e86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011017471842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2501,6 +2514,38 @@ MonoBehaviour:
   lookSmooth: 0.02
   offSetFromTarget: {x: 0, y: 2, z: -2.5}
   camrot_x: 10
+--- !u!114 &114000012559860284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011721045816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114000012654091110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2533,7 +2578,7 @@ MonoBehaviour:
   MaxRecoveryTime: 8
   cat: {fileID: 0}
   inputName: attack_special
---- !u!114 &114000013788262760
+--- !u!114 &114000013641982708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2541,9 +2586,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011721045816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b7984d3ce5841adadb59c0fdd7e895, type: 3}
+  m_Script: {fileID: 1590678366, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95000010127410986}
+  m_ParameterSendBits: 0
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!124 &124000011805061580
 Behaviour:
   m_ObjectHideFlags: 1
