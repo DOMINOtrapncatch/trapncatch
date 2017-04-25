@@ -1874,7 +1874,6 @@ GameObject:
   - 124: {fileID: 916734032}
   - 81: {fileID: 916734031}
   - 82: {fileID: 916734037}
-  - 114: {fileID: 916734036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1950,21 +1949,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &916734036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 916734030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 642240c4a5c260f4baba1b9fc109dce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1711177970}
-  lookSmooth: 0.02
-  offSetFromTarget: {x: 0, y: 2, z: -4}
-  camrot_x: 10
 --- !u!82 &916734037
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4919,7 +4903,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1000011377733904, guid: 405483f73bd68334d9b532adae6c9547,
+  m_PlayerPrefab: {fileID: 1000012684176904, guid: 405483f73bd68334d9b532adae6c9547,
     type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0

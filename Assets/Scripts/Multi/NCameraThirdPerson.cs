@@ -11,14 +11,14 @@ public class NCameraThirdPerson : MonoBehaviour
     public float camrot_x = 10; //rotation de la camera sur l'axe x
 
     private Vector3 destination = Vector3.zero; //where we moving to
-    private MoveThirdPerson charcontroller;
+    private NMoveThirdPerson charcontroller;
     private float rotatevelo = 0; //ne pas oublier de le prendre en compte tmtc
 
     
     void Start()
     {
 
-
+        this.transform.position = new Vector3(0.0f, 0.4f, -0.2f);
         SetCameraTarget(player);
     }
 
@@ -32,9 +32,9 @@ public class NCameraThirdPerson : MonoBehaviour
 
         if (player != null)
         {
-            if (player.GetComponent<MoveThirdPerson>())
+            if (player.GetComponentInParent<NMoveThirdPerson>())
             {
-                charcontroller = player.GetComponent<MoveThirdPerson>();
+                charcontroller = player.GetComponentInParent<NMoveThirdPerson>();
             }
             else
             {

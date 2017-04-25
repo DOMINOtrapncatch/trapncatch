@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.Networking;
 using System.Collections;
 
-public class MoveThirdPerson : NetworkBehaviour {
+public class MoveThirdPerson : MonoBehaviour {
     //ON OUBLIT PAS LE RIGIDBODY SVP freez rotation x,y,z + isgravity=false
     //add collider
     //isground = everything
@@ -62,12 +61,7 @@ public class MoveThirdPerson : NetworkBehaviour {
     
     private void Start()
     {
-        if(!isLocalPlayer)
-        {
-            gameObject.GetComponentInChildren<Camera>().enabled = false;
-            print("coucou");
-            return;
-        }
+        
         targetrot = transform.rotation;
 
         if (GetComponent<Rigidbody>())
@@ -86,9 +80,6 @@ public class MoveThirdPerson : NetworkBehaviour {
     
     private void Update()
     {
-        if (!isLocalPlayer)
-            return;
-
         GetInput();
         Turn();
     }
@@ -96,9 +87,7 @@ public class MoveThirdPerson : NetworkBehaviour {
     private void FixedUpdate() //manage moves that required physics (jump,run)
     {
 
-        if (!isLocalPlayer)
-            return;
-
+        
         Run();
         Jump();
 

@@ -12,7 +12,6 @@ public class NMoveThirdPerson : NetworkBehaviour {
     [System.Serializable]
     public class MoveSettings
     {
-
         public Character chara_cat;
         public float forwardvelo = 12;
         //public float forwardvelo = Character
@@ -47,8 +46,6 @@ public class NMoveThirdPerson : NetworkBehaviour {
     private float forwardinput;
     private float turninput;
     private float jumpinput;
-
-    SpawnManager spawnmanager;
     
     //getter pour targetrot
     //je le laisse au cas ou mais au final je l'utilise pas
@@ -62,18 +59,14 @@ public class NMoveThirdPerson : NetworkBehaviour {
     {
         return Physics.Raycast(transform.position, Vector3.down, movesettings.dist_to_ground, movesettings.ground);
     }
-
-    public override void OnStartLocalPlayer()
-    {
-        GetComponent<MeshRenderer>().material.color = Color.red;
-    }
+    
     private void Start()
     {
-        if (!isLocalPlayer)
+        if(!isLocalPlayer)
+        {
+            gameObject.GetComponentInChildren<Camera>().enabled = false;
             return;
-
-        spawnmanager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
-
+        }
         targetrot = transform.rotation;
 
         if (GetComponent<Rigidbody>())
@@ -84,12 +77,12 @@ public class NMoveThirdPerson : NetworkBehaviour {
         {
             Debug.LogError("rigidbody inexistant + Call Amandine");
         }
-        
         forwardinput = 0;
         turninput = 0;
         jumpinput = 0;
     }
-
+    
+    
     private void Update()
     {
         if (!isLocalPlayer)
@@ -101,6 +94,7 @@ public class NMoveThirdPerson : NetworkBehaviour {
 
     private void FixedUpdate() //manage moves that required physics (jump,run)
     {
+
         if (!isLocalPlayer)
             return;
 
@@ -171,12 +165,5 @@ public class NMoveThirdPerson : NetworkBehaviour {
         {
             velocity.y -= physsettings.downaccel;
         }
-    }
-
-    public IEnumerator Destroy(GameObject cat, float timer)
-    {
-        yield return new WaitForSeconds(timer);
-        spawnmanager.UnSpawnObject(cat);
-        NetworkServer.UnSpawn(cat);
     }
 }
