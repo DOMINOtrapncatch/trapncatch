@@ -4919,7 +4919,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1000011527755660, guid: 405483f73bd68334d9b532adae6c9547,
+  m_PlayerPrefab: {fileID: 1000011377733904, guid: 405483f73bd68334d9b532adae6c9547,
     type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
@@ -5132,6 +5132,7 @@ MonoBehaviour:
   aroundEnemy: []
   enemyKillCount: 0
   isPathfindingActive: 0
+  catIA: 0
   catType: 0
   targets: []
   randomTarget: 1

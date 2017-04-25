@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class MoveThirdPerson : MonoBehaviour {
+public class MoveThirdPerson : NetworkBehaviour {
     //ON OUBLIT PAS LE RIGIDBODY SVP freez rotation x,y,z + isgravity=false
     //add collider
     //isground = everything
@@ -58,9 +59,15 @@ public class MoveThirdPerson : MonoBehaviour {
     {
         return Physics.Raycast(transform.position, Vector3.down, movesettings.dist_to_ground, movesettings.ground);
     }
-
+    
     private void Start()
     {
+        if(!isLocalPlayer)
+        {
+            gameObject.GetComponentInChildren<Camera>().enabled = false;
+            print("coucou");
+            return;
+        }
         targetrot = transform.rotation;
 
         if (GetComponent<Rigidbody>())
@@ -75,15 +82,23 @@ public class MoveThirdPerson : MonoBehaviour {
         turninput = 0;
         jumpinput = 0;
     }
-
+    
+    
     private void Update()
     {
+        if (!isLocalPlayer)
+            return;
+
         GetInput();
         Turn();
     }
 
     private void FixedUpdate() //manage moves that required physics (jump,run)
     {
+
+        if (!isLocalPlayer)
+            return;
+
         Run();
         Jump();
 
