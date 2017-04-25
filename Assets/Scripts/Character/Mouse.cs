@@ -144,7 +144,7 @@ public class Mouse : Character
 		}
 
 		// Decide of the next move
-		switch(mouseType)
+		switch(mouseIA)
 		{
 			case MouseIA.SUICIDE:
 				// Keep following
