@@ -7,7 +7,8 @@ public class Chara_Selection : MonoBehaviour {
     //index
     //list de gameobject et non cat pour avoir accès a la methode setactive oklm
     private int mesh_i = 0;
-    private int cats_i = 0;
+	[HideInInspector]
+    public int cats_i = 0;
     private float camX;
     private float camZ;
 
