@@ -5,25 +5,25 @@ using System.Collections;
 
 public class SpeedUp : Spell
 {
+    [Header("Spell data")]
     public ParticleSystem particle;
     [Range(0, 100)]
     public int SpeedAmount = 20;
 
     public override void Activate()
     {
-        StartCoroutine(speed());
-        cat.Attack += 20;
-        cat.Speed -= SpeedAmount;
+        StartCoroutine("speed");
     }
 
     IEnumerator speed()
     {
-        particle.Stop();
-        particle.transform.position = cat.transform.position;
-        particle.Play();
-        cat.Attack -= 20;
-        cat.Speed += SpeedAmount;
+        if (!particle.isPlaying)
+            particle.Play();
 
-        yield return new WaitForSeconds(20f);
+        cat.Speed += SpeedAmount;
+        yield return new WaitForSeconds(20.0f);
+        cat.Speed -= SpeedAmount;
+
+        particle.Stop();
     }
 }

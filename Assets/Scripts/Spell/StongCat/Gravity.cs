@@ -2,22 +2,22 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ChocWave : Spell
+public class Gravity : Spell
 {
     [Header("Spell data")]
     public ParticleSystem particle;
 
     public override void Activate()
     {
-       
+        StartCoroutine("gravity");
     }
 
-    IEnumerator chocwave()
+    IEnumerator gravity()
     {
         if (!particle.isPlaying)
             particle.Play();
 
-        return null;
+        yield return new WaitForSeconds(5.0f);
 
         particle.Stop();
     }
