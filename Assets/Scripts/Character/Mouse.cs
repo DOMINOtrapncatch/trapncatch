@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class Mouse : Character
 {
 	[Header("Pathfinding Settings")]

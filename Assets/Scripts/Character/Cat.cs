@@ -52,6 +52,8 @@ public class Cat : Character
 	int targetIndex;
 	Path path;
 
+	MouseManager mouseManager;
+
 	void Update()
 	{
 		CheckSpells ();
@@ -97,19 +99,24 @@ public class Cat : Character
 	public void KillEnemy(int enemyIndex)
 	{
 		// Get enemy
-		Mouse enemy = nearEnemy[enemyIndex].GetComponent<Mouse>();
+		GameObject enemyObject = nearEnemy[enemyIndex];
+		Mouse enemy = enemyObject.GetComponent<Mouse>();
 
 		// Spawn particle effect on deth spot and destroy it after it was animated
 		GameObject deathParticleInstance = (GameObject)Instantiate(enemy.deathPrefab, nearEnemy[enemyIndex].transform.position, Quaternion.identity);
 		Destroy(deathParticleInstance, 1.0f);
 
+		// Remove enemy from list into Mouse manager
+		mouseManager.Remove(enemyObject);
+
 		// Destroy corresponding object
-		Destroy(nearEnemy[enemyIndex]);
+       	Destroy(enemyObject);
 
 		// Remove enemy from lists
-		aroundEnemy.Remove(nearEnemy[enemyIndex]);
-		aroundEnemy.Remove(nearEnemy[enemyIndex]);
-		nearEnemy.Remove(nearEnemy[enemyIndex]);
+		aroundEnemy.Remove(enemyObject);
+		aroundEnemy.Remove(enemyObject);
+		nearEnemy.Remove(enemyObject);
+		nearEnemy.Remove(enemyObject);
 
 		// Increment number of enemies killes
 		++enemyKillCount;
@@ -125,6 +132,9 @@ public class Cat : Character
 	{
 		// Update randomizer seed
 		Random.InitState(System.DateTime.Now.Millisecond);
+
+		// Set default variables
+		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 
 		// Init start and target based on random or not
 		if(targets.Count > 0)
