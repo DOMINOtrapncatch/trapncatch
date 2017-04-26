@@ -581,7 +581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &271308371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,6 +1492,51 @@ Transform:
   - {fileID: 150787957}
   m_Father: {fileID: 5823470}
   m_RootOrder: 0
+--- !u!1 &764592306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 764592308}
+  - 114: {fileID: 764592307}
+  m_Layer: 0
+  m_Name: SpawnTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &764592307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 764592306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edead56972fab2498177bea73878316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cat_prefabs:
+  - {fileID: 1000012684176904, guid: 405483f73bd68334d9b532adae6c9547, type: 2}
+  - {fileID: 1000013572534582, guid: 03c5f187b2535764d9aaeff90483ecd3, type: 2}
+  - {fileID: 1000011721045816, guid: a859fd91fdd47b84ca6e18aaab5c6488, type: 2}
+  - {fileID: 1000010504861694, guid: d4ac5e25f7df1ca48bf8c68e30bbffb8, type: 2}
+--- !u!4 &764592308
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 764592306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.97, y: -0.6012375, z: 11.070989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1 &767974743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,7 +1925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &916734031
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4882,7 +4927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1662775013
 MonoBehaviour:
   m_ObjectHideFlags: 0

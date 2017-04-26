@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -14,6 +15,9 @@ public class Chara_Selection : MonoBehaviour {
     private List<SkinnedMeshRenderer> cats_mesh = new List<SkinnedMeshRenderer>();
     public List<GameObject> cats = new List<GameObject>();
     public Camera cam;
+
+    //loadscene
+    public string nextScene = "Multi - Jardin";
 
     void Start () {
         //on fait disparaitre tous les models sauf le premier
@@ -86,6 +90,8 @@ public class Chara_Selection : MonoBehaviour {
         {
             PlayerPrefs.SetInt("ChoosenCat", cats_i);
             AutoFade.LoadLevel(1, .3f, .3f, Palette.DARK_PURPLE);
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
+            
         }
     }
 

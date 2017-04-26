@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,8 +20,7 @@ public class Mode2_Survival : MonoBehaviour {
     void Start()
     {
         player_list = GameObject.FindGameObjectsWithTag("Cat");
-        spawnable_mouse = AssetDatabase.LoadAllAssetsAtPath("Assets/Models/Characters/Prefabs/Mouse/LVL3");
-        
+        spawnable_mouse = Resources.LoadAll("Assets/Models/Characters/Prefabs/Mouse/LVL3");
         foreach(GameObject player in player_list)
         {
             cat_list.Add(player.GetComponent<Cat>());
