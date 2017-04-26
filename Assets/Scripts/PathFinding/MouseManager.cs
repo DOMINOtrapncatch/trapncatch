@@ -22,20 +22,27 @@ public class MouseManager : MonoBehaviour {
 
 	void Update()
 	{
+		// Spawn conditions based on public variables
 		if (enemySpawnCount < enemySpawnLimit && enemies.Count < enemyCap)
 		{
+			// Spawn rate handling
 			if(enemySpawnRateCount == 0)
 			{
+				// Get random mouse profile
 				GameObject mouseProfile = enemiesProfiles[Random.Range(0, enemiesProfiles.Count - 1)];
+
+				// Get corresponding Mouse class and edit some variables to add randomness
 				Mouse newEnemy = mouseProfile.GetComponent<Mouse>();
 				newEnemy.targets.Shuffle();
 				newEnemy.transform.position = newEnemy.targets[0].transform.position;
 				newEnemy.Speed += Random.Range(-.5f, .5f);
 
+				// Create the nex object, instanciate it into the world, add it to the enemies list and set it active
 				GameObject newEnemyObject = (GameObject)Instantiate(mouseProfile, newEnemy.transform.position, Quaternion.identity);
 				enemies.Add(newEnemyObject);
 				newEnemyObject.SetActive(true);
 
+				// increment sme counters
 				enemySpawnCount++;
 				enemySpawnRateCount++;
 			}
@@ -48,6 +55,7 @@ public class MouseManager : MonoBehaviour {
 
 	public void Remove(GameObject enemy)
 	{
+		// Removes an enemy from the enemies list
 		enemies.Remove(enemy);
 		enemyKillCount++;
 	}
