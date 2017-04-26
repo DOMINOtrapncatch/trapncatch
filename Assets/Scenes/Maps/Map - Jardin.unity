@@ -4297,6 +4297,7 @@ GameObject:
   - 114: {fileID: 860923912}
   - 114: {fileID: 860923914}
   - 114: {fileID: 860923913}
+  - 114: {fileID: 860923915}
   m_Layer: 0
   m_Name: '[CAT] Magical '
   m_TagString: Untagged
@@ -4470,6 +4471,7 @@ MonoBehaviour:
   spells:
   - {fileID: 860923912}
   - {fileID: 860923914}
+  - {fileID: 860923915}
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
@@ -4543,6 +4545,25 @@ MonoBehaviour:
     type: 2}
   lifeCostAmount: 20
   manaLostAmount: 20
+--- !u!114 &860923915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 860923902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db542cc5bfd24438955569fa572b1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaCost: 80
+  MaxRecoveryTime: 20
+  RecoveryTime: 0
+  inputName: spell 4
+  rollbackUpParticle: {fileID: 1000013107294458, guid: 9f15f8b45303d476aa8afc5601dd68d1,
+    type: 2}
+  rollbackDownParticle: {fileID: 1000010966559634, guid: 46a712c42bf9b4a309e54d9da4d86646,
+    type: 2}
 --- !u!1 &874549459
 GameObject:
   m_ObjectHideFlags: 0

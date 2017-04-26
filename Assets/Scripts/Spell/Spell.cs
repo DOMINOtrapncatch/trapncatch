@@ -28,6 +28,8 @@ public abstract class Spell : MonoBehaviour {
 	void Start()
 	{
 		cat = GetComponent<Cat>();
+
+        InvokeRepeating("UpdateEverySecond", 0, 1.0f);
 	}
 
     //delai de recovery
@@ -50,5 +52,5 @@ public abstract class Spell : MonoBehaviour {
 
 	abstract public void Activate();
 
-	virtual public void Update() {}
+	virtual public void UpdateEverySecond() {}
 }
