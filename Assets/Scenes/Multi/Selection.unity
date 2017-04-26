@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.878, g: 0.759, b: 0.1, a: 1}
+  m_Color: {r: 0.897, g: 0.666, b: 0.109, a: 0.972}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1100,7 +1100,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 489756402}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.505, y: 0.15568583}
+  m_AnchorMin: {x: 0.5, y: 0.10053424}
   m_AnchorMax: {x: 0.721, y: 0.8986208}
   m_AnchoredPosition: {x: 0.05139923, y: -0.0000038146973}
   m_SizeDelta: {x: 0.35928345, y: 0}
@@ -2796,65 +2796,42 @@ MonoBehaviour:
   - {fileID: 1658186438}
   catsDesc:
   - name: CLASSIQUE
-    attack: 45.2
-    defense: 58.1
-    speed: 31.5
-    mana: 83.9
-    spellsName:
-    - test1
-    - test2
-    - test3
-    - test4
-    spellsDesc:
-    - my long desc 1
-    - my long desc 2
-    - my long desc 3
-    - my long desc 4
-  - name: FORT
+    attack: 75
+    defense: 75
+    speed: 75
+    mana: 60
+    spells:
+    - name: CAT FOOD
+      manaCost: 20
+      desc: "Force l'adversaire \xE0 se diriger vers de la nourriture pendant 10s"
+    - name: WOOL BALL
+      manaCost: 40
+      desc: "Emp\xEAche l'adversaire de se d\xE9placer tant qu'il n'a pas effectu\xE9
+        une certaine combinaison de touches"
+    - name: CAT BITE
+      manaCost: 5
+      desc: "Inflige un dommage de 20pv \xE0 l'adversaire"
+    - name: NIGHT LIFE
+      manaCost: 30
+      desc: "Force l'obscurit\xE9 dans le monde pendant 5s pour tout ses adversaires"
+  - name: PUISSANT
     attack: 84.7
     defense: 86.3
     speed: 12.1
     mana: 46
-    spellsName:
-    - test1
-    - test2
-    - test3
-    - test4
-    spellsDesc:
-    - my long desc 1
-    - my long desc 2
-    - my long desc 3
-    - my long desc 4
+    spells: []
   - name: MAGIQUE
     attack: 50.8
     defense: 47.6
     speed: 57.3
     mana: 100
-    spellsName:
-    - test1
-    - test2
-    - test3
-    - test4
-    spellsDesc:
-    - my long desc 1
-    - my long desc 2
-    - my long desc 3
-    - my long desc 4
+    spells: []
   - name: RAPIDE
     attack: 38.7
     defense: 29.8
     speed: 79
     mana: 53.2
-    spellsName:
-    - test1
-    - test2
-    - test3
-    - test4
-    spellsDesc:
-    - my long desc 1
-    - my long desc 2
-    - my long desc 3
-    - my long desc 4
+    spells: []
   chara_selection: {fileID: 848430950}
 --- !u!1001 &715055647
 Prefab:

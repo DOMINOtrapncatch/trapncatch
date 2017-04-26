@@ -38,13 +38,12 @@ public class SelectionMenuCanvas : MonoBehaviour {
 			TopRightBar.fillAmount    = catsDesc[lastCurrent].speed   / 100.0f;
 			BottomRightBar.fillAmount = catsDesc[lastCurrent].mana    / 100.0f;
 
-			// UPDATE - Spells name
-			for (int i = 0; i < catsDesc[lastCurrent].spellsName.Count; i++)
-				spellsNameTexts[i].text = catsDesc[lastCurrent].spellsName[i];
-
-			// UPDATE - Spells description
-			for (int i = 0; i < catsDesc[lastCurrent].spellsDesc.Count; i++)
-				spellsDescPanels[i].GetComponentInChildren<Text>().text = catsDesc[lastCurrent].spellsDesc[i];
+			// UPDATE - Spells name && Spells desc
+			for (int i = 0; i < catsDesc[lastCurrent].spells.Count; i++)
+			{
+				spellsNameTexts[i].text = catsDesc[lastCurrent].spells[i].name + "\n[" + catsDesc[lastCurrent].spells[i].manaCost+ " MANA]";
+				spellsDescPanels[i].GetComponentInChildren<Text>().text = catsDesc[lastCurrent].spells[i].desc;
+			}
 		}
 	}
 
@@ -68,7 +67,14 @@ public class SelectionMenuCanvas : MonoBehaviour {
 		[Range(0, 100)]
 		public float defense, speed, mana;
 
-		public List<string> spellsName;
-		public List<string> spellsDesc;
+		public List<CatSpell> spells;
+	}
+
+	[System.Serializable]
+	public class CatSpell
+	{
+		public string name;
+		public int manaCost;
+		public string desc;
 	}
 }
