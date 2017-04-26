@@ -50,7 +50,7 @@ public class Mode2_Survival : MonoBehaviour {
 
             // ** troisieme temps **
             //spawn de 3 souris toutes les 10 secondes
-            SpawnInTime();
+            StartCoroutine("SpawnInTime");
         }
 
     }
