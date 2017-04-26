@@ -13,7 +13,7 @@ public class SpeedUp : Spell
     {
         StartCoroutine(speed());
         cat.Attack += 20;
-        cat.Speed -= 20;
+        cat.Speed -= SpeedAmount;
     }
 
     IEnumerator speed()
