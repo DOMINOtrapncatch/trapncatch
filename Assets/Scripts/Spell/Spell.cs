@@ -49,5 +49,6 @@ public abstract class Spell : MonoBehaviour {
     }
 
 	abstract public void Activate();
-	
+
+	virtual public void Update() {}
 }

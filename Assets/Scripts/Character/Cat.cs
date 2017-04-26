@@ -31,7 +31,7 @@ public class Cat : Character
 	public List<Spell> spells;
 	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
-	[HideInInspector]
+	//[HideInInspector]
 	public List<GameObject> aroundEnemy = new List<GameObject>();
 	[HideInInspector]
 	public int enemyKillCount = 0;
@@ -71,6 +71,8 @@ public class Cat : Character
 
 		foreach(Spell spell in spells)
 		{
+			spell.Update();
+
 			if(spell.CanUse ())
 			{
 				spell.Activate ();

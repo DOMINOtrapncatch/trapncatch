@@ -2815,23 +2815,48 @@ MonoBehaviour:
       manaCost: 30
       desc: "Force l'obscurit\xE9 dans le monde pendant 5s pour tout ses adversaires"
   - name: PUISSANT
-    attack: 84.7
-    defense: 86.3
-    speed: 12.1
-    mana: 46
+    attack: 100
+    defense: 65
+    speed: 50
+    mana: 75
     spells: []
   - name: MAGIQUE
-    attack: 50.8
-    defense: 47.6
-    speed: 57.3
+    attack: 70
+    defense: 100
+    speed: 70
     mana: 100
-    spells: []
+    spells:
+    - name: HEAL
+      manaCost: 25
+      desc: Augmente la vie pendant 4s
+    - name: MANA BLOW
+      manaCost: 50
+      desc: Retire 20% du mana de tous les adversaires se situant aux alentours
+    - name: PROJECTILE
+      manaCost: 10
+      desc: Envoie une boule magique qui suit l'adversaire pendant 10s et explose
+        au contact de celui-ci
+    - name: ROLLBACK
+      manaCost: 80
+      desc: Revenir 10s dans le temps et retrouver position, vie et mana
   - name: RAPIDE
-    attack: 38.7
-    defense: 29.8
-    speed: 79
-    mana: 53.2
-    spells: []
+    attack: 65
+    defense: 55
+    speed: 100
+    mana: 50
+    spells:
+    - name: QUICK BITE
+      manaCost: 0
+      desc: Dash vers l'avant suivi d'une attaque basique
+    - name: "SACRED STERO\xCFD"
+      manaCost: 0
+      desc: Augmente l'attaque de 25% mais diminue la vitesse de 25%
+    - name: THAT'S A TRAP
+      manaCost: 0
+      desc: "Place au sol un pi\xE8ge qui ralentit l'adversaire lorsqu'il en est proche"
+    - name: MULTI-SCRATCH
+      manaCost: 0
+      desc: "Diminue l'attaque de 25% mais lance plusieures attaques basiques d'affil\xE9e"
   chara_selection: {fileID: 848430950}
 --- !u!1001 &715055647
 Prefab:
