@@ -65,7 +65,6 @@ public class MagicBallSpell : Spell
 		{
 			magicBallParticle.Stop();
             Destroy(magicBallParticle.gameObject);
-		}
-		
+		}		
 	}
 }

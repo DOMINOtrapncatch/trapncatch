@@ -4,10 +4,10 @@ using System.Collections;
 public class QuickBite : Spell
 {
     [Header("QuickBite settings")]
-    [Range(0, 100)]
-    public float dashDuration = 3F;
-    [Range(0, 1500)]
-    public float dashPropulsion = 250F;
+    [Range(1, 100)]
+    public float dashDuration = 1F;
+    [Range(1, 1000)]
+    public float dashPropulsion = 2F;
     public ParticleSystem particle;
 
     public override void Activate()
@@ -22,16 +22,27 @@ public class QuickBite : Spell
             particle.Play();
 
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-        float duration = dashDuration;
+        /*float duration = dashDuration;
 
         while (duration > 0)
         {
             rb.AddForce(transform.forward * dashPropulsion);
-            duration -= .2F;
+            duration -= .1F;
 
-            yield return new WaitForSeconds(.01F);
+            yield return new WaitForSeconds(.02F);
+        }*/
+
+        float startTime = Time.fixedTime;
+
+        rb.AddForce(transform.forward * dashPropulsion);
+        while (Time.fixedTime - startTime < 2.5f)
+        {
+            yield return new WaitForSeconds(0.2f);
         }
-        
+
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
         cat.spells[0].Activate();
 
         particle.Stop();

@@ -4299,7 +4299,6 @@ GameObject:
   - 114: {fileID: 860923913}
   - 114: {fileID: 860923915}
   - 114: {fileID: 860923916}
-  - 114: {fileID: 860923917}
   m_Layer: 0
   m_Name: '[CAT] Magical '
   m_TagString: Untagged
@@ -4473,7 +4472,7 @@ MonoBehaviour:
   - {fileID: 860923903}
   spells:
   - {fileID: 860923912}
-  - {fileID: 860923917}
+  - {fileID: 860923914}
   - {fileID: 860923915}
   - {fileID: 860923916}
   nearEnemy: []
@@ -4536,7 +4535,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 860923902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03db8303f593e42909ccc02bfb43d507, type: 3}
   m_Name: 
@@ -4589,24 +4588,6 @@ MonoBehaviour:
     type: 2}
   damage: 30
   magicBallSpeed: 200
---- !u!114 &860923917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 860923902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ed9b5113b82d47b44ad7a903c53ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manaCost: 20
-  MaxRecoveryTime: 20
-  RecoveryTime: 0
-  inputName: spell 2
-  dashDuration: 2
-  dashPropulsion: 1500
-  particle: {fileID: 1984452081}
 --- !u!1 &874549459
 GameObject:
   m_ObjectHideFlags: 0
