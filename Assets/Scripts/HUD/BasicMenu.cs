@@ -69,12 +69,24 @@ public class BasicMenu : MonoBehaviour
         text.fontSize = 50;
     }
 
+    // When the button is being hovered
+    public void HoverSmall(Text label)
+	{
+		label.fontSize = 32;
+    }
+
     // When the button is being unhovered
     public void UnHover(string label)
     {
         Text text = GameObject.Find(label).GetComponent<Text>();
 		text.color = Palette.LIGHT_GRAY;
         text.fontSize = 30;
+    }
+
+    // When the button is being unhovered
+    public void UnHoverSmall(Text label)
+	{
+		label.fontSize = 30;
     }
 
     private void HoverUpdate(int direction)
