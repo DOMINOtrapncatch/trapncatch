@@ -28,6 +28,8 @@ public class Swap : MonoBehaviour
 
         // Starting by only activating the first camera
         SwapWith(0);
+
+        
     }
 
     void Update()
