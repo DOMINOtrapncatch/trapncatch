@@ -18,6 +18,7 @@ public class MoveThirdPerson : MonoBehaviour {
         public float jumpvelo = 13;
         public float dist_to_ground = 0.1f; //if we're in the air or not
         public LayerMask ground;
+
     }
     [System.Serializable]
     public class PhysSettings
@@ -61,6 +62,7 @@ public class MoveThirdPerson : MonoBehaviour {
 
     private void Start()
     {
+        
         targetrot = transform.rotation;
 
         if (GetComponent<Rigidbody>())
@@ -74,6 +76,8 @@ public class MoveThirdPerson : MonoBehaviour {
         forwardinput = 0;
         turninput = 0;
         jumpinput = 0;
+
+        movesettings.forwardvelo = movesettings.chara_cat.speed;
     }
 
     private void Update()
