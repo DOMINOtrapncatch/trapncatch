@@ -59,7 +59,7 @@ public class MoveThirdPerson : MonoBehaviour {
     {
         return Physics.Raycast(transform.position, Vector3.down, movesettings.dist_to_ground, movesettings.ground);
     }
-    
+
     private void Start()
     {
         
@@ -79,8 +79,7 @@ public class MoveThirdPerson : MonoBehaviour {
 
         movesettings.forwardvelo = movesettings.chara_cat.speed;
     }
-    
-    
+
     private void Update()
     {
         GetInput();
@@ -89,8 +88,6 @@ public class MoveThirdPerson : MonoBehaviour {
 
     private void FixedUpdate() //manage moves that required physics (jump,run)
     {
-
-        
         Run();
         Jump();
 
