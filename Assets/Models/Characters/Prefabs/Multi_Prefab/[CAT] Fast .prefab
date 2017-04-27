@@ -941,15 +941,15 @@ GameObject:
   - 95: {fileID: 95000011800167074}
   - 54: {fileID: 54000012517221846}
   - 23: {fileID: 23000013035140248}
+  - 114: {fileID: 114000010207187704}
   - 114: {fileID: 114000012088403042}
   - 114: {fileID: 114000012470467892}
   - 114: {fileID: 114000013202704486}
   - 135: {fileID: 135000013822293780}
   - 65: {fileID: 65000012413514438}
+  - 114: {fileID: 114000010244847172}
   - 114: {fileID: 114000012927203620}
   - 114: {fileID: 114000011585935516}
-  - 114: {fileID: 114000010244847172}
-  - 114: {fileID: 114000010207187704}
   - 114: {fileID: 114000011854341488}
   m_Layer: 0
   m_Name: '[CAT] Fast '
@@ -2584,11 +2584,12 @@ MonoBehaviour:
   Defense: 33.6
   MaxLife: 100
   Life: 100
-  Mana: 100
   MaxMana: 40
   ManaMaxRecoveryTime: 100
+  Mana: 100
   ManaRecoveryTime: 0
   icon: {fileID: 0}
+  attacks: []
   spells:
   - {fileID: 0}
   - {fileID: 0}
@@ -2615,9 +2616,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaCost: 0
-  RecoveryTime: 0
   MaxRecoveryTime: 0
-  cat: {fileID: 114000012088403042}
+  RecoveryTime: 0
   inputName: attack
 --- !u!114 &114000012728660416
 MonoBehaviour:
@@ -2630,7 +2630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642240c4a5c260f4baba1b9fc109dce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 4000011467042552}
   lookSmooth: 0.02
   offSetFromTarget: {x: 0, y: 2, z: -2.5}
   camrot_x: 10
@@ -2678,9 +2678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaCost: 80
-  RecoveryTime: 100
   MaxRecoveryTime: 8
-  cat: {fileID: 0}
+  RecoveryTime: 100
   inputName: attack_special
 --- !u!124 &124000010420938244
 Behaviour:
