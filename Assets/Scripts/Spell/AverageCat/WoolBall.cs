@@ -6,10 +6,8 @@ public class WoolBall : Spell {
 
     int restraint = 10; //secondes
     int compteur = 0; //up to 15
-    void Start()
-    {
-        manaCost = 40;
-    }
+    //manaCost = 40
+    
 
     public override void Activate()
     {

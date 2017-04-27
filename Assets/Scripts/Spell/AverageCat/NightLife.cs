@@ -2,20 +2,21 @@
 using System.Collections;
 
 public class NightLife : Spell {
-
+    //UNUSE PAS UTLISEE SALUT AU REVOIR 
+    // AU REVOIRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
     //Need Event System for when light are turned off or condition with the light gameobject
-    public float manaCost = 30;
+    // manaCost = 30;
     public float delay = 5.0f;//secondes
-    private Light mainLight;
+    public Light mainLight;
 
     void Start()
     {
-        mainLight = GetComponent<Light>();
+        //mainLight = GetComponent<Light>();
     }
 
     public override void Activate()
     {
-        StartCoroutine("LightsOff");
+
     }
 
     IEnumerator LightsOff()

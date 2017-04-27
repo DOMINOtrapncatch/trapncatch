@@ -7,13 +7,14 @@ public class CatBite : Spell {
     //AVERAGE CAT
 
     public int damage = 20;
-    public float manaCost = 5;
+    // manaCost = 5
     public GameObject particle;
+    private bool isDead;
     
 
     public override void Activate()
     {
-        particle = (GameObject)Instantiate(particle, cat.transform.position, Quaternion.identity);
+        GameObject particleInit = (GameObject)Instantiate(particle, cat.transform.position, Quaternion.identity);
 
         //basic_spell more powerfull
         foreach(GameObject other in cat.aroundEnemy)
@@ -22,19 +23,23 @@ public class CatBite : Spell {
             Mouse miceEnemy = other.GetComponent<Mouse>();
             if(catEnemy != null && catEnemy.Life > 0)
             {
-                catEnemy.Life -= damage;
+                isDead = catEnemy.Damage(20);
+                if (isDead)
+                    catEnemy.Destroy();
             }
             else if(miceEnemy != null && miceEnemy.Life > 0)
             {
-                miceEnemy.Life -= damage;
+                isDead = miceEnemy.Damage(20);
+                if (isDead)
+                    miceEnemy.Destroy();
             }
         }
 
         //update current cat mana
         cat.Mana -= manaCost;
 
-        //end particle
-        Destroy(particle, 2.0f);
+        //end particle (noo)
+        Destroy(particleInit,1.0f);
     }
 
   

@@ -2549,9 +2549,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaCost: 0
-  RecoveryTime: 0
   MaxRecoveryTime: 0
-  cat: {fileID: 114000013059270624}
+  RecoveryTime: 0
   inputName: attack
 --- !u!114 &114000011454263074
 MonoBehaviour:
@@ -2596,9 +2595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaCost: 80
-  RecoveryTime: 100
   MaxRecoveryTime: 8
-  cat: {fileID: 114000013059270624}
+  RecoveryTime: 100
   inputName: attack_special
 --- !u!114 &114000012838200072
 MonoBehaviour:
@@ -2631,11 +2629,12 @@ MonoBehaviour:
   Defense: 0
   MaxLife: 0
   Life: 100
-  Mana: 0
   MaxMana: 0
   ManaMaxRecoveryTime: 0
+  Mana: 0
   ManaRecoveryTime: 0
   icon: {fileID: 0}
+  attacks: []
   spells:
   - {fileID: 114000011425903664}
   - {fileID: 114000012421902126}
