@@ -3,23 +3,32 @@ using System.Collections;
 using System;
 
 public class NightVision : Spell {
-
-    //Need Event System for when light are turned off or condition with the light gameobject
-    Light light;
+    
+    //askip etat passif
+    public Light vision;
+    public int hauteur = 8;
+    private Light mainLight;
 
     void Start()
     {
-        manaCost = 0;
-        light = GetComponent<Light>();
+        mainLight = GetComponent<Light>();
+    }
+
+    void Update()
+    {
+        if (!mainLight.enabled)
+            Activate();
+        
     }
 
     public override void Activate()
     {
-        if(!light.enabled)
-        {
-            //timer for the spell
-            //visual effect -> ghost or light reduced 50%
-            //FIXME
-        }
+        float catX = cat.transform.position.x;
+        float catY = cat.transform.position.y + hauteur;
+        float catZ = cat.transform.position.z;
+        Light spotlight = Instantiate(vision, new Vector3(catX, catY, catZ), Quaternion.identity) as Light;
+
+        //put it inside cat
+        spotlight.transform.parent = cat.transform;
     }
 }

@@ -4,17 +4,40 @@ using System;
 
 public class CatBite : Spell {
 
-    private int damage = 20;
+    //AVERAGE CAT
 
-	void Start () {
-
-        manaCost = 5;
-	}
-	
+    public int damage = 20;
+    public float manaCost = 5;
+    public GameObject particle;
+    
 
     public override void Activate()
     {
+        particle = (GameObject)Instantiate(particle, cat.transform.position, Quaternion.identity);
+
         //basic_spell more powerfull
-        //FIXME
+        foreach(GameObject other in cat.aroundEnemy)
+        {
+            Cat catEnemy = other.GetComponent<Cat>();
+            Mouse miceEnemy = other.GetComponent<Mouse>();
+            if(catEnemy != null && catEnemy.Life > 0)
+            {
+                catEnemy.Life -= damage;
+            }
+            else if(miceEnemy != null && miceEnemy.Life > 0)
+            {
+                miceEnemy.Life -= damage;
+            }
+        }
+
+        //update current cat mana
+        cat.Mana -= manaCost;
+
+        //end particle
+        Destroy(particle, 2.0f);
     }
+
+  
+
+    
 }

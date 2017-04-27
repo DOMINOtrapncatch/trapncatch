@@ -16,7 +16,7 @@ abstract public class Character : MonoBehaviour
 	public float Life = 100;
 
 	// Valeur maximales brutes
-	private float maxAttackVal = 20, maxSpeedVal = 15, maxDefenseVal = 20, maxLifeVal = 100;
+	private float maxAttackVal = 20, maxSpeedVal = 12, maxDefenseVal = 20, maxLifeVal = 100;
 
 	// Variables utilisees dans les scripts
 	public float attack  { get { return Attack  * maxAttackVal  / 100; } }
