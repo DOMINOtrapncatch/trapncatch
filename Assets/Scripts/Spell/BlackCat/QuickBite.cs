@@ -6,7 +6,8 @@ public class QuickBite : Spell
     [Header("QuickBite settings")]
     [Range(0, 100)]
     public float dashDuration = 3F;
-    public Vector3 direction = new Vector3(0, 0, .1F);
+    [Range(0, 1500)]
+    public float dashPropulsion = 250F;
     public ParticleSystem particle;
 
     public override void Activate()
@@ -25,12 +26,12 @@ public class QuickBite : Spell
 
         while (duration > 0)
         {
-            rb.AddForce(transform.forward + direction);
-            duration -= .1F;
+            rb.AddForce(transform.forward * dashPropulsion);
+            duration -= .2F;
 
-            yield return new WaitForSeconds(.1F);
+            yield return new WaitForSeconds(.01F);
         }
-
+        
         cat.spells[0].Activate();
 
         particle.Stop();
