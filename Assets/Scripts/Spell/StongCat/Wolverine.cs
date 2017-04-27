@@ -6,6 +6,8 @@ public class Wolverine : Spell
 {
     [Header("Spell data")]
     public ParticleSystem particle;
+    [Range(0,100)]
+    public float stopSpeed = 0;
 
     public override void Activate()
     {
@@ -17,7 +19,11 @@ public class Wolverine : Spell
         if (!particle.isPlaying)
             particle.Play();
 
-        for (int i = 0; i < (cat.Life / 2); i++)
+        float lifeStart = cat.Life;
+        stopSpeed = cat.Speed;
+        cat.Speed = 0;
+
+        for (int i = 0; i < (lifeStart / 2); i++)
         {
             if (cat.Life > cat.MaxLife)
             {
@@ -31,5 +37,7 @@ public class Wolverine : Spell
         }
 
         particle.Stop();
+
+        cat.Speed = stopSpeed;
     }
 }

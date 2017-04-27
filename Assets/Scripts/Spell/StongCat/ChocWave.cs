@@ -6,18 +6,30 @@ public class ChocWave : Spell
 {
     [Header("Spell data")]
     public ParticleSystem particle;
+    [Range(0, 100)]
+    public int lifeDamage = 30;
 
     public override void Activate()
     {
-       
+        StartCoroutine("ChocWaveAction");
     }
-
-    IEnumerator chocwave()
+    
+    IEnumerator ChocWaveAction()
     {
         if (!particle.isPlaying)
             particle.Play();
 
-        return null;
+        foreach (GameObject enemy in cat.aroundEnemy)
+        {
+            Character enemyAll = enemy.GetComponentInParent<Character>();
+            if (!enemyAll.Damage(lifeDamage))
+            {
+                enemyAll.Destroy();
+                cat.enemyKillCount++;
+            }
+        }
+
+        yield return new WaitForSeconds(2.0f);
 
         particle.Stop();
     }
