@@ -1,22 +1,34 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
 public class LoadPrefab : MonoBehaviour {
 
     public Object[] cat_prefabs;
-    private int prefab;
-	// Use this for initialization
-	void Start () {
+    public NetworkManager netMan;
+    private int prefab = 1;
+    private GameObject player;
+    // Use this for initialization
+    void Start()
+    {
+        //get player's cat
+        //prefab = PlayerPrefs.GetInt("ChoosenCat");
 
-        cat_prefabs = Resources.LoadAll("Assets/Resources/Multi_Prefab");
-        prefab = PlayerPrefs.GetInt("ChoosenCat");
-        //Instantiate(cat_prefabs[prefab]);
-        print("machin" + cat_prefabs.Length);
-        foreach(Object obj in cat_prefabs)
+        //override network manager spawner
+        //Destroy(netMan.playerPrefab);
+        netMan.playerPrefab = (GameObject)cat_prefabs[prefab];
+        player = netMan.playerPrefab;
+        print(player.name);
+        //ClientScene.RegisterPrefab(player);
+        //spawn
+        if (cat_prefabs != null && prefab >= 0)
         {
-            print("coucou"+ obj.name);
-        }
-        print("super");
-	}
-	
+            player = Instantiate(cat_prefabs[prefab], transform.position, Quaternion.identity) as GameObject;
+            
+        }   
+    }
+
+    
+
+    
 }

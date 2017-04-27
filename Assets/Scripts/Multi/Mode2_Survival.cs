@@ -6,24 +6,24 @@ public class Mode2_Survival : MonoBehaviour {
 
     public int maxPoolSize = 5;//20
     public float delai = 10.0f;
-    public Vector3 spawn_position = new Vector3(-6.0f, -1.0f, 13.0f);
-    public Quaternion spawn_rot = new Quaternion(0.0f,180.0f,0.0f,0.0f);
 
     private GameObject[] player_list;
-    private Object[] spawnable_mouse;
+    public Object[] spawnable_mouse;
     private List<Cat> cat_list;
     private List<Mouse> mouse;
 
     private int DeathCounter;
     private int spawn_index;
 
-    void Start()
+    void Awake()
     {
         player_list = GameObject.FindGameObjectsWithTag("Cat");
-        spawnable_mouse = Resources.LoadAll("Assets/Models/Characters/Prefabs/Mouse/LVL3");
+        //spawnable_mouse = Resources.LoadAll("Assets/Models/Characters/Prefabs/Mouse/LVL3");
         foreach(GameObject player in player_list)
         {
+            print(player.name);
             cat_list.Add(player.GetComponent<Cat>());
+            print(player.name);
         }
 
         //Spawn de depart
@@ -96,10 +96,11 @@ public class Mode2_Survival : MonoBehaviour {
     }
     void SpawnMouse()
     {
+        print("spawn");
         //spawn de souris meutriere
         //choix entre 3 prefabs - random
         spawn_index = Random.Range(0, spawnable_mouse.Length - 1);
-        Instantiate(spawnable_mouse[spawn_index], spawn_position, spawn_rot);
+        Instantiate(spawnable_mouse[spawn_index], transform.position, Quaternion.identity);
 
         //keep trace for other purpose
         mouse.Add(((GameObject) spawnable_mouse[spawn_index]).GetComponent<Mouse>());

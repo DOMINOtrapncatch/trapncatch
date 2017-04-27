@@ -37,7 +37,7 @@ public class Chara_Selection : MonoBehaviour {
 
         //use left/q or right/d for swaping chara
         SwapCharacter();
-        SaveChara(); 
+        SaveChara();
 	}
 
     void SwapCharacter ()
@@ -77,7 +77,6 @@ public class Chara_Selection : MonoBehaviour {
         }
 
         //set active chara depending on user input
-
         cats_mesh[mesh_i].enabled = true;
     }
 
@@ -85,14 +84,14 @@ public class Chara_Selection : MonoBehaviour {
     {
         //save chara the player choose for next scene 
         //next scene load
-
-        if(Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             PlayerPrefs.SetInt("ChoosenCat", cats_i);
             AutoFade.LoadLevel(1, .3f, .3f, Palette.DARK_PURPLE);
             SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
-            
+
         }
+
     }
 
     void RotateRestrain()
