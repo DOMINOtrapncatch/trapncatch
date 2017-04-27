@@ -55,6 +55,8 @@ GameObject:
   - 4: {fileID: 4000012552060528}
   - 198: {fileID: 198000012580198938}
   - 199: {fileID: 199000011786289650}
+  - 54: {fileID: 54000012462672580}
+  - 135: {fileID: 135000012089909454}
   m_Layer: 0
   m_Name: MagicBallExplosion
   m_TagString: Untagged
@@ -103,6 +105,33 @@ Transform:
   - {fileID: 4000012252189082}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &54000012462672580
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013684228232}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &135000012089909454
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013684228232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198000010042290270
 ParticleSystem:
   m_ObjectHideFlags: 1

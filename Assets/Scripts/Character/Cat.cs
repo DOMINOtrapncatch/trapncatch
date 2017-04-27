@@ -83,32 +83,33 @@ public class Cat : Character
 	public void AttackEnemy(int enemyIndex)
 	{
 		// Get enemy
-		Mouse enemy = nearEnemy[enemyIndex].GetComponent<Mouse>();
+		Character enemy = nearEnemy[enemyIndex].GetComponent<Character>();
 
 		// Remove life
-		if(attack > 0)
-			enemy.Life -= attack;
-
-		// If dead, make it disappear
-		if (enemy.life <= 0)
-			KillEnemy(enemyIndex);
+		if(attack > 0 && !enemy.Damage(attack))
+		{
+            KillEnemy(enemyIndex);
+		}
 	}
 
 	public void KillEnemy(int enemyIndex)
 	{
 		// Get enemy
 		GameObject enemyObject = nearEnemy[enemyIndex];
-		Mouse enemy = enemyObject.GetComponent<Mouse>();
+		Character enemy = enemyObject.GetComponent<Character>();
 
 		// Spawn particle effect on deth spot and destroy it after it was animated
-		GameObject deathParticleInstance = (GameObject)Instantiate(enemy.deathPrefab, nearEnemy[enemyIndex].transform.position, Quaternion.identity);
-		Destroy(deathParticleInstance, 1.0f);
+		if(enemyObject.GetComponent<Mouse>() != null)
+		{
+			GameObject deathParticleInstance = (GameObject)Instantiate(enemyObject.GetComponent<Mouse>().deathPrefab, nearEnemy[enemyIndex].transform.position, Quaternion.identity);
+			Destroy(deathParticleInstance, 1.0f);
+		}
 
 		// Remove enemy from list into Mouse manager
 		mouseManager.Remove(enemyObject);
 
-		// Destroy corresponding object
-       	Destroy(enemyObject);
+		// Destroy character
+       	enemy.Destroy();
 
 		// Remove enemy from lists
 		aroundEnemy.Remove(enemyObject);

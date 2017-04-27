@@ -4583,6 +4583,9 @@ MonoBehaviour:
   inputName: spell 4
   magicBallParticule: {fileID: 1000011954746156, guid: d8b953f09816b4be6b16156789f952a5,
     type: 2}
+  magicBallExplodeParticule: {fileID: 1000013684228232, guid: f96fdfe5d211743e1baa14560c8ed000,
+    type: 2}
+  damage: 30
   magicBallSpeed: 200
 --- !u!1 &874549459
 GameObject:
