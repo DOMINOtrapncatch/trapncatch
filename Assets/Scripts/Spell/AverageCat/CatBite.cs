@@ -7,7 +7,7 @@ public class CatBite : Spell {
     //AVERAGE CAT
 
     public int damage = 20;
-    public float manaCost = 5;
+    // manaCost = 5
     public GameObject particle;
     
 

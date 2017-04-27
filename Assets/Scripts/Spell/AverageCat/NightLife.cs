@@ -4,7 +4,7 @@ using System.Collections;
 public class NightLife : Spell {
 
     //Need Event System for when light are turned off or condition with the light gameobject
-    public float manaCost = 30;
+    // manaCost = 30;
     public float delay = 5.0f;//secondes
     private Light mainLight;
 
