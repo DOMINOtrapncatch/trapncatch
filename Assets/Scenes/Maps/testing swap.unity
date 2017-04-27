@@ -2598,7 +2598,15 @@ MonoBehaviour:
   - {fileID: 400343120}
   - {fileID: 400343119}
   nearEnemy: []
+  aroundEnemy: []
   enemyKillCount: 0
+  isPathfindingActive: 0
+  catType: 0
+  targets: []
+  randomTarget: 1
+  turnSpeed: 3
+  turnDst: 5
+  stoppingDst: 10
 --- !u!114 &400343122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4083,7 +4091,6 @@ MonoBehaviour:
   cameras:
   - {fileID: 1403973479}
   - {fileID: 1713251433}
-  keys: 620000006e000000
 --- !u!4 &807381934
 Transform:
   m_ObjectHideFlags: 0
@@ -4955,7 +4962,15 @@ MonoBehaviour:
   - {fileID: 1081216825}
   - {fileID: 1081216824}
   nearEnemy: []
+  aroundEnemy: []
   enemyKillCount: 0
+  isPathfindingActive: 0
+  catType: 0
+  targets: []
+  randomTarget: 1
+  turnSpeed: 3
+  turnDst: 5
+  stoppingDst: 10
 --- !u!114 &1081216827
 MonoBehaviour:
   m_ObjectHideFlags: 0

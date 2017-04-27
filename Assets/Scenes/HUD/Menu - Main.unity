@@ -189,10 +189,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1814907566}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 140}
-  m_SizeDelta: {x: 820, y: 60}
+  m_AnchorMin: {x: 0.34104988, y: 0.68373704}
+  m_AnchorMax: {x: 0.6563772, y: 0.79257363}
+  m_AnchoredPosition: {x: -0.5, y: 0}
+  m_SizeDelta: {x: 1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330854625
 MonoBehaviour:
@@ -215,7 +215,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -251,10 +251,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1814907569}
           m_MethodName: Hover
-          m_Mode: 5
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 330854625}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: SoloLabel
@@ -268,10 +268,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1814907569}
           m_MethodName: UnHover
-          m_Mode: 5
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 330854625}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: SoloLabel
@@ -452,10 +452,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1814907566}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.019586127, y: 0.023225462}
+  m_AnchorMax: {x: 0.9787855, y: 0.97967684}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 800}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727268181
 MonoBehaviour:
@@ -478,7 +478,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 51e8a6ddbc3fe80459b963aa308517a7, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -608,10 +608,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1814907566}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 240, y: 60}
+  m_AnchorMin: {x: 0.34104988, y: 0.51376766}
+  m_AnchorMax: {x: 0.6563772, y: 0.62247825}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1112101226
 MonoBehaviour:
@@ -634,7 +634,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -670,10 +670,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1814907569}
           m_MethodName: Hover
-          m_Mode: 5
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1112101226}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: SettingLabel
@@ -687,10 +687,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1814907569}
           m_MethodName: UnHover
-          m_Mode: 5
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1112101226}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: SettingLabel
@@ -747,10 +747,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1814907566}
   m_RootOrder: 5
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -10}
-  m_SizeDelta: {x: 240, y: 60}
+  m_AnchorMin: {x: 0.34104988, y: 0.4311562}
+  m_AnchorMax: {x: 0.6563772, y: 0.5409342}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1168179035
 MonoBehaviour:
@@ -773,7 +773,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -811,10 +811,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1814907569}
           m_MethodName: Hover
-          m_Mode: 5
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1168179035}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: QuitLabel
@@ -828,10 +828,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1814907569}
           m_MethodName: UnHover
-          m_Mode: 5
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1168179035}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: QuitLabel
@@ -888,10 +888,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1814907566}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 90}
-  m_SizeDelta: {x: 240, y: 60}
+  m_AnchorMin: {x: 0.34104988, y: 0.5991886}
+  m_AnchorMax: {x: 0.6563772, y: 0.70897776}
+  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_SizeDelta: {x: 0, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276974505
 MonoBehaviour:
@@ -914,7 +914,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -950,10 +950,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1814907569}
           m_MethodName: Hover
-          m_Mode: 5
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1276974505}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: MultiLabel
@@ -967,10 +967,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1814907569}
           m_MethodName: UnHover
-          m_Mode: 5
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1276974505}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: MultiLabel
@@ -1106,8 +1106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbc1b0c96556764e8cf6561a03a6cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names:
-  - Solo
-  - Multi
-  - Setting
-  - Quit
+  labels: []
+  labelsSceneId: 
+  missionsSceneId: 
