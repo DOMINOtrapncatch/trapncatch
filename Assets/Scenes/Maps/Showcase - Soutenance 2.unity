@@ -2216,13 +2216,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58005c8f0ee8ab840be82b17c21a62ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 0
-  Speed: 0
-  Defense: 0
-  MaxLife: 0
+  Attack: 100
+  Speed: 50
+  Defense: 65
+  MaxLife: 100
   Life: 100
-  MaxMana: 0
-  ManaMaxRecoveryTime: 0
+  MaxMana: 75
+  ManaMaxRecoveryTime: 10
   Mana: 0
   ManaRecoveryTime: 0
   icon: {fileID: 0}
@@ -11882,6 +11882,36 @@ Prefab:
       propertyPath: attacks.Array.data[1]
       value: 
       objectReference: {fileID: 1405857918}
+    - target: {fileID: 114000012852266264, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: Attack
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012852266264, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: Speed
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012852266264, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: Defense
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012852266264, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: MaxLife
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012852266264, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: MaxMana
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012852266264, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: ManaMaxRecoveryTime
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 454b9aeedd4c43a4f847de164f934514, type: 2}
   m_IsPrefabParent: 0
