@@ -21,7 +21,7 @@ public class SpeedUp : Spell
             particle.Play();
 
         cat.Speed += SpeedAmount;
-        yield return new WaitForSeconds(20.0f);
+        yield return new WaitForSeconds(8.0f);
         cat.Speed -= SpeedAmount;
 
         particle.Stop();
