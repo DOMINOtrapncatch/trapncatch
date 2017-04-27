@@ -19,17 +19,10 @@ public class Swap : MonoBehaviour
     public List<Camera> cameras;
 
     //public List<KeyCode> keys;
-    private List<string> keys;
-    
-
+    public List<string> keys;
 
     void Start()
     {
-        //adding current swap 1, and swap 2 buttons
-        keys = new List<string>();
-        keys.Add("swap 1");
-        keys.Add("swap 2");
-
         if (cameras.Count == 0 || cameras.Count != keys.Count)
             throw new Exception("Need at least one camera!");
 
@@ -54,6 +47,7 @@ public class Swap : MonoBehaviour
         {
             cameras[i].enabled = i == id;
             cats[i].GetComponent<MoveThirdPerson>().enabled = i == id;
+            cats[i].GetComponent<Animator>().enabled = i == id;
         }
     }
 
