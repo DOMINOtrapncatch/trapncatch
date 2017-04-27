@@ -47,7 +47,14 @@ public class HUDManager
 		UpdateSpell();
     }
 
-    public void UpdateSpell()
+	public void UpdateAll()
+	{
+		UpdateSpell();
+		UpdateHealth();
+		UpdateMana();
+	}
+
+    private void UpdateSpell()
 	{
 		for(int i = 0; i < player.spells.Count; i++)
 		{
@@ -70,12 +77,12 @@ public class HUDManager
         objectiveUI.text = objective;
     }
 
-    public void UpdateHealth()
+    private void UpdateHealth()
     {
 		statusUI[0].fillAmount = player.life / player.maxLife;
     }
 
-	public void UpdateMana()
+	private void UpdateMana()
     {
 		statusUI[1].fillAmount = player.mana / player.maxMana;
 

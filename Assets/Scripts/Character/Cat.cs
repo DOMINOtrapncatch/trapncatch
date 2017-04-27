@@ -8,11 +8,13 @@ public class Cat : Character
 {
 	// Variables qui pourront etres modifiees par l'utilisateur
 	[Range(0, 100)]
-	public float Mana;
+	public float MaxMana;
 	[Range(0, 100)]
-	public float MaxMana, ManaMaxRecoveryTime;
+	public float ManaMaxRecoveryTime;
 
-	// Variables qui ne pourront pas etre modifiees par l'utilisateur
+	// Variables qui ne pourront pas etres modifiees par l'utilisateur
+	[HideInInspector]
+	public float Mana = 0;
 	[HideInInspector]
 	public float ManaRecoveryTime = 0;
 
@@ -24,7 +26,8 @@ public class Cat : Character
 	public float maxMana             { get { return MaxMana             * maxManaVal             / 100; } }
 	public float manaMaxRecoveryTime { get { return ManaMaxRecoveryTime * manaMaxRecoveryTimeVal / 100; } }
 
-    public Sprite icon;
+	public Sprite icon;
+	public List<Spell> attacks;
 	public List<Spell> spells;
 	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
@@ -50,6 +53,8 @@ public class Cat : Character
 	int targetIndex;
 	Path path;
 
+	MouseManager mouseManager;
+
 	void Update()
 	{
 		CheckSpells ();
@@ -59,6 +64,14 @@ public class Cat : Character
 
 	public void CheckSpells()
 	{
+		foreach(Spell attack in attacks)
+		{
+			if(attack.CanUse ())
+			{
+				attack.Activate ();
+			}
+		}
+
 		foreach(Spell spell in spells)
 		{
 			if(spell.CanUse ())
@@ -71,33 +84,39 @@ public class Cat : Character
 	public void AttackEnemy(int enemyIndex)
 	{
 		// Get enemy
-		Mouse enemy = nearEnemy[enemyIndex].GetComponent<Mouse>();
+		Character enemy = nearEnemy[enemyIndex].GetComponent<Character>();
 
 		// Remove life
-		if(attack > 0)
-			enemy.Life -= attack;
-
-		// If dead, make it disappear
-		if (enemy.life <= 0)
-			KillEnemy(enemyIndex);
+		if(attack > 0 && !enemy.Damage(attack))
+		{
+            KillEnemy(enemyIndex);
+		}
 	}
 
 	public void KillEnemy(int enemyIndex)
 	{
 		// Get enemy
-		Mouse enemy = nearEnemy[enemyIndex].GetComponent<Mouse>();
+		GameObject enemyObject = nearEnemy[enemyIndex];
+		Character enemy = enemyObject.GetComponent<Character>();
 
 		// Spawn particle effect on deth spot and destroy it after it was animated
-		GameObject deathParticleInstance = (GameObject)Instantiate(enemy.deathPrefab, nearEnemy[enemyIndex].transform.position, Quaternion.identity);
-		Destroy(deathParticleInstance, 1.0f);
+		if(enemyObject.GetComponent<Mouse>() != null)
+		{
+			GameObject deathParticleInstance = (GameObject)Instantiate(enemyObject.GetComponent<Mouse>().deathPrefab, nearEnemy[enemyIndex].transform.position, Quaternion.identity);
+			Destroy(deathParticleInstance, 1.0f);
+		}
 
-		// Destroy corresponding object
-		Destroy(nearEnemy[enemyIndex]);
+		// Remove enemy from list into Mouse manager
+		mouseManager.Remove(enemyObject);
+
+		// Destroy character
+       	enemy.Destroy();
 
 		// Remove enemy from lists
-		aroundEnemy.Remove(nearEnemy[enemyIndex]);
-		aroundEnemy.Remove(nearEnemy[enemyIndex]);
-		nearEnemy.Remove(nearEnemy[enemyIndex]);
+		aroundEnemy.Remove(enemyObject);
+		aroundEnemy.Remove(enemyObject);
+		nearEnemy.Remove(enemyObject);
+		nearEnemy.Remove(enemyObject);
 
 		// Increment number of enemies killes
 		++enemyKillCount;
@@ -113,6 +132,9 @@ public class Cat : Character
 	{
 		// Update randomizer seed
 		Random.InitState(System.DateTime.Now.Millisecond);
+
+		// Set default variables
+		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 
 		// Init start and target based on random or not
 		if(targets.Count > 0)

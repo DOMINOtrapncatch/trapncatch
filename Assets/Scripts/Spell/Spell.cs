@@ -9,9 +9,11 @@ public abstract class Spell : MonoBehaviour {
 
 	// Variables qui pourront etres modifiees par l'utilisateur
 	[Range(0, 100)]
-	public float RecoveryTime;
-	[Range(0, 100)]
 	public float MaxRecoveryTime;
+
+	// Variables qui ne pourront pas etres modifiees par l'utilisateur
+	[HideInInspector]
+	public float RecoveryTime;
 
 	// Valeur maximales brutes
 	private float maxRecoveryTimeVal = 100;
@@ -20,13 +22,20 @@ public abstract class Spell : MonoBehaviour {
 	public float recoveryTime    { get { return RecoveryTime    * maxRecoveryTime    / 100; } }
 	public float maxRecoveryTime { get { return MaxRecoveryTime * maxRecoveryTimeVal / 100; } }
 
-    public Cat cat;
+	protected Cat cat;
     public string inputName;
+
+	void Start()
+	{
+		cat = GetComponent<Cat>();
+
+        InvokeRepeating("UpdateEverySecond", 0, 1.0f);
+	}
 
     //delai de recovery
     //coup en mana
     //check
-    public bool CanUse()
+	public virtual bool CanUse()
     {
 		if(Input.GetButtonDown (inputName) && recoveryTime == maxRecoveryTime && cat.Mana - manaCost >= 0)
 		{
@@ -42,5 +51,6 @@ public abstract class Spell : MonoBehaviour {
     }
 
 	abstract public void Activate();
-	
+
+	virtual public void UpdateEverySecond() {}
 }

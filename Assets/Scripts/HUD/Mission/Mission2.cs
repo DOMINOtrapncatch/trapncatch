@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Mission1 : MonoBehaviour
+public class Mission2 : MonoBehaviour
 {
 	// HUD Handling
     HUDManager myHUD;
@@ -18,10 +18,7 @@ public class Mission1 : MonoBehaviour
     public Cat player;
 
 	// Tooltips variables
-	public string messageTooltip1 = "Attaquez la souris";
-	public string messageTooltip2 = "Achever la souris";
-    int tooltip1;
-    int tooltip2;
+	public string messageTooltip1 = "Tuer toutes les souris";
 
     // Use this for initialization
     void Start ()
@@ -42,43 +39,16 @@ public class Mission1 : MonoBehaviour
 	{
 		if(CheckTooltip1())
         {
-			myHUD.SetObjective(messageTooltip2);
-
-            if(CheckTooltip2())
-            {
-                AutoFade.LoadLevel(9, .3f, .3f, Color.black);
-            }
+			AutoFade.LoadLevel(9, .3f, .3f, Color.black);
         }
 	}
 
 	/*
-	 * Objectif: blesser une souris au moins une fois
+	 * Objectif: tuer un nombre de souris fixées
 	 */
     bool CheckTooltip1()
     {
-		if (Input.GetButtonDown("attack") && player.nearEnemy.Count > 0)
-		{
-			if (tooltip1 > 0)
-				player.Attack = 0;
-
-			++tooltip1;
-		}
-
-        return tooltip1 >= 1;
-    }
-
-	/*
-	 * Objectif: tuer la souris en utilisant du mana
-	 */
-    bool CheckTooltip2()
-    {
-        if(player.maxMana != player.mana)
-		{
-			player.Attack = 10000;
-        	++tooltip2;
-		}
-
-		return tooltip2 >= 1 && player.enemyKillCount > 0;
+		return player.enemyKillCount >= 4;
     }
 
 }

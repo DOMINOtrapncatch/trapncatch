@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 public class HealSpell : Spell {
 
@@ -12,12 +11,31 @@ public class HealSpell : Spell {
 
 	public override void Activate()
 	{
-		particle.Stop();
-		particle.transform.position = cat.transform.position;
-		particle.Play();
+		StartCoroutine("LifeUp");
+	}
 
-		cat.Life += lifeAmount;
-		if (cat.Life > cat.MaxLife)
-			cat.Life = cat.MaxLife;
+	public override bool CanUse()
+	{
+		if (cat.life == cat.maxLife)
+			return false;
+		else
+			return base.CanUse();
+	}
+
+	private IEnumerator LifeUp()
+	{
+		if (!particle.isPlaying)
+			particle.Play();
+		
+		for (int i = 0; i < lifeAmount; i++)
+		{
+			if (cat.Life + 1 > cat.maxLife)
+				break;
+			
+			cat.Life += 1;
+			yield return new WaitForSeconds(0.2f);
+		}
+
+		particle.Stop();
 	}
 }
