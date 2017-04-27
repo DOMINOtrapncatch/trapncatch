@@ -24,4 +24,22 @@ abstract public class Character : MonoBehaviour
 	public float defense { get { return Defense * maxDefenseVal / 100; } }
 	public float life    { get { return Life    * maxLife       / 100; } }
 	public float maxLife { get { return MaxLife * maxLifeVal    / 100; } }
+
+	/*
+	 * @return Still alive ?
+	 */
+	public bool Damage(float damage)
+	{
+		float newLife = Life - damage;
+
+		if (newLife > 0)
+			Life = newLife;
+
+		return newLife > 0;
+	}
+
+	public void Destroy()
+	{
+		Destroy(this.gameObject);
+	}
 }
