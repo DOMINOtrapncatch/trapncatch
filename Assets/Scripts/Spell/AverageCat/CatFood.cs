@@ -4,11 +4,11 @@ using System;
 
 public class CatFood : Spell {
 
+    public GameObject foodParticle;
     int restraint = 45; //secondes
     RigidbodyConstraints rgb;
     //manaCost = 20
-
-
+    
 
     public override void Activate()
     {
@@ -20,7 +20,11 @@ public class CatFood : Spell {
 
     IEnumerator Freeze()
     {
-        if(cat.nearEnemy.Count > 0)
+        GameObject particleInit = (GameObject)Instantiate(foodParticle, cat.transform.position, Quaternion.identity);
+        ParticleSystem food = particleInit.GetComponent<ParticleSystem>();
+        food.Play();
+
+        if (cat.nearEnemy.Count > 0)
         {
             rgb = cat.nearEnemy[0].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         }
@@ -32,6 +36,7 @@ public class CatFood : Spell {
         }
 
         rgb = cat.nearEnemy[0].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-
+        //end particle (noo)
+        Destroy(particleInit, 1.0f);
     }
 }
