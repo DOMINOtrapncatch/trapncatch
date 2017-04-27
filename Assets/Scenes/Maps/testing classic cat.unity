@@ -1044,6 +1044,10 @@ Prefab:
       propertyPath: spells.Array.data[4]
       value: 
       objectReference: {fileID: 873566800}
+    - target: {fileID: 1000012721231604, guid: 454b9aeedd4c43a4f847de164f934514, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 454b9aeedd4c43a4f847de164f934514, type: 2}
   m_IsPrefabParent: 0
