@@ -240,7 +240,6 @@ GameObject:
   - 114: {fileID: 293804095}
   - 114: {fileID: 293804094}
   - 114: {fileID: 293804098}
-  - 114: {fileID: 293804099}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -336,17 +335,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   names: []
   missionsSceneId: 0600000005000000
---- !u!114 &293804099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 293804093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205db5febf360c9489a15cb2a12d134f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &559534517
 GameObject:
   m_ObjectHideFlags: 0
