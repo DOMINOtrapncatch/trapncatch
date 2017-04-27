@@ -2213,7 +2213,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 435019907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e802a2eede06a94eaf492460c2a3b4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58005c8f0ee8ab840be82b17c21a62ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Attack: 0
@@ -2232,6 +2232,7 @@ MonoBehaviour:
   aroundEnemy: []
   enemyKillCount: 0
   isPathfindingActive: 0
+  catIA: 0
   catType: 0
   targets: []
   randomTarget: 1
@@ -6801,6 +6802,7 @@ MonoBehaviour:
   aroundEnemy: []
   enemyKillCount: 0
   isPathfindingActive: 0
+  catIA: 0
   catType: 0
   targets: []
   randomTarget: 1
