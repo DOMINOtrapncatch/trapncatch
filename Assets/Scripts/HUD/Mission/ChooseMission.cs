@@ -7,11 +7,18 @@ using System.Collections.Generic;
 public class ChooseMission : MonoBehaviour
 {
 	public List<Mission> missions = new List<Mission>();
-	int selectedMission = 0;
+	static List<Mission> missionsStatic = new List<Mission>();
+	static int selectedMission = 0;
 
 	// Use this for initialization
 	void Start ()
     {
+		if(missionsStatic.Count <= 0)
+			foreach(Mission mission in missions)
+				missionsStatic.Add(mission);
+
+		selectedMission = 0;
+
         missions[selectedMission].music.Play();
         SelectMission(0);
     }
@@ -57,7 +64,14 @@ public class ChooseMission : MonoBehaviour
     // Load the selected mission
     public void LaunchMission()
     {
-		AutoFade.LoadLevel (missions[selectedMission].id + 5, .3f, .3f, Palette.DARK_PURPLE);
+		AutoFade.LoadLevel (missions[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
+    }
+
+    // Load the selected mission
+    public static void NextMission()
+	{
+		selectedMission = (selectedMission + 1) % missionsStatic.Count;
+		AutoFade.LoadLevel(missionsStatic[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
     }
 
     public void Back()
@@ -79,7 +93,7 @@ public class ChooseMission : MonoBehaviour
 [System.Serializable]
 public class Mission
 {
-	public int id;
+	public int id = 2;
 	public string title;
     public AudioSource music;
 	public Sprite image;

@@ -608,8 +608,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1814907566}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0.34104988, y: 0.51376766}
-  m_AnchorMax: {x: 0.6563772, y: 0.62247825}
+  m_AnchorMin: {x: 0.34104988, y: 0.5195316}
+  m_AnchorMax: {x: 0.6563772, y: 0.6201802}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1106,6 +1106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbc1b0c96556764e8cf6561a03a6cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  labels: []
-  labelsSceneId: 
+  labels:
+  - {fileID: 330854625}
+  - {fileID: 1276974505}
+  - {fileID: 1112101226}
+  - {fileID: 1168179035}
+  labelsSceneId: 020000000300000000000000ffffffff
   missionsSceneId: 

@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
 using System.Collections.Generic;
-using System;
 
 public class BasicMenu : MonoBehaviour
 {
@@ -11,10 +9,6 @@ public class BasicMenu : MonoBehaviour
     public List<Text> labels = new List<Text>();
     public List<int> labelsSceneId = new List<int>();
 	int currentSelectedLabel = 0;
-
-	[Header("Mode Histoire")]
-    public List <int> missionsSceneId = new List<int>();
-    int currentMission = 0;
 
     void Update()
     {
@@ -37,7 +31,10 @@ public class BasicMenu : MonoBehaviour
 		}
 		else if (Input.GetKeyDown(KeyCode.Return))
 		{
-            ChangeScene(labelsSceneId[currentSelectedLabel]);
+			if (labelsSceneId[currentSelectedLabel] == -1)
+				Quit();
+			else
+                ChangeScene(labelsSceneId[currentSelectedLabel]);
 		}
     }
 
@@ -50,8 +47,7 @@ public class BasicMenu : MonoBehaviour
     //Go to the next mission
     public void NextMission()
     {
-        currentMission = (currentMission + 1) % missionsSceneId.Count;
-        ChangeScene(missionsSceneId[currentMission]);
+		ChooseMission.NextMission();
     }
 
     // Close the game
