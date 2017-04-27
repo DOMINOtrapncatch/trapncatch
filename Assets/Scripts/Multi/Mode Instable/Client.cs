@@ -46,6 +46,7 @@ public class Client : MonoBehaviour {
             return;
         }
         playerName = tempName;
+        Debug.Log(playerName);
         
         //usual connection can begin
         NetworkTransport.Init();
@@ -175,7 +176,7 @@ public class Client : MonoBehaviour {
     void SpawnPlayer(string playerName,int m_connectID)
     {
         GameObject go = Instantiate(playerPrefab) as GameObject;
-
+        Debug.Log("Spawn");
         //if its current player
         if(m_connectID == myclientID)
         {

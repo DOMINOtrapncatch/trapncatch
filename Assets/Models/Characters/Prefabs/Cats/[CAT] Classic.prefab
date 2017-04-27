@@ -1218,9 +1218,7 @@ GameObject:
   - 114: {fileID: 114000013990510260}
   - 135: {fileID: 135000013690279006}
   - 65: {fileID: 65000010959247544}
-  - 114: {fileID: 114000011937813234}
-  - 114: {fileID: 114000010173898286}
-  - 114: {fileID: 114000010980681148}
+  - 114: {fileID: 114000013422638424}
   m_Layer: 0
   m_Name: '[CAT] Classic'
   m_TagString: Cat
@@ -2490,26 +2488,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000010173898286
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014109972242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114000010617737028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2549,71 +2527,13 @@ MonoBehaviour:
   aroundEnemy: []
   enemyKillCount: 0
   isPathfindingActive: 0
+  catIA: 0
   catType: 0
   targets: []
   randomTarget: 1
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
---- !u!114 &114000010980681148
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014109972242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d1e61b3e849454fa009758d6a1ff60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movesettings:
-    chara_cat: {fileID: 0}
-    forwardvelo: 12
-    rotatevelo: 100
-    jumpvelo: 13
-    dist_to_ground: 0.1
-    ground:
-      serializedVersion: 2
-      m_Bits: 0
-  physsettings:
-    downaccel: 0.75
-  inputsettings:
-    inputdelay: 0.1
-    forward_axis: Vertical
-    turn_axis: Horizontal
-    jump_axis: Jump
---- !u!114 &114000011937813234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014109972242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 69
-    i1: 75
-    i2: 154
-    i3: 238
-    i4: 221
-    i5: 76
-    i6: 67
-    i7: 164
-    i8: 248
-    i9: 71
-    i10: 222
-    i11: 22
-    i12: 79
-    i13: 147
-    i14: 69
-    i15: 20
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &114000012172078150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2645,6 +2565,33 @@ MonoBehaviour:
   MaxRecoveryTime: 0
   cat: {fileID: 114000010673028692}
   inputName: attack
+--- !u!114 &114000013422638424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014109972242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0731250611ffb34894a180eba28f527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movesettings:
+    chara_cat: {fileID: 114000010673028692}
+    forwardvelo: 12
+    rotatevelo: 100
+    jumpvelo: 13
+    dist_to_ground: 0.1
+    ground:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  physsettings:
+    downaccel: 0.75
+  inputsettings:
+    inputdelay: 0.1
+    forward_axis: Vertical
+    turn_axis: Horizontal
+    jump_axis: Jump
 --- !u!114 &114000013990510260
 MonoBehaviour:
   m_ObjectHideFlags: 1

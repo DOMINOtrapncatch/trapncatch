@@ -43,9 +43,7 @@ GameObject:
   - 114: {fileID: 114000011476212492}
   - 135: {fileID: 135000011925233756}
   - 65: {fileID: 65000010368716042}
-  - 114: {fileID: 114000010370556026}
-  - 114: {fileID: 114000010912905030}
-  - 114: {fileID: 114000013469183314}
+  - 114: {fileID: 114000010949115992}
   m_Layer: 0
   m_Name: '[CAT] Fast '
   m_TagString: Cat
@@ -2533,44 +2531,13 @@ MonoBehaviour:
   aroundEnemy: []
   enemyKillCount: 0
   isPathfindingActive: 0
+  catIA: 0
   catType: 0
   targets: []
   randomTarget: 1
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
---- !u!114 &114000010370556026
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010119998848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 54
-    i1: 159
-    i2: 36
-    i3: 138
-    i4: 108
-    i5: 158
-    i6: 245
-    i7: 100
-    i8: 89
-    i9: 40
-    i10: 69
-    i11: 123
-    i12: 106
-    i13: 0
-    i14: 65
-    i15: 224
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &114000010901663514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2587,7 +2554,7 @@ MonoBehaviour:
   MaxRecoveryTime: 0
   cat: {fileID: 114000010326530448}
   inputName: attack
---- !u!114 &114000010912905030
+--- !u!114 &114000010949115992
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2595,18 +2562,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010119998848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Script: {fileID: 11500000, guid: b0731250611ffb34894a180eba28f527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
+  movesettings:
+    chara_cat: {fileID: 114000010326530448}
+    forwardvelo: 12
+    rotatevelo: 100
+    jumpvelo: 13
+    dist_to_ground: 0.1
+    ground:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  physsettings:
+    downaccel: 0.75
+  inputsettings:
+    inputdelay: 0.1
+    forward_axis: Vertical
+    turn_axis: Horizontal
+    jump_axis: Jump
 --- !u!114 &114000011476212492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2634,33 +2608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b7984d3ce5841adadb59c0fdd7e895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013469183314
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010119998848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d1e61b3e849454fa009758d6a1ff60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movesettings:
-    chara_cat: {fileID: 0}
-    forwardvelo: 12
-    rotatevelo: 100
-    jumpvelo: 13
-    dist_to_ground: 0.1
-    ground:
-      serializedVersion: 2
-      m_Bits: 0
-  physsettings:
-    downaccel: 0.75
-  inputsettings:
-    inputdelay: 0.1
-    forward_axis: Vertical
-    turn_axis: Horizontal
-    jump_axis: Jump
 --- !u!124 &124000013644197776
 Behaviour:
   m_ObjectHideFlags: 1
