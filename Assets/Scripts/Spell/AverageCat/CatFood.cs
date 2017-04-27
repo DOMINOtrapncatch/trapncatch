@@ -5,7 +5,7 @@ using System;
 public class CatFood : Spell {
 
     public GameObject foodParticle;
-    int restraint = 45; //secondes
+    int restraint = 10; //secondes
     RigidbodyConstraints rgb;
     //manaCost = 20
     
@@ -29,14 +29,14 @@ public class CatFood : Spell {
             rgb = cat.nearEnemy[0].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         }
 
-        for(int i = 0; i < restraint; ++i)
+        for(int i = 0; i <= restraint; ++i)
         {
-
+            print(i);
             yield return new WaitForSeconds(1.0f);
         }
-
         rgb = cat.nearEnemy[0].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         //end particle (noo)
-        Destroy(particleInit, 1.0f);
+        food.Stop();
+        Destroy(particleInit, 0.1f);
     }
 }
