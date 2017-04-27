@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class MoveThirdPerson : MonoBehaviour {
+public class NMoveThirdPerson : NetworkBehaviour {
     //ON OUBLIT PAS LE RIGIDBODY SVP freez rotation x,y,z + isgravity=false
     //add collider
     //isground = everything
@@ -18,7 +19,6 @@ public class MoveThirdPerson : MonoBehaviour {
         public float jumpvelo = 13;
         public float dist_to_ground = 0.1f; //if we're in the air or not
         public LayerMask ground;
-
     }
     [System.Serializable]
     public class PhysSettings
@@ -62,7 +62,11 @@ public class MoveThirdPerson : MonoBehaviour {
     
     private void Start()
     {
-        
+        if(!isLocalPlayer)
+        {
+            gameObject.GetComponentInChildren<Camera>().enabled = false;
+            return;
+        }
         targetrot = transform.rotation;
 
         if (GetComponent<Rigidbody>())
@@ -76,13 +80,14 @@ public class MoveThirdPerson : MonoBehaviour {
         forwardinput = 0;
         turninput = 0;
         jumpinput = 0;
-
-        movesettings.forwardvelo = movesettings.chara_cat.speed;
     }
     
     
     private void Update()
     {
+        if (!isLocalPlayer)
+            return;
+
         GetInput();
         Turn();
     }
@@ -90,7 +95,9 @@ public class MoveThirdPerson : MonoBehaviour {
     private void FixedUpdate() //manage moves that required physics (jump,run)
     {
 
-        
+        if (!isLocalPlayer)
+            return;
+
         Run();
         Jump();
 

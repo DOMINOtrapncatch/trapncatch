@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -15,6 +16,9 @@ public class Chara_Selection : MonoBehaviour {
     private List<SkinnedMeshRenderer> cats_mesh = new List<SkinnedMeshRenderer>();
     public List<GameObject> cats = new List<GameObject>();
     public Camera cam;
+
+    //loadscene
+    public string nextScene = "Multi - Jardin";
 
     void Start () {
         //on fait disparaitre tous les models sauf le premier
@@ -34,7 +38,7 @@ public class Chara_Selection : MonoBehaviour {
 
         //use left/q or right/d for swaping chara
         SwapCharacter();
-        SaveChara(); 
+        SaveChara();
 	}
 
     void SwapCharacter ()
@@ -74,7 +78,6 @@ public class Chara_Selection : MonoBehaviour {
         }
 
         //set active chara depending on user input
-
         cats_mesh[mesh_i].enabled = true;
     }
 
@@ -82,12 +85,14 @@ public class Chara_Selection : MonoBehaviour {
     {
         //save chara the player choose for next scene 
         //next scene load
-
-        if(Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             PlayerPrefs.SetInt("ChoosenCat", cats_i);
             AutoFade.LoadLevel(1, .3f, .3f, Palette.DARK_PURPLE);
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
+
         }
+
     }
 
     void RotateRestrain()
