@@ -11,17 +11,26 @@ public class ChocWave : Spell
 
     public override void Activate()
     {
+        StartCoroutine("ChocWaveAction");
+    }
+    
+    IEnumerator ChocWaveAction()
+    {
         if (!particle.isPlaying)
             particle.Play();
 
         foreach (GameObject enemy in cat.aroundEnemy)
         {
             Character enemyAll = enemy.GetComponentInParent<Character>();
-            float lifeEnemy = enemyAll.Life - lifeDamage;
-            enemyAll.Life = lifeEnemy;
+            if (!enemyAll.Damage(lifeDamage))
+            {
+                enemyAll.Destroy();
+                cat.enemyKillCount++;
+            }
         }
 
-        particle.Stop();
+        yield return new WaitForSeconds(2.0f);
 
+        particle.Stop();
     }
 }
