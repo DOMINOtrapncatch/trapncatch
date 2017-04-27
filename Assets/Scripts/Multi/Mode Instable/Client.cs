@@ -62,6 +62,7 @@ public class Client : MonoBehaviour {
 
         isConnected = true;
         connectTime = Time.time;
+        Debug.Log("Client Connected");
         
     }
 

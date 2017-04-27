@@ -70,8 +70,7 @@ public class Server : MonoBehaviour {
         webhostID = NetworkTransport.AddWebsocketHost(topo, port, null);
 
         isStarted = true;
-        
-
+        Debug.Log("Server Connected");
     }
 
     void Update()
