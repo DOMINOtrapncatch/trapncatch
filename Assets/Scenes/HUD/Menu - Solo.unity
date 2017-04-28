@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37356424, g: 0.3811201, b: 0.35887662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37356448, g: 0.3811204, b: 0.35887685, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1889,12 +1889,12 @@ MonoBehaviour:
   - id: 2
     title: L'initiation
     music: {fileID: 1593477281}
-    image: {fileID: 21300000, guid: d59c9e4de96b34488b2bf3b174716f34, type: 3}
+    image: {fileID: 21300000, guid: 37326d17a679b1845bfc3ceeed5f0036, type: 3}
     color: {r: 0.23529412, g: 0.16862746, b: 0.3019608, a: 1}
   - id: 2
     title: De nouveaux arrivants
     music: {fileID: 865544174}
-    image: {fileID: 21300000, guid: d59c9e4de96b34488b2bf3b174716f34, type: 3}
+    image: {fileID: 21300000, guid: 418849a7cc65fd34abf684cd9ad3629a, type: 3}
     color: {r: 0.7490196, g: 0.43921572, b: 0.10588236, a: 1}
   - id: 2
     title: La seconde chance
