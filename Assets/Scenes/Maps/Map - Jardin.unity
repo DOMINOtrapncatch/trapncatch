@@ -4615,8 +4615,8 @@ MonoBehaviour:
   MaxLife: 100
   Life: 100
   MaxMana: 100
-  ManaMaxRecoveryTime: 20
-  Mana: 100
+  ManaMaxRecoveryTime: 10
+  Mana: 0
   ManaRecoveryTime: 0
   icon: {fileID: 0}
   attacks:
@@ -4649,7 +4649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e28e929a69c048879a95a5d85ea422e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 25
+  manaCost: 5
   MaxRecoveryTime: 25
   RecoveryTime: 15
   inputName: spell 1
@@ -4712,7 +4712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db542cc5bfd24438955569fa572b1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 80
+  manaCost: 5
   MaxRecoveryTime: 80
   RecoveryTime: 0
   inputName: spell 3
@@ -4731,7 +4731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a5b0d4131554c4d892654c5769b961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 50
+  manaCost: 5
   MaxRecoveryTime: 50
   RecoveryTime: 0
   inputName: spell 4
