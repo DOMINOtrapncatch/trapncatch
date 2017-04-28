@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -88,8 +88,8 @@ public class Chara_Selection : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             PlayerPrefs.SetInt("ChoosenCat", cats_i);
-            AutoFade.LoadLevel(1, .3f, .3f, Palette.DARK_PURPLE);
-            SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
+            AutoFade.LoadLevel(11, .3f, .3f, Palette.DARK_PURPLE);
+            //SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
 
         }
 
