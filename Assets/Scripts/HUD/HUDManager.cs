@@ -3,55 +3,52 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class HUDManager
+public class HUDManager : MonoBehaviour
 {
-    Cat player;
-    List<Image> statusUI;
-    List<Image> spellsUI;
+	public Cat player;
+    List<Image> statusUI = new List<Image>();
+    List<Image> spellsUI = new List<Image>();
     Text objectiveUI;
 
-    public HUDManager(Cat player, Image healthUI, Image manaUI, Image spell1, Image spell2, Image spell3, Image spell4, Text objectiveUI)
+    void Start()
     {
-		this.player = player;
+		this.objectiveUI = transform.Find("StatusBox/Panel/Text").GetComponent<Text>();
 
-        this.statusUI = new List<Image>();
-        this.spellsUI = new List<Image>();
+		this.statusUI.Add(transform.Find("StatusBox/Status/Health/HealthBar").GetComponent<Image>());
+        this.statusUI.Add(transform.Find("StatusBox/Status/Mana/ManaBar").GetComponent<Image>());
 
-        this.player = player;
-        this.objectiveUI = objectiveUI;
+		for (int i = 1; i <= 4; i++)
+           	this.spellsUI.Add(transform.Find("RadialKey" + i + "/LoadingBar").GetComponent<Image>());
 
-		this.statusUI.Add(healthUI);
-        this.statusUI.Add(manaUI);
-
-		if (player.spells.Count >= 1)
-			this.spellsUI.Add(spell1);
-		else
-			spell1.transform.parent.gameObject.SetActive(false);
-		
-		if(player.spells.Count >= 2)
-            this.spellsUI.Add(spell2);
-		else
-			spell2.transform.parent.gameObject.SetActive(false);
-		
-		if(player.spells.Count >= 3)
-            this.spellsUI.Add(spell3);
-		else
-			spell3.transform.parent.gameObject.SetActive(false);
-		
-		if(player.spells.Count >= 4)
-            this.spellsUI.Add(spell4);
-		else
-			spell4.transform.parent.gameObject.SetActive(false);
+		LoadPlayer(player);
 
 		UpdateHealth();
 		UpdateSpell();
     }
 
-	public void UpdateAll()
+	void Update()
 	{
 		UpdateSpell();
 		UpdateHealth();
 		UpdateMana();
+	}
+
+	public void LoadPlayer(Cat cat)
+	{
+		this.player = cat;
+
+		for (int i = 1; i <= (cat.spells.Count > 4 ? 4 : cat.spells.Count); i++)
+		{
+			Image spellImage = transform.Find("RadialKey" + i + "/Center/Image").GetComponent<Image>();
+
+			if (cat.spells.Count >= i)
+			{
+				spellImage.sprite = player.spells[i - 1].image;
+				spellsUI[i - 1].transform.parent.gameObject.SetActive(true);
+			}
+			else
+				spellsUI[i - 1].transform.parent.gameObject.SetActive(false);
+		}
 	}
 
     private void UpdateSpell()
