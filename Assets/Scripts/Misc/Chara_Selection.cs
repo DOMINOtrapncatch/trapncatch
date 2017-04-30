@@ -1,8 +1,4 @@
 ﻿using UnityEngine;
-<<<<<<< HEAD
-//using UnityEngine.SceneManagement;
-=======
->>>>>>> 41eafd022f6ea9dbc2664aefae255507db23c615
 using System.Collections;
 using System.Collections.Generic;
 
@@ -92,22 +88,17 @@ public class Chara_Selection : MonoBehaviour {
         {
             PlayerPrefs.SetInt("ChoosenCat", cats_i);
             AutoFade.LoadLevel(11, .3f, .3f, Palette.DARK_PURPLE);
-<<<<<<< HEAD
-            //SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
-
-=======
->>>>>>> 41eafd022f6ea9dbc2664aefae255507db23c615
         }
 
     }
 
-    void RotateRestrain()
+    private void RotateRestrain()
     {
         if(Input.GetMouseButton(0))
             cats[cats_i].transform.Rotate(new Vector3(0.0f, Input.GetAxis("Mouse X"), 0.0f));
     }
 
-    void UpdateCam(bool direction)
+    private void UpdateCam(bool direction)
     {
         //vers la droite //true
         if(direction)
