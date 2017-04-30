@@ -40,4 +40,9 @@ public class AdminBoxScript : MonoBehaviour
     {
         AutoFade.LoadLevel(SceneManager.GetActiveScene().buildIndex, .3f, .3f, Palette.WHITE);
     }
+
+    public void ChangeScene(int id)
+    {
+        AutoFade.LoadLevel(id, .3f, .3f, Palette.WHITE);
+    }
 }

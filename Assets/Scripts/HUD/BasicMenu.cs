@@ -69,6 +69,12 @@ public class BasicMenu : MonoBehaviour
 		label.fontSize = 32;
     }
 
+    // When the button is being hovered
+    public void HoverBig(Text label)
+	{
+		label.fontSize = 45;
+    }
+
     // When the button is being unhovered
     public void UnHover(Text label)
     {
@@ -80,5 +86,11 @@ public class BasicMenu : MonoBehaviour
     public void UnHoverSmall(Text label)
 	{
 		label.fontSize = 30;
+    }
+
+    // When the button is being hovered
+    public void UnHoverBig(Text label)
+	{
+		label.fontSize = 40;
     }
 }

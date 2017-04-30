@@ -32,6 +32,9 @@ public class SelectionMenuCanvas : MonoBehaviour {
 			// UPDATE - lastCurrent variable
 			lastCurrent = chara_selection.cats_i;
 
+			// UPDATE - Cat name
+			CatName.text = catsDesc[lastCurrent].name;
+
 			// UPDATE - Progress bars
 			TopLeftBar.fillAmount 	  = catsDesc[lastCurrent].attack  / 100.0f;
 			BottomLeftBar.fillAmount  = catsDesc[lastCurrent].defense / 100.0f;
