@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 
-public class LoadPrefab : NetworkLobbyManager {
+public class LoadPrefab : NetworkBehaviour {
     /*
     public Object[] cat_prefabs;
     public NetworkManager netMan;
@@ -28,7 +28,7 @@ public class LoadPrefab : NetworkLobbyManager {
             
         }   
     }
-    */
+    
     private Dictionary<int, int> currentPlayer;
     
     public override GameObject OnLobbyServerCreateLobbyPlayer(NetworkConnection conn, short playerControllerId)
@@ -49,6 +49,6 @@ public class LoadPrefab : NetworkLobbyManager {
         GameObject player = (GameObject) GameObject.Instantiate(spawnPrefabs[index], startPositions[conn.connectionId].position,Quaternion.identity);
         NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         return player;
-    }
+    }*/
 
 }
