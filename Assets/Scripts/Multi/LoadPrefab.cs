@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 using System.Collections;
 
 public class LoadPrefab : MonoBehaviour {
-
+    /*
     public Object[] cat_prefabs;
     public NetworkManager netMan;
     private int prefab = 1;
@@ -27,6 +27,8 @@ public class LoadPrefab : MonoBehaviour {
             
         }   
     }
+    */
+
 
     
 

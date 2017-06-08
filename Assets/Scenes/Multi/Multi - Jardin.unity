@@ -1518,7 +1518,7 @@ MonoBehaviour:
   cat_prefabs:
   - {fileID: 1000012684176904, guid: 405483f73bd68334d9b532adae6c9547, type: 2}
   - {fileID: 1000013572534582, guid: 03c5f187b2535764d9aaeff90483ecd3, type: 2}
-  - {fileID: 1000011721045816, guid: a859fd91fdd47b84ca6e18aaab5c6488, type: 2}
+  - {fileID: 0}
   - {fileID: 1000010504861694, guid: d4ac5e25f7df1ca48bf8c68e30bbffb8, type: 2}
   netMan: {fileID: 0}
 --- !u!1 &278365313
@@ -7114,7 +7114,7 @@ MonoBehaviour:
   cat_prefabs:
   - {fileID: 1000012684176904, guid: 405483f73bd68334d9b532adae6c9547, type: 2}
   - {fileID: 1000013572534582, guid: 03c5f187b2535764d9aaeff90483ecd3, type: 2}
-  - {fileID: 1000011721045816, guid: a859fd91fdd47b84ca6e18aaab5c6488, type: 2}
+  - {fileID: 0}
   - {fileID: 1000010504861694, guid: d4ac5e25f7df1ca48bf8c68e30bbffb8, type: 2}
   netMan: {fileID: 1662775013}
 --- !u!4 &1551206545
@@ -7783,7 +7783,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1000012684176904, guid: 405483f73bd68334d9b532adae6c9547,
+  m_PlayerPrefab: {fileID: 1000011556605054, guid: a859fd91fdd47b84ca6e18aaab5c6488,
     type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
