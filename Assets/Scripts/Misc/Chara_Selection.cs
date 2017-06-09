@@ -92,13 +92,13 @@ public class Chara_Selection : MonoBehaviour {
 
     }
 
-    void RotateRestrain()
+    private void RotateRestrain()
     {
         if(Input.GetMouseButton(0))
             cats[cats_i].transform.Rotate(new Vector3(0.0f, Input.GetAxis("Mouse X"), 0.0f));
     }
 
-    void UpdateCam(bool direction)
+    private void UpdateCam(bool direction)
     {
         //vers la droite //true
         if(direction)
