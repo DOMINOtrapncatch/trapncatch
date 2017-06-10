@@ -58,13 +58,14 @@ public class ChooseMission : MonoBehaviour
 
         missionLabel.text = "Chapitre " + selectedMission + " :\n" + missions[selectedMission].title;
 
-        missions[selectedMission].music.Play();
+        missions[selectedMission].music.Play();            
     }
 
     // Load the selected mission
     public void LaunchMission()
     {
-		AutoFade.LoadLevel (missions[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
+        if (selectedMission == 0 || SaveManager.Completed(selectedMission - 1))
+		    AutoFade.LoadLevel (missions[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
     }
 
     // Load the selected mission

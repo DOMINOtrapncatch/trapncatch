@@ -10,6 +10,7 @@ public class Mission2 : MissionBase
 		if(CheckTooltip1())
         {
 			AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+            SaveManager.Save(2);
         }
 	}
 
