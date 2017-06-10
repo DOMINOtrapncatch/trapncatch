@@ -59,38 +59,36 @@ public class BasicMenu : MonoBehaviour
     // When the button is being hovered
     public void Hover(Text label)
     {
-        label.color = new Color(1F, 1F, 1F, 1F);
-        label.fontSize = 35;
+        label.fontSize += 5;
     }
 
     // When the button is being hovered
     public void HoverSmall(Text label)
 	{
-		label.fontSize = 32;
+		label.fontSize += 2;
     }
 
     // When the button is being hovered
     public void HoverBig(Text label)
 	{
-		label.fontSize = 45;
+		label.fontSize += 10;
     }
 
     // When the button is being unhovered
     public void UnHover(Text label)
     {
-		label.color = Palette.LIGHT_GRAY;
-        label.fontSize = 25;
+        label.fontSize -= 5;
     }
 
     // When the button is being unhovered
     public void UnHoverSmall(Text label)
 	{
-		label.fontSize = 30;
+		label.fontSize -= 2;
     }
 
     // When the button is being hovered
     public void UnHoverBig(Text label)
 	{
-		label.fontSize = 40;
+		label.fontSize -= 10;
     }
 }
