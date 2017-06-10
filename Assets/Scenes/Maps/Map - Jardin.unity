@@ -4454,7 +4454,7 @@ GameObject:
   - 114: {fileID: 860923913}
   m_Layer: 0
   m_Name: '[CAT] Magical '
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4471,6 +4471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
@@ -4487,6 +4488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4bebf84725e8544a23ddf8601bc740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
@@ -4630,6 +4632,7 @@ MonoBehaviour:
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
+  spellUseCount: 0
   isPathfindingActive: 0
   catIA: 0
   catType: 2
@@ -4649,6 +4652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e28e929a69c048879a95a5d85ea422e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: d624d187eb6154ac291080f5c8e2115f, type: 3}
   manaCost: 5
   MaxRecoveryTime: 25
   RecoveryTime: 15
@@ -4693,6 +4697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03db8303f593e42909ccc02bfb43d507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 73fb630daa4474562822b1beff9990ff, type: 3}
   manaCost: 20
   MaxRecoveryTime: 20
   RecoveryTime: 0
@@ -4712,6 +4717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db542cc5bfd24438955569fa572b1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: d7739fb009b5142969937dd0d0a4cb04, type: 3}
   manaCost: 5
   MaxRecoveryTime: 80
   RecoveryTime: 0
@@ -4731,6 +4737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a5b0d4131554c4d892654c5769b961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 8327b2f9addc9400ebea3d306d4c90a3, type: 3}
   manaCost: 5
   MaxRecoveryTime: 50
   RecoveryTime: 0
@@ -6107,6 +6114,7 @@ GameObject:
   - 114: {fileID: 1099069392}
   - 114: {fileID: 1099069391}
   - 225: {fileID: 1099069390}
+  - 114: {fileID: 1099069395}
   - 114: {fileID: 1099069389}
   m_Layer: 5
   m_Name: HUDCanvas
@@ -6126,14 +6134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde70d02b7a6c604bb4b0e8de2ee1680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 683654307}
-  manaBar: {fileID: 1997506709}
-  spellBar1: {fileID: 788583208}
-  spellBar2: {fileID: 1119473586}
-  spellBar3: {fileID: 1218914951}
-  spellBar4: {fileID: 80632073}
-  objective: {fileID: 17733055}
-  player: {fileID: 860923911}
   messageTooltip1: Attaquez la souris
   messageTooltip2: Achever la souris
 --- !u!225 &1099069390
@@ -6231,6 +6231,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1099069395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099069388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f807d1ee90a5bd141ab6b4ebc9f670df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 860923911}
 --- !u!1 &1107331977 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100430, guid: 13bca45783c6c9d42829e858472b1750, type: 3}

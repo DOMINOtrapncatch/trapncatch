@@ -2,43 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Mission1 : MonoBehaviour
+public class Mission1 : MissionBase
 {
-	// HUD Handling
-    HUDManager myHUD;
-    public Image healthBar;
-    public Image manaBar;
-    public Image spellBar1;
-    public Image spellBar2;
-    public Image spellBar3;
-    public Image spellBar4;
-    public Text objective;
-
-	// Player related variables
-    public Cat player;
-
 	// Tooltips variables
-	public string messageTooltip1 = "Attaquez la souris";
 	public string messageTooltip2 = "Achever la souris";
     int tooltip1;
     int tooltip2;
 
-    // Use this for initialization
-    void Start ()
-    {
-        myHUD = new HUDManager(player, healthBar, manaBar, spellBar1, spellBar2, spellBar3, spellBar4, objective);
-		myHUD.SetObjective(messageTooltip1);
-    }
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		myHUD.UpdateAll();
-
-        CheckTooltips();
-	}
-
-	void CheckTooltips()
+	override public void CheckTooltips()
 	{
 		if(CheckTooltip1())
         {
@@ -56,10 +27,10 @@ public class Mission1 : MonoBehaviour
 	 */
     bool CheckTooltip1()
     {
-		if (Input.GetButtonDown("attack") && player.nearEnemy.Count > 0)
+		if (Input.GetButtonDown("attack") && myHUD.player.nearEnemy.Count > 0)
 		{
 			if (tooltip1 > 0)
-				player.Attack = 0;
+				myHUD.player.Attack = 0;
 
 			++tooltip1;
 		}
@@ -72,13 +43,13 @@ public class Mission1 : MonoBehaviour
 	 */
     bool CheckTooltip2()
     {
-        if(player.maxMana != player.mana)
+		if(myHUD.player.spellUseCount > 0)
 		{
-			player.Attack = 10000;
+			myHUD.player.Attack = 10000;
         	++tooltip2;
 		}
 
-		return tooltip2 >= 1 && player.enemyKillCount > 0;
+		return tooltip2 >= 1 && myHUD.player.enemyKillCount > 0;
     }
 
 }

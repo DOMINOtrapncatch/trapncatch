@@ -35,6 +35,8 @@ public class Cat : Character
 	public List<GameObject> aroundEnemy = new List<GameObject>();
 	[HideInInspector]
 	public int enemyKillCount = 0;
+	[HideInInspector]
+	public int spellUseCount = 0;
 
 	[Header("Pathfinding Settings")]
 	public bool isPathfindingActive = false;
@@ -76,6 +78,7 @@ public class Cat : Character
 		{
 			if(spell.CanUse ())
 			{
+				spellUseCount++;
 				spell.Activate ();
 			}
 		}

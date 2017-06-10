@@ -2148,9 +2148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaCost: 0
-  RecoveryTime: 0
   MaxRecoveryTime: 0
-  cat: {fileID: 1649861106}
+  RecoveryTime: 0
   inputName: attack
 --- !u!114 &1649861106
 MonoBehaviour:
@@ -2169,17 +2168,19 @@ MonoBehaviour:
   Defense: 40
   MaxLife: 100
   Life: 100
-  Mana: 100
   MaxMana: 100
   ManaMaxRecoveryTime: 1
+  Mana: 100
   ManaRecoveryTime: 0
   icon: {fileID: 0}
+  attacks: []
   spells:
   - {fileID: 1649861105}
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
   isPathfindingActive: 1
+  catIA: 0
   catType: 0
   targets:
   - {fileID: 798134391}
@@ -2234,12 +2235,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some transforms are animated by both a Humanoid
-    animation clip and a Generic animation clip. Only the Humanoid clip will be applied
-    on those transforms.\n\tTransform 'FemurAvant_L'\n\tTransform 'T_te'\n\tTransform
-    'FemurAvant_R'\n\tTransform 'Cou'\n\tTransform 'TalonAvant_R'\n\tTransform 'TalonAvant_L'\n\tTransform
-    'FemurAvant_L'\n\tTransform 'CuisseAvant_R'\n\tTransform 'CuisseAvant_L'\n\tTransform
-    'FemurAvant_R'\n\tand more ...\n\tFrom animation clip 'Sitting'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1652497903
