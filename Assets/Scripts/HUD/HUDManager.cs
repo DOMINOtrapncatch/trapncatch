@@ -69,8 +69,22 @@ public class HUDManager : MonoBehaviour
 
     public void SetObjective(string objective)
     {
-        objectiveUI.text = objective;
+		if(objectiveUI.text != objective)
+		{
+            StopCoroutine("ChangeObjectiveAnim");
+			StartCoroutine("ChangeObjectiveAnim");
+			objectiveUI.text = objective;
+		}
     }
+
+	IEnumerator ChangeObjectiveAnim()
+	{
+		for (float xSize = 15; xSize >= 1.0; xSize -= 1f)
+		{
+			objectiveUI.gameObject.GetComponent<RectTransform>().localScale = new Vector3(xSize, 1, 1);
+			yield return new WaitForSeconds(0.01f);
+		}
+	}
 
     private void UpdateHealth()
     {

@@ -14,24 +14,38 @@ public class Mission0 : MissionBase
 
 	override public void CheckTooltips()
 	{
-		if (CheckTooltip1(true))
+		switch(currentTooltip)
 		{
-			myHUD.SetObjective(messageTooltip2);
+			case 1:
+				if (CheckTooltip1(true))
+				{
+					myHUD.SetObjective(messageTooltip2);
+					currentTooltip++;
+				}
+				break;
 
-			if(CheckTooltip2(true))
-			{
-				myHUD.SetObjective(messageTooltip3);
+			case 2:
+				if(CheckTooltip2(true))
+				{
+					myHUD.SetObjective(messageTooltip3);
+					currentTooltip++;
+				}
+				break;
 
+			case 3:
 				if(CheckTooltip3())
 				{
 					myHUD.SetObjective(messageTooltip4);
-
-					if(CheckTooltip4())
-					{
-						AutoFade.LoadLevel(9, .3f, .3f, Color.black); 
-					}
+					currentTooltip++;
 				}
-			}
+				break;
+
+			case 4:
+				if(CheckTooltip4())
+				{
+					AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+				}
+				break;
 		}
 	}
 
@@ -53,13 +67,13 @@ public class Mission0 : MissionBase
 	{
 		if(checkInputs && Input.GetButtonDown("attack")) // Check for real attack --> && player.nearEnemy.Count > 0)
 		{
-			if(tooltip2 > 0)
+			if(tooltip2 == 0)
 				myHUD.player.Attack = 0;
 			
-			++tooltip2;
+			tooltip2 = 1;
 		}
 
-		return tooltip2 >= 1;
+		return tooltip2 == 1;
 	}
 
 	/*
@@ -70,7 +84,7 @@ public class Mission0 : MissionBase
 		if (myHUD.player.nearEnemy.Count > 1)
 			++tooltip3;
 
-		return tooltip3 >= 200;
+		return tooltip3 >= 100;
 	}
 
 	/*
