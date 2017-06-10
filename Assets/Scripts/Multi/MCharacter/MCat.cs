@@ -148,7 +148,7 @@ public class MCat : MCharacter
 		Random.InitState(System.DateTime.Now.Millisecond);
 
 		// Set default variables
-		//mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
+		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 
 		// Init start and target based on random or not
 		if(targets.Count > 0)

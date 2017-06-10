@@ -106,7 +106,7 @@ public class LoadPlayerPrefab : NetworkManager
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
     {
         var futurplayer = (GameObject)GameObject.Instantiate(player, playerSpawnPos, Quaternion.identity);
-        NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+        NetworkServer.AddPlayerForConnection(conn, futurplayer, playerControllerId);
     }
 
 }
