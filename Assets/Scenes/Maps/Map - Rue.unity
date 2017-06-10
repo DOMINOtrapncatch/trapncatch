@@ -2763,6 +2763,7 @@ MonoBehaviour:
   MaxRecoveryTime: 80
   RecoveryTime: 0
   inputName: spell 3
+  isActivable: 0
   rollbackUpParticle: {fileID: 1000013107294458, guid: 9f15f8b45303d476aa8afc5601dd68d1,
     type: 2}
   rollbackDownParticle: {fileID: 1000010966559634, guid: 46a712c42bf9b4a309e54d9da4d86646,
@@ -2783,6 +2784,7 @@ MonoBehaviour:
   MaxRecoveryTime: 50
   RecoveryTime: 0
   inputName: spell 4
+  isActivable: 0
   magicBallParticule: {fileID: 1000011954746156, guid: d8b953f09816b4be6b16156789f952a5,
     type: 2}
   magicBallExplodeParticule: {fileID: 1000013684228232, guid: f96fdfe5d211743e1baa14560c8ed000,
@@ -2805,6 +2807,7 @@ MonoBehaviour:
   MaxRecoveryTime: 20
   RecoveryTime: 0
   inputName: spell 2
+  isActivable: 0
   manaBlowParticlePrefab: {fileID: 1000011686349344, guid: fc89952a45cb7422c9aed2792d4cb186,
     type: 2}
   lifeCostAmount: 20
@@ -2825,6 +2828,7 @@ MonoBehaviour:
   MaxRecoveryTime: 25
   RecoveryTime: 15
   inputName: spell 1
+  isActivable: 0
   particle: {fileID: 316247310}
   lifeAmount: 20
 --- !u!114 &856018415
@@ -2844,6 +2848,7 @@ MonoBehaviour:
   MaxRecoveryTime: 0
   RecoveryTime: 0
   inputName: attack_special
+  isActivable: 0
 --- !u!114 &856018416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2861,6 +2866,7 @@ MonoBehaviour:
   MaxRecoveryTime: 0
   RecoveryTime: 0
   inputName: attack
+  isActivable: 0
 --- !u!114 &856018417
 MonoBehaviour:
   m_ObjectHideFlags: 0
