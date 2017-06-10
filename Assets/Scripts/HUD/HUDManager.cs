@@ -8,6 +8,7 @@ public class HUDManager : MonoBehaviour
     public Cat player;
     List<Image> statusUI = new List<Image>();
     List<Image> spellsUI = new List<Image>();
+    List<Image> spellsUIImage = new List<Image>();
     Text objectiveUI;
 
     void Awake()
@@ -40,6 +41,7 @@ public class HUDManager : MonoBehaviour
         for (int i = 1; i <= (cat.spells.Count > 4 ? 4 : cat.spells.Count); i++)
         {
             Image spellImage = transform.Find("RadialKey" + i + "/Center/Image").GetComponent<Image>();
+			spellsUIImage.Add(spellImage);
 
             if (cat.spells.Count >= i)
             {
@@ -56,14 +58,10 @@ public class HUDManager : MonoBehaviour
         for (int i = 0; i < player.spells.Count; i++)
         {
             if (player.spells[i].recoveryTime < player.spells[i].maxRecoveryTime)
-            {
                 player.spells[i].RecoveryTime += 1;
-                spellsUI[i].color = new Color(spellsUI[i].color.r, spellsUI[i].color.g, spellsUI[i].color.b, 20);
-            }
-            else
-            {
-                spellsUI[i].color = new Color(spellsUI[i].color.r, spellsUI[i].color.g, spellsUI[i].color.b, 100);
-            }
+
+			spellsUI[i].color = player.spells[i].isActivable ? Palette.SPELL_ACTIVE : Palette.SPELL_INACTIVE;
+			spellsUIImage[i].color = player.spells[i].isActivable ? Palette.WHITE : Palette.GRAY;
 
             spellsUI[i].fillAmount = player.spells[i].recoveryTime / player.spells[i].maxRecoveryTime;
         }
@@ -71,8 +69,22 @@ public class HUDManager : MonoBehaviour
 
     public void SetObjective(string objective)
     {
-        objectiveUI.text = objective;
+		if(objectiveUI.text != objective)
+		{
+            StopCoroutine("ChangeObjectiveAnim");
+			StartCoroutine("ChangeObjectiveAnim");
+			objectiveUI.text = objective;
+		}
     }
+
+	IEnumerator ChangeObjectiveAnim()
+	{
+		for (float xSize = 15; xSize >= 1.0; xSize -= 1f)
+		{
+			objectiveUI.gameObject.GetComponent<RectTransform>().localScale = new Vector3(xSize, 1, 1);
+			yield return new WaitForSeconds(0.01f);
+		}
+	}
 
     private void UpdateHealth()
     {

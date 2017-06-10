@@ -2828,7 +2828,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 554382471}
   m_LocalRotation: {x: -0, y: -0.92077816, z: -0, w: 0.39008665}
-  m_LocalPosition: {x: 0.9612967, y: -1.09, z: -3.8101158}
+  m_LocalPosition: {x: 0.96, y: -1.09, z: -4.03}
   m_LocalScale: {x: 0.11999999, y: 0.12, z: 0.11999999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -5262,7 +5262,7 @@ RectTransform:
   m_GameObject: {fileID: 805959970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.12, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1809576068}
@@ -5297,7 +5297,7 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 7
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -7350,6 +7350,8 @@ GameObject:
   - 114: {fileID: 1169329463}
   - 114: {fileID: 1169329462}
   - 225: {fileID: 1169329461}
+  - 114: {fileID: 1169329460}
+  - 114: {fileID: 1169329466}
   m_Layer: 5
   m_Name: HUDCanvas
   m_TagString: Untagged
@@ -7357,6 +7359,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1169329460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169329459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f807d1ee90a5bd141ab6b4ebc9f670df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1837774421}
 --- !u!225 &1169329461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7448,6 +7462,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1169329466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169329459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8071589de891e468e0e6b4e2f65ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageTooltip1: "Se d\xE9placer"
+  messageTooltip2: Left Click pour attaquer
+  messageTooltip3: Poursuivre la souris
+  messageTooltip4: "Allez jusqu'\xE0 la porte"
 --- !u!1 &1171524762
 GameObject:
   m_ObjectHideFlags: 0
@@ -10957,7 +10986,6 @@ GameObject:
   - 82: {fileID: 1837774418}
   - 114: {fileID: 1837774421}
   - 114: {fileID: 1837774420}
-  - 114: {fileID: 1837774413}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Cat
@@ -10965,29 +10993,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1837774413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1837774412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af8071589de891e468e0e6b4e2f65ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 988998009}
-  manaBar: {fileID: 1285385347}
-  spellBar1: {fileID: 805217538}
-  spellBar2: {fileID: 156897975}
-  spellBar3: {fileID: 150902071}
-  spellBar4: {fileID: 1419197554}
-  objective: {fileID: 805959972}
-  player: {fileID: 1837774421}
-  messageTooltip1: "Se d\xE9placer"
-  messageTooltip2: Left Click pour attaquer
-  messageTooltip3: Poursuivre la souris
-  messageTooltip4: "Allez jusqu'\xE0 la porte"
 --- !u!54 &1837774414
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11222,10 +11227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4bebf84725e8544a23ddf8601bc740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
   inputName: attack
+  isActivable: 0
 --- !u!114 &1837774421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11250,9 +11257,11 @@ MonoBehaviour:
   attacks:
   - {fileID: 1837774420}
   spells: []
+  nearColliders: []
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
+  spellUseCount: 0
   isPathfindingActive: 0
   catIA: 0
   catType: 0

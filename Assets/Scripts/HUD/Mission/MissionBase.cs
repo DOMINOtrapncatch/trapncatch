@@ -7,6 +7,7 @@ abstract public class MissionBase : MonoBehaviour
 
 	// Tooltips variables
 	public string messageTooltip1;
+	protected int currentTooltip = 1;
 
 	// Use this for initialization
 	void Start()

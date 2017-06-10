@@ -7,10 +7,16 @@ public class Mission2 : MissionBase
 
 	override public void CheckTooltips()
 	{
-		if(CheckTooltip1())
-        {
-			AutoFade.LoadLevel(9, .3f, .3f, Color.black);
-        }
+		switch(currentTooltip)
+		{
+			case 1:
+				if(CheckTooltip1())
+		        {
+					AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+		        }
+				break;
+		}
+
 	}
 
 	/*

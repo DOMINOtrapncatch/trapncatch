@@ -14,14 +14,38 @@ public class Mission0 : MissionBase
 
 	override public void CheckTooltips()
 	{
-		if (CheckTooltip1(true) && !CheckTooltip3())
+		switch(currentTooltip)
 		{
-			myHUD.SetObjective(messageTooltip2);
+			case 1:
+				if (CheckTooltip1(true))
+				{
+					myHUD.SetObjective(messageTooltip2);
+					currentTooltip++;
+				}
+				break;
 
-			if(CheckTooltip2(true))
-			{
-				myHUD.SetObjective(messageTooltip3);
-			}
+			case 2:
+				if(CheckTooltip2(true))
+				{
+					myHUD.SetObjective(messageTooltip3);
+					currentTooltip++;
+				}
+				break;
+
+			case 3:
+				if(CheckTooltip3())
+				{
+					myHUD.SetObjective(messageTooltip4);
+					currentTooltip++;
+				}
+				break;
+
+			case 4:
+				if(CheckTooltip4())
+				{
+					AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+				}
+				break;
 		}
 	}
 
@@ -43,13 +67,13 @@ public class Mission0 : MissionBase
 	{
 		if(checkInputs && Input.GetButtonDown("attack")) // Check for real attack --> && player.nearEnemy.Count > 0)
 		{
-			if(tooltip2 > 0)
+			if(tooltip2 == 0)
 				myHUD.player.Attack = 0;
 			
-			++tooltip2;
+			tooltip2 = 1;
 		}
 
-		return tooltip2 >= 1;
+		return tooltip2 == 1;
 	}
 
 	/*
@@ -57,19 +81,17 @@ public class Mission0 : MissionBase
 	 */
 	bool CheckTooltip3()
 	{
-		return tooltip3 >= 4;
+		if (myHUD.player.nearEnemy.Count > 1)
+			++tooltip3;
+
+		return tooltip3 >= 100;
 	}
 
-	void OnTriggerEnter(Collider box)
+	/*
+	 * Objectif: aller vers la porte d'entrée
+	 */
+	bool CheckTooltip4()
 	{
-		if (!CheckTooltip3() && box.tag == "Enemy" && CheckTooltip2(false))
-        {
-            myHUD.SetObjective(messageTooltip4);
-			++tooltip3;
-        }
-		else if (box.tag == "Collider" && CheckTooltip3())
-		{
-			AutoFade.LoadLevel(9, .3f, .3f, Color.black); 
-		}
+		return myHUD.player.nearColliders.Count >= 1;
 	}
 }

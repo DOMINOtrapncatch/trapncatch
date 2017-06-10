@@ -5,8 +5,6 @@ using System.Collections;
 
 public class DialogueScript : MonoBehaviour
 {
-    public string dialogueLabel;
-    public string bgImage;
     public string[] dialogueTexts;
     public Sprite[] dialogueImages;
     public int sceneId;
@@ -17,8 +15,8 @@ public class DialogueScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        dialogueText = GameObject.Find(dialogueLabel).GetComponent<Text>();
-        dialogueImage = GameObject.Find(bgImage).GetComponent<Image>();
+        dialogueText = transform.Find("Dialogue/DialogueText").GetComponent<Text>();
+        dialogueImage = transform.Find("Background").GetComponent<Image>();
         Proceed();
 	}
 	
@@ -41,4 +39,14 @@ public class DialogueScript : MonoBehaviour
             AutoFade.LoadLevel(sceneId, .3f, .3f, Color.black);
         ++click;
     }
+
+	public void Hover(Text label)
+	{
+		label.fontSize += 10;
+	}
+
+	public void UnHover(Text label)
+	{
+		label.fontSize -= 10;
+	}
 }
