@@ -7,6 +7,9 @@ using UnityEngine.Networking;
 [System.Serializable]
 public class MMouse : MCharacter
 {
+    [SyncVar]
+    private int score;
+
 	[Header("Pathfinding Settings")]
 	public MMouseIA mouseIA = MMouseIA.NORMAL;
     public MMouseType mouseType = MMouseType.LVL1;
@@ -80,6 +83,24 @@ public class MMouse : MCharacter
 			StartCoroutine("FollowPath");
 		}
 	}
+
+    public int GetScore()
+    {
+        switch(mouseType)
+        {
+            case MMouseType.LVL1:
+                score = 5;
+                break;
+            case MMouseType.LVL2:
+                score = 15;
+                break;
+            case MMouseType.LVL3:
+                score = 30;
+                break;
+        }
+
+        return score;
+    }
 
 	IEnumerator UpdatePath()
 	{

@@ -56,6 +56,9 @@ public class MCat : MCharacter
 
 	MouseManager mouseManager;
 
+    [SyncVar]
+    public int score = 0;
+    
 	void Update()
 	{
 		CheckSpells ();
@@ -90,11 +93,18 @@ public class MCat : MCharacter
 		// Remove life
 		if(attack > 0 && !enemy.Damage(attack))
 		{
+            if(enemy.GetComponent<MMouse>() != null)
+            {
+                MMouse mouse = enemy.GetComponent<MMouse>();
+                score += mouse.GetScore();
+            }
             KillEnemy(enemyIndex);
 		}
 	}
 
-	public void KillEnemy(int enemyIndex)
+    
+
+    public void KillEnemy(int enemyIndex)
 	{
 		// Get enemy
 		GameObject enemyObject = nearEnemy[enemyIndex];
@@ -124,13 +134,15 @@ public class MCat : MCharacter
 		++enemyKillCount;
 	}
 
-	/*
+    
+
+    /*
 	 *  =================
 	 *   | PATHFINDING |
 	 *  ==================
 	 */
 
-	void Start()
+    void Start()
 	{
 		// Update randomizer seed
 		Random.InitState(System.DateTime.Now.Millisecond);

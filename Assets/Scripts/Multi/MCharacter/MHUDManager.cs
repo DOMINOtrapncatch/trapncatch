@@ -4,14 +4,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
 
-public class MHUDManager
+public class MHUDManager : MonoBehaviour
 {
     MCat player;
     List<Image> statusUI;
     List<Image> spellsUI;
     Text objectiveUI;
-
-    public MHUDManager(MCat player, Image healthUI, Image manaUI, Image spell1, Image spell2, Image spell3, Image spell4, Text objectiveUI)
+    Text scoreText;
+    
+    
+    public MHUDManager(MCat player, Image healthUI, Image manaUI, Image spell1, Image spell2, Image spell3, Image spell4, Text objectiveUI,Text scoreText)
     {
 		this.player = player;
 
@@ -20,6 +22,7 @@ public class MHUDManager
 
         this.player = player;
         this.objectiveUI = objectiveUI;
+        this.scoreText = scoreText;
 
 		this.statusUI.Add(healthUI);
         this.statusUI.Add(manaUI);
@@ -100,4 +103,11 @@ public class MHUDManager
 			}
 		}
     }
+
+    public void DisplayScore(int score)
+    {
+        scoreText.text = string.Format("Score : {0}", score);
+    }
+
+    
 }
