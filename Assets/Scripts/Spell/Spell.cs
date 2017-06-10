@@ -4,6 +4,10 @@ using System.Runtime.Remoting;
 
 public abstract class Spell : MonoBehaviour {
 
+	[Header("HUD Handling")]
+	public Sprite image;
+
+	[Header("Spell capacities")]
 	[Range(0, 100)]
     public float manaCost;
 
