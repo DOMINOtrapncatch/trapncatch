@@ -18,6 +18,8 @@ public class CatAttackTrigger : MonoBehaviour {
 			if (cat.isPathfindingActive)
 				cat.AttackEnemy(0);
 		}
+		else if (col.gameObject.tag == "Collider")
+			cat.nearColliders.Add(col.gameObject.transform.parent.gameObject);
 	}
 
 	void OnTriggerExit(Collider col)

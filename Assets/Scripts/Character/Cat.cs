@@ -30,6 +30,8 @@ public class Cat : Character
 	public List<Spell> attacks;
 	public List<Spell> spells;
 	[HideInInspector]
+	public List<GameObject> nearColliders = new List<GameObject>();
+	[HideInInspector]
 	public List<GameObject> nearEnemy = new List<GameObject>();
 	[HideInInspector]
 	public List<GameObject> aroundEnemy = new List<GameObject>();
