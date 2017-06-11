@@ -2,11 +2,24 @@
 
 public class PowerUp : MonoBehaviour
 {
-	void OnTriggerEnter(Collider col)
-	{
-		if (col.gameObject.tag == "Cat")
-            Activate((Character)col.gameObject.GetComponent(typeof(Character)));
-	}
+    PowerUpManager powerUpManager;
 
-	protected virtual void Activate(Character enemy){}
+    void Start()
+    {
+        powerUpManager = (PowerUpManager)FindObjectOfType(typeof(PowerUpManager));
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Cat")
+            Activate((Character)col.gameObject.GetComponent(typeof(Character)));
+    }
+
+    protected virtual void Activate(Character enemy) { }
+
+    protected void Destroy()
+    {
+        powerUpManager.Remove(gameObject);
+        Destroy(gameObject);
+    }
 }
