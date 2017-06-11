@@ -476,7 +476,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039834e6903284d9a92fb7058749a512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpSpawnPoints: []
+  powerUpSpawnPoints:
+  - {fileID: 778275732}
+  - {fileID: 925640517}
+  - {fileID: 1843702500}
   powerUpProfiles:
   - {fileID: 1000012380177102, guid: dc9971636ff674248b8610774ba46be3, type: 2}
   - {fileID: 1000013600926892, guid: eb26ce994565a441f99d9f7f16ab85fb, type: 2}
@@ -1692,7 +1695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f68b7ea80a2b440ca349f4268665f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayGridGizmos: 1
+  displayGridGizmos: 0
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 256
@@ -2320,7 +2323,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778275731}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -165.3, y: 0, z: 51.8}
+  m_LocalPosition: {x: -165.3, y: 0.1, z: 51.8}
   m_LocalScale: {x: 3.1, y: 3.1000018, z: 3.1000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2742,7 +2745,7 @@ GameObject:
   - 114: {fileID: 856018410}
   m_Layer: 0
   m_Name: '[CAT] Magical '
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3148,7 +3151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 925640516}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.54, y: 0, z: 39.9}
+  m_LocalPosition: {x: 4.54, y: 0.1, z: 39.9}
   m_LocalScale: {x: 3.1, y: 3.1000018, z: 3.1000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -62877,7 +62880,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1843702499}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -74.5, y: 0, z: 62.6}
+  m_LocalPosition: {x: -74.5, y: 0.1, z: 62.6}
   m_LocalScale: {x: 3.1, y: 3.1000018, z: 3.1000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
