@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
@@ -39,7 +39,7 @@ public class BasicMenu : MonoBehaviour
     }
 
     // Go from one scene to another scene specified by his id
-    public void ChangeScene(int sceneId)
+    public virtual void ChangeScene(int sceneId)
     {
 		AutoFade.LoadLevel (sceneId, .3f, .3f, Palette.DARK_PURPLE);
     }
@@ -49,6 +49,12 @@ public class BasicMenu : MonoBehaviour
     {
 		ChooseMission.NextMission();
     }
+
+	// Restart the current mission
+	public void RestartMission()
+	{
+		ChangeScene(missionsSceneId[currentMission]);
+	}
 
     // Close the game
     public void Quit()
