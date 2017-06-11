@@ -72,7 +72,13 @@ public class ChooseMission : MonoBehaviour
 	{
 		selectedMission = (selectedMission + 1) % missionsStatic.Count;
 		AutoFade.LoadLevel(missionsStatic[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
-    }
+	}
+
+	// Restart the current mission
+	public static void RestartMission()
+	{
+		AutoFade.LoadLevel(missionsStatic[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
+	}
 
     public void Back()
     {

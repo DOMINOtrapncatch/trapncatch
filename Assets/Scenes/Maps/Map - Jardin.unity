@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa657bbfe576a1445aed2ffe9a78b102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names: []
-  missionsSceneId: 
+  labels: []
+  labelsSceneId: 
 --- !u!114 &60707691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5266,10 +5266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
   inputName: attack_special
+  isActivable: 0
 --- !u!114 &860923904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5282,10 +5284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4bebf84725e8544a23ddf8601bc740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
   inputName: attack
+  isActivable: 0
 --- !u!114 &860923905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5422,6 +5426,7 @@ MonoBehaviour:
   - {fileID: 860923914}
   - {fileID: 860923915}
   - {fileID: 860923916}
+  nearColliders: []
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
@@ -5445,10 +5450,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e28e929a69c048879a95a5d85ea422e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: d624d187eb6154ac291080f5c8e2115f, type: 3}
   manaCost: 5
   MaxRecoveryTime: 25
   RecoveryTime: 15
   inputName: spell 1
+  isActivable: 0
   particle: {fileID: 1210973159}
   lifeAmount: 20
 --- !u!114 &860923913
@@ -5494,6 +5501,7 @@ MonoBehaviour:
   MaxRecoveryTime: 20
   RecoveryTime: 0
   inputName: spell 2
+  isActivable: 0
   manaBlowParticlePrefab: {fileID: 0, guid: fc89952a45cb7422c9aed2792d4cb186, type: 2}
   lifeCostAmount: 20
   manaLostAmount: 20
@@ -5513,6 +5521,7 @@ MonoBehaviour:
   MaxRecoveryTime: 80
   RecoveryTime: 0
   inputName: spell 3
+  isActivable: 0
   rollbackUpParticle: {fileID: 0, guid: 9f15f8b45303d476aa8afc5601dd68d1, type: 2}
   rollbackDownParticle: {fileID: 0, guid: 46a712c42bf9b4a309e54d9da4d86646, type: 2}
 --- !u!114 &860923916
@@ -5531,6 +5540,7 @@ MonoBehaviour:
   MaxRecoveryTime: 50
   RecoveryTime: 0
   inputName: spell 4
+  isActivable: 0
   magicBallParticule: {fileID: 0, guid: d8b953f09816b4be6b16156789f952a5, type: 2}
   magicBallExplodeParticule: {fileID: 0, guid: f96fdfe5d211743e1baa14560c8ed000, type: 2}
   damage: 30
@@ -6995,14 +7005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde70d02b7a6c604bb4b0e8de2ee1680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  manaBar: {fileID: 0}
-  spellBar1: {fileID: 0}
-  spellBar2: {fileID: 0}
-  spellBar3: {fileID: 0}
-  spellBar4: {fileID: 0}
-  objective: {fileID: 0}
-  player: {fileID: 0}
   messageTooltip1: Attaquez la souris
   messageTooltip2: Achever la souris
 --- !u!225 &1099069390
