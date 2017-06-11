@@ -8,7 +8,8 @@ public class ProtectionPowerUp : PowerUp
 
     protected override void Activate(Character enemy)
     {
-        enemy.StartCoroutine(Protection(enemy));
+		enemy.StartCoroutine(Protection(enemy));
+		Destroy();
     }
 
     private IEnumerator Protection(Character enemy)
@@ -18,7 +19,5 @@ public class ProtectionPowerUp : PowerUp
         enemy.Attack += protectionIncrease;
         yield return new WaitForSeconds(protectionTimeout);
         enemy.Attack -= protectionIncrease;
-
-        Destroy();
     }
 }
