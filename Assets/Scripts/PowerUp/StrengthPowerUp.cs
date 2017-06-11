@@ -9,6 +9,7 @@ public class StrengthPowerUp : PowerUp
     protected override void Activate(Character enemy)
     {
         enemy.StartCoroutine(Strength(enemy));
+        Destroy();
     }
 
     private IEnumerator Strength(Character enemy)
@@ -18,7 +19,5 @@ public class StrengthPowerUp : PowerUp
         enemy.Attack += strengthIncrease;
         yield return new WaitForSeconds(strengthTimeout);
         enemy.Attack -= strengthIncrease;
-
-        Destroy();
     }
 }

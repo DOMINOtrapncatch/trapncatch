@@ -8,7 +8,8 @@ public class SpeedPowerUp : PowerUp
 
     protected override void Activate(Character enemy)
     {
-        enemy.StartCoroutine(Speed(enemy));
+		enemy.StartCoroutine(Speed(enemy));
+		Destroy();
     }
 
     private IEnumerator Speed(Character enemy)
@@ -18,7 +19,5 @@ public class SpeedPowerUp : PowerUp
         enemy.Speed += speedIncrease;
         yield return new WaitForSeconds(speedTimeout);
         enemy.Speed -= speedIncrease;
-
-        Destroy();
     }
 }
