@@ -48,12 +48,18 @@ public class BasicMenu : MonoBehaviour
         AutoFade.LoadLevel(sceneId, .3f, .3f, Palette.DARK_PURPLE);
     }
 
-    //Go to the next mission
+    // Go to the next mission
     public void NextMission()
     {
         currentMission = (currentMission + 1) % missionsSceneId.Count;
         ChangeScene(missionsSceneId[currentMission]);
-    }
+	}
+
+	// Restart the current mission
+	public void RestartMission()
+	{
+		ChangeScene(missionsSceneId[currentMission]);
+	}
 
     // Close the game
     public void Quit()
