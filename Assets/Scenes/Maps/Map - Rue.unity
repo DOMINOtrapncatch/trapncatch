@@ -449,6 +449,52 @@ Transform:
   - {fileID: 929781898}
   m_Father: {fileID: 1288951469}
   m_RootOrder: 0
+--- !u!1 &256609874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 256609876}
+  - 114: {fileID: 256609875}
+  m_Layer: 0
+  m_Name: PowerUpManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &256609875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256609874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 039834e6903284d9a92fb7058749a512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpSpawnPoints: []
+  powerUpProfiles:
+  - {fileID: 1000012380177102, guid: dc9971636ff674248b8610774ba46be3, type: 2}
+  - {fileID: 1000013600926892, guid: eb26ce994565a441f99d9f7f16ab85fb, type: 2}
+  - {fileID: 1000012465022638, guid: 4eeba3b76f38c4aefa877d12f911c3f8, type: 2}
+  - {fileID: 1000010231256310, guid: bfb4f0fe84c6a49cca984b9cae11867d, type: 2}
+--- !u!4 &256609876
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256609874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -84.47735, y: -5.3155413, z: 30.482973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
 --- !u!1 &266301589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,6 +2942,7 @@ MonoBehaviour:
   - {fileID: 856018413}
   - {fileID: 856018411}
   - {fileID: 856018412}
+  nearColliders: []
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
