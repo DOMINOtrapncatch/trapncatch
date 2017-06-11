@@ -101,7 +101,7 @@ GameObject:
   - 222: {fileID: 468675}
   - 114: {fileID: 468674}
   m_Layer: 5
-  m_Name: PlaneMissionComplete
+  m_Name: PlaneMissionEchouer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,7 +169,7 @@ GameObject:
   - 222: {fileID: 204189835}
   - 114: {fileID: 204189834}
   m_Layer: 5
-  m_Name: PlaneBorderMissionComplete
+  m_Name: PlaneBorderMissionEchouer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,7 +239,7 @@ GameObject:
   - 114: {fileID: 370366065}
   - 114: {fileID: 370366064}
   m_Layer: 5
-  m_Name: MenuPrincipalLabel
+  m_Name: AnnulerLaMissionLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu principal
+  m_Text: Annuler la mission
 --- !u!222 &370366067
 CanvasRenderer:
   m_ObjectHideFlags: 0
