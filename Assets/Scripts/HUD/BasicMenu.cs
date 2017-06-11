@@ -11,14 +11,14 @@ public class BasicMenu : MonoBehaviour
     string[] labelNames;
     string[] buttonNames;
     int buttonHovered = 0;
-    public List <int> missionsSceneId = new List<int>();
+    public List<int> missionsSceneId = new List<int>();
     int currentMission = 0;
 
-    
+
 
     void Start()
     {
-        
+
         buttonNames = new string[names.Length];
         labelNames = new string[names.Length];
 
@@ -40,12 +40,12 @@ public class BasicMenu : MonoBehaviour
             Launch();
     }
 
-    
+
 
     // Go from one scene to another scene specified by his id
-    public void ChangeScene(int sceneId)
+    public virtual void ChangeScene(int sceneId)
     {
-		AutoFade.LoadLevel (sceneId, .3f, .3f, Palette.DARK_PURPLE);
+        AutoFade.LoadLevel(sceneId, .3f, .3f, Palette.DARK_PURPLE);
     }
 
     //Go to the next mission
@@ -71,22 +71,22 @@ public class BasicMenu : MonoBehaviour
 
     // When the button is being hovered
     public void HoverSmall(Text label)
-	{
-		label.fontSize = 32;
+    {
+        label.fontSize = 32;
     }
 
     // When the button is being unhovered
     public void UnHover(string label)
     {
         Text text = GameObject.Find(label).GetComponent<Text>();
-		text.color = Palette.LIGHT_GRAY;
+        text.color = Palette.LIGHT_GRAY;
         text.fontSize = 30;
     }
 
     // When the button is being unhovered
     public void UnHoverSmall(Text label)
-	{
-		label.fontSize = 30;
+    {
+        label.fontSize = 30;
     }
 
     private void HoverUpdate(int direction)

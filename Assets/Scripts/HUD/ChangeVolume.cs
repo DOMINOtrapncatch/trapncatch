@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ChangeVolume : MonoBehaviour {
-
+public class ChangeVolume : MonoBehaviour
+{
     public Slider slideVolume;
-    public AudioSource musicSource;
+
+    void Start()
+    {
+        slideVolume.value = AudioListener.volume;
+    }
 
     public void SetVolume()
     {
-        musicSource.volume = slideVolume.value;
+        AudioListener.volume = slideVolume.value;
     }
-	
+
 }
