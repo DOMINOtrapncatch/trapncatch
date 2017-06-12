@@ -21,7 +21,7 @@ public class ChocWave : Spell
 
         foreach (GameObject enemy in cat.aroundEnemy)
         {
-            Character enemyAll = enemy.GetComponentInParent<Character>();
+            Character enemyAll = (Character)enemy.GetComponent(typeof(Character));
             if (!enemyAll.Damage(lifeDamage))
             {
                 enemyAll.Destroy();

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Gravity : Spell
 {
@@ -17,7 +18,13 @@ public class Gravity : Spell
         if (!particle.isPlaying)
             particle.Play();
 
-        yield return new WaitForSeconds(5.0f);
+        foreach(GameObject enemy in cat.aroundEnemy)
+        {
+            Character CatEnemy = (Character) enemy.GetComponent(typeof(Character));
+            CatEnemy.Speed = 0;
+        }
+
+        yield return new WaitForSeconds(3.0f);
 
         particle.Stop();
     }
