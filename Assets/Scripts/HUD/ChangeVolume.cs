@@ -14,5 +14,4 @@ public class ChangeVolume : MonoBehaviour
     {
         AudioListener.volume = slideVolume.value;
     }
-
 }
