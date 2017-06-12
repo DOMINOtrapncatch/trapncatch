@@ -27,12 +27,9 @@ public class HealSpell : Spell {
 		if (!particle.isPlaying)
 			particle.Play();
 		
-		for (int i = 0; i < lifeAmount; i++)
+		for (int i = 0; i < lifeAmount && cat.Life < cat.maxLife; i++)
 		{
-			if (cat.Life + 1 > cat.maxLife)
-				break;
-			
-			cat.Life += 1;
+			cat.Heal(1);
 			yield return new WaitForSeconds(0.2f);
 		}
 

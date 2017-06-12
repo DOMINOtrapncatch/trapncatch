@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System;
+using UnityEngine;
 
 abstract public class Character : MonoBehaviour
 {
@@ -36,6 +36,14 @@ abstract public class Character : MonoBehaviour
 			Life = newLife;
 
 		return newLife > 0;
+	}
+
+	public void Heal(int heal)
+	{
+		float newLife = Life + heal;
+
+		if (newLife > maxLife)
+			Life = maxLife;
 	}
 
 	public void Destroy()
