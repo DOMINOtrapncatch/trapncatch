@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
@@ -58,14 +58,16 @@ public class ChooseMission : MonoBehaviour
 
         missionLabel.text = "Chapitre " + selectedMission + " :\n" + missions[selectedMission].title;
 
-        missions[selectedMission].music.Play();            
+        missions[selectedMission].music.Play();
     }
 
     // Load the selected mission
     public void LaunchMission()
     {
-        if (selectedMission == 0 || SaveManager.Completed(selectedMission - 1))
-		    AutoFade.LoadLevel (missions[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
+        string mission = "mission" + (selectedMission - 1);
+
+        if (selectedMission == 0 || SaveManager.Get(mission) == "1")
+	        AutoFade.LoadLevel (missions[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
     }
 
     // Load the selected mission

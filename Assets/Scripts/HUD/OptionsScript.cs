@@ -59,6 +59,7 @@ public class OptionsScript : BasicMenu {
 		}
 
 		keyText.text = keyToEdit.realKey.value;
+        SaveManager.Set(keyToEdit.realKey.input, keyToEdit.realKey.value);
 
 		ColorDuplicates();
 

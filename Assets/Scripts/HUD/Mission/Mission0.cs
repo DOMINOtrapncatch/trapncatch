@@ -45,6 +45,7 @@ public class Mission0 : MissionBase
 				{
                     SaveManager.SaveMission(0);
 					AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+                    SaveManager.Set("mission0", "1");
 				}
 				break;
 		}

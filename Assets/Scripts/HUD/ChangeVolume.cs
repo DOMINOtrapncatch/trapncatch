@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ChangeVolume : MonoBehaviour
@@ -7,11 +8,13 @@ public class ChangeVolume : MonoBehaviour
 
     void Start()
     {
+        AudioListener.volume = float.Parse(SaveManager.Get("volume"));
         slideVolume.value = AudioListener.volume;
     }
 
     public void SetVolume()
     {
         AudioListener.volume = slideVolume.value;
+        SaveManager.Set("volume", slideVolume.value.ToString());
     }
 }

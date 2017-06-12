@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System;
 
 public class SaveManager : MonoBehaviour
 {
-    static string mission;
-    static string file = "mission.sav";
-    
+    static Dictionary<string, string> data;
+    static string file = "data.sav";
+
     void Start()
     {
         CreateSave();
@@ -17,50 +17,25 @@ public class SaveManager : MonoBehaviour
     // Create the file if needed.
     private void CreateSave()
     {
+        string missions = "mission0=0\nmission1=0\nmission2=0\nmission3=0\nmission4=0\nmission5=0\n";
+        string spells = "spell1=&\nspell2=é\nspell3=\"\nspell4='\nattaque=MOUSE 0\nswap=MOUSE 1\n";
+        string movements = "up=Z\nleft=Q\nright=D\ndown=S\nvolume=0.5\njump=Space";
+
         if (!File.Exists(file))
-            File.WriteAllText(file, "000000");
+            File.WriteAllText(file, missions + spells + movements);
     }
 
     // Update data
     private void GetSave()
     {
-        mission = File.ReadAllText(file);
-    }
+        data = new Dictionary<string, string>();
+        string[] lines = File.ReadAllText(file).Split('\n');
 
-    /// <summary>
-    /// Check if mission is completed.
-    /// </summary>
-    /// <param name="id">id of the mission to be checked.</param>
-    /// <returns></returns>
-    public static bool Completed(int id)
-    {
-        return mission[id] == '1';
-    }
-
-    // Set a mission state to completed
-    private static void SetMission(int id)
-    {
-        string newData = "";
-
-        for (int i = 0; i < mission.Length; ++i)
+        for (int i = 0; i < lines.Length; ++i)
         {
-            if (id == i)
-                newData += '1';
-            else
-                newData += mission[i];
+            string[] lineValues = lines[i].Split('=');
+            data.Add(lineValues[0], lineValues[1]);
         }
-
-        mission = newData;
-    }
-
-    /// <summary>
-    /// Save the progression.
-    /// <param name="id">id of the mission to change.</param>
-    /// </summary>
-    public static void SaveMission(int id)
-    {
-        SetMission(id);
-        File.WriteAllText(file, mission);
     }
 
     /// <summary>
@@ -68,9 +43,22 @@ public class SaveManager : MonoBehaviour
     /// </summary>
     /// <param name="input">For exemple : "spell1".</param>
     /// <param name="key">The key you want to save as the new one.</param>
-    public static void SetKey(string input, string key)
+    public static void Set(string input, string key)
     {
+        data[input] = key;
 
+        string newData = "";
+        int i = 0;
+
+        foreach (var d in data)
+        {
+            newData += d.Key + "=" + d.Value;
+            if (i != data.Count - 1)
+                newData += "\n";
+            ++i;
+        }
+
+        File.WriteAllText(file, newData);
     }
 
     /// <summary>
@@ -78,8 +66,8 @@ public class SaveManager : MonoBehaviour
     /// </summary>
     /// <param name="input">The input you want.</param>
     /// <returns>Key in string</returns>
-    public static string GetKey(string input)
+    public static string Get(string input)
     {
-        return "";
+        return data[input];
     }
 }
