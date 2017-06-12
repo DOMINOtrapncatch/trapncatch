@@ -6,196 +6,196 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Mouse : Character
 {
-	public int damageValue = 10;
+    public int damageValue = 10;
 
-	[Header("Pathfinding Settings")]
-	public MouseIA mouseIA = MouseIA.NORMAL;
+    [Header("Pathfinding Settings")]
+    public MouseIA mouseIA = MouseIA.NORMAL;
     public MouseType mouseType = MouseType.LVL1;
 
-	const float minPathUpdateTime = .2f;
-	const float pathUpdateMoveThreshold = .5f;
+    const float minPathUpdateTime = .2f;
+    const float pathUpdateMoveThreshold = .5f;
 
-	public List<Transform> targets = new List<Transform>();
-	public bool randomTarget = true;
-	public float turnSpeed = 3;
-	public float turnDst = 5;
-	public float stoppingDst = 10;
+    public List<Transform> targets = new List<Transform>();
+    public bool randomTarget = true;
+    public float turnSpeed = 3;
+    public float turnDst = 5;
+    public float stoppingDst = 10;
 
-	int targetIndex;
-	Path path;
+    int targetIndex;
+    Path path;
 
-	[Header("GUI Settings")]
-	public Image healthBar;
+    [Header("GUI Settings")]
+    public Image healthBar;
 
-	[Header("Particle Effects")]
-	public GameObject deathPrefab;
-	public GameObject explosionPrefab;
+    [Header("Particle Effects")]
+    public GameObject deathPrefab;
+    public GameObject explosionPrefab;
 
-	void Start()
-	{
-		// Update randomizer seed
-		Random.InitState(System.DateTime.Now.Millisecond);
+    void Start()
+    {
+        // Update randomizer seed
+        Random.InitState(System.DateTime.Now.Millisecond);
 
-		// Init start and target based on random or not
-		if(randomTarget && mouseIA != MouseIA.SUICIDE)
-		{
-			targetIndex = Random.Range(0, targets.Count - 1);
+        // Init start and target based on random or not
+        if (randomTarget && mouseIA != MouseIA.SUICIDE)
+        {
+            targetIndex = Random.Range(0, targets.Count - 1);
 
-			int startIndex;
-			if(targets.Count > 1)
-			{
-				do
-				{
-					startIndex = Random.Range(0, targets.Count - 1);
-				}
-				while (startIndex == targetIndex);
-			}
-			else
-			{
-				startIndex = 0;
-			}
+            int startIndex;
+            if (targets.Count > 1)
+            {
+                do
+                {
+                    startIndex = Random.Range(0, targets.Count - 1);
+                }
+                while (startIndex == targetIndex);
+            }
+            else
+            {
+                startIndex = 0;
+            }
 
-			transform.position = targets[startIndex].position;
-		}
-		else
-		{
-			targetIndex = 1;
-			transform.position = targets[0].position;
-		}
+            transform.position = targets[startIndex].position;
+        }
+        else
+        {
+            targetIndex = 1;
+            transform.position = targets[0].position;
+        }
 
-		StartCoroutine(UpdatePath());
-	}
+        StartCoroutine(UpdatePath());
+    }
 
-	void Update()
-	{
-		healthBar.fillAmount = this.life / this.maxLife;
-	}
+    void Update()
+    {
+        healthBar.fillAmount = this.life / this.maxLife;
+    }
 
-	public void OnPathFound(Vector3[] waypoints, bool pathSuccessful)
-	{
-		if(pathSuccessful)
-		{
-			// Get success path
-			path = new Path(waypoints, transform.position, turnDst, stoppingDst);
+    public void OnPathFound(Vector3[] waypoints, bool pathSuccessful)
+    {
+        if (pathSuccessful)
+        {
+            // Get success path
+            path = new Path(waypoints, transform.position, turnDst, stoppingDst);
 
-			StopCoroutine("FollowPath"); // In case coroutine alwready exists
-			StartCoroutine("FollowPath");
-		}
-	}
+            StopCoroutine("FollowPath"); // In case coroutine alwready exists
+            StartCoroutine("FollowPath");
+        }
+    }
 
-	IEnumerator UpdatePath()
-	{
-		// Handle level loading trouble maker
-		if (Time.timeSinceLevelLoad < .3f)
-			yield return new WaitForSeconds(.3f);
-		
-		PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
+    IEnumerator UpdatePath()
+    {
+        // Handle level loading trouble maker
+        if (Time.timeSinceLevelLoad < .3f)
+            yield return new WaitForSeconds(.3f);
 
-		float sqrMoveThreshold = pathUpdateMoveThreshold * pathUpdateMoveThreshold;
-		Vector3 targetPosOld = targets[targetIndex].position;
+        PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
 
-		while(true)
-		{
-			yield return new WaitForSeconds(minPathUpdateTime);
+        float sqrMoveThreshold = pathUpdateMoveThreshold * pathUpdateMoveThreshold;
+        Vector3 targetPosOld = targets[targetIndex].position;
 
-			// Update only if moved a certain dist (this is here for performance issues)
-			if((targets[targetIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
-			{
-				PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
-				targetPosOld = targets[targetIndex].position;
-			}
-		}
-	}
+        while (true)
+        {
+            yield return new WaitForSeconds(minPathUpdateTime);
 
-	IEnumerator FollowPath()
-	{
-		bool followingPath = true;
-		int pathIndex = 0;
-		transform.LookAt(path.lookPoints[0]);
+            // Update only if moved a certain dist (this is here for performance issues)
+            if ((targets[targetIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
+            {
+                PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
+                targetPosOld = targets[targetIndex].position;
+            }
+        }
+    }
 
-		float speedPercent = 1;
+    IEnumerator FollowPath()
+    {
+        bool followingPath = true;
+        int pathIndex = 0;
+        transform.LookAt(path.lookPoints[0]);
 
-		while (followingPath)
-		{
-			Vector2 pos2D = new Vector2(transform.position.x, transform.position.z);
-			while(path.turnBoundaries[pathIndex].HasCrossedLine(pos2D))
-			{
-				if (pathIndex == path.finishLineIndex)
-				{
-					followingPath = false;
-					break;
-				}
-				else
-				{
-					pathIndex++;
-				}
-			}
+        float speedPercent = 1;
 
-			if (followingPath)
-			{
-				if(pathIndex >= path.slowDownIndex && stoppingDst > 0)
-				{
-					speedPercent = Mathf.Clamp01(path.turnBoundaries[path.finishLineIndex].DistanceFromPoint(pos2D) / stoppingDst);
-					followingPath = !(speedPercent < 0.2f);
-				}
+        while (followingPath)
+        {
+            Vector2 pos2D = new Vector2(transform.position.x, transform.position.z);
+            while (path.turnBoundaries[pathIndex].HasCrossedLine(pos2D))
+            {
+                if (pathIndex == path.finishLineIndex)
+                {
+                    followingPath = false;
+                    break;
+                }
+                else
+                {
+                    pathIndex++;
+                }
+            }
 
-				Quaternion targetRotation = Quaternion.LookRotation(path.lookPoints[pathIndex] - transform.position);
-				transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
-				transform.Translate(Vector3.forward * Time.deltaTime * speed * speedPercent, Space.Self);
-			}
+            if (followingPath)
+            {
+                if (pathIndex >= path.slowDownIndex && stoppingDst > 0)
+                {
+                    speedPercent = Mathf.Clamp01(path.turnBoundaries[path.finishLineIndex].DistanceFromPoint(pos2D) / stoppingDst);
+                    followingPath = !(speedPercent < 0.2f);
+                }
 
-			yield return null; // Move to the next frame
-		}
+                Quaternion targetRotation = Quaternion.LookRotation(path.lookPoints[pathIndex] - transform.position);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
+                transform.Translate(Vector3.forward * Time.deltaTime * speed * speedPercent, Space.Self);
+            }
 
-		// Decide of the next move
-		switch(mouseIA)
-		{
-			case MouseIA.SUICIDE:
-				// Keep following
-				targetIndex = randomTarget ? Random.Range(1, targets.Count - 1) : 1;
-				break;
+            yield return null; // Move to the next frame
+        }
 
-			case MouseIA.CIRCLE:
-				// Go to next point
-				targetIndex = (targetIndex + 1) % targets.Count;
-				break;
+        // Decide of the next move
+        switch (mouseIA)
+        {
+            case MouseIA.SUICIDE:
+                // Keep following
+                targetIndex = randomTarget ? Random.Range(1, targets.Count - 1) : 1;
+                break;
 
-			case MouseIA.NORMAL:
-				// Disappear
+            case MouseIA.CIRCLE:
+                // Go to next point
+                targetIndex = (targetIndex + 1) % targets.Count;
+                break;
+
+            case MouseIA.NORMAL:
+                // Disappear
                 Destroy(gameObject);
-				break;
-		}
-	}
+                break;
+        }
+    }
 
-	public void OnDrawGizmos()
-	{
-		if(path != null)
-		{
-			path.DrawWithGizmos();
-		}
-	}
+    public void OnDrawGizmos()
+    {
+        if (path != null)
+        {
+            path.DrawWithGizmos();
+        }
+    }
 
-	public void TryExplodeOn(Cat enemy)
-	{
-		if(mouseIA == MouseIA.SUICIDE && enemy != null)
-		{
-			enemy.StartCoroutine(ExplodeOn(enemy));
-			Destroy(gameObject);
-		}
-	}
+    public void TryExplodeOn(Cat enemy)
+    {
+        if (mouseIA == MouseIA.SUICIDE && enemy != null)
+        {
+            enemy.StartCoroutine(ExplodeOn(enemy));
+            enemy.KillEnemy(gameObject);
+        }
+    }
 
-	IEnumerator ExplodeOn(Cat enemy)
-	{
-		//Deal damage to enemy
-		enemy.Damage(damageValue);
+    IEnumerator ExplodeOn(Cat enemy)
+    {
+        //Deal damage to enemy
+        enemy.Damage(damageValue);
 
-		// Handle animation
-		GameObject explosionEffect = (GameObject)Instantiate(explosionPrefab, transform.position, explosionPrefab.transform.rotation);
-		yield return new WaitForSeconds(2.0f);
-		Destroy(explosionEffect);
-	}
+        // Handle animation
+        GameObject explosionEffect = (GameObject)Instantiate(explosionPrefab, transform.position, explosionPrefab.transform.rotation);
+        yield return new WaitForSeconds(2.0f);
+        Destroy(explosionEffect);
+    }
 
-	/*void Update()
+    /*void Update()
 	{
 		[POOR PATHFINDING]
 		=> I KEEP THIS IF WE WANT TO RE-IMPLEMENT IT (BUT DAMN CHANGE THE CALCULATION IT IS BAADDDD)
@@ -212,7 +212,7 @@ public class Mouse : Character
 
 public enum MouseIA
 {
-	NORMAL, SUICIDE, CIRCLE
+    NORMAL, SUICIDE, CIRCLE
 }
 
 public enum MouseType

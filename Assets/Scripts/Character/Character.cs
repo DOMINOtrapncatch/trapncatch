@@ -34,6 +34,8 @@ abstract public class Character : MonoBehaviour
 
 		if (newLife > 0)
 			Life = newLife;
+        else
+            AutoFade.LoadLevel(14, .3f, .3f, Color.black);
 
 		return newLife > 0;
 	}
