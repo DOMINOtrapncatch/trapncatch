@@ -10284,7 +10284,7 @@ MonoBehaviour:
   inputName: spell 1
   isActivable: 0
   dashDuration: 1
-  dashPropulsion: 10
+  dashPropulsion: 50
   particle: {fileID: 775915049}
 --- !u!114 &1468328227 stripped
 MonoBehaviour:
