@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour {
     public Text countdown;
     public float timelimit;//minute
     public float second;
+    public int colorlimit;
 	// Use this for initialization
 	void Start () {
 
@@ -16,6 +17,7 @@ public class Timer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         TimeControl();
+        TimeUI();
         LastMinuteRed();
     }
 
@@ -40,13 +42,16 @@ public class Timer : MonoBehaviour {
             second -= Time.deltaTime;
         }
 
-        countdown.text = timelimit.ToString("00") + ":" + second.ToString("00");
+        
     }
 
-    
+    public void TimeUI()
+    {
+        countdown.text = timelimit.ToString("00") + ":" + second.ToString("00");
+    }
     public void LastMinuteRed()
     {
-        if(timelimit <= 3)
+        if(timelimit <= colorlimit)
         {
             countdown.color = Color.red;
         }

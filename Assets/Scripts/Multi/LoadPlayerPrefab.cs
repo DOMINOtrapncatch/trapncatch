@@ -8,6 +8,7 @@ public class LoadPlayerPrefab : NetworkManager
     public class MsgTypes
     {
         public const short PlayerPrefab = MsgType.Highest + 1;
+        public const short SyncTime = MsgType.Highest + 1;
 
         public class PlayerPrefabMsg : MessageBase
         {
@@ -15,6 +16,12 @@ public class LoadPlayerPrefab : NetworkManager
             public short prefabIndex;
         }
     }
+
+    public class SyncTimeMessage : MessageBase
+    {
+        public double timeStamp;
+    }
+    
 
     public class NetworkSpawn : NetworkManager
     {
@@ -32,12 +39,38 @@ public class LoadPlayerPrefab : NetworkManager
         private int playerPref;
         private GameObject player;
 
+        bool isSyncWithServer = false;
+        public static double syncServerTime;
+
         public override void OnStartServer()
         {
             NetworkServer.RegisterHandler(MsgTypes.PlayerPrefab, OnResponsePrefab);
             base.OnStartServer();
+
+            isSyncWithServer = true;
+            syncServerTime = Network.time;
         }
 
+        public override void OnStartClient(NetworkClient client)
+        {
+            base.OnStartClient(client);
+            client.RegisterHandler(MsgTypes.SyncTime, OnReceiveSyncTime);
+        }
+
+        private void OnReceiveSyncTime(NetworkMessage msg)
+        {
+            var mess = msg.ReadMessage<SyncTimeMessage>();
+            isSyncWithServer = true;
+            syncServerTime = mess.timeStamp;
+        }
+        public override void OnServerConnect(NetworkConnection conn)
+        {
+
+            base.OnServerConnect(conn);
+            var syncTimeMessage = new SyncTimeMessage();
+            syncTimeMessage.timeStamp = Network.time;
+            NetworkServer.SendToClient(conn.connectionId, MsgTypes.SyncTime, syncTimeMessage);
+        }
         public override void OnClientConnect(NetworkConnection conn)
         {
             client.RegisterHandler(MsgTypes.PlayerPrefab, OnRequestPrefab);
@@ -65,6 +98,15 @@ public class LoadPlayerPrefab : NetworkManager
             MsgTypes.PlayerPrefabMsg msg = new MsgTypes.PlayerPrefabMsg();
             msg.controllerID = playerControllerId;
             NetworkServer.SendToClient(conn.connectionId, MsgTypes.PlayerPrefab, msg);
+        }
+
+        void Update()
+        {
+            if(isSyncWithServer)
+            {
+                syncServerTime += Time.deltaTime;
+
+            }
         }
 
     }

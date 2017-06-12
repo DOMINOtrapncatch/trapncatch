@@ -14,7 +14,7 @@ abstract public class MCharacter : NetworkBehaviour
 
 	// Variables qui ne pourront pas etres modifiees par l'utilisateur
 	[HideInInspector]
-	public float Life = 100;
+	[SyncVar]public float Life = 100;
 
 	// Valeur maximales brutes
 	private float maxAttackVal = 20, maxSpeedVal = 12, maxDefenseVal = 20, maxLifeVal = 100;

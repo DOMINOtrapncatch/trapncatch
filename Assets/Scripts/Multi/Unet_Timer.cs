@@ -15,32 +15,35 @@ public class Unet_Timer : NetworkBehaviour {
 
     [SyncVar]
     public int minPlayers;
-    public bool masterTimer = false;
+
+    [SyncVar]
+    public float timer;
+
    
     public Timer countdown;
 
     private Unet_Timer serverTimer;
-    private Unet_Timer[] timers;
-
     void Start()
     {
-        countdown = GetComponent<Timer>();
+        
+        
         if(isServer)
         {
             if(isLocalPlayer)
             {
                 serverTimer = this;
-                masterTimer = true;
+                timer = countdown.timelimit;
             }
         }
         else if(isLocalPlayer)
         {
-            timers = FindObjectsOfType<Unet_Timer>();
+            Unet_Timer[] timers = FindObjectsOfType<Unet_Timer>();
             for(int i = 0; i < timers.Length; ++i)
             {
-                if (timers[i].masterTimer)
+                if (timers[i].isServer)
                 {
                     serverTimer = timers[i];
+                    timer = serverTimer.timer;
                 }
             }
         }
@@ -48,44 +51,41 @@ public class Unet_Timer : NetworkBehaviour {
 
     void Update()
     {
-
-        countdown.TimeControl();
-        countdown.LastMinuteRed();
-
         //ya que le server qui touche directement au temps
         MasterControl();
-
         if(isLocalPlayer)
         {
             //tout le monde update
             ClientTimeUpdate();
-            countdown.TimeControl();
-            countdown.LastMinuteRed();
         }
-
-        
     }
 
     
 
     public void MasterControl()
     {
-        if(masterTimer)
+        if(isServer)
         {
-            if(countdown.timelimit <= 0)
+            if(timer <= 0)
             {
-                countdown.timelimit = -2;
+                timer = -2;
             }
-            else if(countdown.timelimit == -1)
+            else if(timer == -1)
             {
                 if (NetworkServer.connections.Count >= minPlayers)
-                    countdown.timelimit = 0;
+                    timer = 0;
             }
-            else if(countdown.timelimit == -2)
+            else if(timer == -2)
             {
                 // fin du jeu
                 //load scene
             }
+            else
+            {
+                ServerControl();
+            }
+
+            
         }
     }
 
@@ -93,20 +93,43 @@ public class Unet_Timer : NetworkBehaviour {
     {
         if(serverTimer)
         {
-            countdown.timelimit = serverTimer.countdown.timelimit;
+            timer = serverTimer.timer;
             minPlayers = serverTimer.minPlayers;
+            
+
         }
         else
         {
-            //Unet_Timer[] timers = FindObjectsOfType<Unet_Timer>();
+            Unet_Timer[] timers = FindObjectsOfType<Unet_Timer>();
             for(int i = 0; i < timers.Length; ++i)
             {
-                if(timers[i].masterTimer)
+                
+                if(timers[i].isServer)
                 {
                     serverTimer = timers[i];
+                    timer = serverTimer.timer;
                     
                 }
+               
             }
         }
+        CmdUI();
+
+    }
+
+    [Server]
+    public void ServerControl()
+    {
+        countdown.TimeControl();
+        countdown.TimeUI();
+        countdown.LastMinuteRed();
+    }
+
+   
+    [Command]
+    private void CmdUI()
+    {
+        countdown.TimeUI();
+        countdown.LastMinuteRed();
     }
 }
