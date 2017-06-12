@@ -70,7 +70,7 @@ public class Cat : Character
     {
         bool res = base.Damage(damage);
 
-        if(res)
+        if(!res)
             AutoFade.LoadLevel(14, .3f, .3f, Color.black);
         
         return res;
@@ -108,16 +108,16 @@ public class Cat : Character
         }
     }
 
-    public void KillEnemy(int enemyIndex)
+    public void KillEnemy(int enemyIndex, bool isNear = true)
     {
         // Get enemy
-        GameObject enemyObject = nearEnemy[enemyIndex];
+        GameObject enemyObject = isNear ? nearEnemy[enemyIndex] : aroundEnemy[enemyIndex];
         Character enemy = enemyObject.GetComponent<Character>();
 
         // Spawn particle effect on deth spot and destroy it after it was animated
         if (enemyObject.GetComponent<Mouse>() != null)
         {
-            GameObject deathParticleInstance = (GameObject)Instantiate(enemyObject.GetComponent<Mouse>().deathPrefab, nearEnemy[enemyIndex].transform.position, Quaternion.identity);
+            GameObject deathParticleInstance = (GameObject)Instantiate(enemyObject.GetComponent<Mouse>().deathPrefab, isNear ? nearEnemy[enemyIndex].transform.position : aroundEnemy[enemyIndex].transform.position, Quaternion.identity);
             Destroy(deathParticleInstance, 1.0f);
         }
 
@@ -130,8 +130,11 @@ public class Cat : Character
         // Remove enemy from lists
         aroundEnemy.Remove(enemyObject);
         aroundEnemy.Remove(enemyObject);
-        nearEnemy.Remove(enemyObject);
-        nearEnemy.Remove(enemyObject);
+        if(isNear)
+		{
+			nearEnemy.Remove(enemyObject);
+			nearEnemy.Remove(enemyObject);
+        }
 
         // Increment number of enemies killes
         ++enemyKillCount;
@@ -139,11 +142,21 @@ public class Cat : Character
 
     public void KillEnemy(GameObject enemy)
     {
-        try
+		if (aroundEnemy.Contains(enemy))
+		{
+            if(nearEnemy.Contains(enemy))
+			{
+                KillEnemy(nearEnemy.FindIndex(obj => obj == enemy), true);
+            }
+            else
+            {
+                KillEnemy(aroundEnemy.FindIndex(obj => obj == enemy), false);
+            }
+		}
+        else
         {
-            KillEnemy(aroundEnemy.FindIndex(obj => obj == enemy));
+            Destroy(enemy);
         }
-        catch { }
     }
 
     /*
