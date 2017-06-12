@@ -5,39 +5,35 @@ using UnityEngine.UI;
 public class Wolverine : Spell
 {
     [Header("Spell data")]
+
     public ParticleSystem particle;
-    [Range(0,100)]
-    public float stopSpeed = 0;
+	[Range(0, 100)]
+	public int lifeAmount = 20;
 
     public override void Activate()
     {
         StartCoroutine("wolverine");
-    }
+	}
+
+	public override bool CanUse()
+	{
+		if (cat.life == cat.maxLife)
+			return false;
+		else
+			return base.CanUse();
+	}
 
     IEnumerator wolverine()
     {
-        if (!particle.isPlaying)
-            particle.Play();
+		if (!particle.isPlaying)
+			particle.Play();
 
-        float lifeStart = cat.Life;
-        stopSpeed = cat.Speed;
-        cat.Speed = 0;
+		for (int i = 0; i < lifeAmount && cat.Life < cat.maxLife; i++)
+		{
+			cat.Heal(1);
+			yield return new WaitForSeconds(0.2f);
+		}
 
-        for (int i = 0; i < (lifeStart / 2); i++)
-        {
-            if (cat.Life > cat.MaxLife)
-            {
-                cat.Life = cat.MaxLife;
-                break;
-            }
-
-            cat.Life += 1;
-
-            yield return new WaitForSeconds(0.8f);
-        }
-
-        particle.Stop();
-
-        cat.Speed = stopSpeed;
+		particle.Stop();
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ChocWave : Spell
 {
     [Header("Spell data")]
-    public ParticleSystem particle;
+	public GameObject particle;
     [Range(0, 100)]
     public int lifeDamage = 30;
 
@@ -16,12 +16,11 @@ public class ChocWave : Spell
     
     IEnumerator ChocWaveAction()
     {
-        if (!particle.isPlaying)
-            particle.Play();
+		GameObject particleInit = (GameObject)Instantiate(particle, cat.transform.position + Vector3.up * .25f, particle.transform.rotation);
 
         foreach (GameObject enemy in cat.aroundEnemy)
         {
-            Character enemyAll = enemy.GetComponentInParent<Character>();
+            Character enemyAll = (Character)enemy.GetComponent(typeof(Character));
             if (!enemyAll.Damage(lifeDamage))
             {
                 enemyAll.Destroy();
@@ -31,6 +30,6 @@ public class ChocWave : Spell
 
         yield return new WaitForSeconds(2.0f);
 
-        particle.Stop();
+		Destroy(particleInit);
     }
 }
