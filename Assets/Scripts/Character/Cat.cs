@@ -66,7 +66,17 @@ public class Cat : Character
             AutoFade.LoadLevel(1, .3f, .3f, Palette.DARK_PURPLE);
     }
 
-    public void CheckSpells()
+    public override bool Damage(float damage)
+    {
+        bool res = base.Damage(damage);
+
+        if(res)
+            AutoFade.LoadLevel(14, .3f, .3f, Color.black);
+        
+        return res;
+ 	}
+
+	void CheckSpells()
     {
         foreach (Spell attack in attacks)
         {

@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using UnityEngine;
 
 abstract public class Character : MonoBehaviour
@@ -28,14 +28,12 @@ abstract public class Character : MonoBehaviour
 	/*
 	 * @return Still alive ?
 	 */
-	public bool Damage(float damage)
+	public virtual bool Damage(float damage)
 	{
 		float newLife = Life - damage;
 
 		if (newLife > 0)
 			Life = newLife;
-        else
-            AutoFade.LoadLevel(14, .3f, .3f, Color.black);
 
 		return newLife > 0;
 	}
