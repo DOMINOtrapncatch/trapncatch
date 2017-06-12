@@ -2147,10 +2147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4bebf84725e8544a23ddf8601bc740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
   inputName: attack
+  isActivable: 0
 --- !u!114 &1649861106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2176,9 +2178,11 @@ MonoBehaviour:
   attacks: []
   spells:
   - {fileID: 1649861105}
+  nearColliders: []
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
+  spellUseCount: 0
   isPathfindingActive: 1
   catIA: 0
   catType: 0
