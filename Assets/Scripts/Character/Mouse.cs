@@ -6,6 +6,8 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Mouse : Character
 {
+	public int damageValue = 10;
+
 	[Header("Pathfinding Settings")]
 	public MouseIA mouseIA = MouseIA.NORMAL;
     public MouseType mouseType = MouseType.LVL1;
@@ -27,6 +29,7 @@ public class Mouse : Character
 
 	[Header("Particle Effects")]
 	public GameObject deathPrefab;
+	public GameObject explosionPrefab;
 
 	void Start()
 	{
@@ -34,7 +37,7 @@ public class Mouse : Character
 		Random.InitState(System.DateTime.Now.Millisecond);
 
 		// Init start and target based on random or not
-		if(randomTarget)
+		if(randomTarget && mouseIA != MouseIA.SUICIDE)
 		{
 			targetIndex = Random.Range(0, targets.Count - 1);
 
@@ -170,6 +173,26 @@ public class Mouse : Character
 		{
 			path.DrawWithGizmos();
 		}
+	}
+
+	public void TryExplodeOn(Cat enemy)
+	{
+		if(mouseIA == MouseIA.SUICIDE && enemy != null)
+		{
+			enemy.StartCoroutine(ExplodeOn(enemy));
+			Destroy(gameObject);
+		}
+	}
+
+	IEnumerator ExplodeOn(Cat enemy)
+	{
+		//Deal damage to enemy
+		enemy.Damage(damageValue);
+
+		// Handle animation
+		GameObject explosionEffect = (GameObject)Instantiate(explosionPrefab, transform.position, explosionPrefab.transform.rotation);
+		yield return new WaitForSeconds(2.0f);
+		Destroy(explosionEffect);
 	}
 
 	/*void Update()
