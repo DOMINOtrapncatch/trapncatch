@@ -20,6 +20,10 @@ public class Swap : MonoBehaviour
 
     //public List<KeyCode> keys;
     public List<string> keys;
+    public HUDManager hud;
+
+    [HideInInspector]
+    public static bool HasSwapped { get; private set; }
 
     void Start()
     {
@@ -28,8 +32,7 @@ public class Swap : MonoBehaviour
 
         // Starting by only activating the first camera
         SwapWith(0);
-
-        
+        HasSwapped = false;    
     }
 
     void Update()
@@ -49,6 +52,8 @@ public class Swap : MonoBehaviour
             cats[i].GetComponent<MoveThirdPerson>().enabled = i == id;
             cats[i].GetComponent<Animator>().enabled = i == id;
         }
+        hud.LoadPlayer(cats[id]);
+        HasSwapped = true;
     }
 
 }

@@ -9,12 +9,7 @@ public class MultipleScratch : Spell
 
     public override void Activate()
     {
-        int i = 10;
-        while (i > 0)
-        {
-            cat.spells[0].Activate();
-            --i;
-        }
+        StartCoroutine(Effect());
     }
 
     IEnumerator Effect()
@@ -25,7 +20,7 @@ public class MultipleScratch : Spell
         int i = numberOfAttacks;
         while (i > 0)
         {
-            cat.spells[0].Activate();
+            cat.attacks[0].Activate();
             --i;
         }
 
