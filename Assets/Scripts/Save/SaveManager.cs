@@ -5,8 +5,8 @@ using System;
 
 public class SaveManager : MonoBehaviour
 {
-    static string data;
-    static string file = "data.sav";
+    static string mission;
+    static string file = "mission.sav";
     
     void Start()
     {
@@ -24,7 +24,7 @@ public class SaveManager : MonoBehaviour
     // Update data
     private void GetSave()
     {
-        data = File.ReadAllText(file);
+        mission = File.ReadAllText(file);
     }
 
     /// <summary>
@@ -34,32 +34,52 @@ public class SaveManager : MonoBehaviour
     /// <returns></returns>
     public static bool Completed(int id)
     {
-        return data[id] == '1';
+        return mission[id] == '1';
     }
 
     // Set a mission state to completed
-    private static void Set(int id)
+    private static void SetMission(int id)
     {
         string newData = "";
 
-        for (int i = 0; i < data.Length; ++i)
+        for (int i = 0; i < mission.Length; ++i)
         {
             if (id == i)
                 newData += '1';
             else
-                newData += data[i];
+                newData += mission[i];
         }
 
-        data = newData;
+        mission = newData;
     }
 
     /// <summary>
     /// Save the progression.
     /// <param name="id">id of the mission to change.</param>
     /// </summary>
-    public static void Save(int id)
+    public static void SaveMission(int id)
     {
-        Set(id);
-        File.WriteAllText(file, data);
+        SetMission(id);
+        File.WriteAllText(file, mission);
+    }
+
+    /// <summary>
+    /// Save the key to the correct binding.
+    /// </summary>
+    /// <param name="input">For exemple : "spell1".</param>
+    /// <param name="key">The key you want to save as the new one.</param>
+    public static void SetKey(string input, string key)
+    {
+
+    }
+
+    /// <summary>
+    /// Get the key associated with the correct input.
+    /// </summary>
+    /// <param name="input">The input you want.</param>
+    /// <returns>Key in string</returns>
+    public static string GetKey(string input)
+    {
+        return "";
     }
 }

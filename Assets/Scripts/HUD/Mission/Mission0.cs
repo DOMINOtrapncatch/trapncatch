@@ -21,7 +21,7 @@ public class Mission0 : MissionBase
 			if(CheckTooltip2(true))
 			{
 				myHUD.SetObjective(messageTooltip3);
-                SaveManager.Save(0);
+                SaveManager.SaveMission(0);
             }
 		}
 	}
