@@ -5,53 +5,57 @@ using UnityEngine.Networking;
 
 public abstract class MSpell : NetworkBehaviour {
 
-	[Range(0, 100)]
+    [Header("HUD Handling")]
+    public Sprite image;
+
+    [Header("Spell capacities")]
+    [Range(0, 100)]
     public float manaCost;
 
-	// Variables qui pourront etres modifiees par l'utilisateur
-	[Range(0, 100)]
-	public float MaxRecoveryTime;
+    // Variables qui pourront etres modifiees par l'utilisateur
+    [Range(0, 100)]
+    public float MaxRecoveryTime;
 
-	// Variables qui ne pourront pas etres modifiees par l'utilisateur
-	[HideInInspector]
-	public float RecoveryTime;
+    // Variables qui ne pourront pas etres modifiees par l'utilisateur
+    [HideInInspector]
+    public float RecoveryTime;
 
-	// Valeur maximales brutes
-	private float maxRecoveryTimeVal = 100;
+    // Valeur maximales brutes
+    private float maxRecoveryTimeVal = 100;
 
-	// Variables utilisees dans les scripts
-	public float recoveryTime    { get { return RecoveryTime    * maxRecoveryTime    / 100; } }
-	public float maxRecoveryTime { get { return MaxRecoveryTime * maxRecoveryTimeVal / 100; } }
+    // Variables utilisees dans les scripts
+    public float recoveryTime { get { return RecoveryTime * maxRecoveryTime / 100; } }
+    public float maxRecoveryTime { get { return MaxRecoveryTime * maxRecoveryTimeVal / 100; } }
 
-	protected MCat cat;
+    protected MCat cat;
     public string inputName;
 
-	void Start()
-	{
-		cat = GetComponent<MCat>();
+    void Start()
+    {
+        cat = GetComponent<MCat>();
 
         InvokeRepeating("UpdateEverySecond", 0, 1.0f);
-	}
+    }
 
     //delai de recovery
     //coup en mana
     //check
-	public virtual bool CanUse()
+    public virtual bool CanUse()
     {
-		if(Input.GetButtonDown (inputName) && recoveryTime == maxRecoveryTime && cat.Mana - manaCost >= 0)
-		{
+        if (Input.GetButtonDown(inputName) && recoveryTime == maxRecoveryTime && cat.Mana - manaCost >= 0)
+        {
             RecoveryTime = 0;
 
-			if(manaCost > 0)
-            	cat.Mana -= manaCost;
-			
+            if (manaCost > 0)
+                cat.Mana -= manaCost;
+
             return true;
         }
 
         return false;
     }
 
-	abstract public void Activate();
+    abstract public void Activate();
 
-	virtual public void UpdateEverySecond() {}
+    virtual public void UpdateEverySecond() { }
 }

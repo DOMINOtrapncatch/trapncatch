@@ -22,7 +22,7 @@ public class Unet_Timer : NetworkBehaviour {
    
     public Timer countdown;
 
-    private Unet_Timer serverTimer;
+    //private Unet_Timer serverTimer;
     void Start()
     {
         
@@ -31,13 +31,13 @@ public class Unet_Timer : NetworkBehaviour {
         {
             if(isLocalPlayer)
             {
-                serverTimer = this;
+                //serverTimer = this;
                 timer = countdown.timelimit;
             }
         }
         else if(isLocalPlayer)
         {
-            Unet_Timer[] timers = FindObjectsOfType<Unet_Timer>();
+            /*Unet_Timer[] timers = FindObjectsOfType<Unet_Timer>();
             for(int i = 0; i < timers.Length; ++i)
             {
                 if (timers[i].isServer)
@@ -45,7 +45,8 @@ public class Unet_Timer : NetworkBehaviour {
                     serverTimer = timers[i];
                     timer = serverTimer.timer;
                 }
-            }
+            }*/
+            RpcUI();
         }
     }
 
@@ -57,6 +58,7 @@ public class Unet_Timer : NetworkBehaviour {
         {
             //tout le monde update
             ClientTimeUpdate();
+            RpcUI();
         }
     }
 
@@ -82,6 +84,7 @@ public class Unet_Timer : NetworkBehaviour {
             }
             else
             {
+                countdown.TimeControl();
                 ServerControl();
             }
 
@@ -91,7 +94,7 @@ public class Unet_Timer : NetworkBehaviour {
 
     public void ClientTimeUpdate()
     {
-        if(serverTimer)
+       /* if(serverTimer)
         {
             timer = serverTimer.timer;
             minPlayers = serverTimer.minPlayers;
@@ -112,24 +115,23 @@ public class Unet_Timer : NetworkBehaviour {
                 }
                
             }
-        }
-        CmdUI();
+        }*/
+        RpcUI();
 
     }
 
     [Server]
     public void ServerControl()
     {
-        countdown.TimeControl();
+        
         countdown.TimeUI();
         countdown.LastMinuteRed();
     }
 
    
-    [Command]
-    private void CmdUI()
+    [ClientRpc]
+    private void RpcUI()
     {
-        countdown.TimeUI();
-        countdown.LastMinuteRed();
+        ServerControl();
     }
 }

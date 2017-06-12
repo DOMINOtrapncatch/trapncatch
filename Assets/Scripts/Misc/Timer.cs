@@ -47,7 +47,7 @@ public class Timer : MonoBehaviour {
 
     public void TimeUI()
     {
-        countdown.text = timelimit.ToString("00") + ":" + second.ToString("00");
+        //countdown.text = timelimit.ToString("00") + ":" + second.ToString("00");
     }
     public void LastMinuteRed()
     {

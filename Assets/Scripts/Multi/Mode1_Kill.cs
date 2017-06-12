@@ -19,14 +19,7 @@ public class Mode1_Kill : NetworkBehaviour {
      * 
      */
     MHUDManager myHUD;
-    public Image healthBar;
-    public Image manaBar;
-    public Image spellBar1;
-    public Image spellBar2;
-    public Image spellBar3;
-    public Image spellBar4;
-    public Text objective;
-    public Text scoreText;
+    Text scoreText;
 
     public string toolTip = "Tuer toutes les souris";
     private List<MMouse> mice_list;
@@ -41,7 +34,7 @@ public class Mode1_Kill : NetworkBehaviour {
     
     void Awake()
     {
-        scoreText = transform.Find("Score").GetComponent<Text>();
+        scoreText = myHUD.scoreText;
         GameObject[] tempMouse = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] tempPlayer = GameObject.FindGameObjectsWithTag("Cat");
         

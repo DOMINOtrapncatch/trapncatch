@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class LoadPlayerPrefab : NetworkManager
+public class CustomUNET : NetworkManager
 {
     public class MsgTypes
     {
@@ -15,6 +15,7 @@ public class LoadPlayerPrefab : NetworkManager
             public short controllerID;
             public short prefabIndex;
         }
+        
     }
 
     public class SyncTimeMessage : MessageBase
@@ -40,7 +41,6 @@ public class LoadPlayerPrefab : NetworkManager
         private GameObject player;
 
         bool isSyncWithServer = false;
-        public static double syncServerTime;
 
         public override void OnStartServer()
         {
@@ -48,28 +48,18 @@ public class LoadPlayerPrefab : NetworkManager
             base.OnStartServer();
 
             isSyncWithServer = true;
-            syncServerTime = Network.time;
         }
 
         public override void OnStartClient(NetworkClient client)
         {
             base.OnStartClient(client);
-            client.RegisterHandler(MsgTypes.SyncTime, OnReceiveSyncTime);
         }
 
-        private void OnReceiveSyncTime(NetworkMessage msg)
-        {
-            var mess = msg.ReadMessage<SyncTimeMessage>();
-            isSyncWithServer = true;
-            syncServerTime = mess.timeStamp;
-        }
+       
         public override void OnServerConnect(NetworkConnection conn)
         {
 
             base.OnServerConnect(conn);
-            var syncTimeMessage = new SyncTimeMessage();
-            syncTimeMessage.timeStamp = Network.time;
-            NetworkServer.SendToClient(conn.connectionId, MsgTypes.SyncTime, syncTimeMessage);
         }
         public override void OnClientConnect(NetworkConnection conn)
         {
@@ -102,15 +92,12 @@ public class LoadPlayerPrefab : NetworkManager
 
         void Update()
         {
-            if(isSyncWithServer)
-            {
-                syncServerTime += Time.deltaTime;
-
-            }
+            
         }
 
     }
 
+    //player prefab
     [SerializeField]
     Vector3 playerSpawnPos;
     [SerializeField]
@@ -121,8 +108,10 @@ public class LoadPlayerPrefab : NetworkManager
     GameObject magique;
     [SerializeField]
     GameObject rapide;
-
+    
     private GameObject player;
+    public MHUDManager myHUD;
+    private float timer;
 
     void Update()
     {
@@ -148,7 +137,62 @@ public class LoadPlayerPrefab : NetworkManager
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
     {
         var futurplayer = (GameObject)GameObject.Instantiate(player, playerSpawnPos, Quaternion.identity);
+        myHUD.player = futurplayer.GetComponent<MCat>();
         NetworkServer.AddPlayerForConnection(conn, futurplayer, playerControllerId);
     }
 
+    //Custom UI 
+    #region CUSTOM UI
+    public void StartupHost()
+    {
+        SetPort();
+        NetworkManager.singleton.StartHost();
+    }
+
+    public void JoinGame()
+    {
+        SetIPAddress();
+        SetPort();
+        NetworkManager.singleton.StartClient();
+    }
+
+    private void SetIPAddress()
+    {
+        string ipAddress = GameObject.Find("InputFieldIPAddress").transform.FindChild("Text").GetComponent<Text>().text;
+        NetworkManager.singleton.networkAddress = ipAddress;
+    }
+
+    private void SetPort()
+    {
+        NetworkManager.singleton.networkPort = 7777;
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if(level == 0)
+        {
+            StartCoroutine(SetupMenuSceneButtons());
+        }
+        else
+        {
+            SetupOtherSceneButtons();
+        }
+    }
+
+    IEnumerator SetupMenuSceneButtons()
+    {
+        yield return new WaitForSeconds(0.3f);
+        GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.RemoveAllListeners();
+        GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.AddListener(StartupHost);
+
+        GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.RemoveAllListeners();
+        GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.AddListener(JoinGame);
+    }
+
+    private void SetupOtherSceneButtons()
+    {
+        GameObject.Find("ButtonDisconnect").GetComponent<Button>().onClick.RemoveAllListeners();
+        GameObject.Find("ButtonDisconnect").GetComponent<Button>().onClick.AddListener(NetworkManager.singleton.StopHost);
+    }
+    #endregion
 }

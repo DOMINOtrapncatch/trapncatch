@@ -445,7 +445,7 @@ GameObject:
   - 114: {fileID: 114000012983322696}
   m_Layer: 0
   m_Name: '[CAT] Magical '
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2660,9 +2660,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508657716ed4cd446a5afdae76a62f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: d624d187eb6154ac291080f5c8e2115f, type: 3}
   manaCost: 5
   MaxRecoveryTime: 25
-  RecoveryTime: 0
+  RecoveryTime: 100
   inputName: spell 1
   particle: {fileID: 198000012028277806}
   lifeAmount: 20
@@ -2696,6 +2697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba7e240274c8ff4c8ed0b782b3e98ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
@@ -2753,9 +2755,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04426391434c67a4cae27e8114ee6e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: d7739fb009b5142969937dd0d0a4cb04, type: 3}
   manaCost: 5
   MaxRecoveryTime: 80
-  RecoveryTime: 0
+  RecoveryTime: 100
   inputName: spell 3
   rollbackUpParticle: {fileID: 1000013444293348, guid: 142a3cdc6791de04aa315d96c4bbcd26,
     type: 2}
@@ -2772,6 +2775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cd8c6b079f14c49afb10f6427fb7d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
@@ -2787,9 +2791,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca7c59ddabf1c5489df1b64533edcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 73fb630daa4474562822b1beff9990ff, type: 3}
   manaCost: 20
   MaxRecoveryTime: 20
-  RecoveryTime: 0
+  RecoveryTime: 100
   inputName: spell 2
   manaBlowParticlePrefab: {fileID: 1000012802340058, guid: e1f84467a79ddf44cbe0ccbc13c67149,
     type: 2}
@@ -2813,7 +2818,7 @@ MonoBehaviour:
   Life: 100
   MaxMana: 100
   ManaMaxRecoveryTime: 10
-  Mana: 0
+  Mana: 100
   ManaRecoveryTime: 0
   icon: {fileID: 0}
   attacks:
@@ -2835,6 +2840,7 @@ MonoBehaviour:
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
+  score: 0
 --- !u!114 &114000012137027802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2900,9 +2906,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7100b48fd9bd645b05c611f4d98220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 8327b2f9addc9400ebea3d306d4c90a3, type: 3}
   manaCost: 5
   MaxRecoveryTime: 50
-  RecoveryTime: 0
+  RecoveryTime: 100
   inputName: spell 4
   magicBallParticule: {fileID: 1000010947483078, guid: 4fcea8a9c79afbb41b3095fbbf56e81c,
     type: 2}
