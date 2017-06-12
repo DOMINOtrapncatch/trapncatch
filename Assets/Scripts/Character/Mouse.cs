@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,13 +15,15 @@ public class Mouse : Character
     const float minPathUpdateTime = .2f;
     const float pathUpdateMoveThreshold = .5f;
 
-    public List<Transform> targets = new List<Transform>();
+	public List<Transform> targets = new List<Transform>();
     public bool randomTarget = true;
     public float turnSpeed = 3;
     public float turnDst = 5;
     public float stoppingDst = 10;
 
     int targetIndex;
+    [HideInInspector]
+    public int hideIndex = -1;
     Path path;
 
     [Header("GUI Settings")]
@@ -29,7 +31,10 @@ public class Mouse : Character
 
     [Header("Particle Effects")]
     public GameObject deathPrefab;
-    public GameObject explosionPrefab;
+	public GameObject explosionPrefab;
+
+	[HideInInspector]
+	public List<GameObject> aroundCats = new List<GameObject>();
 
     void Start()
     {
@@ -95,15 +100,36 @@ public class Mouse : Character
         Vector3 targetPosOld = targets[targetIndex].position;
 
         while (true)
-        {
-            yield return new WaitForSeconds(minPathUpdateTime);
-
-            // Update only if moved a certain dist (this is here for performance issues)
-            if ((targets[targetIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
+		{
+            if(hideIndex >= 0)
             {
-                PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
-                targetPosOld = targets[targetIndex].position;
+                if ((targets[hideIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
+				{
+					PathRequestManager.RequestPath(new PathRequest(transform.position, targets[hideIndex].position, OnPathFound));
+					targetPosOld = targets[hideIndex].position;
+				}
+                else if(aroundCats.Count == 0)
+                {
+					targetIndex = (targetIndex + 1) % targets.Count;
+                    if(targetIndex == hideIndex)
+                        targetIndex = (targetIndex + 1) % targets.Count;
+					hideIndex = -1;
+                }
+                else
+                {
+                    hideIndex = GetBestSpotToGetAwayFromCat();
+                }
             }
+            else
+			{
+				if ((targets[targetIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
+				{
+					PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
+					targetPosOld = targets[targetIndex].position;
+				}
+            }
+
+			yield return new WaitForSeconds(minPathUpdateTime);
         }
     }
 
@@ -113,7 +139,7 @@ public class Mouse : Character
         int pathIndex = 0;
         transform.LookAt(path.lookPoints[0]);
 
-        float speedPercent = 1;
+		float speedPercent = 1;
 
         while (followingPath)
         {
@@ -144,6 +170,23 @@ public class Mouse : Character
                 transform.Translate(Vector3.forward * Time.deltaTime * speed * speedPercent, Space.Self);
             }
 
+			// Priority to the nearest enemy
+            if (mouseIA == MouseIA.SMART && aroundCats.Count > 0)
+            {
+                hideIndex = GetBestSpotToGetAwayFromCat();
+
+				if (hideIndex < 0)
+                {
+					break;
+                }
+            }
+			// Get out if enemy is away
+			if (hideIndex >= 0 && mouseIA == MouseIA.SMART && aroundCats.Count == 0)
+			{
+                hideIndex = -1;
+				break;
+			}
+            
             yield return null; // Move to the next frame
         }
 
@@ -158,6 +201,21 @@ public class Mouse : Character
             case MouseIA.CIRCLE:
                 // Go to next point
                 targetIndex = (targetIndex + 1) % targets.Count;
+				break;
+
+            case MouseIA.SMART:
+                // Go to next point if there ane no ennemies around
+                if(aroundCats.Count == 0)
+				{
+                    print(targetIndex);
+					targetIndex = (targetIndex + 1) % targets.Count;
+                    print(" => " + targetIndex);
+                    hideIndex = -1;
+                }
+                else if(!followingPath && aroundCats.Count > 0)
+                {
+                    hideIndex = GetBestSpotToGetAwayFromCat();
+                }
                 break;
 
             case MouseIA.NORMAL:
@@ -195,24 +253,29 @@ public class Mouse : Character
         Destroy(explosionEffect);
     }
 
-    /*void Update()
-	{
-		[POOR PATHFINDING]
-		=> I KEEP THIS IF WE WANT TO RE-IMPLEMENT IT (BUT DAMN CHANGE THE CALCULATION IT IS BAADDDD)
+    int GetBestSpotToGetAwayFromCat()
+    {
+        int bestSpot = 0;
+        float bestValue = Vector3.Distance(targets[0].position, aroundCats[0].transform.position) - Vector3.Distance(targets[0].position, transform.position);
 
-		if (Vector3.SqrMagnitude(targetPositions [currentPosition].transform.position - transform.position) <= 0.02)
-		{
-			currentPosition = (currentPosition + 1) % targetPositions.Count;
-		}
+        for (int i = 1; i < targets.Count; i++)
+        {
+			float newValue = Vector3.Distance(targets[i].position, aroundCats[0].transform.position) - Vector3.Distance(targets[i].position, transform.position);
+			if (newValue > bestValue)
+			{
+				bestSpot = i;
+				bestValue = newValue;
+			}
+        }
 
-		transform.position = Vector3.Lerp (transform.position, targetPositions [currentPosition].transform.position, (Mathf.Sin(speed * Time.time) + 0.01f) / 10.0f);
-	}*/
+        return bestSpot;
+    }
 
 }
 
 public enum MouseIA
 {
-    NORMAL, SUICIDE, CIRCLE
+    NORMAL, SUICIDE, CIRCLE, SMART
 }
 
 public enum MouseType
