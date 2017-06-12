@@ -24,7 +24,6 @@ public class Mission1 : MissionBase
 			case 2:
 				if(CheckTooltip2())
 	            {
-                    SaveManager.SaveMission(1);
 	                AutoFade.LoadLevel(9, .3f, .3f, Color.black);
                     SaveManager.Set("mission1", "1");
                 }
