@@ -33,7 +33,8 @@ public class MouseManager : MonoBehaviour {
 
 				// Get corresponding Mouse class and edit some variables to add randomness
 				Mouse newEnemy = mouseProfile.GetComponent<Mouse>();
-				newEnemy.targets.Shuffle();
+				if(newEnemy.mouseIA != MouseIA.SUICIDE)
+					newEnemy.targets.Shuffle();
 				newEnemy.transform.position = newEnemy.targets[0].transform.position;
 				newEnemy.Speed += Random.Range(-.5f, .5f);
 
