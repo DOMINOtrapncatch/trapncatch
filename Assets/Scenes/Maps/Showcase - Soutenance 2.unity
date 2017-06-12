@@ -2503,11 +2503,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 489304643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dde70d02b7a6c604bb4b0e8de2ee1680, type: 3}
+  m_Script: {fileID: 11500000, guid: 9beebc95bf5bb7d4dbe2d634fa46cac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageTooltip1: Attaquez la souris
-  messageTooltip2: Achever la souris
+  messageTooltip1: Utilisez le swap !
+  tooltip2: Tuez une dizaine de souris.
 --- !u!114 &489304645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10053,6 +10053,11 @@ Prefab:
       propertyPath: spells.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013526165502, guid: 369f248a6c9ef5645928457b6a0041e0,
+        type: 2}
+      propertyPath: attacks.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011005598378, guid: 369f248a6c9ef5645928457b6a0041e0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -10148,6 +10153,16 @@ Prefab:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013526165502, guid: 369f248a6c9ef5645928457b6a0041e0,
+        type: 2}
+      propertyPath: attacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1468328228}
+    - target: {fileID: 114000013526165502, guid: 369f248a6c9ef5645928457b6a0041e0,
+        type: 2}
+      propertyPath: attacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 1468328227}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 369f248a6c9ef5645928457b6a0041e0, type: 2}
   m_IsPrefabParent: 0
@@ -10173,7 +10188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movesettings:
-    chara_cat: {fileID: 0}
+    chara_cat: {fileID: 1468328220}
     forwardvelo: 12
     rotatevelo: 100
     jumpvelo: 13
@@ -10268,9 +10283,21 @@ MonoBehaviour:
   RecoveryTime: 0
   inputName: spell 1
   isActivable: 0
-  dashDuration: 2.5
-  dashPropulsion: 400
+  dashDuration: 1
+  dashPropulsion: 10
   particle: {fileID: 775915049}
+--- !u!114 &1468328227 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011254992468, guid: 369f248a6c9ef5645928457b6a0041e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1468328216}
+  m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
+--- !u!114 &1468328228 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011170992066, guid: 369f248a6c9ef5645928457b6a0041e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1468328216}
+  m_Script: {fileID: 11500000, guid: bc4bebf84725e8544a23ddf8601bc740, type: 3}
 --- !u!1 &1474186494 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100034, guid: 13bca45783c6c9d42829e858472b1750, type: 3}

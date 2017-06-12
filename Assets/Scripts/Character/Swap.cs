@@ -22,13 +22,17 @@ public class Swap : MonoBehaviour
     public List<string> keys;
     public HUDManager hud;
 
+    [HideInInspector]
+    public static bool HasSwapped { get; private set; }
+
     void Start()
     {
         if (cameras.Count == 0 || cameras.Count != keys.Count)
             throw new Exception("Need at least one camera!");
 
         // Starting by only activating the first camera
-        SwapWith(0);        
+        SwapWith(0);
+        HasSwapped = false;    
     }
 
     void Update()
@@ -49,6 +53,7 @@ public class Swap : MonoBehaviour
             cats[i].GetComponent<Animator>().enabled = i == id;
         }
         hud.LoadPlayer(cats[id]);
+        HasSwapped = true;
     }
 
 }
