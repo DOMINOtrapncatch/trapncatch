@@ -9,7 +9,7 @@ public static class InputManager {
 	public static void Init(List<string> inputStrings)
 	{
 		foreach(string inputString in inputStrings)
-			keys.Add(new RealKey(inputString, "a")); // TODO -> Load from save function (who gets form a save or default value)
+			keys.Add(new RealKey(inputString, SaveManager.Get(inputString))); // TODO -> Load from save function (who gets form a save or default value)
 	}
 
 	public static RealKey Get(int inputID)

@@ -64,7 +64,10 @@ public class ChooseMission : MonoBehaviour
     // Load the selected mission
     public void LaunchMission()
     {
-		AutoFade.LoadLevel (missions[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
+        string mission = "mission" + (selectedMission - 1);
+
+        if (selectedMission == 0 || SaveManager.Get(mission) == "1")
+	        AutoFade.LoadLevel (missions[selectedMission].id, .3f, .3f, Palette.DARK_PURPLE);
     }
 
     // Load the selected mission
