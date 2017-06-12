@@ -3176,7 +3176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012096350404, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000010554768854, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5531,7 +5531,7 @@ MonoBehaviour:
   inputName: spell 1
   isActivable: 0
   particle: {fileID: 618984230}
-  stopSpeed: 0
+  lifeAmount: 20
 --- !u!114 &1352487581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5568,7 +5568,8 @@ MonoBehaviour:
   RecoveryTime: 0
   inputName: spell 4
   isActivable: 0
-  particle: {fileID: 198000010618253836, guid: 900ab297a5c4344cba7ed3a4f125067d, type: 2}
+  gravityParticle: {fileID: 1000011063716228, guid: 900ab297a5c4344cba7ed3a4f125067d,
+    type: 2}
 --- !u!114 &1352487583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5586,7 +5587,7 @@ MonoBehaviour:
   RecoveryTime: 0
   inputName: spell 3
   isActivable: 0
-  particle: {fileID: 198000010662081146, guid: d948f9143f9954709b492690a795dcb4, type: 2}
+  particle: {fileID: 1000013764141868, guid: d948f9143f9954709b492690a795dcb4, type: 2}
   lifeDamage: 30
 --- !u!114 &1352487584
 MonoBehaviour:
@@ -6144,7 +6145,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013078540184, guid: c6b1c61aa18eb4a7e8ab2be29b5d1c63, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6b1c61aa18eb4a7e8ab2be29b5d1c63, type: 2}
@@ -7955,7 +7956,7 @@ GameObject:
   - 137: {fileID: 2021981344}
   m_Layer: 0
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

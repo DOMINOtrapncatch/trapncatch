@@ -5,8 +5,11 @@ using System.Collections.Generic;
 
 public class Gravity : Spell
 {
-    [Header("Spell data")]
-    public ParticleSystem particle;
+	[Header("Spell data")]
+	public GameObject gravityParticle;
+	List<GameObject> nearEnemySave;
+	List<float> speedEnemy;
+	float restraint = 10; //secondes
 
     public override void Activate()
     {
@@ -15,28 +18,37 @@ public class Gravity : Spell
 
     IEnumerator gravity()
     {
-        if (!particle.isPlaying)
-            particle.Play();
+		Dictionary<Character, float> nearEnemySave = new Dictionary<Character, float>();
 
-        List<float> speedEnemy = new List<float>();
-        List<GameObject> AroundEnemy = cat.aroundEnemy;
+		// Start particle effect
+		GameObject particleInit = (GameObject)Instantiate(gravityParticle, cat.transform.position, gravityParticle.transform.rotation);
 
-        foreach(GameObject enemy in AroundEnemy)
-        {
-            Character CatEnemy = (Character) enemy.GetComponent(typeof(Character));
-            speedEnemy.Add(CatEnemy.Speed);
-            CatEnemy.Speed = 0;
-        }
+		if (cat.aroundEnemy.Count > 0)
+		{
+			//freez
+			foreach (GameObject enemy in cat.aroundEnemy)
+			{
+				// Get character
+				Character chara = enemy.GetComponent<Character>();
 
-        yield return new WaitForSeconds(4.0f);
+				if (enemy != null && !nearEnemySave.ContainsKey(chara))
+				{
+					// Save its data
+					nearEnemySave.Add(chara, chara.Speed);
 
-        particle.Stop();
+					// Set its speed
+					chara.Speed = 0;
+				}
+			}
+		}
 
-        for(int i = 0; i< AroundEnemy.Count; i++)
-        {
-            AroundEnemy[i].GetComponent<Character>().Speed = speedEnemy[i];
-        }
-        speedEnemy.Clear();
-        AroundEnemy.Clear();
+		yield return new WaitForSeconds(restraint);
+
+		//unfreez
+		foreach(KeyValuePair<Character, float> enemy in nearEnemySave)
+			enemy.Key.Speed = enemy.Value;
+
+		// End particle effect
+		Destroy(particleInit, 0.1f);
     }
 }
