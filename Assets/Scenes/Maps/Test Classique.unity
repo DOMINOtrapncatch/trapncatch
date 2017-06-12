@@ -4170,7 +4170,7 @@ MonoBehaviour:
   manaCost: 0
   MaxRecoveryTime: 60
   RecoveryTime: 0
-  inputName: spell 2
+  inputName: spell 1
   foodParticle: {fileID: 1000011867518726, guid: 8359a0525b82aed41a0e4da2157206a5,
     type: 2}
 --- !u!114 &826495232
@@ -4188,7 +4188,7 @@ MonoBehaviour:
   manaCost: 5
   MaxRecoveryTime: 60
   RecoveryTime: 0
-  inputName: spell 1
+  inputName: spell 2
   damage: 20
   particle: {fileID: 1000011941651444, guid: 38b6cbfb2ec48494daaf1407594f7682, type: 2}
 --- !u!114 &826495233
@@ -8661,7 +8661,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1416054671}
   m_LocalRotation: {x: -0, y: -0.42154902, z: -0, w: -0.90680563}
-  m_LocalPosition: {x: -2.11, y: 0, z: 2.5}
+  m_LocalPosition: {x: -1.31, y: 0, z: 4.75}
   m_LocalScale: {x: 0.120000005, y: 0.12, z: 0.120000005}
   m_LocalEulerAnglesHint: {x: 0, y: 409.622, z: 0}
   m_Children:
