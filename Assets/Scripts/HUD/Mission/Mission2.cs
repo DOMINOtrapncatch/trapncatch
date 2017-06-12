@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -12,6 +12,7 @@ public class Mission2 : MissionBase
 			case 1:
 				if(CheckTooltip1())
 		        {
+                    SaveManager.SaveMission(2);
 					AutoFade.LoadLevel(9, .3f, .3f, Color.black);
 		        }
 				break;
