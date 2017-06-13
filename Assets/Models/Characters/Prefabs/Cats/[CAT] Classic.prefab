@@ -630,7 +630,6 @@ GameObject:
   - 114: {fileID: 114000013304142838}
   - 114: {fileID: 114000011374497034}
   - 114: {fileID: 114000011833746364}
-  - 114: {fileID: 114000013039891730}
   - 65: {fileID: 65000013320725236}
   - 114: {fileID: 114000013767733082}
   - 114: {fileID: 114000011991879306}
@@ -2499,7 +2498,8 @@ MonoBehaviour:
   Mana: 0
   ManaRecoveryTime: 0
   icon: {fileID: 0}
-  attacks: []
+  attacks:
+  - {fileID: 114000011833746364}
   spells:
   - {fileID: 114000011833746364}
   - {fileID: 114000013767733082}
@@ -2533,7 +2533,7 @@ MonoBehaviour:
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
-  inputName: attack
+  inputName: attaque
   isActivable: 0
 --- !u!114 &114000011991879306
 MonoBehaviour:
@@ -2554,23 +2554,6 @@ MonoBehaviour:
   isActivable: 0
   foodParticle: {fileID: 1000011867518726, guid: 8359a0525b82aed41a0e4da2157206a5,
     type: 2}
---- !u!114 &114000013039891730
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012333192972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  manaCost: 80
-  MaxRecoveryTime: 8
-  RecoveryTime: 100
-  inputName: attack_special
-  isActivable: 0
 --- !u!114 &114000013073550602
 MonoBehaviour:
   m_ObjectHideFlags: 1
