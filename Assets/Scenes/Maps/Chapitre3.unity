@@ -1694,9 +1694,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011374497034, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: spells.Array.data[0]
+      value: 
+      objectReference: {fileID: 220482788}
+    - target: {fileID: 114000011374497034, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: spells.Array.data[1]
+      value: 
+      objectReference: {fileID: 220482787}
+    - target: {fileID: 114000011374497034, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: spells.Array.data[2]
+      value: 
+      objectReference: {fileID: 1817596870}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 454b9aeedd4c43a4f847de164f934514, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &220482787 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011991879306, guid: 454b9aeedd4c43a4f847de164f934514,
+    type: 2}
+  m_PrefabInternal: {fileID: 220482786}
+  m_Script: {fileID: 11500000, guid: e3e83d6e2cd8dfb429787b509e817c68, type: 3}
+--- !u!114 &220482788 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013767733082, guid: 454b9aeedd4c43a4f847de164f934514,
+    type: 2}
+  m_PrefabInternal: {fileID: 220482786}
+  m_Script: {fileID: 11500000, guid: 3e7b920b800380f489b08c30c8a9831d, type: 3}
 --- !u!1 &256609874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,7 +3894,7 @@ GameObject:
   - 114: {fileID: 563615857}
   - 114: {fileID: 563615856}
   m_Layer: 5
-  m_Name: AdminCanvas (1)
+  m_Name: AdminCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12834,6 +12861,23 @@ MonoBehaviour:
   lookSmooth: 0.02
   offSetFromTarget: {x: 0, y: 2, z: -4}
   camrot_x: 10
+--- !u!114 &1817596870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817596868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e516b93cd641a4b4d8c35a1157b93a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 4cf5cfee9dae4496681b260cc14bb439, type: 3}
+  manaCost: 20
+  MaxRecoveryTime: 20
+  RecoveryTime: 0
+  inputName: spell 3
+  isActivable: 0
 --- !u!114 &1817596876 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000011374497034, guid: 454b9aeedd4c43a4f847de164f934514,
