@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
+using UnityEngine.UI;
 
-public class MHealSpell : MSpell {
+public class MWolverine : MSpell
+{
+    [Header("Spell data")]
 
-	[Header("Spell Data")]
-
-	public ParticleSystem particle;
+    public ParticleSystem particle;
 	[Range(0, 100)]
 	public int lifeAmount = 20;
 
-	public override void Activate()
-	{
+    public override void Activate()
+    {
         if (!isLocalPlayer)
             return;
-		StartCoroutine("LifeUp");
+        StartCoroutine("wolverine");
 	}
 
 	public override bool CanUse()
@@ -25,20 +25,17 @@ public class MHealSpell : MSpell {
 			return base.CanUse();
 	}
 
-	private IEnumerator LifeUp()
-	{
+    IEnumerator wolverine()
+    {
 		if (!particle.isPlaying)
 			particle.Play();
-		
-		for (int i = 0; i < lifeAmount; i++)
+
+		for (int i = 0; i < lifeAmount && cat.Life < cat.maxLife; i++)
 		{
-			if (cat.Life + 1 > cat.maxLife)
-				break;
-			
-			cat.Life += 1;
+			cat.Heal(1);
 			yield return new WaitForSeconds(0.2f);
 		}
 
 		particle.Stop();
-	}
+    }
 }

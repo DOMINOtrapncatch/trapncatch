@@ -12,6 +12,8 @@ public class MRollbackSpell : MSpell {
 
 	public override void Activate()
 	{
+        if (!isLocalPlayer)
+            return;
 		StartCoroutine("Rollback");
 	}
 

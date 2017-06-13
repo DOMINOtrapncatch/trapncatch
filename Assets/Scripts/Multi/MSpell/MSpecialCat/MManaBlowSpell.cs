@@ -12,6 +12,8 @@ public class MManaBlowSpell : MSpell
 
 	public override void Activate()
 	{
+        if (!isLocalPlayer)
+            return;
 		GameObject manaBlowParticleInstance = (GameObject)Instantiate(manaBlowParticlePrefab, cat.transform.position, Quaternion.identity);
         NetworkServer.Spawn(manaBlowParticleInstance);
 

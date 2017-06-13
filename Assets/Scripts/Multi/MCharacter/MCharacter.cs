@@ -39,7 +39,17 @@ abstract public class MCharacter : NetworkBehaviour
 		return newLife > 0;
 	}
 
-	public void Destroy()
+    public void Heal(int heal)
+    {
+        float newLife = Life + heal;
+
+        if (newLife >= maxLife)
+            Life = maxLife;
+        else
+            Life = newLife;
+    }
+
+    public void Destroy()
 	{
 		Destroy(this.gameObject);
 	}

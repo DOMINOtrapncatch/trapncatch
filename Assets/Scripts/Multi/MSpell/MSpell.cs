@@ -32,6 +32,9 @@ public abstract class MSpell : NetworkBehaviour {
 
     void Start()
     {
+        if (!isServer)
+            return;
+
         cat = GetComponent<MCat>();
 
         InvokeRepeating("UpdateEverySecond", 0, 1.0f);
