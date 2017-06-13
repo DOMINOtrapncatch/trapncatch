@@ -5,33 +5,33 @@ using System;
 public class NightVision : Spell {
     
     //askip etat passif
-    public GameObject vision;
-    public int hauteur = 8;
-    public float delay = 5.0f;
-    public Light mainLight;
+    //public GameObject vision;
+    //public int hauteur = 8;
+    //public float delay = 5.0f;
+    //public Light mainLight;
 
-    private Light spotlight;
+    //private Light spotlight;
 
-    void Start()
+    /*void Start()
     {
-        spotlight = vision.GetComponent<Light>();
+        //spotlight = vision.GetComponent<Light>();
         //mainLight = GetComponent<Light>();
-    }
+    }*/
 
     
 
     public override void Activate()
     {
 
-        StartCoroutine("LightsOff");
+        /*StartCoroutine("LightsOff");
 
         if (mainLight.enabled)
             return;
 
-        SpotLight();
+        SpotLight();*/
     }
 
-    public void SpotLight()
+    /*public void SpotLight()
     {
         float catX = cat.transform.position.x;
         float catY = cat.transform.position.y + hauteur;
@@ -56,5 +56,5 @@ public class NightVision : Spell {
         Destroy(spotlight);
 
         mainLight.enabled = true;
-    }
+    }*/
 }

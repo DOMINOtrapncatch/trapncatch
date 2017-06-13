@@ -2253,7 +2253,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014126287992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: bee2abc80dc2e476d881493851ebef35, type: 3}
   m_Controller: {fileID: 9100000, guid: a4f70ca032afa47d8a765750b64d2541, type: 2}
   m_CullingMode: 1
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014126287992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66b7984d3ce5841adadb59c0fdd7e895, type: 3}
   m_Name: 
@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014126287992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0731250611ffb34894a180eba28f527, type: 3}
   m_Name: 
@@ -2414,7 +2414,7 @@ MonoBehaviour:
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
-  inputName: attack
+  inputName: attaque
   isActivable: 0
 --- !u!114 &114000014043176790
 MonoBehaviour:
