@@ -1605,7 +1605,7 @@ MonoBehaviour:
   - {fileID: 835699199}
   enemyCap: 3
   enemySpawnLimit: 1000
-  enemySpawnRate: 20
+  enemySpawnRate: 50
 --- !u!4 &183546738
 Transform:
   m_ObjectHideFlags: 0
@@ -1671,6 +1671,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 454b9aeedd4c43a4f847de164f934514, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &220482787 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012801163400, guid: 454b9aeedd4c43a4f847de164f934514,
+    type: 2}
+  m_PrefabInternal: {fileID: 220482786}
 --- !u!1 &256609874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4289,6 +4294,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 369f248a6c9ef5645928457b6a0041e0, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &587585689 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012828662114, guid: 369f248a6c9ef5645928457b6a0041e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 587585688}
 --- !u!1 &594446932
 GameObject:
   m_ObjectHideFlags: 0
@@ -8796,7 +8806,7 @@ Prefab:
         type: 2}
       propertyPath: targets.Array.data[1]
       value: 
-      objectReference: {fileID: 1688550752}
+      objectReference: {fileID: 1620899758}
     - target: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
         type: 2}
       propertyPath: targets.Array.data[2]
@@ -10966,7 +10976,7 @@ Prefab:
         type: 2}
       propertyPath: targets.Array.data[1]
       value: 
-      objectReference: {fileID: 1688550752}
+      objectReference: {fileID: 587585689}
     - target: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
         type: 2}
       propertyPath: targets.Array.data[2]
@@ -11613,6 +11623,17 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52920a57b56a44c2ab5a0b32d2d18aa7, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1620899757 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000014043176790, guid: 52920a57b56a44c2ab5a0b32d2d18aa7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1620899756}
+  m_Script: {fileID: 11500000, guid: 58005c8f0ee8ab840be82b17c21a62ba, type: 3}
+--- !u!4 &1620899758 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013807101978, guid: 52920a57b56a44c2ab5a0b32d2d18aa7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1620899756}
 --- !u!1 &1660783994
 GameObject:
   m_ObjectHideFlags: 0
@@ -11755,6 +11776,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageTooltip1: Effectuez un swap
   tooltip2: Tuez une dizaine de souris.
+  allied:
+  - {fileID: 1817596876}
+  - {fileID: 580641067}
+  ennemies:
+  - {fileID: 1620899757}
+  - {fileID: 1688550751}
 --- !u!1001 &1688550750
 Prefab:
   m_ObjectHideFlags: 0
@@ -11797,6 +11824,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c2cd1bd8530cb24caeacd02de180bde, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1688550751 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013744346312, guid: 5c2cd1bd8530cb24caeacd02de180bde,
+    type: 2}
+  m_PrefabInternal: {fileID: 1688550750}
+  m_Script: {fileID: 11500000, guid: 168e9afcc6d7b40d5ac81f17d2ab7fbc, type: 3}
 --- !u!4 &1688550752 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012384116334, guid: 5c2cd1bd8530cb24caeacd02de180bde,
@@ -13648,7 +13681,7 @@ Prefab:
         type: 2}
       propertyPath: targets.Array.data[1]
       value: 
-      objectReference: {fileID: 1688550752}
+      objectReference: {fileID: 220482787}
     - target: {fileID: 114000011431135900, guid: 06963c92fbb1f1e4db99cd7c787a42ff,
         type: 2}
       propertyPath: targets.Array.data[2]
