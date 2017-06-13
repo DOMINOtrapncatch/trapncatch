@@ -963,15 +963,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - Waouh !
-  - "C'\xE9tait incroyable, comment avez-vous fais cela ?"
-  - "*flatt\xE9* Eh bien, \xE7a s'appelle une \"capacit\xE9\"."
-  - "Mais je ne peux l'apprendre \xE0 un chat qui n'appartient pas aux gang des chats
-    de goutti\xE8res."
-  - Comment faire pour les rejoindre?
-  - '*Une souris apparait*'
-  - "Mmmh, si tu arrives a me rapporter cette souris, je consid\xE8rerai ta demande."
-  - Fais attention, c'est une souris agressive.
+  - (Puissant) Je veux ma revanche!
+  - "(Classique) Mais vous avez d\xE9j\xE0 perdu!"
+  - "(Rapide) Ce n'est pas grave, nous pouvons les vaincre \xE0 nouveau!"
+  - "(Magique) Quel sera le d\xE9fi cette fois-ci?"
+  - (Rapide) Pourquoi pas une course?
+  - (Puissant) Parfait! Je ne perdrais pas!
   dialogueImages:
   - {fileID: 21300000, guid: 2cdd342e92c7fb747ba17ef22b84ae9d, type: 3}
   sceneId: 16
