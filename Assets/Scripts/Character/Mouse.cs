@@ -101,32 +101,40 @@ public class Mouse : Character
 
         while (true)
 		{
-            if(hideIndex >= 0)
+            try
             {
-                if ((targets[hideIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
-				{
-					PathRequestManager.RequestPath(new PathRequest(transform.position, targets[hideIndex].position, OnPathFound));
-					targetPosOld = targets[hideIndex].position;
-				}
-                else if(aroundCats.Count == 0)
+                if (hideIndex >= 0)
                 {
-					targetIndex = (targetIndex + 1) % targets.Count;
-                    if(targetIndex == hideIndex)
+                    if ((targets[hideIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
+                    {
+                        PathRequestManager.RequestPath(new PathRequest(transform.position, targets[hideIndex].position, OnPathFound));
+                        targetPosOld = targets[hideIndex].position;
+                    }
+                    else if (aroundCats.Count == 0)
+                    {
                         targetIndex = (targetIndex + 1) % targets.Count;
-					hideIndex = -1;
+                        if (targetIndex == hideIndex)
+                            targetIndex = (targetIndex + 1) % targets.Count;
+                        hideIndex = -1;
+                    }
+                    else
+                    {
+                        hideIndex = GetBestSpotToGetAwayFromCat();
+                    }
                 }
                 else
                 {
-                    hideIndex = GetBestSpotToGetAwayFromCat();
+                    if ((targets[targetIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
+                    {
+                        PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
+                        targetPosOld = targets[targetIndex].position;
+                    }
                 }
             }
-            else
-			{
-				if ((targets[targetIndex].position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
-				{
-					PathRequestManager.RequestPath(new PathRequest(transform.position, targets[targetIndex].position, OnPathFound));
-					targetPosOld = targets[targetIndex].position;
-				}
+
+            catch
+            {
+                this.Destroy();
             }
 
 			yield return new WaitForSeconds(minPathUpdateTime);

@@ -59,6 +59,9 @@ public class Cat : Character
 
     MouseManager mouseManager;
 
+    [HideInInspector]
+    public bool Dead = false;
+
     void Update()
     {
         CheckSpells();
@@ -70,8 +73,8 @@ public class Cat : Character
     {
         bool res = base.Damage(damage);
 
-        if(!res)
-            AutoFade.LoadLevel(14, .3f, .3f, Color.black);
+        if (!res)
+            Dead = true;
         
         return res;
  	}
