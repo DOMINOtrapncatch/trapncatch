@@ -19,17 +19,16 @@ public class Swap : MonoBehaviour
     public List<Camera> cameras;
 
     //public List<KeyCode> keys;
-    public List<string> keys;
+    public string key;
     public HUDManager hud;
 
     [HideInInspector]
     public static bool HasSwapped { get; private set; }
 
+    static int i = 0;
+
     void Start()
     {
-        if (cameras.Count == 0 || cameras.Count != keys.Count)
-            throw new Exception("Need at least one camera!");
-
         // Starting by only activating the first camera
         SwapWith(0);
         HasSwapped = false;    
@@ -37,10 +36,10 @@ public class Swap : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < keys.Count; ++i)
+        if (Input.GetButtonDown(InputManager.Get(key)))
         {
-            if (Input.GetButtonDown(keys[i]))
-                SwapWith(i);
+            i = (i + 1) % cameras.Count;
+            SwapWith(i);
         }
     }
 
