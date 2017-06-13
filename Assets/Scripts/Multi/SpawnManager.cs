@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 using System.Collections;
 
-public class SpawnManager : MonoBehaviour {
+public class SpawnManager : NetworkBehaviour {
 
     public GameObject cat;
     public GameObject[] cat_list;

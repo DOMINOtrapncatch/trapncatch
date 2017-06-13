@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using System.Collections.Generic;
 
-public class LoadPrefab : MonoBehaviour {
-
+public class LoadPrefab : NetworkBehaviour {
+    /*
     public Object[] cat_prefabs;
     public NetworkManager netMan;
     private int prefab = 1;
@@ -27,8 +28,27 @@ public class LoadPrefab : MonoBehaviour {
             
         }   
     }
-
     
-
+    private Dictionary<int, int> currentPlayer;
     
+    public override GameObject OnLobbyServerCreateLobbyPlayer(NetworkConnection conn, short playerControllerId)
+    {
+        if (!currentPlayer.ContainsKey(conn.connectionId))
+            currentPlayer.Add(conn.connectionId, 0);
+        return base.OnLobbyServerCreateLobbyPlayer(conn, playerControllerId);
+    }
+
+    public void SetPlayerCatLobby(NetworkConnection conn)
+    {
+        if (currentPlayer.ContainsKey(conn.connectionId))
+            currentPlayer[conn.connectionId] = PlayerPrefs.GetInt("ChoosenCat");
+    }
+    public override GameObject OnLobbyServerCreateGamePlayer(NetworkConnection conn, short playerControllerId)
+    {
+        int index = currentPlayer[conn.connectionId];
+        GameObject player = (GameObject) GameObject.Instantiate(spawnPrefabs[index], startPositions[conn.connectionId].position,Quaternion.identity);
+        NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+        return player;
+    }*/
+
 }
