@@ -884,15 +884,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - Waouh !
-  - "C'\xE9tait incroyable, comment avez-vous fais cela ?"
-  - "*flatt\xE9* Eh bien, \xE7a s'appelle une \"capacit\xE9\"."
-  - "Mais je ne peux l'apprendre \xE0 un chat qui n'appartient pas aux gang des chats
-    de goutti\xE8res."
-  - Comment faire pour les rejoindre?
-  - '*Une souris apparait*'
-  - "Mmmh, si tu arrives a me rapporter cette souris, je consid\xE8rerai ta demande."
-  - Fais attention, c'est une souris agressive.
+  - Ah vous chassez la souris?
+  - Vous vous y prenez mal!
+  - Vous pensez faire mieux que nous?
+  - "Bien s\xFBr! Nous sommes largement meilleur!"
+  - "Dans ce cas, nous verrons quelle \xE9quipe attrape le plus de souris."
+  - "Donc tu fais \xE9quipe avec moi, fais de ton mieux!"
   dialogueImages:
   - {fileID: 21300000, guid: 707d6a34f5061b443b1210ca58faad0e, type: 3}
   - {fileID: 21300000, guid: 707d6a34f5061b443b1210ca58faad0e, type: 3}
@@ -900,7 +897,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 707d6a34f5061b443b1210ca58faad0e, type: 3}
   - {fileID: 21300000, guid: 707d6a34f5061b443b1210ca58faad0e, type: 3}
   - {fileID: 21300000, guid: 37326d17a679b1845bfc3ceeed5f0036, type: 3}
-  sceneId: 14
+  sceneId: 15
 --- !u!114 &1213089601
 MonoBehaviour:
   m_ObjectHideFlags: 0
