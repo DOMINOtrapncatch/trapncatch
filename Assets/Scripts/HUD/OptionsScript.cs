@@ -42,7 +42,7 @@ public class OptionsScript : BasicMenu {
 		{
 			if (Input.anyKeyDown && Input.inputString != "")
 			{
-				keyToEdit.realKey.value = Input.inputString == " " ? "Space" : (Input.inputString == "\t" ? "Tab" : Input.inputString.ToUpper());
+				keyToEdit.realKey.value = Input.inputString == " " ? "Space" : (Input.inputString == "\t" ? "Tab" : Input.inputString.ToLower());
 				break;
 			}
 			else if(Input.GetMouseButtonDown(0))

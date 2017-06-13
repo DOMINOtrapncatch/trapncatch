@@ -87,7 +87,7 @@ public class Chara_Selection : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             PlayerPrefs.SetInt("ChoosenCat", cats_i);
-            AutoFade.LoadLevel(2, .3f, .3f, Palette.DARK_PURPLE);//9
+            AutoFade.LoadLevel(19, .3f, .3f, Palette.DARK_PURPLE);//9
         }
 
     }
