@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e83d6e2cd8dfb429787b509e817c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 36e0646c8aea5479fad47d8656b26878, type: 3}
   manaCost: 20
   MaxRecoveryTime: 60
   RecoveryTime: 0
@@ -2604,7 +2604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584f4d5eb7186b444a5e255c93760141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 4d9b91aaf7de2431a803339fa06ff84f, type: 3}
   manaCost: 30
   MaxRecoveryTime: 60
   RecoveryTime: 0
@@ -2625,7 +2625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7b920b800380f489b08c30c8a9831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 2dc9d07c666454802ac577ff75e83261, type: 3}
   manaCost: 5
   MaxRecoveryTime: 60
   RecoveryTime: 0
