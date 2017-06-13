@@ -13,6 +13,6 @@ public class WoolBall : Spell {
     {
         //either wait 10secondes 
         //or clickmouse 0(or other key) up to 15 times
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 }
