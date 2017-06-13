@@ -45,4 +45,34 @@ public class AdminBoxScript : MonoBehaviour
     {
         AutoFade.LoadLevel(id, .3f, .3f, Palette.WHITE);
     }
+
+    public void CompleteMission0()
+    {
+        SaveManager.Set("mission0", "1");
+    }
+
+    public void CompleteMission1()
+    {
+        SaveManager.Set("mission1", "1");
+    }
+
+    public void CompleteMission2()
+    {
+        SaveManager.Set("mission2", "1");
+    }
+
+    public void CompleteMission3()
+    {
+        SaveManager.Set("mission3", "1");
+    }
+
+    public void CompleteMission4()
+    {
+        SaveManager.Set("mission4", "1");
+    }
+
+    public void CompleteMission5()
+    {
+        SaveManager.Set("mission5", "1");
+    }
 }
