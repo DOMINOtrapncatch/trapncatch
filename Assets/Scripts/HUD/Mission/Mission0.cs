@@ -17,6 +17,7 @@ public class Mission0 : MissionBase
 		switch(currentTooltip)
 		{
 			case 1:
+				myHUD.player.Attack = 0;
 				if (CheckTooltip1(true))
 				{
 					myHUD.SetObjective(messageTooltip2);

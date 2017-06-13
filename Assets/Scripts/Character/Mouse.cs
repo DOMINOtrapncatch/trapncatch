@@ -207,9 +207,7 @@ public class Mouse : Character
                 // Go to next point if there ane no ennemies around
                 if(aroundCats.Count == 0)
 				{
-                    print(targetIndex);
 					targetIndex = (targetIndex + 1) % targets.Count;
-                    print(" => " + targetIndex);
                     hideIndex = -1;
                 }
                 else if(!followingPath && aroundCats.Count > 0)

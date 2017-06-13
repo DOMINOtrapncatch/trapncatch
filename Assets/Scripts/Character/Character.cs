@@ -42,8 +42,10 @@ abstract public class Character : MonoBehaviour
 	{
 		float newLife = Life + heal;
 
-		if (newLife > maxLife)
+		if (newLife >= maxLife)
 			Life = maxLife;
+		else
+			Life = newLife;
 	}
 
 	public void Destroy()
