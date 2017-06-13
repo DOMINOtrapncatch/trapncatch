@@ -39,12 +39,11 @@ public class MouseManager : MonoBehaviour {
 				newEnemy.Speed += Random.Range(-.5f, .5f);
 
                 // Create the nex object, instanciate it into the world, add it to the enemies list and set it active
-                if (newEnemy.mouseIA == MouseIA.SUICIDE && newEnemy.targets[1] != null)
+                if ((newEnemy.mouseIA == MouseIA.SUICIDE && newEnemy.targets[1] != null) || newEnemy.mouseIA != MouseIA.SUICIDE)
                 {
                     GameObject newEnemyObject = (GameObject)Instantiate(mouseProfile, newEnemy.transform.position, Quaternion.identity);
                     enemies.Add(newEnemyObject);
                     newEnemyObject.SetActive(true);
-
 
                     // increment sme counters
                     enemySpawnCount++;

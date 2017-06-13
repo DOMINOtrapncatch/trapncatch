@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿﻿﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -241,7 +241,7 @@ public class Mouse : Character
 
     public void TryExplodeOn(Cat enemy)
     {
-        if (mouseIA == MouseIA.SUICIDE && enemy != null)
+        if ((mouseIA == MouseIA.SUICIDE && enemy != null) || mouseIA != MouseIA.SUICIDE)
         {
             enemy.StartCoroutine(ExplodeOn(enemy));
             enemy.KillEnemy(gameObject);
