@@ -33,13 +33,13 @@ public class Mission2 : MissionBase
             Mouse mouse = enemy.GetComponent<Mouse>();
             if (mouse != null)
             {
-                if (mouse.mouseType == MouseType.LVL2)
+                if (mouse.mouseIA == MouseIA.SMART)
                 {
                     stop = true;
                     break;
                 }
             }
         }
-        return !stop;
+        return stop;
     }
 }
