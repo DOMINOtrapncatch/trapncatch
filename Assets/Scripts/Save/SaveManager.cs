@@ -18,7 +18,7 @@ public class SaveManager : MonoBehaviour
     private void CreateSave()
     {
         string missions = "mission0=0\nmission1=0\nmission2=0\nmission3=0\nmission4=0\nmission5=0\n";
-        string spells = "spell1=&\nspell2=é\nspell3=\"\nspell4='\nattaque=MOUSE 0\nswap=MOUSE 1\n";
+        string spells = "spell 1=&\nspell 2=é\nspell 3=\"\nspell 4='\nattaque=MOUSE 0\nswap=MOUSE 1\n";
         string movements = "up=Z\nleft=Q\nright=D\ndown=S\nvolume=0.5\njump=Space";
 
         if (!File.Exists(file))
