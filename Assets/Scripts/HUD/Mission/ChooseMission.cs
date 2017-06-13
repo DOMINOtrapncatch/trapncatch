@@ -36,6 +36,11 @@ public class ChooseMission : MonoBehaviour
             Back();
     }
 
+    public static void Success()
+    {
+        AutoFade.LoadLevel(7, .3f, .3f, Color.black);
+    }
+
     // For the solo menu (1 == right button, -1 == left button)
     public void SelectMission(int direction)
     {

@@ -9,8 +9,18 @@ public static class InputManager {
 	public static void Init(List<string> inputStrings)
 	{
 		foreach(string inputString in inputStrings)
-			keys.Add(new RealKey(inputString, SaveManager.Get(inputString)));
+        {
+            keys.Add(new RealKey(inputString, SaveManager.Get(inputString)));
+        }
 	}
+
+    public static string Get(string inputString)
+	{
+		if (keys.Count == 0)
+			Init(InitInputManager.inputValues);
+
+		return keys.Find(obj => obj.input == inputString).value;
+    }
 
 	public static RealKey Get(int inputID)
 	{

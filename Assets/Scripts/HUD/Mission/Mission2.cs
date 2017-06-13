@@ -14,16 +14,8 @@ public class Mission2 : MissionBase
             case 1:
                 if (CheckTooltip1())
                 {
-                    AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+                    ChooseMission.Success();
                     SaveManager.Set("mission2", "1");
-                }
-                break;
-
-            case 2:
-                if (!CheckTooltip1())
-                {
-                    myHUD.SetObjective("Achever la souris intelligente");
-                    currentTooltip++;
                 }
                 break;
         }
@@ -48,6 +40,6 @@ public class Mission2 : MissionBase
                 }
             }
         }
-        return stop;
+        return !stop;
     }
 }

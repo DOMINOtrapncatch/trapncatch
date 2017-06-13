@@ -12864,7 +12864,7 @@ MonoBehaviour:
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
-  inputName: attack
+  inputName: attaque
   isActivable: 0
 --- !u!114 &1837774421
 MonoBehaviour:
@@ -12887,7 +12887,8 @@ MonoBehaviour:
   Mana: 100
   ManaRecoveryTime: 0
   icon: {fileID: 0}
-  attacks: []
+  attacks:
+  - {fileID: 1837774420}
   spells: []
   nearColliders: []
   nearEnemy: []

@@ -98,14 +98,21 @@ public class Cat : Character
 
     public void AttackEnemy(int enemyIndex)
     {
-        // Get enemy
-        Character enemy = nearEnemy[enemyIndex].GetComponent<Character>();
-
-        // Remove life
-        if (attack > 0 && !enemy.Damage(attack))
+        try
         {
-            KillEnemy(enemyIndex);
+			// Get enemy
+			Character enemy = nearEnemy[enemyIndex].GetComponent<Character>();
+
+			// Remove life
+			if (attack > 0 && !enemy.Damage(attack))
+			{
+				KillEnemy(enemyIndex);
+			}
         }
+        catch
+        {
+            nearEnemy.RemoveAt(enemyIndex);
+        } 
     }
 
     public void KillEnemy(int enemyIndex, bool isNear = true)

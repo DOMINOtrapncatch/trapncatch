@@ -46,7 +46,7 @@ public abstract class Spell : MonoBehaviour {
     {
 		if(recoveryTime == maxRecoveryTime && cat.Mana - manaCost >= 0)
 		{
-			if(Input.GetButtonDown (inputName))
+            if(Input.GetButtonDown(InputManager.Get(inputName)))
 			{
 				RecoveryTime = 0;
 
