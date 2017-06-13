@@ -601,6 +601,11 @@ Prefab:
       value: 
       objectReference: {fileID: 114000010652371070, guid: 94deef354b81f7747bff43c15af6b6fb,
         type: 2}
+    - target: {fileID: 114000013859715432, guid: ad22afa647027344381e6faccc5f9395,
+        type: 2}
+      propertyPath: m_OfflineScene
+      value: Menu - Multi
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad22afa647027344381e6faccc5f9395, type: 2}
   m_IsPrefabParent: 0

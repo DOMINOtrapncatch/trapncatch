@@ -1964,7 +1964,7 @@ Prefab:
     - target: {fileID: 114000014008960240, guid: 527efe82f1967d74791216e26ddb84ec,
         type: 2}
       propertyPath: m_LocalPlayerAuthority
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013919593744, guid: 527efe82f1967d74791216e26ddb84ec,
         type: 2}
@@ -1976,6 +1976,11 @@ Prefab:
       propertyPath: m_Text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013919593744, guid: 527efe82f1967d74791216e26ddb84ec,
+        type: 2}
+      propertyPath: countdown
+      value: 
+      objectReference: {fileID: 1196932743}
     m_RemovedComponents:
     - {fileID: 114000012226734648, guid: 527efe82f1967d74791216e26ddb84ec, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 527efe82f1967d74791216e26ddb84ec, type: 2}
@@ -4290,6 +4295,12 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300104, guid: 13bca45783c6c9d42829e858472b1750, type: 3}
+--- !u!114 &1196932743 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011455311638, guid: 527efe82f1967d74791216e26ddb84ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 489217696}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1209618278
 Prefab:
   m_ObjectHideFlags: 0
@@ -6677,6 +6688,7 @@ MonoBehaviour:
   spells:
   - {fileID: 1711177969}
   - {fileID: 1711177971}
+  nearColliders: []
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
@@ -6689,6 +6701,7 @@ MonoBehaviour:
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
+  Dead: 0
 --- !u!23 &1711177967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6734,6 +6747,7 @@ MonoBehaviour:
   MaxRecoveryTime: 0
   RecoveryTime: 0
   inputName: attack
+  isActivable: 0
 --- !u!4 &1711177970
 Transform:
   m_ObjectHideFlags: 0
@@ -6767,6 +6781,7 @@ MonoBehaviour:
   MaxRecoveryTime: 0
   RecoveryTime: 0
   inputName: attack_special
+  isActivable: 0
   particle: {fileID: 198000010125173380, guid: 50e23844106e349be89c2709a08b2e4d, type: 2}
   lifeAmount: 20
 --- !u!1 &1724119947 stripped
