@@ -1103,6 +1103,7 @@ GameObject:
   - 114: {fileID: 114000013603962072}
   - 114: {fileID: 114000013744346312}
   - 114: {fileID: 114000013414845144}
+  - 114: {fileID: 114000010841416262}
   - 114: {fileID: 114000010236859720}
   - 114: {fileID: 114000010483008596}
   - 114: {fileID: 114000012578298456}
@@ -2686,6 +2687,23 @@ MonoBehaviour:
     type: 2}
   lifeCostAmount: 20
   manaLostAmount: 20
+--- !u!114 &114000010841416262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013570101858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd24aded58086e14785192f5ae6fb914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  manaCost: 0
+  MaxRecoveryTime: 0
+  RecoveryTime: 0
+  inputName: attack_special
+  isActivable: 0
 --- !u!114 &114000011940119084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2767,7 +2785,7 @@ MonoBehaviour:
   manaCost: 0
   MaxRecoveryTime: 0
   RecoveryTime: 0
-  inputName: attaque
+  inputName: attack
   isActivable: 0
 --- !u!114 &114000013603962072
 MonoBehaviour:
@@ -2803,6 +2821,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   attacks:
   - {fileID: 114000013414845144}
+  - {fileID: 114000010841416262}
   spells:
   - {fileID: 114000010236859720}
   - {fileID: 114000010483008596}
