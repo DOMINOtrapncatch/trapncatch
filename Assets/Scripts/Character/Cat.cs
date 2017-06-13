@@ -38,6 +38,8 @@ public class Cat : Character
     [HideInInspector]
     public int enemyKillCount = 0;
     [HideInInspector]
+    public int smartMouseKillCount = 0;
+    [HideInInspector]
     public int spellUseCount = 0;
 
     [Header("Pathfinding Settings")]
@@ -147,6 +149,9 @@ public class Cat : Character
         }
 
         // Increment number of enemies killes
+        if (enemyObject.GetComponent<Mouse>() != null && enemyObject.GetComponent<Mouse>().mouseIA == MouseIA.SMART)
+            ++smartMouseKillCount;
+
         ++enemyKillCount;
     }
 

@@ -26,20 +26,6 @@ public class Mission2 : MissionBase
      */
     bool CheckTooltip1()
     {
-        List<GameObject> ListCatEnemy = myHUD.player.nearEnemy;
-        bool stop = false;
-        foreach (GameObject enemy in ListCatEnemy)
-        {
-            Mouse mouse = enemy.GetComponent<Mouse>();
-            if (mouse != null)
-            {
-                if (mouse.mouseIA == MouseIA.SMART)
-                {
-                    stop = true;
-                    break;
-                }
-            }
-        }
-        return stop;
+        return myHUD.player.smartMouseKillCount >= 1;
     }
 }

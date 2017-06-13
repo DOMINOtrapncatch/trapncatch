@@ -835,8 +835,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 512, y: 384}
-  m_SizeDelta: {x: 1024, y: 768}
+  m_AnchoredPosition: {x: 236.5, y: 186.5}
+  m_SizeDelta: {x: 473, y: 373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &714758415
 MonoBehaviour:
@@ -2275,12 +2275,12 @@ MonoBehaviour:
     music: {fileID: 865544174}
     image: {fileID: 21300000, guid: 418849a7cc65fd34abf684cd9ad3629a, type: 3}
     color: {r: 0.7490196, g: 0.43921572, b: 0.10588236, a: 1}
-  - id: 16
+  - id: 22
     title: La seconde chance
     music: {fileID: 1293861808}
     image: {fileID: 21300000, guid: 2cdd342e92c7fb747ba17ef22b84ae9d, type: 3}
     color: {r: 0.23529413, g: 0.16862746, b: 0.3019608, a: 1}
-  - id: 15
+  - id: 23
     title: La revanche des souris
     music: {fileID: 1293861808}
     image: {fileID: 21300000, guid: d73ef00883045714c96ee8f64f46dd39, type: 3}
