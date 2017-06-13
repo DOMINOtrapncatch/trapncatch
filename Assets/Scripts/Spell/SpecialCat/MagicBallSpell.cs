@@ -30,6 +30,7 @@ public class MagicBallSpell : Spell
 		float startTime = Time.fixedTime;
 		List<Collider> enemies = new List<Collider>();
 
+		// Check for enemies
 		while (enemies.Count == 0 && Time.fixedTime - startTime < 2.5f)
 		{
 			Collider[] colliders = Physics.OverlapSphere(magicBallCollider.transform.position, magicBallCollider.radius);
@@ -38,33 +39,28 @@ public class MagicBallSpell : Spell
 				if (col.tag == "Enemy")
 					enemies.Add(col);
 
-			if(enemies.Count > 0)
-			{
-				magicBallParticle.Stop();
-				Destroy(magicBallParticle.gameObject);
-
-				GameObject magicBallExplode = (GameObject)Instantiate(magicBallExplodeParticule, magicBallParticle.transform.position, magicBallParticle.transform.rotation);
-				magicBallExplode.GetComponent<ParticleSystem>().Play();
-				Destroy(magicBallExplode, 1.0f);
-
-				foreach(Collider enemy in enemies)
-				{
-					Character charact = enemy.gameObject.GetComponentInParent<Character>();
-					if (!charact.Damage(damage))
-					{
-						charact.Destroy();
-						cat.enemyKillCount++;
-					}
-				}
-			}
+			if (enemies.Count > 0)
+				break;
 
 			yield return new WaitForSeconds(0.2f);
 		}
 
-		if(enemies.Count <= 0)
+		// Play explosion animation
+		magicBallParticle.Stop();
+		Destroy(magicBallParticle.gameObject);
+
+		GameObject magicBallExplode = (GameObject)Instantiate(magicBallExplodeParticule, magicBallParticle.transform.position, magicBallParticle.transform.rotation);
+		magicBallExplode.GetComponent<ParticleSystem>().Play();
+		Destroy(magicBallExplode, 1.0f);
+
+		foreach(Collider enemy in enemies)
 		{
-			magicBallParticle.Stop();
-            Destroy(magicBallParticle.gameObject);
-		}		
+			Character charact = enemy.gameObject.GetComponentInParent<Character>();
+			if (!charact.Damage(damage))
+			{
+				charact.Destroy();
+				cat.enemyKillCount++;
+			}
+		}
 	}
 }

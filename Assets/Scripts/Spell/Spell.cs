@@ -29,6 +29,9 @@ public abstract class Spell : MonoBehaviour {
 	protected Cat cat;
     public string inputName;
 
+	// Valeur permettant de savoir si le spell peut être activé
+	public bool isActivable = false;
+
 	void Start()
 	{
 		cat = GetComponent<Cat>();
@@ -41,14 +44,23 @@ public abstract class Spell : MonoBehaviour {
     //check
 	public virtual bool CanUse()
     {
-		if(Input.GetButtonDown (inputName) && recoveryTime == maxRecoveryTime && cat.Mana - manaCost >= 0)
+		if(recoveryTime == maxRecoveryTime && cat.Mana - manaCost >= 0)
 		{
-            RecoveryTime = 0;
+			if(Input.GetButtonDown (inputName))
+			{
+				RecoveryTime = 0;
 
-			if(manaCost > 0)
-            	cat.Mana -= manaCost;
-			
-            return true;
+				if(manaCost > 0)
+	            	cat.Mana -= manaCost;
+
+				isActivable = false;
+				
+	            return true;
+			}
+			else
+			{
+				isActivable = true;
+			}
         }
 
         return false;

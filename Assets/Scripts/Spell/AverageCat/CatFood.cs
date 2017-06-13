@@ -5,20 +5,20 @@ using System;
 
 public class CatFood : Spell {
 
-    public GameObject foodParticle;
-    float restraint = 10; //secondes
-    //manaCost = 20
-    
-    
-    public override void Activate()
-    {
-        //get the other cat.position and freeze it
-        //check with timer
-       StartCoroutine("Freeze");
-    }
+	public GameObject foodParticle;
+	float restraint = 10; //secondes
+	//manaCost = 20
 
-    IEnumerator Freeze()
-    {
+
+	public override void Activate()
+	{
+		//get the other cat.position and freeze it
+		//check with timer
+		StartCoroutine("Freeze");
+	}
+
+	IEnumerator Freeze()
+	{
 		Dictionary<Character, float> nearEnemySave = new Dictionary<Character, float>();
 
 		// Start particle effect
@@ -26,7 +26,7 @@ public class CatFood : Spell {
 
 		if (cat.aroundEnemy.Count > 0)
 		{
-            //freez
+			//freez
 			foreach (GameObject enemy in cat.aroundEnemy)
 			{
 				// Get character
@@ -38,9 +38,9 @@ public class CatFood : Spell {
 					nearEnemySave.Add(chara, chara.Speed);
 
 					// Set its speed
-                    chara.Speed = 0;
-                }
-            }
+					chara.Speed = 0;
+				}
+			}
 		}
 
 		yield return new WaitForSeconds(restraint);
@@ -51,5 +51,5 @@ public class CatFood : Spell {
 
 		// End particle effect
 		Destroy(particleInit, 0.1f);
-    }
+	}
 }

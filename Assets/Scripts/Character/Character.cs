@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿﻿using System;
 using UnityEngine;
 
 abstract public class Character : MonoBehaviour
@@ -28,7 +28,7 @@ abstract public class Character : MonoBehaviour
 	/*
 	 * @return Still alive ?
 	 */
-	public bool Damage(float damage)
+	public virtual bool Damage(float damage)
 	{
 		float newLife = Life - damage;
 

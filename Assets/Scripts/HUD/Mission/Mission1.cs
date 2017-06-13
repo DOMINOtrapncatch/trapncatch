@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -11,15 +11,24 @@ public class Mission1 : MissionBase
 
 	override public void CheckTooltips()
 	{
-		if(CheckTooltip1())
-        {
-			myHUD.SetObjective(messageTooltip2);
+		switch(currentTooltip)
+		{
+			case 1:
+				if(CheckTooltip1())
+		        {
+					myHUD.SetObjective(messageTooltip2);
+					currentTooltip++;
+		        }
+				break;
 
-            if(CheckTooltip2())
-            {
-                AutoFade.LoadLevel(9, .3f, .3f, Color.black);
-            }
-        }
+			case 2:
+				if(CheckTooltip2())
+	            {
+	                AutoFade.LoadLevel(9, .3f, .3f, Color.black);
+                    SaveManager.Set("mission1", "1");
+                }
+				break;
+		}
 	}
 
 	/*
@@ -29,13 +38,13 @@ public class Mission1 : MissionBase
     {
 		if (Input.GetButtonDown("attack") && myHUD.player.nearEnemy.Count > 0)
 		{
-			if (tooltip1 > 0)
+			if (tooltip1 == 0)
 				myHUD.player.Attack = 0;
 
-			++tooltip1;
+			tooltip1 = 1;
 		}
 
-        return tooltip1 >= 1;
+        return tooltip1 == 1;
     }
 
 	/*
