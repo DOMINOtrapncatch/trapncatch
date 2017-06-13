@@ -9,9 +9,7 @@ public static class InputManager {
 	public static void Init(List<string> inputStrings)
 	{
 		foreach(string inputString in inputStrings)
-        {
             keys.Add(new RealKey(inputString, SaveManager.Get(inputString)));
-        }
 	}
 
     public static string Get(string inputString)
