@@ -24,9 +24,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HUD/Mission - 1.unity
   - enabled: 0
-    path: Assets/Scenes/Maps/Map - Maison.unity
+    path: Assets/Scenes/Maps/Chapitre1.unity
   - enabled: 0
-    path: Assets/Scenes/Maps/Map - Jardin.unity
+    path: Assets/Scenes/Maps/Chapitre2.unity
   - enabled: 1
     path: Assets/Scenes/HUD/Menu - Success.unity
   - enabled: 1
@@ -63,3 +63,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HUD/Mission - 2.unity
   - enabled: 1
     path: Assets/Scenes/Multi/JoinMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Chapitre0.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Mission - 3.unity
