@@ -1,18 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Palette
+public static class Palette
 {
-	public static readonly Color DARK_PURPLE = new Color (60F  / 255F, 43F  / 255F, 77F  / 255F, 1F);
-	public static readonly Color LIGHT_GRAY  = new Color (219F / 255F, 211F / 255F, 211F / 255F, 1F);
-	public static readonly Color WHITE = new Color(1F, 1F, 1F, 1F);
-	public static readonly Color GRAY = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1F);
-
-
-    // Options
-    public static readonly Color RED = new Color(188F / 255F, 54F / 255F, 54F / 255F, 1F);
-    public static readonly Color DARK_GRAY = new Color(64F / 255F, 64F / 255F, 64F / 255F, 1F);
+	public static readonly Color PURPLE = new Color(95F / 255F, 69F / 255F, 94F / 255F, 1F);
 
 	// Utilisé pour les spells
 	public static readonly Color SPELL_ACTIVE = new Color(104F / 255F, 51F / 255F, 15F / 255F, 1F);
 	public static readonly Color SPELL_INACTIVE = new Color(190F / 255F, 190F / 255F, 190F / 255F, 1F);
+	public static readonly Color WHITE = new Color(1F, 1F, 1F, 1F);
+	public static readonly Color GRAY = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1F);
 }

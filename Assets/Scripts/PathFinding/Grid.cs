@@ -74,13 +74,13 @@ public class Grid : MonoBehaviour {
 			}
 		}
 
-		BlurPenaltyMap(blurSize);
+		BlurPenaltyMap();
 	}
 
 	/*
 	 * Permet de "flouter" le masque de penalite pour avoir un mvt plus naturel (le seeker ne se colle plus aux bordures)
 	 */
-	void BlurPenaltyMap(int blurSize)
+	void BlurPenaltyMap()
 	{
 		// NOTE: La methode de bluring utilisee est une methode opti (d'ou le code un peu chelou...)
 
