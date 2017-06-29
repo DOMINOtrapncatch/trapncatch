@@ -5,75 +5,67 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/HUD/Splash - Domino.unity
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/HUD/Menu - Fail.unity
+  - enabled: 1
     path: Assets/Scenes/HUD/Menu - Main.unity
-  - enabled: 0
-    path: Assets/Scenes/Menu.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Menu - Solo.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/HUD/Menu - Multi.unity
-  - enabled: 0
-    path: Assets/Scenes/DominoScene.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Splash - TrapNCatch.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Mission - 0.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Mission - 1.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Chapitre1.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Chapitre2.unity
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/HUD/Menu - Options.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Menu - Solo.unity
+  - enabled: 1
     path: Assets/Scenes/HUD/Menu - Success.unity
-  - enabled: 0
-    path: Assets/Scenes/Multi/Selection.unity
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/HUD/Mission - 0.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Mission - 1.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Mission - 2.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Mission - 3.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Mission - 4.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Mission - 5.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Mission - Success.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Splash - Domino.unity
+  - enabled: 1
+    path: Assets/Scenes/HUD/Splash - TrapNCatch.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Chapitre0.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Chapitre1.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Chapitre2.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Chapitre3.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Chapitre4.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Chapitre5.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Showcase - Chats.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Showcase - Soutenance 2.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps/Test Classique.unity
+  - enabled: 1
+    path: Assets/Scenes/Multi/JoinMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/Multi/Lobby - Maison.unity
+  - enabled: 1
     path: Assets/Scenes/Multi/Multi - Jardin.unity
   - enabled: 1
-    path: Assets/Scenes/Multi/Mode Instable/Instable_Server.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Showcase - Soutenance 2.unity
-  - enabled: 0
-    path: Assets/Scenes/Multi/Lobby - Maison.unity
-<<<<<<< HEAD
-  - enabled: 0
-    path: Assets/Scenes/Multi/timer test.unity
-  - enabled: 0
-=======
+    path: Assets/Scenes/Multi/Selection.unity
   - enabled: 1
->>>>>>> 499578b1fe390f8bf8c00ad9c155aaac6640fe88
-    path: Assets/Scenes/HUD/Menu - Fail.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Menu - Options.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Chapitre1.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Chapitre2.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Chapitre3.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Chapitre5.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Chapitre4.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Mission - Success.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Mission - 2.unity
-  - enabled: 0
-    path: Assets/Scenes/Multi/JoinMenu.unity
-  - enabled: 0
-    path: Assets/Scenes/Maps/Chapitre0.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Mission - 3.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Mission - 4.unity
-  - enabled: 0
-    path: Assets/Scenes/HUD/Mission - 5.unity
+    path: Assets/Scenes/Multi/test_mode1et2.unity
   - enabled: 1
     path: Assets/Scenes/Multi/timer test.unity
   - enabled: 1
     path: Assets/Scenes/Multi/Mode Instable/Instable_Client.unity
+  - enabled: 1
+    path: Assets/Scenes/Multi/Mode Instable/Instable_Server.unity

@@ -100,17 +100,76 @@ public class AutoFade : MonoBehaviour
 		StartCoroutine(Fade(aFadeOutTime, aFadeInTime, aColor));
 	}
 
-	public static void LoadLevel(string aLevelName,float aFadeOutTime, float aFadeInTime, Color aColor)
-	{
-		if (Fading) return;
-		Instance.m_LevelName = aLevelName;
-		Instance.StartFade(aFadeOutTime, aFadeInTime, aColor);
-	}
 	public static void LoadLevel(int aLevelIndex,float aFadeOutTime, float aFadeInTime, Color aColor)
 	{
 		if (Fading) return;
-		Instance.m_LevelName = "";
-		Instance.m_LevelIndex = aLevelIndex;
+		switch(aLevelIndex)
+		{
+			case 4:
+				Instance.m_LevelName = "Splash - TrapNCatch";
+				break;
+
+			case 5:
+				Instance.m_LevelName = "Mission - 0";
+				break;
+			case 6:
+				Instance.m_LevelName = "Mission - 1";
+				break;
+			case 18:
+				Instance.m_LevelName = "Mission - 2";
+				break;
+			case 21:
+				Instance.m_LevelName = "Mission - 3";
+				break;
+			case 22:
+				Instance.m_LevelName = "Mission - 4";
+				break;
+			case 23:
+				Instance.m_LevelName = "Mission - 5";
+				break;
+
+			case 20:
+				Instance.m_LevelName = "Chapitre0";
+				break;
+			case 12:
+				Instance.m_LevelName = "Chapitre1";
+				break;
+			case 13:
+				Instance.m_LevelName = "Chapitre2";
+				break;
+			case 14:
+				Instance.m_LevelName = "Chapitre3";
+				break;
+			case 16:
+				Instance.m_LevelName = "Chapitre4";
+				break;
+			case 15:
+				Instance.m_LevelName = "Chapitre5";
+				break;
+
+			case 7:
+				Instance.m_LevelName = "Menu - Success";
+				break;
+			case 10:
+				Instance.m_LevelName = "Menu - Fail";
+				break;
+			case 17:
+				Instance.m_LevelName = "Mission - Success";
+				break;
+
+			case 2:
+				Instance.m_LevelName = "Menu - Solo";
+				break;
+			case 3:
+				Instance.m_LevelName = "Menu - Multi";
+				break;
+			case 11:
+				Instance.m_LevelName = "Menu - Options";
+				break;
+			default:
+				Instance.m_LevelName = "Menu - Main";
+				break;
+		}
 		Instance.StartFade(aFadeOutTime, aFadeInTime, aColor);
 	}
 }
