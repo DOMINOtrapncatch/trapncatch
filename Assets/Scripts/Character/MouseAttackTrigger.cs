@@ -11,7 +11,7 @@ public class MouseAttackTrigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-		if (col.gameObject.tag == "Cat")
+        if (col.gameObject.tag == "Cat")
 			mouse.TryExplodeOn(col.gameObject.GetComponent<Cat>());
 	}
 }

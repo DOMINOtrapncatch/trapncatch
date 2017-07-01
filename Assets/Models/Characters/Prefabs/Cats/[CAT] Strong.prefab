@@ -1042,7 +1042,7 @@ GameObject:
   - 114: {fileID: 114000010326402184}
   m_Layer: 0
   m_Name: '[CAT] Strong'
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014126287992}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66b7984d3ce5841adadb59c0fdd7e895, type: 3}
   m_Name: 
@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014126287992}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0731250611ffb34894a180eba28f527, type: 3}
   m_Name: 
@@ -2448,6 +2448,7 @@ MonoBehaviour:
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
+  smartMouseKillCount: 0
   spellUseCount: 0
   isPathfindingActive: 0
   catIA: 0
@@ -2457,6 +2458,7 @@ MonoBehaviour:
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
+  Dead: 0
 --- !u!135 &135000010119829320
 SphereCollider:
   m_ObjectHideFlags: 1

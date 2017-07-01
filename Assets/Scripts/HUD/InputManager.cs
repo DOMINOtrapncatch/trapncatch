@@ -17,7 +17,7 @@ public static class InputManager {
 		if (keys.Count == 0)
 			Init(InitInputManager.inputValues);
 
-		return keys.Find(obj => obj.input == inputString).value;
+        return keys.Find(obj => obj.input == inputString).value.ToUpper();
     }
 
 	public static RealKey Get(int inputID)

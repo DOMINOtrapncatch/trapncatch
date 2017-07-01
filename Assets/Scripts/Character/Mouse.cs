@@ -241,7 +241,7 @@ public class Mouse : Character
 
     public void TryExplodeOn(Cat enemy)
     {
-        if ((mouseIA == MouseIA.SUICIDE && enemy != null) || mouseIA != MouseIA.SUICIDE)
+        if (mouseIA == MouseIA.SUICIDE && enemy != null)
         {
             enemy.StartCoroutine(ExplodeOn(enemy));
             enemy.KillEnemy(gameObject);

@@ -28,8 +28,9 @@ public class MouseManager : MonoBehaviour {
 			// Spawn rate handling
 			if(enemySpawnRateCount == 0)
 			{
-				// Get random mouse profile
-				GameObject mouseProfile = enemiesProfiles[Random.Range(0, enemiesProfiles.Count - 1)];
+                // Get random mouse profile
+                int rand = Random.Range(0, enemiesProfiles.Count - 1);
+				GameObject mouseProfile = enemiesProfiles[rand];
 
 				// Get corresponding Mouse class and edit some variables to add randomness
 				Mouse newEnemy = mouseProfile.GetComponent<Mouse>();

@@ -170,6 +170,7 @@ public class Cat : Character
 		}
         else
         {
+            mouseManager.Remove(enemy);
             Destroy(enemy);
         }
     }
@@ -267,6 +268,12 @@ public class Cat : Character
                 }
                 else if (aroundEnemy.Count > 0)
                 {
+					if (aroundEnemy[0] == null)
+					{
+						aroundEnemy.RemoveAt(0);
+						break;
+					}
+
                     PathRequestManager.RequestPath(new PathRequest(transform.position, aroundEnemy[0].transform.position, OnPathFound));
 
                     float sqrMoveThreshold = pathUpdateMoveThreshold * pathUpdateMoveThreshold;
@@ -278,6 +285,12 @@ public class Cat : Character
 
                         if (aroundEnemy.Count == 0)
                             break;
+
+                        if (aroundEnemy[0] == null)
+                        {
+                            aroundEnemy.RemoveAt(0);
+                            break;
+                        }
 
                         // Update only if moved a certain dist (this is here for performance issues)
                         if ((aroundEnemy[0].transform.position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
