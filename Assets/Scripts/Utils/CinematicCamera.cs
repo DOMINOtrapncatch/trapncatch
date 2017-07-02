@@ -6,7 +6,7 @@ public class CinematicCamera : MonoBehaviour
 	CharacterController camera;
 
 	Vector3 moveDirection = Vector3.zero;
-	private float turner;
+	float turner, looker;
 
 	void Start()
 	{
@@ -27,6 +27,11 @@ public class CinematicCamera : MonoBehaviour
 		turner += Input.GetAxis ("Mouse X") / 8.0f;
 		if(turner != 0)
 			transform.eulerAngles += new Vector3 (0,turner,0);
+
+		// Rotation Y Z
+		looker += -Input.GetAxis ("Mouse Y") / 8.0f;
+		if(looker != 0)
+			transform.eulerAngles += new Vector3 (looker,0,0);
 
 		// Movement Y
 		moveDirection.y = Input.GetKey(KeyCode.Space) ? 1.0f : (Input.GetKey(KeyCode.LeftShift) ? -1.0f : 0.0f);
