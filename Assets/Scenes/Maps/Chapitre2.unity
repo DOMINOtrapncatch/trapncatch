@@ -8850,7 +8850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f68b7ea80a2b440ca349f4268665f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayGridGizmos: 1
+  displayGridGizmos: 0
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 256
