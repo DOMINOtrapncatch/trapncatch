@@ -19,6 +19,8 @@ public class Timer : MonoBehaviour {
         TimeControl();
         TimeUI();
         LastMinuteRed();
+
+        Overtime();
     }
 
     public void TimeControl()
@@ -55,5 +57,11 @@ public class Timer : MonoBehaviour {
         {
             countdown.color = Color.red;
         }
+    }
+
+    public void Overtime()
+    {
+        if(timelimit <= 0)
+            AutoFade.LoadLevel(3, .3f, .3f, Palette.DARK_PURPLE);
     }
 }

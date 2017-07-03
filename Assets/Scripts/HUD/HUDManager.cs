@@ -10,6 +10,9 @@ public class HUDManager : MonoBehaviour
     List<Image> spellsUI = new List<Image>();
     List<Image> spellsUIImage = new List<Image>();
     Text objectiveUI;
+    public Text countdown;
+
+    public Timer count;
 
     void Awake()
     {
@@ -17,6 +20,9 @@ public class HUDManager : MonoBehaviour
 
         this.statusUI.Add(transform.Find("StatusBox/Status/Health/HealthBar").GetComponent<Image>());
         this.statusUI.Add(transform.Find("StatusBox/Status/Mana/ManaBar").GetComponent<Image>());
+
+        this.countdown = transform.Find("countdown").GetComponent<Text>();
+        this.count = transform.Find("countdown").GetComponent<Timer>();
 
         for (int i = 1; i <= 4; i++)
             this.spellsUI.Add(transform.Find("RadialKey" + i + "/LoadingBar").GetComponent<Image>());
@@ -32,6 +38,7 @@ public class HUDManager : MonoBehaviour
         UpdateSpell();
         UpdateHealth();
         UpdateMana();
+        
     }
 
     public void LoadPlayer(Cat cat)
