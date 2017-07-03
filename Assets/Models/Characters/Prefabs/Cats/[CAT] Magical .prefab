@@ -2636,7 +2636,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013570101858}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 91971a6cbe042b64daccafabd596196b, type: 3}
   m_Controller: {fileID: 9100000, guid: a4f70ca032afa47d8a765750b64d2541, type: 2}
   m_CullingMode: 1
@@ -2775,7 +2775,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013570101858}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66b7984d3ce5841adadb59c0fdd7e895, type: 3}
   m_Name: 
@@ -2812,6 +2812,7 @@ MonoBehaviour:
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
+  smartMouseKillCount: 0
   spellUseCount: 0
   isPathfindingActive: 0
   catIA: 0
@@ -2821,13 +2822,14 @@ MonoBehaviour:
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
+  Dead: 0
 --- !u!114 &114000014061969448
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013570101858}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0731250611ffb34894a180eba28f527, type: 3}
   m_Name: 

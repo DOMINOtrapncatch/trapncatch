@@ -5,18 +5,25 @@ using System;
 
 public class Mission4 : MissionBase {
 
-    public string tooltip = "Survivez";
+    //public string tooltip = "Survivez";
+    public MouseManager mafia;
 
-    public List<Cat> players;
-    public List<Mouse> enemies;
-
-    private bool playersAllDead = false;
+    //private bool playersAllDead = false;
 
     //mouse manager 
     //disons moins de 10 souris meurtrieres
     public override void CheckTooltips()
     {
-        throw new NotImplementedException();
+        if(Checktip1())
+        {
+            ChooseMission.Success();
+            SaveManager.Set("mission4", "1");
+        }
+    }
+
+    private bool Checktip1()
+    {
+        return myHUD.player.enemyKillCount == mafia.enemyCap;
     }
     
 }

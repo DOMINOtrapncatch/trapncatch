@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Chara_Selection : MonoBehaviour {
 
+    public int level;
     //index
     //list de gameobject et non cat pour avoir accès a la methode setactive oklm
     private int mesh_i = 0;
@@ -87,7 +88,7 @@ public class Chara_Selection : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             PlayerPrefs.SetInt("ChoosenCat", cats_i);
-            AutoFade.LoadLevel(19, .3f, .3f, Palette.DARK_PURPLE);//9
+            AutoFade.LoadLevel(level, .3f, .3f, Palette.DARK_PURPLE);//9
         }
 
     }

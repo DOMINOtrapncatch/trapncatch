@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692504, g: 0.4967869, b: 0.57508504, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3581,6 +3581,7 @@ MonoBehaviour:
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
+  smartMouseKillCount: 0
   spellUseCount: 0
   isPathfindingActive: 0
   catIA: 0
@@ -3590,6 +3591,7 @@ MonoBehaviour:
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
+  Dead: 0
 --- !u!23 &814126728
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3821,6 +3823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98afa4fb84262aa4b95bf03b6038302a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 24
   cats_i: 0
   cats:
   - {fileID: 1991133612}
@@ -9067,6 +9070,7 @@ MonoBehaviour:
   nearEnemy: []
   aroundEnemy: []
   enemyKillCount: 0
+  smartMouseKillCount: 0
   spellUseCount: 0
   isPathfindingActive: 0
   catIA: 0
@@ -9076,6 +9080,7 @@ MonoBehaviour:
   turnSpeed: 3
   turnDst: 5
   stoppingDst: 10
+  Dead: 0
 --- !u!23 &1991133619
 MeshRenderer:
   m_ObjectHideFlags: 0
