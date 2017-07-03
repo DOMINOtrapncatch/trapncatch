@@ -342,7 +342,7 @@ MonoBehaviour:
   dialogueImages:
   - {fileID: 21300000, guid: 04b91bfc14b420140bc81e6f1c1ef093, type: 3}
   - {fileID: 21300000, guid: 07d3fb2c2beebe447bebe4b57849a2c0, type: 3}
-  sceneId: 20
+  sceneId: 15
 --- !u!1 &575210652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1026,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

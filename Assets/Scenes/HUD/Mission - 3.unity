@@ -197,7 +197,7 @@ MonoBehaviour:
   - "(Noir) Donc tu fais \xE9quipe avec moi, fais de ton mieux!"
   dialogueImages:
   - {fileID: 21300000, guid: 418849a7cc65fd34abf684cd9ad3629a, type: 3}
-  sceneId: 14
+  sceneId: 18
 --- !u!114 &121615764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +721,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

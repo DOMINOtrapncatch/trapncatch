@@ -2771,7 +2771,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9537,6 +9537,26 @@ Prefab:
     - target: {fileID: 4000012801163400, guid: 454b9aeedd4c43a4f847de164f934514, type: 2}
       propertyPath: m_RootOrder
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010443153944, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: isActivable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013767733082, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: isActivable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011991879306, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: isActivable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013414380360, guid: 454b9aeedd4c43a4f847de164f934514,
+        type: 2}
+      propertyPath: isActivable
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 454b9aeedd4c43a4f847de164f934514, type: 2}

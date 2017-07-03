@@ -105,68 +105,83 @@ public class AutoFade : MonoBehaviour
 		if (Fading) return;
 		switch(aLevelIndex)
 		{
-			case 4:
+			case 2:
 				Instance.m_LevelName = "Splash - TrapNCatch";
 				break;
 
-			case 5:
+			case 8:
 				Instance.m_LevelName = "Mission - 0";
 				break;
-			case 6:
+			case 9:
 				Instance.m_LevelName = "Mission - 1";
 				break;
-			case 18:
+			case 10:
 				Instance.m_LevelName = "Mission - 2";
 				break;
-			case 21:
+			case 11:
 				Instance.m_LevelName = "Mission - 3";
 				break;
-			case 22:
+			case 12:
 				Instance.m_LevelName = "Mission - 4";
 				break;
-			case 23:
+			case 13:
 				Instance.m_LevelName = "Mission - 5";
 				break;
 
-			case 20:
+			case 15:
 				Instance.m_LevelName = "Chapitre0";
 				break;
-			case 12:
+			case 16:
 				Instance.m_LevelName = "Chapitre1";
 				break;
-			case 13:
+			case 17:
 				Instance.m_LevelName = "Chapitre2";
 				break;
-			case 14:
+			case 18:
 				Instance.m_LevelName = "Chapitre3";
 				break;
-			case 16:
+			case 19:
 				Instance.m_LevelName = "Chapitre4";
 				break;
-			case 15:
+			case 20:
 				Instance.m_LevelName = "Chapitre5";
 				break;
 
 			case 7:
 				Instance.m_LevelName = "Menu - Success";
 				break;
-			case 10:
+			case 3:
 				Instance.m_LevelName = "Menu - Fail";
 				break;
-			case 17:
+			case 14:
 				Instance.m_LevelName = "Mission - Success";
 				break;
 
-			case 2:
+			case 6:
 				Instance.m_LevelName = "Menu - Solo";
 				break;
-			case 3:
+			case 4:
 				Instance.m_LevelName = "Menu - Multi";
 				break;
-			case 11:
+			case 5:
 				Instance.m_LevelName = "Menu - Options";
 				break;
-			default:
+            case 24:
+                Instance.m_LevelName = "JoinMenu";
+                break;
+            case 25:
+                Instance.m_LevelName = "Multi - Jardin";
+                break;
+            case 26:
+                Instance.m_LevelName = "Selection";
+                break;
+            case 27:
+                Instance.m_LevelName = "timer test";
+                break;
+            case 28:
+                Instance.m_LevelName = "Instable_Client";
+                break;
+            default:
 				Instance.m_LevelName = "Menu - Main";
 				break;
 		}
