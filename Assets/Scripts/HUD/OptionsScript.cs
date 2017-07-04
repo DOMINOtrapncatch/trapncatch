@@ -15,7 +15,7 @@ public class OptionsScript : BasicMenu {
 		foreach(Key key in keys)
 		{
 			key.realKey = InputManager.Get(i);
-			key.textBox.text = key.realKey.value;
+			key.textBox.text = key.realKey.value.ToUpper();
 			i++;
 		}
 
@@ -58,7 +58,7 @@ public class OptionsScript : BasicMenu {
 			yield return new WaitForSeconds(0.01f);
 		}
 
-		keyText.text = keyToEdit.realKey.value;
+		keyText.text = keyToEdit.realKey.value.ToUpper();
         SaveManager.Set(keyToEdit.realKey.input, keyToEdit.realKey.value);
 
 		ColorDuplicates();

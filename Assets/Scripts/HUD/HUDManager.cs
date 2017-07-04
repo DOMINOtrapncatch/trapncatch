@@ -21,8 +21,14 @@ public class HUDManager : MonoBehaviour
         this.statusUI.Add(transform.Find("StatusBox/Status/Health/HealthBar").GetComponent<Image>());
         this.statusUI.Add(transform.Find("StatusBox/Status/Mana/ManaBar").GetComponent<Image>());
 
-        this.countdown = transform.Find("countdown").GetComponent<Text>();
-        this.count = transform.Find("countdown").GetComponent<Timer>();
+		try
+		{
+			this.countdown = transform.Find("countdown").GetComponent<Text>();
+			this.count = transform.Find("countdown").GetComponent<Timer>();
+		}
+		catch {
+			// Do nothing. This is here because amandine don't know how to code :)
+		}
 
         for (int i = 1; i <= 4; i++)
             this.spellsUI.Add(transform.Find("RadialKey" + i + "/LoadingBar").GetComponent<Image>());

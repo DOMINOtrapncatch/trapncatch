@@ -8819,8 +8819,8 @@ MonoBehaviour:
   - {fileID: 211316472}
   randomTarget: 1
   turnSpeed: 4
-  turnDst: 0
-  stoppingDst: 0
+  turnDst: 2
+  stoppingDst: 0.2
   hideIndex: -1
   healthBar: {fileID: 221833937}
   deathPrefab: {fileID: 1000011728585516, guid: 85611536f2122472fae84aa7a9c52881,

@@ -17,10 +17,10 @@ public class LogoLoader : MonoBehaviour {
         yield return new WaitForSeconds(4);
 		switch(loadScene)
 		{
-			case 4:
+			case 2:
 				AutoFade.LoadLevel (loadScene, 2, 2, Color.white);
 				break;
-			case 1:
+			case 0:
 				AutoFade.LoadLevel (loadScene, 2, 2, Palette.DARK_PURPLE);
 				break;
 			default:

@@ -192,7 +192,7 @@ MonoBehaviour:
   - {fileID: 1287252311}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 231350998}
@@ -979,7 +979,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 117199696}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.88, y: 0.01, z: 1.89}
+  m_LocalPosition: {x: -5.89, y: 0.01, z: 1.89}
   m_LocalScale: {x: 3.1, y: 3.1000018, z: 3.1000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -3404,7 +3404,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394932839}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.31, y: 0.01, z: -5.43}
+  m_LocalPosition: {x: -2.31, y: 0.01, z: -4.545}
   m_LocalScale: {x: 3.1, y: 3.1000018, z: 3.1000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -4440,7 +4440,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534026458}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.71, y: 0.01, z: 2.34}
+  m_LocalPosition: {x: -1.98, y: 0.01, z: 2.34}
   m_LocalScale: {x: 3.1, y: 3.1000018, z: 3.1000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -5859,7 +5859,7 @@ MonoBehaviour:
   - {fileID: 1051042985}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 1903071187}
@@ -6056,7 +6056,7 @@ MonoBehaviour:
   - {fileID: 1969657161}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 387561341}
@@ -6301,7 +6301,7 @@ MonoBehaviour:
   - {fileID: 42126459}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 1960631727}
@@ -7397,7 +7397,7 @@ MonoBehaviour:
   - {fileID: 1688550752}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 1201418699}
@@ -10322,7 +10322,7 @@ MonoBehaviour:
   - {fileID: 1620899758}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 633446696}
@@ -10392,7 +10392,7 @@ MonoBehaviour:
   - {fileID: 1938332054}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 1963501054}
@@ -10782,7 +10782,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1287252310}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.52, y: 0.01, z: 4.67}
+  m_LocalPosition: {x: 3.612, y: 0.01, z: 1.79}
   m_LocalScale: {x: 3.1, y: 3.1000018, z: 3.1000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -11691,7 +11691,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1394627542}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -12652,7 +12652,7 @@ MonoBehaviour:
   - {fileID: 587585689}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 580457124}
@@ -13916,7 +13916,7 @@ MonoBehaviour:
   - {fileID: 42126459}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 1758222867}
@@ -15319,7 +15319,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1938332053}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.85, y: 0.01, z: 4.99}
+  m_LocalPosition: {x: -0.85, y: 0.01, z: 5.461}
   m_LocalScale: {x: 3.1, y: 3.1000018, z: 3.1000018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -15945,7 +15945,7 @@ MonoBehaviour:
   - {fileID: 220482787}
   randomTarget: 0
   turnSpeed: 4
-  turnDst: 0
+  turnDst: 2
   stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 470041580}
@@ -15998,7 +15998,7 @@ MonoBehaviour:
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 256
-  gridWorldSize: {x: 200, y: 30, z: 0}
+  gridWorldSize: {x: 30.71, y: 24.5, z: 0}
   nodeRadius: 0.1
   walkableRegions:
   - terrainMask:
