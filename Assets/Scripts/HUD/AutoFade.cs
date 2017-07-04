@@ -181,6 +181,9 @@ public class AutoFade : MonoBehaviour
             case 28:
                 Instance.m_LevelName = "Instable_Client";
                 break;
+            case 29:
+                Instance.m_LevelName = "CatSelect";
+                break;
             default:
 				Instance.m_LevelName = "Menu - Main";
 				break;

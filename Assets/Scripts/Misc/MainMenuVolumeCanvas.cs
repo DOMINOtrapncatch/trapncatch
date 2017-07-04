@@ -3,11 +3,44 @@ using System.Collections;
 
 public class MainMenuVolumeCanvas : MonoBehaviour {
 
+    public SaveManager save;
+
+    private void Start()
+    {
+        VolumeInit();
+    }
+
+    private void VolumeInit()
+    {
+        AudioListener.volume = float.Parse(SaveManager.Get("volume"));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //dsl mais je prefere rajouter un script plutot que de casser une bonne architecture x)
     //pas trop le temps de faire gaffe genre tmtc
 
     //ceci est un script offrant plein de possibilité genre publicité et tout ça et genre oe et genre la vie cest des choxu a al mdoe de chez onsou
-
+    /*
     private GameObject canvas;
     private bool retry;
 
@@ -44,5 +77,5 @@ public class MainMenuVolumeCanvas : MonoBehaviour {
 
         //askip si il a changé d'avis
 
-    }
+    }*/
 }

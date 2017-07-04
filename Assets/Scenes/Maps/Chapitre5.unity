@@ -1051,6 +1051,11 @@ Prefab:
       propertyPath: isActivable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013414845144, guid: 5c2cd1bd8530cb24caeacd02de180bde,
+        type: 2}
+      propertyPath: inputName
+      value: attaque
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c2cd1bd8530cb24caeacd02de180bde, type: 2}
   m_IsPrefabParent: 0
