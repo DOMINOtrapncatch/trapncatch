@@ -958,8 +958,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 582, y: 310.5}
-  m_SizeDelta: {x: 1164, y: 621}
+  m_AnchoredPosition: {x: 203.5, y: 227}
+  m_SizeDelta: {x: 407, y: 454}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &96525640
 GameObject:
@@ -2834,6 +2834,11 @@ Prefab:
     - target: {fileID: 1000010017649830, guid: 82adf2fa63c19f74caca30965b366ad6, type: 2}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000011552102134, guid: 82adf2fa63c19f74caca30965b366ad6,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82adf2fa63c19f74caca30965b366ad6, type: 2}
@@ -13077,8 +13082,8 @@ MonoBehaviour:
   - {fileID: 1043678337}
   randomTarget: 1
   turnSpeed: 4
-  turnDst: 0
-  stoppingDst: 0
+  turnDst: 2
+  stoppingDst: 0.1
   hideIndex: -1
   healthBar: {fileID: 1550083422}
   deathPrefab: {fileID: 1000011728585516, guid: 85611536f2122472fae84aa7a9c52881,

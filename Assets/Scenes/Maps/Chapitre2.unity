@@ -6433,6 +6433,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014286421250, guid: 2aac4ae0ce9f3c048acbcabf21023385, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000013742998384, guid: 2aac4ae0ce9f3c048acbcabf21023385,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2aac4ae0ce9f3c048acbcabf21023385, type: 2}
   m_IsPrefabParent: 0
@@ -8656,7 +8665,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012801163400, guid: 454b9aeedd4c43a4f847de164f934514, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 114000010443153944, guid: 454b9aeedd4c43a4f847de164f934514,
         type: 2}

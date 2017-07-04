@@ -180,7 +180,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 2
@@ -954,9 +954,29 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.981
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &103437587 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+  m_PrefabInternal: {fileID: 103437586}
+--- !u!65 &103437588
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 103437587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.326344, y: 1.1880221, z: 0.41485006}
+  m_Center: {x: 0, y: 0.21464303, z: 0.21335304}
 --- !u!1 &117199696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4415,9 +4435,29 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.981
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &530090441 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+  m_PrefabInternal: {fileID: 530090440}
+--- !u!65 &530090442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 530090441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.326344, y: 1.1880221, z: 0.41485006}
+  m_Center: {x: 0, y: 0.21464303, z: 0.21335304}
 --- !u!1 &534026458
 GameObject:
   m_ObjectHideFlags: 0
@@ -5636,6 +5676,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.981
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
   m_IsPrefabParent: 0
@@ -5847,7 +5891,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 2
@@ -5991,9 +6035,29 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.981
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &690458892 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+  m_PrefabInternal: {fileID: 690458891}
+--- !u!65 &690458893
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 690458892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.326344, y: 1.1880221, z: 0.41485006}
+  m_Center: {x: 0, y: 0.21464303, z: 0.21335304}
 --- !u!4 &695230009
 Transform:
   m_ObjectHideFlags: 0
@@ -6043,7 +6107,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 2
@@ -6287,7 +6351,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 2
@@ -6360,6 +6424,15 @@ Prefab:
     - target: {fileID: 4000013627135720, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
       propertyPath: m_LocalScale.z
       value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011237795014, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000012752699934, guid: 486636d05e0392d4e8935a2447fe5bdc,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
@@ -7387,7 +7460,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 1
@@ -7936,9 +8009,29 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.981
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &932951009 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+  m_PrefabInternal: {fileID: 932951008}
+--- !u!65 &932951010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932951009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.326344, y: 1.1880221, z: 0.41485006}
+  m_Center: {x: 0, y: 0.21464303, z: 0.21335304}
 --- !u!1 &933294668
 GameObject:
   m_ObjectHideFlags: 0
@@ -10312,7 +10405,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 1
@@ -10380,7 +10473,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 2
@@ -10675,6 +10768,15 @@ Prefab:
     - target: {fileID: 4000013627135720, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
       propertyPath: m_LocalScale.z
       value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011237795014, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000012752699934, guid: 486636d05e0392d4e8935a2447fe5bdc,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
@@ -11034,6 +11136,15 @@ Prefab:
     - target: {fileID: 4000013627135720, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
       propertyPath: m_LocalScale.z
       value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011237795014, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000012752699934, guid: 486636d05e0392d4e8935a2447fe5bdc,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
@@ -12500,6 +12611,15 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 3.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011237795014, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000012752699934, guid: 486636d05e0392d4e8935a2447fe5bdc,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 486636d05e0392d4e8935a2447fe5bdc, type: 2}
   m_IsPrefabParent: 0
@@ -12642,7 +12762,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 1
@@ -13585,7 +13705,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 95000011476340620, guid: 5c2cd1bd8530cb24caeacd02de180bde,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013603962072, guid: 5c2cd1bd8530cb24caeacd02de180bde,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014061969448, guid: 5c2cd1bd8530cb24caeacd02de180bde,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000014061969448, guid: 5c2cd1bd8530cb24caeacd02de180bde, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5c2cd1bd8530cb24caeacd02de180bde, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1688550751 stripped
@@ -13902,7 +14038,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 2
@@ -15935,7 +16071,7 @@ MonoBehaviour:
   Attack: 50
   Speed: 20
   Defense: 50
-  MaxLife: 40
+  MaxLife: 10
   Life: 100
   damageValue: 10
   mouseIA: 1
@@ -16590,9 +16726,29 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.981
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &2104607737 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 26919ac164443f44ba66725f5e04a136, type: 3}
+  m_PrefabInternal: {fileID: 2104607736}
+--- !u!65 &2104607738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2104607737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.326344, y: 1.1880221, z: 0.41485006}
+  m_Center: {x: 0, y: 0.21464303, z: 0.21335304}
 --- !u!1 &2109053492
 GameObject:
   m_ObjectHideFlags: 0
